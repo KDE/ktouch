@@ -21,7 +21,7 @@ void CourseBase::setTitle(const QString& title)
     if(title != m_title)
     {
         m_title = title;
-        emit titleChanged();
+        Q_EMIT titleChanged();
     }
 }
 
@@ -35,7 +35,7 @@ void CourseBase::setDescription(const QString& description)
     if(description != m_description)
     {
         m_description = description;
-        emit descriptionChanged();
+        Q_EMIT descriptionChanged();
     }
 }
 
@@ -49,7 +49,7 @@ void CourseBase::setKeyboardLayoutName(const QString& keyboardLayoutName)
     if(keyboardLayoutName != m_keyboardLayoutName)
     {
         m_keyboardLayoutName = keyboardLayoutName;
-        emit keyboardLayoutNameChanged();
+        Q_EMIT keyboardLayoutNameChanged();
     }
 }
 

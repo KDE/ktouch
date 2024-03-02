@@ -24,7 +24,7 @@ class NewResourceAssistant : public KAssistantDialog
 public:
     explicit NewResourceAssistant(ResourceModel* resourceModel, QWidget* parent = nullptr);
     Resource* createResource();
-private slots:
+private Q_SLOTS:
     void setResourceType(ResourceModel::ResourceItemType type);
     void updateNewCoursePageValidity();
     void updateNewKeyboardLayoutPageValidity();

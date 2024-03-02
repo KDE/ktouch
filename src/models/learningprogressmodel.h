@@ -41,15 +41,15 @@ public:
     Q_INVOKABLE int elapsedTime(int row) const;
     Q_INVOKABLE qreal accuracy(int row) const;
     Q_INVOKABLE QString lessonId(int row) const;
-public slots:
+public Q_SLOTS:
     void update();
-signals:
+Q_SIGNALS:
     void profileChanged();
     void courseFilterChanged();
     void lessonFilterChanged();
     void maxCharactersTypedPerMinuteChanged();
     void minAccuracyChanged();
-private slots:
+private Q_SLOTS:
     void profileDestroyed();
 private:
     QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const override;

@@ -14,7 +14,7 @@ class KeyboardLayoutEditorView : public QQuickWidget
     Q_OBJECT
 public:
     explicit KeyboardLayoutEditorView(QWidget* parent = nullptr);
-signals:
+Q_SIGNALS:
     void clicked();
 protected:
     void mousePressEvent(QMouseEvent* event) override;

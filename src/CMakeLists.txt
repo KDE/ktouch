@@ -177,17 +177,16 @@ target_link_libraries(ktouch
         Qt::QuickWidgets
         Qt::QuickControls2
         Qt::Sql
-        Qt::XmlPatterns
-        KF5::Completion
-        KF5::ConfigWidgets
-        KF5::ItemViews
-        KF5::XmlGui
-        KF5::I18n
-        KF5::KCMUtils
-        KF5::TextWidgets
-        KF5::WindowSystem
-        KF5::CoreAddons
-        KF5::IconThemes
+        KF6::Completion
+        KF6::ConfigWidgets
+        KF6::ItemViews
+        KF6::XmlGui
+        KF6::I18n
+        KF6::KCMUtils
+        KF6::TextWidgets
+        KF6::WindowSystem
+        KF6::CoreAddons
+        LibXml2::LibXml2
         ${ktouch_X11_DEPS}
 )
 

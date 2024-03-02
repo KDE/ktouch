@@ -38,12 +38,12 @@ public:
     Q_SLOT void setZoomLevel(int zoomLevel);
 
     Q_INVOKABLE void setKeyGeometry(int keyIndex, int top, int left, int width, int height);
-signals:
+Q_SIGNALS:
     void keyboardLayoutChanged();
     void readOnlyChanged();
     void selectedKeyChanged();
     void zoomLevelChanged();
-private slots:
+private Q_SLOTS:
     void clearSelection();
     void validateSelection();
     void createNewKey();

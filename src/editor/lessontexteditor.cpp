@@ -100,15 +100,15 @@ void LessonTextEditor::reformatText()
 
     QString text = doPartialReplace? cursor.selectedText(): m_lessonTextEdit->toPlainText();
 
-    text.replace('\r', QLatin1String(" "));
-    text.replace('\n', QLatin1String(" "));
+    text.replace(QLatin1Char('\r'), QLatin1String(" "));
+    text.replace(QLatin1Char('\n'), QLatin1String(" "));
     text.replace(QString::fromUtf8("\u2029"), QLatin1String(" "));
 
-    const QStringList tokens(text.split(' '));
+    const QStringList tokens(text.split(QLatin1Char(' ')));
     QStringList lines;
-    QString currentLine(QLatin1String(""));
+    QString currentLine;
 
-    foreach(const QString& token, tokens)
+    for(const QString& token : std::as_const(tokens))
     {
         if (token.isEmpty())
             continue;
@@ -120,7 +120,7 @@ void LessonTextEditor::reformatText()
         }
         else
         {
-            currentLine += currentLine.isEmpty()? token: ' ' + token;
+            currentLine += currentLine.isEmpty()? token: QLatin1Char(' ') + token;
         }
     }
 

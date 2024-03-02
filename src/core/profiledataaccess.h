@@ -60,7 +60,7 @@ public:
 
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = nullptr, Lesson* lessonFilter = nullptr);
 
-signals:
+Q_SIGNALS:
     void profileCountChanged();
 
 private:

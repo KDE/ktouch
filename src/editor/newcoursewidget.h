@@ -21,7 +21,7 @@ public:
     QString title() const;
     QString keyboardLayoutName() const;
     QString description() const;
-signals:
+Q_SIGNALS:
     void isValidChanged() const;
 };
 

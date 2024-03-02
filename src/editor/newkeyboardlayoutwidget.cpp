@@ -92,7 +92,7 @@ void NewKeyboardLayoutWidget::checkName()
     if (!m_nameIsValid)
         m_messageWidget->animatedShow();
 
-    emit isValidChanged();
+    Q_EMIT isValidChanged();
 }
 
 #include "moc_newkeyboardlayoutwidget.cpp"

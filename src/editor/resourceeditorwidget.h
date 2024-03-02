@@ -33,10 +33,10 @@ public:
     void openResource(Resource* dataIndexResource);
     void clearUndoStackForResource(Resource* dataIndexResource);
     void save();
-signals:
+Q_SIGNALS:
     void resourceRestorationRequested();
     void resourceRestorationDismissed();
-private slots:
+private Q_SLOTS:
     void requestResourceRestoration();
     void clearMessage();
 private:

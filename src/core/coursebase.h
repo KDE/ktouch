@@ -28,7 +28,7 @@ public:
     QString keyboardLayoutName() const;
     void setKeyboardLayoutName(const QString& keyboardLayoutName);
 
-signals:
+Q_SIGNALS:
 
     void titleChanged();
     void descriptionChanged();

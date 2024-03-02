@@ -53,7 +53,7 @@ public:
     float accuracy();
     int charactersPerMinute();
 
-signals:
+Q_SIGNALS:
     void statsChanged();
     void isValidChanged();
     void errorsChanged();

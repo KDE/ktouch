@@ -27,7 +27,7 @@ void GridItem::setLineDistance(qreal distance)
     if (distance != m_lineDistance)
     {
         m_lineDistance = distance;
-        emit lineDistanceChanged();
+        Q_EMIT lineDistanceChanged();
     }
 }
 
@@ -41,7 +41,7 @@ void GridItem::setColor(const QColor& color)
     if (color != m_color)
     {
         m_color = color;
-        emit colorChanged();
+        Q_EMIT colorChanged();
         update();
     }
 }
@@ -56,7 +56,7 @@ void GridItem::setBackgroundColor(const QColor& backgroundColor)
     if (backgroundColor != m_backgroundColor)
     {
         m_backgroundColor = backgroundColor;
-        emit backgroundColorChanged();
+        Q_EMIT backgroundColorChanged();
     }
 }
 

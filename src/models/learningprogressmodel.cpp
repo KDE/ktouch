@@ -44,7 +44,7 @@ void LearningProgressModel::setProfile(Profile* profile)
         }
 
         update();
-        emit profileChanged();
+        Q_EMIT profileChanged();
     }
 }
 
@@ -70,7 +70,7 @@ void LearningProgressModel::setCourseFilter(Course* courseFilter)
         }
 
         update();
-        emit courseFilterChanged();
+        Q_EMIT courseFilterChanged();
     }
 }
 
@@ -96,7 +96,7 @@ void LearningProgressModel::setLessonFilter(Lesson* lessonFilter)
         }
 
         update();
-        emit lessonFilterChanged();
+        Q_EMIT lessonFilterChanged();
     }
 }
 
@@ -149,9 +149,9 @@ QVariant LearningProgressModel::headerData(int section, Qt::Orientation orientat
     switch (section - originalColumnCount)
     {
     case 0:
-        return QVariant("accuracy");
+        return QStringLiteral("accuracy");
     case 1:
-        return QVariant("characters_per_minute");
+        return QStringLiteral("characters_per_minute");
     default:
         return QVariant();
     }
@@ -241,8 +241,8 @@ void LearningProgressModel::update()
         setQuery(query);
     }
 
-    emit maxCharactersTypedPerMinuteChanged();
-    emit minAccuracyChanged();
+    Q_EMIT maxCharactersTypedPerMinuteChanged();
+    Q_EMIT minAccuracyChanged();
 }
 
 QVariant LearningProgressModel::accuracyData(int row, int role) const

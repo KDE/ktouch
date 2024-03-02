@@ -20,9 +20,9 @@ public:
     QString name() const;
     QString title() const;
     bool isValid() const;
-signals:
+Q_SIGNALS:
     void isValidChanged();
-private slots:
+private Q_SLOTS:
     void pasteCurrentName();
     void checkName();
 private:

@@ -21,7 +21,7 @@ public:
     void setReadOnly(bool readOnly);
     KTextEdit* textEdit() const;
     LessonTextHighlighter* highlighter() const;
-private slots:
+private Q_SLOTS:
     void onLessonTextChanged();
     void openTextFile();
     void reformatText();

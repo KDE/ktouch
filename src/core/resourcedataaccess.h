@@ -9,6 +9,9 @@
 
 #include <QObject>
 
+#include <libxml/parser.h>
+#include <libxml/xmlschemas.h>
+
 class QXmlSchema;
 class QDomDocument;
 class QFile;
@@ -28,8 +31,8 @@ public:
     Q_INVOKABLE bool storeCourse(const QString& path, Course* source);
 
 private:
-    QXmlSchema loadXmlSchema(const QString& name);
-    QDomDocument getDomDocument(QFile& file, QXmlSchema& schema);
+    xmlSchemaValidCtxtPtr loadXmlSchema(const QString& name);
+    QDomDocument getDomDocument(QFile& file, xmlSchemaValidCtxtPtr schema);
     bool openResourceFile(const QString& relPath, QFile& file);
 };
 

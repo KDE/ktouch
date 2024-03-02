@@ -21,7 +21,7 @@ void Lesson::setId(const QString& id)
     if(id != m_id)
     {
         m_id = id;
-        emit idChanged();
+        Q_EMIT idChanged();
     }
 }
 
@@ -35,7 +35,7 @@ void Lesson::setTitle(const QString& title)
     if(title != m_title)
     {
         m_title = title;
-        emit titleChanged();
+        Q_EMIT titleChanged();
     }
 }
 
@@ -49,7 +49,7 @@ void Lesson::setNewCharacters(const QString& newCharacters)
     if (newCharacters != m_newCharacters)
     {
         m_newCharacters = newCharacters;
-        emit newCharactersChanged();
+        Q_EMIT newCharactersChanged();
     }
 }
 
@@ -63,7 +63,7 @@ void Lesson::setCharacters(const QString& characters)
     if(characters != m_characters)
     {
         m_characters = characters;
-        emit charactersChanged();
+        Q_EMIT charactersChanged();
     }
 }
 
@@ -77,7 +77,7 @@ void Lesson::setText(const QString& text)
     if (text != m_text)
     {
         m_text = text;
-        emit textChanged();
+        Q_EMIT textChanged();
     }
 }
 

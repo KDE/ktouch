@@ -48,14 +48,14 @@ public:
     QSize size() const;
     void setSize(const QSize& size);
 
-signals:
+Q_SIGNALS:
     void associatedDataIndexKeyboardLayoutChanged();
     void widthChanged();
     void heightChanged();
     void referenceKeyChanged();
     void keyCountChanged();
 
-private slots:
+private Q_SLOTS:
     void onKeyGeometryChanged(int keyIndex);
 
 private:

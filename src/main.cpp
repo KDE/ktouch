@@ -13,15 +13,14 @@
 #include "mainwindow.h"
 #include "version.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 int main(int argc, char **argv)
 {
     // TODO ktouch doesn't detect keyboard presses on wayland at the moment so force X11/XWayland for now
 #ifdef Q_OS_LINUX
     qputenv("QT_QPA_PLATFORM", "xcb");
 #endif
-
-    Application::setAttribute(Qt::AA_EnableHighDpiScaling);
-    Application::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     Application app(argc, argv);
 
@@ -65,7 +64,7 @@ int main(int argc, char **argv)
 
     parser.addOption(QCommandLineOption(QStringLiteral("resource-editor"), i18n("Launch the course and keyboard layout editor")));
 
-    parser.addOption({{"I", "import-path"}, i18n("Prepend the path to the list of QML import paths"), QStringLiteral("path")});
+    parser.addOption({{u"I"_s, u"import-path"_s}, i18n("Prepend the path to the list of QML import paths"), QStringLiteral("path")});
 
     parser.process(app);
 
@@ -73,7 +72,7 @@ int main(int argc, char **argv)
 
     if (parser.isSet(QStringLiteral("import-path")))
     {
-        foreach (const QString& path, parser.values("import-path"))
+        for (const QString& path : parser.values(u"import-path"_s))
         {
             app.qmlImportPaths().append(path);
         }

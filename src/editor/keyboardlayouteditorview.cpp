@@ -20,7 +20,7 @@ void KeyboardLayoutEditorView::mousePressEvent(QMouseEvent* event)
 
     if (!event->isAccepted() && event->button() == Qt::LeftButton)
     {
-        emit clicked();
+        Q_EMIT clicked();
     }
 }
 

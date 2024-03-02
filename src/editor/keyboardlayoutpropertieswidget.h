@@ -25,7 +25,7 @@ public:
     void setUndoStack(QUndoStack* undoStack);
     void setSelectedKey(int index);
     void setReadOnly(bool readOnly);
-private slots:
+private Q_SLOTS:
     void setKeyboardLayoutTitle(const QString& title);
     void setKeyboardLayoutName(const QString& name);
     void setKeyboardLayoutSize(const QSize& size);

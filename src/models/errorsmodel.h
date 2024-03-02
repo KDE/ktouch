@@ -27,10 +27,10 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     Q_INVOKABLE QString character(int row) const;
     Q_INVOKABLE int errors(int row) const;
-signals:
+Q_SIGNALS:
     void trainingStatsChanged();
     void maximumErrorCountChanged();
-private slots:
+private Q_SLOTS:
     void buildErrorList();
 private:
     TrainingStats* m_trainingStats;

@@ -21,6 +21,8 @@ class KeyboardLayoutMenu;
 class Lesson;
 class XEventNotifier;
 
+Q_DECLARE_OPAQUE_POINTER(DataIndex *)
+
 class KTouchContext : public QObject
 {
     Q_OBJECT
@@ -35,15 +37,15 @@ public:
     bool keyboardKCMAvailable();
     Q_INVOKABLE void showMenu(int xPos, int yPos);
     Q_INVOKABLE Lesson* createLesson();
-public slots:
+public Q_SLOTS:
     void showResourceEditor();
     void showKeyboardKCM();
     bool showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout);
-private slots:
+private Q_SLOTS:
     void showConfigDialog();
     void configureShortcuts();
     void setFullscreen(bool fullscreen);
-signals:
+Q_SIGNALS:
     void keyboardLayoutNameChanged();
 private:
     void init();

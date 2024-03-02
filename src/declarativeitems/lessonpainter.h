@@ -38,9 +38,9 @@ public:
     TrainingLineCore* trainingLineCore() const;
     void setTrainingLineCore(TrainingLineCore* trainingLineCore);
     QRectF cursorRectangle() const;
-public slots:
+public Q_SLOTS:
     void reset();
-signals:
+Q_SIGNALS:
     void lessonChanged();
     void maximumWidthChanged();
     void maximumHeightChanged();
@@ -49,7 +49,7 @@ signals:
     void done();
 protected:
     void paint(QPainter* painter) override;
-private slots:
+private Q_SLOTS:
     void updateLayout();
     void resetTrainingStatus();
     void updateTrainingStatus();

@@ -31,11 +31,11 @@ void ProfileDataAccess::loadProfiles()
     if (!db.isOpen())
         return;
 
-    foreach(Profile* profile, m_profiles)
+    for(Profile* profile : std::as_const(m_profiles))
         profile->deleteLater();
 
     m_profiles.clear();
-    emit profileCountChanged();
+    Q_EMIT profileCountChanged();
 
     QSqlQuery profileQuery = db.exec(QStringLiteral("SELECT id, name, skill_level, last_used_course_id FROM profiles"));
 
@@ -57,7 +57,7 @@ void ProfileDataAccess::loadProfiles()
         m_profiles.append(profile);
     }
 
-    emit profileCountChanged();
+    Q_EMIT profileCountChanged();
 }
 
 int ProfileDataAccess::profileCount() const
@@ -133,7 +133,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
     }
 
     m_profiles.append(profile);
-    emit profileCountChanged();
+    Q_EMIT profileCountChanged();
 }
 
 void ProfileDataAccess::updateProfile(int index)
@@ -230,7 +230,7 @@ void ProfileDataAccess::removeProfile(int index)
     }
 
     m_profiles.removeAt(index);
-    emit profileCountChanged();
+    Q_EMIT profileCountChanged();
     profile->deleteLater();
 }
 

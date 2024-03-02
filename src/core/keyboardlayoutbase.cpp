@@ -19,7 +19,7 @@ const QString& KeyboardLayoutBase::title() const
 void KeyboardLayoutBase::setTitle(const QString& title)
 {
     m_title = title;
-    emit titleChanged();
+    Q_EMIT titleChanged();
 }
 
 const QString& KeyboardLayoutBase::name() const
@@ -32,7 +32,7 @@ void KeyboardLayoutBase::setName(const QString& name)
     if(name != m_name)
     {
         m_name = name;
-        emit nameChanged();
+        Q_EMIT nameChanged();
     }
 }
 

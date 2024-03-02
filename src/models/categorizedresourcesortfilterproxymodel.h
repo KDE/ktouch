@@ -29,7 +29,7 @@ public:
     void setInvertedKeyboardLayoutNameFilter(bool inverted);
     ResourceModel* resourceModel() const;
     void setResourceModel(ResourceModel* resourceModel);
-signals:
+Q_SIGNALS:
     void resourceTypeFilterChanged();
     void keyboardLayoutNameFilterChanged();
     void invertedKeyboardLayoutNameFilterChanged();

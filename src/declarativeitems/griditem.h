@@ -25,7 +25,7 @@ public:
     QColor backgroundColor() const;
     void setBackgroundColor(const QColor& backgroundColor);
     void paint(QPainter* painter) override;
-signals:
+Q_SIGNALS:
     void lineDistanceChanged();
     void colorChanged();
     void backgroundColorChanged();

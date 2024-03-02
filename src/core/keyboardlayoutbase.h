@@ -24,7 +24,7 @@ public:
     const QString& name() const;
     void setName(const QString& name);
 
-signals:
+Q_SIGNALS:
     void titleChanged();
     void nameChanged();
 

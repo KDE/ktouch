@@ -49,7 +49,7 @@ void ErrorsModel::setTrainingStats(TrainingStats* trainingStats)
         }
 
         buildErrorList();
-        emit trainingStatsChanged();
+        Q_EMIT trainingStatsChanged();
     }
 }
 
@@ -101,7 +101,7 @@ QVariant ErrorsModel::headerData(int section, Qt::Orientation orientation, int r
     switch (section)
     {
     case 0:
-        return QVariant("errors");
+        return QStringLiteral("errors");
     default:
         return QVariant();
     }
@@ -129,7 +129,7 @@ void ErrorsModel::buildErrorList()
 
     std::sort(m_errors.begin(), m_errors.end(), lessThan);
 
-    emit maximumErrorCountChanged();
+    Q_EMIT maximumErrorCountChanged();
 
     endResetModel();
 }

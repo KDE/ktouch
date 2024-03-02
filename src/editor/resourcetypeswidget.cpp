@@ -36,7 +36,7 @@ ResourceTypesWidget::ResourceTypesWidget(QWidget* parent) :
 void ResourceTypesWidget::currentRowChanged(const QModelIndex& current)
 {
     const QStandardItem* item = m_typesModel->item(current.row());
-    emit typeSelected(static_cast<ResourceModel::ResourceItemType>(item->data().toInt()));
+    Q_EMIT typeSelected(static_cast<ResourceModel::ResourceItemType>(item->data().toInt()));
 }
 
 #include "moc_resourcetypeswidget.cpp"

@@ -29,7 +29,7 @@ public:
 protected:
     void closeEvent(QCloseEvent* event) override;
 
-private slots:
+private Q_SLOTS:
     void newResource();
     void deleteResource();
     void importResource();

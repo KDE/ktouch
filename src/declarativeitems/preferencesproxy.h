@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE QColor fingerColor(int index);
     Q_INVOKABLE void writeConfig();
 
-signals:
+Q_SIGNALS:
     void configChanged();
 };
 

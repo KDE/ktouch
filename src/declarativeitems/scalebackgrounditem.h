@@ -28,7 +28,7 @@ public:
     QColor color() const;
     void setColor(const QColor& color);
     void paint(QPainter* painter) override;
-signals:
+Q_SIGNALS:
     void startAngleChanged();
     void stopAngleChanged();
     void scaleMarkHeightChanged();
