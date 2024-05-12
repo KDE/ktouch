@@ -147,7 +147,7 @@ msgstr "Nou"
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr "Nou..."
+msgstr "Nou…"
 
 #: src/editor/newresourceassistant.cpp:35
 #, kde-format
@@ -431,12 +431,12 @@ msgstr "Configureu el teclat"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Editor de cursos i la disposició de teclat..."
+msgstr "Editor de cursos i la disposició de teclat…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
 msgid "Configure Keyboard..."
-msgstr "Configura el teclat..."
+msgstr "Configura el teclat…"
 
 #: src/main.cpp:31
 #, kde-format
@@ -1282,7 +1282,7 @@ msgstr "ID del modificador:"
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr "Obri un fitxer de text..."
+msgstr "Obri un fitxer de text…"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
