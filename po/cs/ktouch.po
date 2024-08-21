@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2019, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2019, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2023-10-12 16:39+0200\n"
+"PO-Revision-Date: 2024-08-20 15:24+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -63,7 +63,7 @@ msgstr "Kurz s ID %1 neexistuje"
 #: src/core/userdataaccess.cpp:328
 #, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr "Rozložení kláves s ID %1 neexistuje"
+msgstr "Rozvržení kláves s ID %1 neexistuje"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
@@ -105,12 +105,12 @@ msgstr "Vestavěné kurzy jde pouze prohlížet."
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "Chyba při otevírání rozložení kláves."
+msgstr "Chyba při otevírání rozvržení kláves."
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "Vestavěná rozložení kláves jde pouze prohlížet."
+msgstr "Vestavěná rozvržení kláves jde pouze prohlížet."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "Vybraný soubor nelze otevřít"
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Rozložení kláves se zadaným jménem již existuje."
+msgstr "Rozvržení kláves se zadaným jménem již existuje."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "Nový kurz"
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr "Nové rozložení kláves"
+msgstr "Nové rozvržení kláveso"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -189,27 +189,27 @@ msgstr "Exportovat"
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "Editor kurzů a rozložení kláves"
+msgstr "Editor kurzů a rozvržení kláves"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr "Vytvořit nový kurz nebo rozložení kláves"
+msgstr "Vytvořit nový kurz nebo rozvržení kláves"
 
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr "Smazat aktuálně vybraný kurz nebo rozložení kláves"
+msgstr "Smazat aktuálně vybraný kurz nebo rozvržení kláves"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "Importovat kurz nebo rozložení kláves ze souboru"
+msgstr "Importovat kurz nebo rozvržení kláves ze souboru"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr "Exportovat aktuálně vybraný kurz nebo rozložení kláves do souboru"
+msgstr "Exportovat aktuálně vybraný kurz nebo rozvržení kláves do souboru"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
@@ -219,7 +219,7 @@ msgstr "Chyba při mazání kurzu"
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "Chyba při mazání rozložení kláves"
+msgstr "Chyba při mazání rozvržení kláves"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
@@ -240,7 +240,7 @@ msgstr "Chyba při ukládání kurzu"
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "Chyba při ukládání rozložení kláves"
+msgstr "Chyba při ukládání rozvržení kláves"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
@@ -250,7 +250,7 @@ msgstr "Kurz <b>%1</b> byl smazán"
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr "Rozložení kláves <b>%1</b> smazáno"
+msgstr "Rozvržení kláves <b>%1</b> smazáno"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
@@ -260,7 +260,7 @@ msgstr "Chyba při ukládání kurzu na disk."
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "Chyba při ukládání rozložení kláves na disk."
+msgstr "Chyba při ukládání rozvržení kláves na disk."
 
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
@@ -283,19 +283,19 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
-"Vybrané rozložení kláves již existuje mezi vestavěnými rozloženími kláves."
+"Vybrané rozvržení kláves již existuje mezi vestavěnými rozvrženími kláves."
 
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
 msgid "Import as new keyboard layout"
-msgstr "Importovat jako nové rozložení kláves."
+msgstr "Importovat jako nové rozvržení kláves."
 
 #: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
-"Vybrané rozložení kláves již existuje mezi uživatelskými rozloženími kláves."
+"Vybrané rozvržení kláves již existuje mezi uživatelskými rozvrženími kláves."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
@@ -315,7 +315,7 @@ msgstr "Použít jiný kurz jako šablonu"
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "Použít jiné rozložení kláves jako šablonu"
+msgstr "Použít jiné rozvržení kláves jako šablonu"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -325,13 +325,13 @@ msgstr "Kurz"
 #: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
-msgstr "Rozložení kláves"
+msgstr "Rozvržení klávesnice"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "Rozložení kláves, které se má použít na platformách jiných než X11"
+msgstr "Rozvržení kláves, které se má použít na platformách jiných než X11"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
@@ -425,7 +425,7 @@ msgstr "Nastavit klávesnici"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Editor kurzů a rozložení kláves..."
+msgstr "Editor kurzů a rozvržení kláves..."
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
@@ -509,7 +509,7 @@ msgstr "Všichni tvůrci souborů s rozloženími kláves a lekcemi pro procvič
 #: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr "Spustit editor kurzů a rozložení kláves"
+msgstr "Spustit editor kurzů a rozvržení kláves"
 
 #: src/main.cpp:68
 #, kde-format
@@ -559,7 +559,7 @@ msgstr "Kurzy"
 #: src/models/resourcemodel.cpp:211
 #, kde-format
 msgid "Keyboard Layouts"
-msgstr "Rozložení kláves"
+msgstr "Rozvržení kláves"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
@@ -888,7 +888,7 @@ msgstr "Tato lekce"
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr "Obrázek vašeho rozložení kláves není k dispozici."
+msgstr "Obrázek vašeho rozvržení kláves není k dispozici."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
@@ -979,7 +979,7 @@ msgstr " %"
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr "Rozložení kláves:"
+msgstr "Rozvržení kláves:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
@@ -1281,7 +1281,7 @@ msgstr "0 znaků"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr "Vložit název aktivního systémového rozložení kláves"
+msgstr "Vložit název aktivního systémového rozvržení kláves"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
@@ -1351,7 +1351,7 @@ msgstr "Nastavit název"
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Nastavit rozložení kláves"
+msgstr "Nastavit rozvržení kláves"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1386,17 +1386,17 @@ msgstr "Nastavit text lekce"
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr "Nastavit název rozložení kláves"
+msgstr "Nastavit název rozvržení kláves"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr "Nastavit jméno rozložení kláves"
+msgstr "Nastavit jméno rozvržení kláves"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr "Nastavit rozměry rozložení kláves"
+msgstr "Nastavit rozměry rozvržení kláves"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
