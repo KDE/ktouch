@@ -1,16 +1,16 @@
-# Albanian translation for kdeedu
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the kdeedu package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
-#
+# Albanian translation for ktouch
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the ktouch package.
+# Besnik Bleta <besnik@programeshqip.org>, 2023, 2024.
+# Falënderime Agron Selimajt për pak ndreqje shprehjeje.
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeedu\n"
+"Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2023-12-10 23:02+0200\n"
+"PO-Revision-Date: 2024-02-14 20:19+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
-"Language-Team: Albanian <sq@li.org>\n"
+"Language-Team: Albanian kde-i18n-sq@kde.org\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,16 +22,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE Shqip"
+msgstr "Besnik Bleta"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-shqip@yahoogroups.com"
+msgstr "besnik@programeshqip.org"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -55,7 +54,7 @@ msgstr "Vend për të ruajtur tekste mësimesh personale"
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr "S’ka kur me ID-në %1"
+msgstr "S’ka kurse me ID-në %1"
 
 #: src/core/userdataaccess.cpp:328
 #, kde-format
@@ -65,7 +64,7 @@ msgstr "S’ka skemë tastiere me ID-në %1"
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
 msgid "Hidden"
-msgstr ""
+msgstr "Fshehur"
 
 #: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
 #, kde-format
@@ -75,7 +74,7 @@ msgstr "Në krye majtas"
 #: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
 #, kde-format
 msgid "Top right"
-msgstr "Në krye djathas"
+msgstr "Në krye djathtas"
 
 #: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
 #, kde-format
@@ -137,8 +136,7 @@ msgid "There is already a keyboard layout with the same name."
 msgstr "Ka tashmë një skemë tastiere me të njëjtin emër."
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
 msgstr "E re"
@@ -175,7 +173,7 @@ msgstr "Fshije"
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr "jeImporto"
+msgstr "Importo"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
@@ -183,8 +181,7 @@ msgid "Export"
 msgstr "Eksportoje"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Course and Keyboard Layout Editor"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Përpunues Kursi dhe Skeme Tastiere"
@@ -202,7 +199,7 @@ msgstr "Fshi kursin, ose skemën e tastierës të përzgjedhur tani"
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "i tanishëmImporto një kurs, ose skemë tastiere prej një kartele"
+msgstr "Importo një kurs, ose skemë tastiere prej një kartele"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
@@ -244,12 +241,12 @@ msgstr "Gabim teksa ruhej skemë tastiere"
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr "Kursi b>%1</b> u fshi."
+msgstr "Kursi <b>%1</b> u fshi"
 
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr "Skema e tastierës <b>%1</b> u fshi."
+msgstr "Skema e tastierës <b>%1</b> u fshi"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
@@ -338,7 +335,7 @@ msgstr "Skema e tastierës për përdorim në platforma jo-X11"
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr "Kontrollon nëse janë ndrequr apo jo gabime në shtypje."
+msgstr "Kontrollon nëse duhen ndrequr apo jo gabime shtypjeje."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
@@ -358,14 +355,14 @@ msgstr ""
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
 msgstr ""
-"Tasti Return në fund të një rreshti do të bëjë kalimin në rreshtin pasues."
+"Tasti Return, në fund të një rreshti, do të bëjë kalimin në rreshtin pasues."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
 msgstr ""
-"Tasti Space në fund të një rreshti do të bëjë kalimin në rreshtin pasues."
+"Tasti Space, në fund të një rreshti, do të bëjë kalimin në rreshtin pasues."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
@@ -382,7 +379,7 @@ msgstr ""
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
-"Përpikëria minimum e domosdoshme shtypjesh, në përqindje, për të shkyçur "
+"Përpikëria minimum e domosdoshme e shtypjeve, në përqindje, për të shkyçur "
 "mësimin pasues."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
@@ -395,7 +392,7 @@ msgstr "Ngjyrë nuance tastiere për të theksuar tastet për çdo gisht."
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Sa të tejdukshme duhet të shfaqen ngjyrat për gishtat."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -421,11 +418,10 @@ msgstr "Ngjyra"
 #: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Color Settings"
-msgstr "Rregullime Ngjyrasg"
+msgstr "Rregullime Ngjyrash"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "Formësoni Tastierë"
@@ -433,7 +429,7 @@ msgstr "Formësoni Tastierë"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Përpunues Kursi dhe Skeme Tastiere…"
+msgstr "Përpunues Kursesh dhe Skemash Tastiere…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
@@ -507,7 +503,7 @@ msgstr "Anne-Marie Mahfouf"
 #: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
-msgstr "Mjaft arnime, ndreqje dhe përditësim"
+msgstr "Mjaft arnime, ndreqje dhe përditësime"
 
 #: src/main.cpp:49
 #, kde-format
@@ -522,7 +518,7 @@ msgstr "Vini në punë përpunuesin e kurseve dhe skemave të tastierës"
 #: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "Shtoje shtegun në krye të listës së shtigjeve QML të importuara"
 
 #: src/mainwindow.cpp:59
 #, kde-format
@@ -600,7 +596,7 @@ msgstr "Mësim:"
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
 msgid "Training on:"
-msgstr ""
+msgstr "Stërvitje në"
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -718,10 +714,9 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Që të Shkyçet, Plotësoni Mësimet e Mëparshme"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
-msgstr "Shtoni mësim të ri"
+msgstr "Shtoni Mësim të Ri"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -729,8 +724,7 @@ msgid "Manage Profiles"
 msgstr "Administroni Profile"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
-#| msgid "Manage Profiles"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
 msgstr "Administroni Profile"
@@ -789,7 +783,7 @@ msgstr "Nuk kam, ose kam fare pak përvojë në shtypje në makinë"
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
 msgstr ""
-"Mësimet shkyçen dora-dorës që përmirësohet aftësitë tuaja përgjatë kohës."
+"Mësimet shkyçen dora-dorës që përmirësohen aftësitë tuaja përgjatë kohës."
 
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
@@ -989,7 +983,7 @@ msgstr "Dora e Djathtë"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Patejdukshmëri"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
@@ -1202,7 +1196,7 @@ msgstr "Gishti i vogël i djathtë"
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr ""
+msgstr "Piketë Haptike"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
@@ -1232,13 +1226,13 @@ msgstr "Lloj:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
-msgstr ""
+msgstr "Tasti Tab"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
-msgstr "Capslock"
+msgstr "Tasti Capslock"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:585
@@ -1262,7 +1256,7 @@ msgstr "Tasti Return"
 #: src/ui/keyboardlayoutpropertieswidget.ui:600
 #, kde-format
 msgid "Space"
-msgstr "Tasti hapësirë"
+msgstr "Tasti Hapësirë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:605
@@ -1304,7 +1298,7 @@ msgstr "0 Shenja"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr ""
+msgstr "Ngjitni emrin aktual të skemës së tastierës së sistemit"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
@@ -1340,13 +1334,13 @@ msgstr "Kalo te rreshti pasues me :"
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr "Ret&urn"
+msgstr "Tastin Ret&urn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr "Spa&ce"
+msgstr "Tastin Spa&ce"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
@@ -1444,7 +1438,7 @@ msgstr "Caktoni gisht për tastin"
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr ""
+msgstr "Caktoni piketë haptike tasti"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
 #, kde-format
@@ -1459,17 +1453,17 @@ msgstr "Hiqe shenjën e tastit"
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
 msgid "Set key character value"
-msgstr ""
+msgstr "Caktoni vlerë shenje tasti"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr ""
+msgstr "Caktoni ndryshues shenje tasti"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr ""
+msgstr "Caktoni pozicion shenje tasti"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
 #, kde-format
@@ -1485,261 +1479,3 @@ msgstr "Caktoni etiketë tasti special"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Caktoni ID ndryshuesi tasti special"
-
-#, fuzzy
-#~| msgid "Level Editor"
-#~ msgid "Launch Editor"
-#~ msgstr "Modifikuesi i Niveleve"
-
-#, fuzzy
-#~| msgctxt "Lesson Name"
-#~| msgid "Ukrainian"
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Brazilian"
-#~ msgstr "Ukrainase"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Danish"
-#~ msgstr "Daneze"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "English Dvorak"
-#~ msgstr "Anglisht Dvorak"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "English"
-#~ msgstr "Anglisht"
-
-#, fuzzy
-#~| msgctxt "Keyboard Layout Name"
-#~| msgid "English Dvorak"
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "English Dvorak (United Kingdom)"
-#~ msgstr "Anglisht Dvorak"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "French Dvorak"
-#~ msgstr "Dvorak Francez"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "French"
-#~ msgstr "Franceze"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "German"
-#~ msgstr "Gjermane"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Italian"
-#~ msgstr "Italiane"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Norwegian"
-#~ msgstr "Norvegjeze"
-
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Slovenian"
-#~ msgstr "Sllovene"
-
-#, fuzzy
-#~| msgctxt "Keyboard Layout Name"
-#~| msgid "English Dvorak"
-#~ msgctxt "Keyboard Layout Name"
-#~ msgid "Spanish Dvorak"
-#~ msgstr "Anglisht Dvorak"
-
-#~ msgid "General Options"
-#~ msgstr "Opsione të Përgjithshme"
-
-#~ msgid "Black && White"
-#~ msgstr "Bardhë && Zi"
-
-#~ msgid "Classic"
-#~ msgstr "Klasik"
-
-#~ msgctxt "Num-lock"
-#~ msgid "Num"
-#~ msgstr "Num"
-
-#~ msgid " (modified)"
-#~ msgstr " (modifikuar)"
-
-#~ msgid "abcdefghijklmnopqrstuvwxyz"
-#~ msgstr "abcçddheëfggjhijklllmnnjopqrrrsshtthuvxxhyzzh"
-
-#~ msgctxt "basically all characters on the keyboard"
-#~ msgid "abcdefghijklmnopqrstuvwxyz"
-#~ msgstr "abcçddheëfggjhijklllmnnjopqrrrsshtthuvxxhyzzh"
-
-#~ msgid "***current***  "
-#~ msgstr "***i tanishëm***  "
-
-#~ msgid "Sessions"
-#~ msgstr "Seksionet"
-
-#~ msgid "You rock!"
-#~ msgstr "Je njësh!"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Shiriti Kryesor"
-
-#~ msgid "KTouch"
-#~ msgstr "KTouch"
-
-#~ msgid "Add"
-#~ msgstr "Shto"
-
-#~ msgid "Text color:"
-#~ msgstr "Ngjyra e tekstit:"
-
-#~ msgid "Text color"
-#~ msgstr "Ngjyra e tekstit"
-
-#~ msgid "Background:"
-#~ msgstr "Sfondi:"
-
-#~ msgid "Language id:"
-#~ msgstr "ID e gjuhës:"
-
-#~ msgid "Comments:"
-#~ msgstr "Komente:"
-
-#~ msgid "Close"
-#~ msgstr "Mbylle"
-
-#~ msgid "Comment:"
-#~ msgstr "Komento:"
-
-#~ msgid "Summary"
-#~ msgstr "Përmbledhja"
-
-#~ msgid "1."
-#~ msgstr "1."
-
-#~ msgid "2."
-#~ msgstr "2."
-
-#~ msgid "3."
-#~ msgstr "3."
-
-#~ msgid "4."
-#~ msgstr "4."
-
-#~ msgid "5."
-#~ msgstr "5."
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Score"
-#~ msgstr "Rezultati"
-
-#~ msgid "Browse..."
-#~ msgstr "Shfleto..."
-
-#, fuzzy
-#~| msgid "&Ok"
-#~ msgid "&OK"
-#~ msgstr "&Ok"
-
-#~ msgid "Text:"
-#~ msgstr "Teksti:"
-
-#~ msgid "Fast"
-#~ msgstr "Me Shpejtësi"
-
-#~ msgid "Sound"
-#~ msgstr "Zëri"
-
-#~ msgid "Correctness:"
-#~ msgstr "Korrektësia:"
-
-#~ msgid "lines"
-#~ msgstr "rreshta"
-
-#~ msgid "Lecture:"
-#~ msgstr "Lektura:"
-
-#~ msgid "a:"
-#~ msgstr "a:"
-
-#~ msgid "e:"
-#~ msgstr "e:"
-
-#~ msgid "b:"
-#~ msgstr "b:"
-
-#~ msgid "f:"
-#~ msgstr "f:"
-
-#~ msgid "c:"
-#~ msgstr "c:"
-
-#~ msgid "g:"
-#~ msgstr "g:"
-
-#~ msgid "d:"
-#~ msgstr "d:"
-
-#~ msgid "h:"
-#~ msgstr "h:"
-
-#~ msgid "lectureLabel2"
-#~ msgstr "lectureLabel2"
-
-#~ msgid "Level:"
-#~ msgstr "Niveli:"
-
-#~ msgid "levelLabel2"
-#~ msgstr "levelLabel2"
-
-#~ msgid "Clear History"
-#~ msgstr "Pastro Historinë"
-
-#~ msgid "Level"
-#~ msgstr "Niveli"
-
-#~ msgid "Current level"
-#~ msgstr "Niveli i tanishëm"
-
-#~ msgid "Speed"
-#~ msgstr "Shpejtësia"
-
-#~ msgid "&Add"
-#~ msgstr "&Shto"
-
-#~ msgid "Ins, Alt+A"
-#~ msgstr "Ins, Alt+A"
-
-#~ msgid "Del, Alt+R"
-#~ msgstr "Del, Alt+R"
-
-#~ msgid "&Close"
-#~ msgstr "&Mbylle"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Dvorak - ABCD"
-#~ msgstr "Dvorak - ABCD"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Hellenic"
-#~ msgstr "Helenike"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Latin"
-#~ msgstr "Latin"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Norwegian"
-#~ msgstr "Norvegjeze"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Slovenian"
-#~ msgstr "Sllovene"
-
-#~ msgctxt "Lesson Name"
-#~ msgid "Ukrainian"
-#~ msgstr "Ukrainase"
-
-#~ msgid "F&ile"
-#~ msgstr "Karte&lë"
