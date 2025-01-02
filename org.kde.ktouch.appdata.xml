@@ -9,6 +9,7 @@
   <launchable type="desktop-id">org.kde.ktouch.desktop</launchable>
   <name>KTouch</name>
   <name xml:lang="ar">معلم طباعة</name>
+  <name xml:lang="bg">KTouch</name>
   <name xml:lang="bs">KTouch</name>
   <name xml:lang="ca">KTouch</name>
   <name xml:lang="ca-valencia">KTouch</name>
@@ -39,6 +40,7 @@
   <name xml:lang="ru">KTouch</name>
   <name xml:lang="sk">KTouch</name>
   <name xml:lang="sl">KTouch</name>
+  <name xml:lang="sq">KTouch</name>
   <name xml:lang="sv">Ktouch</name>
   <name xml:lang="tr">K On Parmak</name>
   <name xml:lang="uk">KTouch</name>
@@ -47,6 +49,7 @@
   <name xml:lang="zh-TW">打字練習_KTouch</name>
   <summary>Touch Typing Tutor</summary>
   <summary xml:lang="ar">معلم طباعة باللمس</summary>
+  <summary xml:lang="bg">Програма за обучение за писане с всички пръсти</summary>
   <summary xml:lang="bs">Intruktor kucanja na tastaturi</summary>
   <summary xml:lang="ca">Tutor de mecanografia</summary>
   <summary xml:lang="ca-valencia">Tutor de mecanografia</summary>
@@ -76,6 +79,7 @@
   <summary xml:lang="ru">Клавиатурный тренажёр</summary>
   <summary xml:lang="sk">Výuka písania na stroji</summary>
   <summary xml:lang="sl">Učenje slepega tipkanja</summary>
+  <summary xml:lang="sq">Kujdestar Shtypjeje Në Tastierë</summary>
   <summary xml:lang="sv">Maskinskrivningsträning</summary>
   <summary xml:lang="tr">On Parmak Öğretici</summary>
   <summary xml:lang="uk">Навчання комп’ютерного набору</summary>
@@ -85,6 +89,7 @@
   <description>
     <p>KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.</p>
     <p xml:lang="ar">معلم الطباعة هو مدرب آلة كاتبة لتعلم لمس الكتابة. يوفر لك نصًا للتدريب عليه ويتكيف مع مستويات مختلفة اعتمادًا على مدى مهارتك. يعرض لوحة المفاتيح ويشير إلى المفتاح الذي يجب الضغط عليه بعد ذلك والإصبع الصحيح الذي يجب استخدامه. تتعلم الكتابة بكل أصابعك ، خطوة بخطوة ، دون الحاجة إلى إلقاء نظرة على لوحة المفاتيح للعثور على مفاتيحك.  إنه مناسب لجميع الأعمار ومعلم الكتابة المثالي للمدارس والجامعات والاستخدام الشخصي. يأتي معلم الطباعة بالعشرات من الدورات التدريبية المختلفة في العديد من اللغات ومحرر الدورة التدريبية المريح. يتم دعم تخطيطات لوحة المفاتيح المختلفة ويمكن إنشاء تخطيطات جديدة معرّفة من قبل المستخدم. أثناء التدريب، يقوم معلم الطابعة بجمع معلومات إحصائية شاملة لمساعدتك أنت أو معلمك على تحليل تقدمك.</p>
+    <p xml:lang="bg">KTouch е програма тренажор за пишеща машина за научаване на писане с десет пръста. Предоставя ви текст, върху който да тренирате, и се настройва на различни нива в зависимост от това колко сте добри. Той показва вашата клавиатура и показва кой следващ клавиш да натиснете и кой е правилният пръст, който да използвате. Научавате се да пишете с всички пръсти, стъпка по стъпка, без да се налага да поглеждате към клавиатурата, за да намерите клавишите си. Той е удобен за всички възрасти и идеалният учител по писане за училища, университети и лична употреба. KTouch се доставя с десетки различни курсове на много езици и удобен редактор на курсове. Поддържат се различни клавиатурни подредби и могат да се създават нови дефинирани от потребителя подредби. По време на обучение KTouch събира изчерпателна статистическа информация, за да помогне на вас или вашия учител да анализирате напредъка си.</p>
     <p xml:lang="bs">KTouch je trener za učenje kucanja na pisaćoj mašini. On vam pruža tekst za trenirati i prilagođava na različite nivoe zavisno od toga koliko ste dobri. On prikazuje tastaturu i ukazuje na to koji taster pritisnuti sljedeći i koji je ispravan prst za korištenje. Učite kucanje sa svim prstima, korak po korak, bez da pogledom dolje na tastaturi pronađete svoje tastere. On je pogodan za sve uzraste i savršen učitelj kucanja za škole, univerzitete i osobnu upotrebu. KTouch dolazi s desecima različitih kurseva za mnoge jezike i udobnim urednikom kurseva. Različite tastature su podržane i novi korisnički definirani rasporedi mogu biti kreirani. Tokom treninga, KTouch prikuplja sveobuhvatne statističke podatke koji će pomoći vama ili vašem učitelj da analizirate vaš napredak.</p>
     <p xml:lang="ca">El KTouch és un entrenador de mecanografia per a aprendre a teclejar. Proporciona text per a entrenar i s'ajusta a diferents nivells en funció del vostre nivell. Mostra el teclat i indica la tecla següent a prémer i quin és el dit correcte a utilitzar. Aprendreu mecanografia amb tots els dits, pas a pas, sense haver de mirar el teclat per a cercar les tecles. És apropiat per a totes les edats i és el tutor de mecanografia perfecte per a les escoles, universitats i ús personal. El KTouch es distribueix amb dotzenes de cursos diferents en molts idiomes i és un editor còmode de cursos. S'accepten diferents disposicions de teclat i se'n poden crear de noves definides per l'usuari. Durant l'entrenament, el KTouch acumula informació estadística global per a ajudar-vos a analitzar el progrés.</p>
     <p xml:lang="ca-valencia">KTouch és un entrenador de mecanografia per a aprendre a teclejar. Proporciona text per a entrenar i s'ajusta a diferents nivells en funció del vostre nivell. Mostra el teclat i indica la tecla següent a prémer i quin és el dit correcte que s'ha d'utilitzar. Aprendreu mecanografia amb tots els dits, pas a pas, sense haver de mirar el teclat per a buscar les tecles. És apropiat per a totes les edats i és el tutor de mecanografia perfecte per a les escoles, universitats i ús personal. KTouch es distribuïx amb dotzenes de cursos diferents en molts idiomes i és un editor còmode de cursos. S'accepten diferents disposicions de teclat i se'n poden crear de noves definides per l'usuari. Durant l'entrenament, KTouch acumula informació estadística global per a ajudar-vos a analitzar el progrés.</p>
@@ -110,6 +115,7 @@
     <p xml:lang="ru">KTouch — это тренажёр для обучения методу слепой печати текста. Он предоставляет текст для тренировки и подстраивается под разные уровни навыков пользователя. Программа отображает клавиатуру и указывает, какую клавишу следует нажать следующей и какой палец при этом использовать. Этот тренажёр позволяет научиться печатать всеми пальцами не глядя на клавиатуру. Он подходит для всех возрастов и является идеальным средством обучения слепой печати для школ, университетов и личного пользования. KTouch предоставляет десятки различных курсов на многих языках, а также позволяет редактировать упражнения. Поддерживаются различные раскладки клавиатуры, а также доступно создание пользовательских раскладок. Во время обучения KTouch собирает подробную статистическую информацию, позволяющую проанализировать прогресс.</p>
     <p xml:lang="sk">KTouch je tréner písacieho stroja na výuku písania na stroji. Poskytuje vám texty na tréning a úpravu na rôzne úrovne v závislosti od vašej pokročilosti. Zobrazuje klávesnicu a ukazuje, ktoré klávesy treba najbližšie stlačiť a ktorý je správny prst na použitie. Naučíte sa písať všetkými prstami, krok za krokom bez nutnosti pozerať sa dolu na klávesnicu, aby ste našli klávesy. Je vhodný pre všetky vekové skupiny a výborný program pre školy, univerzity a osobné použitie. KTouch obsahuje mnoho rôznych kurzov v mnohých jazykoch a komfortný editor kurzov. Podporuje rôzne rozloženia klávesnice a umožňuje vytvoriť vlastné rozloženia. Počas tréningu zbiera štatistické informácie, aby vám pomohol analyzovať váš postup.</p>
     <p xml:lang="sl">KTouch je program za učenje slepega tipkanja. Vključena ima besedila na katerih se lahko učite in jih sproti prilagaja vašim sposobnostim. Prikazuje tudi vašo tipkovnico in na njej označi katero tipko je treba pritisniti naslednjo in s katerim prstom. Korak za korakom se boste naučili tipkati z vsemi prsti, brez da bi morali gledati tipkovnico in na njej iskati tipke. Primeren je za vse starosti in je odlično orodje za učenje tipkanja v šoli, na univerzah ali doma. KTouch vsebuje številne tečaje v raznolikih jezikih in tudi urejevalnik tečajev. Podprte so različne razporeditve tipk, ustvarite pa lahko tudi lastne. Med vadbo KTouch zbira statistične podatke, ki lahko vam oz. vašem učitelju pomagajo pri preučevanju vašega napredka.</p>
+    <p xml:lang="sq">KTouch është një stërvitës shtypjeje në tastierë për të mësuar shtypje në të. Ju jep tekst për t’u stërvitur dhe përshtat nivele të ndryshme, në varësi se sa të zotë jeni. Shfaq tastierën tuaj dhe tregon se cili tast të shtype më pas dhe cili është gishti i saktë që duhet përdorur. Ju mësoni të shtypni me krejt gishtat, hap pas hapi, pa u dashur të shihni tastierën që të jeni gishtat. Është i përshtatshëm për krejt moshat dhe kujdestar i përsosur shtypjeje, për shkolla, universitete dhe përdorim personal. KTouch-i vjen me dhjetëra kurse të ndryshme në mjaft gjuhë dhe një përpunues të rehatshëm kursesh. Mbulohen skema të ndryshme tastiere dhe mund të krijohen skema të reja, të ujdisura nga përdoruesit. Gjatë stërvitjes, KTouch-i grumbullon informacion shterues statistikor, për t’ju ndihmuar ju, ose mësuesin tuaj të analizoni ecurinë tuaj.</p>
     <p xml:lang="sv">Ktouch är ett program för att lära sig maskinskrivning. Det tillhandahåller en text att öva på, och justeras till olika nivåer, beroende på hur bra du är. Det visar tangentbordet och vilken tangent som ska tryckas ner härnäst, och det riktiga fingret som ska användas. Man lär sig att skriva med alla fingrar, steg för steg, utan att behöva titta ner på tangentbordet hela tiden för att hitta rätt tangenter. Det är bekvämt för alla åldrar och är perfekt för skrivmaskinsövning på skolor, universitet och vid personlig användning. Ktouch levereras med dussintals kurser på många språk och en bekväm kurseditor. Olika tangentbordslayouter stöds och nya användardefinierade layouter kan skapas. Under övningar samlar Ktouch in omfattande statistisk information för att hjälpa dig eller din lärare att analysera dina framsteg.</p>
     <p xml:lang="tr">K On Parmak, on parmak yazma çalıştıran bir daktilo eğitmenidir. Ne kadar iyi olduğunuza bağlı olarak farklı düzeylerde eğitim almanız için metin hazırlar ve ayarlar. Klavyenizi görüntüler ve bir sonraki düğmeye hangi klavye düğmesinin kullanılacağını belirtir. Düğmeleri bulmak için klavyeye bakmanıza gerek kalmadan, adım adım ilerleyerek tüm parmaklarınızla yazmayı öğrenirsiniz. Her yaşa uygun, okullar, üniversiteler ve kişisel kullanım için mükemmel derecede yazmayı öğrenmek için uygundur. K On Parmak birçok dilde düzinelerce farklı ders ve kolay bir ders düzenleyiciyle birlikte gelir. Farklı klavye düzenlerini destekler ve yeni kullanıcı tanımlı düzenler oluşturulabilir. Eğitim sırasında, K On Parmak size veya öğretmeninin ilerlesini çözümlemede size yardımcı olacak kapsamlı istatistiki bilgileri de toplar.</p>
     <p xml:lang="uk">KTouch — програма для навчання машинопису. Ви вводитимете навчальний текст, а програма визначатиме рівень складності цього тексту, залежно від ваших навичок. У вікні програми ви зможете бачити клавіатуру, підсвічування для клавіш, які слід натискати, та рекомендації щодо пальця, яким це слід робити. Ви зможете навчитися десятипальцевому набору, крок за кроком, не дивлячись на клавіатуру і не шукаючи на ній потрібних вам клавіш. Програму пристосовано для користувачів будь-якого віку, вона є чудовим засобом навчання для шкіл, університетів та особистих потреб. Разом з KTouch постачаються десятки різних курсів багатьма мовами, а також зручний редактор курсів. Передбачено підтримку різних розкладок клавіатур та можливість визначення власних розкладок. Під час навчання KTouch збирає статистичні дані, які допоможуть вам та вашому наставнику проаналізувати поступ навчання.</p>
@@ -125,6 +131,7 @@
     <screenshot type="default">
       <caption>Training with KTouch</caption>
       <caption xml:lang="ar">التدرب مع معلم الطباعة</caption>
+      <caption xml:lang="bg">Обучение с KTouch</caption>
       <caption xml:lang="ca">Entrenant amb el KTouch</caption>
       <caption xml:lang="ca-valencia">Entrenant amb KTouch</caption>
       <caption xml:lang="cs">Procvičování s KTouch</caption>
@@ -149,6 +156,7 @@
       <caption xml:lang="ru">Тренировка с KTouch</caption>
       <caption xml:lang="sk">Tréning s KTouch</caption>
       <caption xml:lang="sl">Vaje s KTouch</caption>
+      <caption xml:lang="sq">Stërvitje me KTouch-in</caption>
       <caption xml:lang="sv">Övning med Ktouch</caption>
       <caption xml:lang="tr">K On Parmak ile egzersiz</caption>
       <caption xml:lang="uk">Вправляння у KTouch</caption>
@@ -160,6 +168,7 @@
     <screenshot>
       <caption>Selecting a Lesson for Training</caption>
       <caption xml:lang="ar">اختر درس للتدرب</caption>
+      <caption xml:lang="bg">Избор на урок за обучение</caption>
       <caption xml:lang="ca">Selecció d'una lliçó per a entrenar-se</caption>
       <caption xml:lang="ca-valencia">Seleccioneu una lliçó per a entrenar-se</caption>
       <caption xml:lang="cs">Výběr lekce k učení</caption>
@@ -184,6 +193,7 @@
       <caption xml:lang="ru">Выбор упражнения для тренировки</caption>
       <caption xml:lang="sk">Výber lekcie pre tréning</caption>
       <caption xml:lang="sl">Izbira lekcije za vadbo</caption>
+      <caption xml:lang="sq">Përzgjedhje e një Mësimi për Stërvitje</caption>
       <caption xml:lang="sv">Välja en lektion för övning</caption>
       <caption xml:lang="tr">Egzersiz için Bir Ders Seçme</caption>
       <caption xml:lang="uk">Вибір уроку для навчання</caption>
@@ -195,6 +205,7 @@
     <screenshot>
       <caption>Reviewing Typing Performance after Finishing a Lesson</caption>
       <caption xml:lang="ar">يراجع أداء الطباعة بعد الانتهاء من الدرس</caption>
+      <caption xml:lang="bg">Преглед на производителността при писане след завършване на урок</caption>
       <caption xml:lang="ca">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
       <caption xml:lang="ca-valencia">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
       <caption xml:lang="de">Überprüfen der Eingabegeschwindigkeit nach Beendigung einer Lektion</caption>
@@ -218,6 +229,7 @@
       <caption xml:lang="ru">Просмотр результатов после выполнения упражнения</caption>
       <caption xml:lang="sk">Kontrola výkonnosti písania po dokončení lekcie</caption>
       <caption xml:lang="sl">Pregled uspešnosti tipkanja po zaključku lekcije</caption>
+      <caption xml:lang="sq">Shqyrtim i Suksesit Në Shtypje, pas Përfundimit të një Mësimi</caption>
       <caption xml:lang="sv">Granska skrivprestation efter en lektion har avslutats</caption>
       <caption xml:lang="tr">Bir Dersi Bitirdikten Sonra Başarımı Gözden Geçirme</caption>
       <caption xml:lang="uk">Огляд поступу навчання після завершення уроку</caption>
@@ -230,6 +242,7 @@
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
   <developer_name xml:lang="ar">مجتمع كِيدِي</developer_name>
+  <developer_name xml:lang="bg">Общността на KDE</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
@@ -256,6 +269,7 @@
   <developer_name xml:lang="ru">Сообщество KDE</developer_name>
   <developer_name xml:lang="sk">KDE Komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
+  <developer_name xml:lang="sq">Bashkësia KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
@@ -267,6 +281,9 @@
   </provides>
   <content_rating type="oars-1.0"/>
   <releases>
+    <release version="24.12.1" date="2025-01-09"/>
+    <release version="24.12.0" date="2024-12-12"/>
+    <release version="24.08.3" date="2024-11-07"/>
     <release version="24.08.2" date="2024-10-10"/>
     <release version="24.08.1" date="2024-09-12"/>
     <release version="24.08.0" date="2024-08-22"/>

@@ -2,162 +2,163 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2007-04-22 10:48+0000\n"
-"Last-Translator: Zlatko Popov <zlatkopopov@fsa-bg.org>\n"
+"PO-Revision-Date: 2024-10-29 21:16+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Минчо Кондарев"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mkondarev@yahoo.de"
 
 #: src/bindings/stringformatter.cpp:31
 #, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr ""
+msgstr "Невалидна версия на базата данни '%1'."
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
-#, fuzzy, kde-format
+#, kde-format
 msgid "Custom Lessons"
-msgstr "&Начало"
+msgstr "Персонализирани уроци"
 
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr ""
+msgstr "Място за съхранение на лични урочни текстове"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr ""
+msgstr "Няма курс с ID %1"
 
 #: src/core/userdataaccess.cpp:328
-#, fuzzy, kde-format
+#, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Няма клавиатурна подредба с ID %1"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
-#, fuzzy, kde-format
+#, kde-format
 msgid "Hidden"
-msgstr "Скриване на клавиатурата"
+msgstr "Скрити"
 
 #: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
 #, kde-format
 msgid "Top left"
-msgstr ""
+msgstr "Горе вляво"
 
 #: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
 #, kde-format
 msgid "Top right"
-msgstr ""
+msgstr "Горе вдясно"
 
 #: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
 #, kde-format
 msgid "Bottom left"
-msgstr ""
+msgstr "Долу вляво"
 
 #: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
 #, kde-format
 msgid "Bottom right"
-msgstr ""
+msgstr "Долу вдясно"
 
 #: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr ""
+msgstr "Грешка при отваряне на курса"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr ""
+msgstr "Вградените курсове могат само да се разглеждат."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Грешка при отваряне на клавиатурната подредба"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr ""
+msgstr "Вградените клавиатурни подредби могат само да се разглеждат."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: src/editor/lessontexteditor.cpp:62
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 Character"
 msgid_plural "%1 Characters"
-msgstr[0] "Знаци: "
-msgstr[1] "Знаци: "
+msgstr[0] "%1 знак"
+msgstr[1] "%1 знак"
 
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "Текстови файлове (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
-msgstr ""
+msgstr "Избраният файл не можа да бъде отворен"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr ""
+msgstr "Вече има клавиатурна подредба със същото име."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "New"
-msgstr ""
+msgstr "Нов"
 
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr ""
+msgstr "Нов..."
 
 #: src/editor/newresourceassistant.cpp:35
-#, fuzzy, kde-format
+#, kde-format
 msgid "New course"
-msgstr "Нова цветова схема"
+msgstr "Нов курс"
 
 #: src/editor/newresourceassistant.cpp:39
-#, fuzzy, kde-format
+#, kde-format
 msgid "New keyboard layout"
-msgstr "Клавиатурна подредба"
+msgstr "Нова клавиатурна подредба"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
 msgid "Template"
-msgstr ""
+msgstr "Шаблон"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
@@ -166,109 +167,109 @@ msgstr ""
 #: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Изтриване"
 
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr ""
+msgstr "Импортиране"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Експортиране"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "Редактор на клавиатурни подредби"
+msgstr "Редактор на курс и клавиатурна подредба"
 
 #: src/editor/resourceeditor.cpp:67
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Създаване на нов курс или клавиатурна подредба"
 
 #: src/editor/resourceeditor.cpp:69
-#, fuzzy, kde-format
+#, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Изтрийте текущия избран курс или клавиатурна подредба"
 
 #: src/editor/resourceeditor.cpp:79
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Импортиране на курс или клавиатурна подредба от файл"
 
 #: src/editor/resourceeditor.cpp:81
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Експортирайте текущия избран курс или клавиатурна подредба във файл"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr ""
+msgstr "Грешка при изтриването на курса"
 
 #: src/editor/resourceeditor.cpp:195
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Грешка при изтриване на клавиатурната подредба"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr ""
+msgstr "XML файлове (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr ""
+msgstr "Избраният файл не можа да бъде импортиран."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr ""
+msgstr "Грешка при запазване на курса"
 
 #: src/editor/resourceeditor.cpp:290
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Грешка при запазване на клавиатурната подредба"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr ""
+msgstr "Курсът <b>%1</b> е изтрит"
 
 #: src/editor/resourceeditor.cpp:381
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr "Клавиатурна подредба"
+msgstr "Клавиатурната подредба <b>%1</b> е изтрита"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr ""
+msgstr "Грешка при запазване на курса на диск."
 
 #: src/editor/resourceeditor.cpp:449
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "неименувана клавиатурна подредба"
+msgstr "Грешка при запазване на клавиатурната подредба на диск."
 
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr ""
+msgstr "Избраният курс вече присъства като вграден курс."
 
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
-msgstr ""
+msgstr "Импортиране като нов курс"
 
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr ""
+msgstr "Избраният курс вече присъства като потребителски курс."
 
 #: src/editor/resourceeditor.cpp:613
 #, kde-format
@@ -276,83 +277,88 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
+"Избраната клавиатурна подредба вече присъства като вградена клавиатурна "
+"подредба."
 
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import as new keyboard layout"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Импортиране като нова клавиатурна подредба"
 
 #: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
+"Избраната клавиатурна подредба вече присъства като потребителска клавиатурна "
+"подредба."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
-msgstr ""
+msgstr "Възстановяване"
 
 #: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
 msgid "Dismiss"
-msgstr ""
+msgstr "Отхвърляне"
 
 #: src/editor/resourcetemplatewidget.cpp:45
 #, kde-format
 msgid "Use another course as template"
-msgstr ""
+msgstr "Използвайте друг курс като шаблон"
 
 #: src/editor/resourcetemplatewidget.cpp:48
-#, fuzzy, kde-format
+#, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Използване на друга клавиатурна подредба като шаблон"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
 msgid "Course"
-msgstr ""
+msgstr "курс"
 
 #: src/editor/resourcetypeswidget.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard layout"
-msgstr "Клавиатурна подредба"
+msgstr "Подредба на клавиатурата"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr ""
+msgstr "Клавиатурната подредба за използване на различни от X11 платформи"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
+msgstr "Контролира дали грешките при въвеждане трябва да се коригират или не."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
 #, kde-format
 msgid "Controls the visibility of the keyboard during training."
-msgstr ""
+msgstr "Контролира видимостта на клавиатурата по време на тренировка."
 
 #. i18n: ectx: label, entry (ShowStatistics), group (Training)
 #: src/ktouch.kcfg:23
 #, kde-format
 msgid "Controls the visibility of realtime statistics during training."
 msgstr ""
+"Контролира видимостта на статистиката в реално време по време на обучение."
 
 #. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
-msgstr ""
+msgstr "Клавишът за връщане в края на ред ще превключи към следващия ред."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
-msgstr ""
+msgstr "Клавишът за интервал в края на ред ще превключи към следващия ред."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
@@ -360,6 +366,8 @@ msgstr ""
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
+"Минималното необходимо количество удари в минута за отключване на следващия "
+"урок."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
@@ -367,70 +375,74 @@ msgstr ""
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
+"Минималната необходима точност на въвеждане в проценти за отключване на "
+"следващия урок."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
 msgstr ""
+"Цветът за оцветяване на клавиатурата за подчертаване на клавишите за всеки "
+"пръст."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Как трябва да се показват прозрачни цветове на пръстите."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
 #, kde-format
 msgid "The ID of the last used profile."
-msgstr ""
+msgstr "ID на последния използван профил."
 
 #: src/ktouchcontext.cpp:129
-#, fuzzy, kde-format
+#, kde-format
 msgid "Training"
-msgstr "&Сесия"
+msgstr "Обучение"
 
 #: src/ktouchcontext.cpp:129
-#, fuzzy, kde-format
+#, kde-format
 msgid "Training Settings"
-msgstr "Статистика за сесиите"
+msgstr "Настройки за обучение"
 
 #: src/ktouchcontext.cpp:130
-#, fuzzy, kde-format
+#, kde-format
 msgid "Colors"
-msgstr "Настройки на цветовете"
+msgstr "Цветове"
 
 #: src/ktouchcontext.cpp:130
-#, fuzzy, kde-format
+#, kde-format
 msgid "Color Settings"
-msgstr "Настройки на цветовете"
+msgstr "Настройки на цвета"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Конфигуриране на клавиатура"
 
 #: src/ktouchcontext.cpp:160
-#, fuzzy, kde-format
+#, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Редактор на клавиатурни подредби"
+msgstr "Редактор на курс и клавиатурна подредба..."
 
 #: src/ktouchcontext.cpp:170
-#, fuzzy, kde-format
+#, kde-format
 msgid "Configure Keyboard..."
-msgstr "Отваряне на клавиатурен файл..."
+msgstr "Конфигуриране на клавиатурата..."
 
 #: src/main.cpp:31
-#, fuzzy, kde-format
+#, kde-format
 msgid "Typewriting Trainer"
-msgstr "Ред за въвеждане"
+msgstr "Трениране на машинопис"
 
 #: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
-msgstr ""
+msgstr "Научете и практикувайте писане на машина"
 
 #: src/main.cpp:36
 #, kde-format
@@ -438,121 +450,123 @@ msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
+"Авторско право (C) 2011-2015 от Себастиан Готфрид\n"
+"Авторско право (C) 2000-2007 от Håvard Frøiland и Andreas Nicolai"
 
 #: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
-msgstr ""
+msgstr "Себастиан Готфрид"
 
 #: src/main.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "Current maintainer"
-msgstr "Current maintainer and programmer"
+msgstr "Текущ поддържащ"
 
 #: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
-msgstr ""
+msgstr "Андреас Николай"
 
 #: src/main.cpp:44
-#, fuzzy, kde-format
+#, kde-format
 msgid "Former maintainer and programmer"
-msgstr "Current maintainer and programmer"
+msgstr "Бивш поддържащ и програмист"
 
 #: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
-msgstr ""
+msgstr "Håvard Frøiland"
 
 #: src/main.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "Original author"
-msgstr "Original author, project admin"
+msgstr "Оригинален автор"
 
 #: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
-msgstr ""
+msgstr "Дейвид Виньони"
 
 #: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
-msgstr "Creator of the SVG icon"
+msgstr "Автор на SVG икона"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr ""
+msgstr "Ан-Мари Мафуф"
 
 #: src/main.cpp:48
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lots of patches, fixes and updates"
-msgstr "Lots of patches, fixes, updates"
+msgstr "Много пачове, корекции и актуализации"
 
 #: src/main.cpp:49
-#, fuzzy, kde-format
+#, kde-format
 msgid "All the creators of training and keyboard files"
-msgstr "Текущо зареден файл с клавиатурни подредби"
+msgstr "Всички създатели на обучителни и клавиатурни файлове"
 
 #: src/main.cpp:66
-#, fuzzy, kde-format
+#, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Стартирайте редактора на курса и клавиатурната подредба"
 
 #: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "Добавяне на пътя към списъка с пътища за импортиране на QML"
 
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "%1 е срещнал грешка по време на изпълнение и трябва да бъде затворен."
 
 #: src/models/charactersmodel.cpp:195
-#, fuzzy, kde-format
+#, kde-format
 msgid "Character"
-msgstr "Знаци: "
+msgstr "Символ"
 
 #: src/models/charactersmodel.cpp:197
-#, fuzzy, kde-format
+#, kde-format
 msgid "Modifier ID"
-msgstr "Промяна / други клавиши:"
+msgstr "ID на модификатора"
 
 #: src/models/charactersmodel.cpp:199
 #, kde-format
 msgid "Position"
-msgstr ""
+msgstr "Позиция"
 
 #: src/models/lessonmodel.cpp:67
 #, kde-format
 msgid "<No title>"
-msgstr ""
+msgstr "<Без заглавие>"
 
 #: src/models/lessonmodel.cpp:69
-#, fuzzy, kde-format
+#, kde-format
 msgid "<p>New characters: %1</p><p>%2</p>"
-msgstr "нови знаци"
+msgstr "<p>Нови знаци: %1</p><p>%2</p>"
 
 #: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
-#, fuzzy, kde-format
+#, kde-format
 msgid "Title"
-msgstr "Заглавие:"
+msgstr "Заглавие"
 
 #: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Courses"
-msgstr ""
+msgstr "Курсове"
 
 #: src/models/resourcemodel.cpp:211
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard Layouts"
-msgstr "&Клавиатурни подредби"
+msgstr "Клавиатурни подредби"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
 msgid "Name: %1"
-msgstr ""
+msgstr "Име: %1"
 
 #: src/qml/common/LearningProgressChart.qml:39
 #: src/qml/meters/AccuracyMeter.qml:17
@@ -562,61 +576,61 @@ msgstr "Точност"
 
 #: src/qml/common/LearningProgressChart.qml:48
 #: src/qml/meters/CharactersPerMinuteMeter.qml:20
-#, fuzzy, kde-format
+#, kde-format
 msgid "Characters per Minute"
-msgstr "Знаци за минута"
+msgstr "Знаци в минута"
 
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
 msgid "<i>Unknown</i>"
-msgstr ""
+msgstr "<i>Неизвестен</i>"
 
 #: src/qml/common/LearningProgressChart.qml:81
 #, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
-msgstr ""
+msgstr "урок:"
 
 #: src/qml/common/LearningProgressChart.qml:85
-#, fuzzy, kde-format
+#, kde-format
 msgid "Training on:"
-msgstr "&Сесия"
+msgstr "Обучение по:"
 
 #: src/qml/common/LearningProgressChart.qml:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "Accuracy:"
-msgstr "Точност"
+msgstr "Точност:"
 
 #: src/qml/common/LearningProgressChart.qml:95
-#, fuzzy, kde-format
+#, kde-format
 msgid "Characters per Minute:"
 msgstr "Знаци в минута:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "Клавиатурна подредба"
+msgstr "Курсове за вашата клавиатурна подредба"
 
 #: src/qml/homescreen/CourseSelector.qml:163
-#, fuzzy, kde-format
+#, kde-format
 msgid "Other Courses"
-msgstr "Нова цветова схема"
+msgstr "Други курсове"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
-#, fuzzy, kde-format
+#, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr "Ред за въвеждане"
+msgstr "Добре дошли в обучението по машинопис"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
-#, fuzzy, kde-format
+#, kde-format
 msgid "Start Training"
-msgstr "&Сесия"
+msgstr "Започнете обучение"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
-#, fuzzy, kde-format
+#, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "неименувана клавиатурна подредба"
+msgstr "Избраният курс е предназначен за конкретна клавиатурна подредба."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
@@ -624,6 +638,8 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
+"Избраният курс не е предназначен за активната клавиатурна подредба на вашия "
+"компютър."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -632,36 +648,40 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"KTouch не може да превключва или настройва клавиатурни подредби. Преди "
+"обучението трябва да конфигурирате компютъра си да използва правилната "
+"клавиатурна подредба. В противен случай ще трябва да използвате текущата си "
+"клавиатурна подредба, за да въведете текста на урока."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "Configure Keyboard"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Конфигуриране на клавиатура"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr "Клавиатурна подредба"
+msgstr "Урокът <b>%1</b> е изтрит."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "Урокът без заглавие е изтрит."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Отмяна"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "Потвърждаване"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
-#, fuzzy, kde-format
+#, kde-format
 msgid "Edit lesson"
-msgstr "Текст в реда за въвеждане"
+msgstr "Редактиране на урока"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -676,173 +696,174 @@ msgid "Title:"
 msgstr "Заглавие:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lesson text"
-msgstr "Текст в реда за въвеждане"
+msgstr "Текст на урока"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr ""
+msgstr "Завършете предишния урок за отключване"
 
 #: src/qml/homescreen/LessonSelector.qml:182
 #, kde-format
 msgid "Add New Lesson"
-msgstr ""
+msgstr "Добавете нов урок"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
-#, fuzzy, kde-format
+#, kde-format
 msgid "Manage Profiles"
-msgstr "Създаване на нова клавиатура!"
+msgstr "Управление на профили"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr "Създаване на нова клавиатура!"
+msgstr "Управление на профили"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr ""
+msgstr "Обучени уроци:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
-#, fuzzy, kde-format
+#, kde-format
 msgid "Total training time:"
-msgstr "Настройки на сесия"
+msgstr "Общо време за обучение:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "Последно обучен:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr ""
+msgstr "Никога"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Редактиране"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr ""
+msgstr "Наистина ли искате да изтриете профила \"<b>%1</b>\"?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr ""
+msgstr "Преди да започнете обучението, моля, представете се:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr ""
+msgstr "Нямам или имам много малък опит в машинното писане"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
 msgstr ""
+"Уроците се отключват, докато уменията ви за писане се подобряват с времето."
 
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
 msgid "I am an experienced machine typist and want to improve my skills"
-msgstr ""
+msgstr "Аз съм опитен машинописец и искам да подобря уменията си"
 
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
 msgid "All lessons are unlocked immediately."
-msgstr ""
+msgstr "Всички уроци се отключват веднага."
 
 #: src/qml/homescreen/ProfileSelector.qml:57
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create New Profile"
-msgstr "Създаване на нова клавиатура!"
+msgstr "Създаване на нов профил"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgid "Use Selected Profile"
-msgstr "Отваряне на сесия от файл:"
+msgstr "Използване на избрания профил"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lesson training statistics"
-msgstr "Статистика за текущата сесия"
+msgstr "Статистика за обучение на уроци"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
 msgid "Elapsed time"
-msgstr ""
+msgstr "Изминало време"
 
 #: src/qml/scorescreen/ScoreScreen.qml:121
-#, fuzzy, kde-format
+#, kde-format
 msgid "Character:"
-msgstr "Знаци: "
+msgstr "Символ:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:125
 #, kde-format
 msgid "Errors:"
-msgstr ""
+msgstr "Грешки:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:152
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
-msgstr ""
+msgstr "Връщане към началния екран"
 
 #: src/qml/scorescreen/ScoreScreen.qml:166
 #, kde-format
 msgid "Repeat Lesson"
-msgstr ""
+msgstr "Повторете урока"
 
 #: src/qml/scorescreen/ScoreScreen.qml:174
 #, kde-format
 msgid "Next Lesson"
-msgstr ""
+msgstr "Следващ урок"
 
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr ""
+msgstr "честито! Преминахте урока."
 
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr ""
+msgstr "Не сте преминали урока."
 
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr ""
+msgstr "Повторете урока. Вашите умения ще се подобрят автоматично с времето."
 
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr ""
+msgstr "Следващият урок е отключен"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
-msgstr ""
+msgstr "Покажи"
 
 #: src/qml/scorescreen/ScoreScreen.qml:285
 #: src/qml/scorescreen/ScoreScreen.qml:358
@@ -855,209 +876,212 @@ msgstr "Прогрес"
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
-msgstr ""
+msgstr "Грешки"
 
 #: src/qml/scorescreen/ScoreScreen.qml:296
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
-msgstr ""
+msgstr "край"
 
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr ""
+msgstr "Всички уроци"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
-#, fuzzy, kde-format
+#, kde-format
 msgid "This Lesson"
-msgstr "&Начало"
+msgstr "Този урок"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
-#, fuzzy, kde-format
+#, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr "неименувана клавиатурна подредба"
+msgstr "Няма налична визуализация за вашата клавиатурна подредба."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "Меню"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
-#, fuzzy, kde-format
+#, kde-format
 msgid "Resume Training"
-msgstr "&Сесия"
+msgstr "Възобновяване на обучението"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
-#, fuzzy, kde-format
+#, kde-format
 msgid "Restart Lesson"
-msgstr "&Начало"
+msgstr "Рестартиране на урока"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
-#, fuzzy, kde-format
+#, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
-msgstr "Тренировъчна сесия! Времето тече..."
+msgstr ""
+"Тренировката започна. Времето започва да тече с първото натискане на клавиш."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
-msgstr "Пауза; натиснете клавиш, за да продължите сесията..."
+msgstr ""
+"Тренировката е прекъсната. Времето започва да тече отново със следващото "
+"натискане на клавиш."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
 #, kde-format
 msgid "Fingers"
-msgstr ""
+msgstr "Пръсти"
 
 #. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
 #: src/ui/colorsconfigwidget.ui:44
 #, kde-format
 msgid "Left Hand"
-msgstr ""
+msgstr "Лява ръка"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
 #: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, fuzzy, kde-format
+#, kde-format
 msgid "Index finger:"
-msgstr "Ред за въвеждане"
+msgstr "Показалец:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
 #: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, fuzzy, kde-format
+#, kde-format
 msgid "Middle finger:"
-msgstr "Избор на файл със сесии"
+msgstr "Среден пръст:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
 #: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, fuzzy, kde-format
+#, kde-format
 msgid "Ring finger:"
-msgstr "Ред за въвеждане"
+msgstr "Безименен пръст:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
 #: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, fuzzy, kde-format
+#, kde-format
 msgid "Little finger:"
-msgstr "Избор на файл със сесии"
+msgstr "Малък пръст:"
 
 #. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
 #: src/ui/colorsconfigwidget.ui:190
 #, kde-format
 msgid "Right Hand"
-msgstr ""
+msgstr "Дясна ръка"
 
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Непрозрачност"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
+#, no-c-format, kde-format
 msgid " %"
 msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard layout:"
-msgstr "Клавиатурна подредба"
+msgstr "Подредба на клавиатурата:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "Описание:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
 #, kde-format
 msgid "Lessons:"
-msgstr ""
+msgstr "Уроци:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
 #: src/ui/courseeditor.ui:182
 #, kde-format
 msgid "Add new lesson"
-msgstr ""
+msgstr "Добавете нов урок"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
-msgstr ""
+msgstr "Премахване на урока"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:224
-#, fuzzy, kde-format
+#, kde-format
 msgid "Move lesson up"
-msgstr "Текст в реда за въвеждане"
+msgstr "Преместете урока нагоре"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
 #: src/ui/courseeditor.ui:237
 #, kde-format
 msgid "Move lesson down"
-msgstr ""
+msgstr "Преместете урока надолу"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:312
-#, fuzzy, kde-format
+#, kde-format
 msgid "New characters:"
-msgstr "нови знаци"
+msgstr "Нови герои:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "Диалог"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create new normal key"
-msgstr "Създаване на нова клавиатура!"
+msgstr "Създаване на нов нормален ключ"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:25
-#, fuzzy, kde-format
+#, kde-format
 msgid "Normal Key"
-msgstr "Цвят на нормалните клавиши:"
+msgstr "Нормален ключ"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:41
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create new special key"
-msgstr "Създаване на нова сесия"
+msgstr "Създаване на нов специален ключ"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:44
-#, fuzzy, kde-format
+#, kde-format
 msgid "Special Key"
-msgstr "Създаване на нова сесия"
+msgstr "Специален ключ"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:63
 #, kde-format
 msgid "Delete selected key"
-msgstr ""
+msgstr "Изтриване на избрания ключ"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
 #: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Клавиатура"
 
 #. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
@@ -1065,7 +1089,7 @@ msgstr "Запис на клавиатурна подредба"
 #: src/ui/newkeyboardlayoutwidget.ui:22
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -1073,7 +1097,7 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:276
 #, kde-format
 msgid "Width:"
-msgstr ""
+msgstr "ширина:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
@@ -1081,25 +1105,25 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:305
 #, kde-format
 msgid "Height:"
-msgstr ""
+msgstr "Височина:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: src/ui/keyboardlayoutpropertieswidget.ui:185
 #, kde-format
 msgid "Geometry"
-msgstr ""
+msgstr "Геометрия"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/ui/keyboardlayoutpropertieswidget.ui:211
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left:"
-msgstr "Сесия:"
+msgstr "ляво:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: src/ui/keyboardlayoutpropertieswidget.ui:221
 #, kde-format
 msgid "Top:"
-msgstr ""
+msgstr "Най-горе:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1107,346 +1131,346 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:546
 #, kde-format
 msgid "Key"
-msgstr ""
+msgstr "Ключ"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, fuzzy, kde-format
+#, kde-format
 msgid "Finger:"
-msgstr "Ред за въвеждане"
+msgstr "Пръст:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left little finger"
-msgstr "Избор на файл със сесии"
+msgstr "Ляв малък пръст"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left ring finger"
-msgstr "Ред за въвеждане"
+msgstr "Ляв безименен пръст"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left middle finger"
-msgstr "Избор на файл със сесии"
+msgstr "Ляв среден пръст"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left index finger"
-msgstr "Избор на файл със сесии"
+msgstr "Ляв показалец"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right index finger"
-msgstr "Ред за въвеждане"
+msgstr "Десен показалец"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right middle finger"
-msgstr "Избор на файл със сесии"
+msgstr "Десен среден пръст"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right ring finger"
-msgstr "Ред за въвеждане"
+msgstr "Десен безименен пръст"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right little finger"
-msgstr "Ред за въвеждане"
+msgstr "Десен малък пръст"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr ""
+msgstr "Хаптичен маркер:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, fuzzy, kde-format
+#, kde-format
 msgid "Characters"
-msgstr "Знаци: "
+msgstr "Знаци"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add new character"
-msgstr "нови знаци"
+msgstr "Добавяне на нов знак"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove character"
-msgstr "нови знаци"
+msgstr "Премахване на символ"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:558
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "Тип:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
-msgstr ""
+msgstr "Таб"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
-msgstr ""
+msgstr "Capslock"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
-msgstr ""
+msgstr "Backspace"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
-msgstr ""
+msgstr "Връщане"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:600
 #, kde-format
 msgid "Space"
-msgstr ""
+msgstr "Интервал"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:605
 #, kde-format
 msgid "Other"
-msgstr ""
+msgstr "други"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:613
-#, fuzzy, kde-format
+#, kde-format
 msgid "Label:"
-msgstr "lectureLabel1"
+msgstr "Етикет:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, fuzzy, kde-format
+#, kde-format
 msgid "Modifier ID:"
-msgstr "Промяна / други клавиши:"
+msgstr "ID на модификатора:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
 #: src/ui/lessontexteditor.ui:31
-#, fuzzy, kde-format
+#, kde-format
 msgid "Open a text file..."
-msgstr "&Отваряне на сесия..."
+msgstr "Отворете текстов файл..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr ""
+msgstr "Автоматично пренасяне на редовете"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
-#, fuzzy, kde-format
+#, kde-format
 msgid "0 Characters"
-msgstr "Знаци: "
+msgstr "0 знака"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
-#, fuzzy, kde-format
+#, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Поставете името на текущата системна клавиатурна подредба"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
-#, fuzzy, kde-format
+#, kde-format
 msgid "During training:"
-msgstr "&Сесия"
+msgstr "По време на обучението:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr ""
+msgstr "Принудително коригиране на грешки при въвеждане"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show keyboard"
-msgstr "Създаване на нова клавиатура!"
+msgstr "Показване на клавиатурата"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show real-time statistics"
-msgstr "Общо статистика"
+msgstr "Показване на статистика в реално време"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
 #, kde-format
 msgid "Go to next line with:"
-msgstr ""
+msgstr "Отиване на следващия ред с:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr ""
+msgstr "En&ter"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr ""
+msgstr "&Интервал"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr ""
+msgstr "Ограничения за отключване на урока"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
-#, fuzzy, kde-format
+#, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr "Думи за секунда"
+msgstr "Минимален брой удари в минута:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
-#, fuzzy, kde-format
+#, kde-format
 msgid "Minimum accuracy:"
-msgstr "Точност"
+msgstr "Минимална точност:"
 
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr ""
+msgstr "Задайте заглавие"
 
 #: src/undocommands/coursecommands.cpp:56
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Задаване на клавиатурна подредба"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
 msgid "Edit description"
-msgstr ""
+msgstr "Редактиране на описанието"
 
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format
 msgid "Add lesson"
-msgstr ""
+msgstr "Добавяне на урок"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
 msgid "Move lesson"
-msgstr ""
+msgstr "Преместете урока"
 
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr ""
+msgstr "Задайте заглавие на урока"
 
 #: src/undocommands/coursecommands.cpp:321
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set new characters for lesson"
-msgstr "нови знаци"
+msgstr "Задаване на нови знаци за урока"
 
 #: src/undocommands/coursecommands.cpp:360
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set lesson text"
-msgstr "Текст в реда за въвеждане"
+msgstr "Задайте текст на урока"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout title"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Задайте заглавие на клавиатурната подредба"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout name"
-msgstr "Запис на клавиатурна подредба"
+msgstr "Задайте име на клавиатурната подредба"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout size"
-msgstr "неименувана клавиатурна подредба"
+msgstr "Задаване на размера на клавиатурната подредба"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add key"
-msgstr "Скриване на клавиатурата"
+msgstr "Добавяне на ключ"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove key"
-msgstr "нови знаци"
+msgstr "Извадете ключа"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
 msgid "Set key geometry"
-msgstr ""
+msgstr "Задайте геометрия на ключа"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
 msgid "Set key finger"
-msgstr ""
+msgstr "Задаване на ключов пръст"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr ""
+msgstr "Задайте ключов хаптичен маркер"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add key character"
-msgstr "нови знаци"
+msgstr "Добавяне на ключов знак"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:430
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove key character"
-msgstr "нови знаци"
+msgstr "Премахване на ключов знак"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:487
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set key character value"
-msgstr "нови знаци"
+msgstr "Задайте стойност на ключовия знак"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr ""
+msgstr "Задайте модификатор на ключови знаци"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr ""
+msgstr "Задайте позиция на ключовия знак"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set special key type"
-msgstr "Създаване на нова сесия"
+msgstr "Задайте специален тип ключ"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set special key label"
-msgstr "Създаване на нова сесия"
+msgstr "Задайте етикет на специален ключ"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr ""
+msgstr "Задайте идентификатор на модификатор на специален ключ"
