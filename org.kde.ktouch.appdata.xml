@@ -25,6 +25,7 @@
   <name xml:lang="fi">KTouch</name>
   <name xml:lang="fr">KTouch</name>
   <name xml:lang="gl">KTouch</name>
+  <name xml:lang="he">KTouch</name>
   <name xml:lang="ia">KTouch</name>
   <name xml:lang="id">KTouch</name>
   <name xml:lang="it">KTouch</name>
@@ -64,6 +65,7 @@
   <summary xml:lang="fi">Konekirjoituksen harjoitteluohjelma</summary>
   <summary xml:lang="fr">Formateur en dactylographie KTouch</summary>
   <summary xml:lang="gl">Titor de mecanografía</summary>
+  <summary xml:lang="he">לימוד הקלדה עיוורת</summary>
   <summary xml:lang="ia">Preceptor per typar per toccar</summary>
   <summary xml:lang="id">Tutorial Pengetikan Setuh</summary>
   <summary xml:lang="it">Istruttore di dattilografia</summary>
@@ -145,6 +147,7 @@
       <caption xml:lang="fi">Harjoittelu KTouchilla</caption>
       <caption xml:lang="fr">Entraînement sur KTouch</caption>
       <caption xml:lang="gl">Adestrando con KTouch</caption>
+      <caption xml:lang="he">תרגול עם KTouch</caption>
       <caption xml:lang="id">Berlatih dengan KTouch</caption>
       <caption xml:lang="it">Allenamento con KTouch</caption>
       <caption xml:lang="ka">KTouch-ით სწავლა</caption>
@@ -182,6 +185,7 @@
       <caption xml:lang="fi">Oppitunnin harjoituksen valinta</caption>
       <caption xml:lang="fr">Sélectionner une leçon d'entraînement</caption>
       <caption xml:lang="gl">Seleccionando unha lección para adestrar</caption>
+      <caption xml:lang="he">נא לבחור שיעור לתרגול</caption>
       <caption xml:lang="id">Memilih Pelajaran untuk Pelatihan</caption>
       <caption xml:lang="it">Selezionare una lezione per l'allenamento</caption>
       <caption xml:lang="ka">აირჩიეთ გაკვეთილი</caption>
@@ -218,6 +222,7 @@
       <caption xml:lang="fi">Konekirjoituskyvyn tarkastelu oppitunnin jälkeen</caption>
       <caption xml:lang="fr">Examiner la performance en dactylographie après avoir terminé une leçon</caption>
       <caption xml:lang="gl">Revisando o rendemento de mecanografía tras rematar unha lección</caption>
+      <caption xml:lang="he">סקירת ביצועי הקלדה לאחר סוף שיעור</caption>
       <caption xml:lang="id">Peninjauan Ulang Kinerja Pengetikan sesudah Selesai Pelajaran</caption>
       <caption xml:lang="it">Revisione delle prestazioni di digitazione dopo aver terminato una lezione</caption>
       <caption xml:lang="ka">გაკვეთილის დასრულების შემდეგ კრეფის წარმადობის შედეგების ნახვა</caption>
@@ -256,6 +261,7 @@
   <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">A comunidade de KDE</developer_name>
+  <developer_name xml:lang="he">קהילת KDE</developer_name>
   <developer_name xml:lang="ia">Le communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La comunità KDE</developer_name>
