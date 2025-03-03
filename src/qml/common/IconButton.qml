@@ -45,7 +45,7 @@ Button {
             anchors.fill: parent;
             id: bg
             color: buttonColorScheme.alternateBackground
-            visible: false
+            visible: GraphicsInfo.api === GraphicsInfo.Software
         }
 
         HueSaturation {

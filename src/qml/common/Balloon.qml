@@ -30,7 +30,7 @@ Loader {
             id: dismissArea
             anchors.fill: parent
             opacity: root.active && (root.status == 'open' || root.status =='opening')? 1 : 0
-            layer.enabled: true
+            layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
             layer.effect: DropShadow {
                 anchors.fill: parent
                 radius: Units.smallSpacing

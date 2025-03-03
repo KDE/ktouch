@@ -109,7 +109,7 @@ ComboBox {
 
         background: Rectangle {
             color: listColorScheme.normalBackground
-            layer.enabled: true
+            layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
             layer.effect: DropShadow {
                 radius: Units.smallSpacing
                 samples: 2 * radius + 1

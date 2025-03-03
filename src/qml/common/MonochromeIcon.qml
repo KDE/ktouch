@@ -15,7 +15,7 @@ Item {
 
     Icon {
         id: icon
-        visible: false
+        visible: GraphicsInfo.api === GraphicsInfo.Software
     }
 
     ColorOverlay {
