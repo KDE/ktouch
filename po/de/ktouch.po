@@ -27,13 +27,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Deutsches KDE-Übersetzerteam,Thorsten Mürell,Thomas Diehl,Martin Ereth"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"kde-i18n-de@kde.org,thorsten@muerell.de,thd@kde.org,martin.ereth@arcor.de"
+msgstr "kde-i18n-de@kde.org"
 
 #: src/bindings/stringformatter.cpp:31
 #, kde-format
