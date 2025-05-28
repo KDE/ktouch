@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2025-02-14 12:51+0200\n"
+"PO-Revision-Date: 2025-05-27 15:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -52,17 +52,17 @@ msgstr "גרסת מסד הנתונים ‚%1’ שגויה."
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
 #, kde-format
 msgid "Custom Lessons"
-msgstr ""
+msgstr "שיעורים משלך"
 
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr ""
+msgstr "מקום לאחסון טקסטים לשיעורים אישיים"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr ""
+msgstr "אין קורס עם המזהה %1"
 
 #: src/core/userdataaccess.cpp:328
 #, kde-format
@@ -77,33 +77,33 @@ msgstr "מוסתר"
 #: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
 #, kde-format
 msgid "Top left"
-msgstr ""
+msgstr "שמאל למעלה"
 
 #: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
 #, kde-format
 msgid "Top right"
-msgstr ""
+msgstr "ימין למעלה"
 
 #: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
 #, kde-format
 msgid "Bottom left"
-msgstr ""
+msgstr "שמאל למטה"
 
 #: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
 #, kde-format
 msgid "Bottom right"
-msgstr ""
+msgstr "ימין למטה"
 
 #: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr ""
+msgstr "שגיאה בפתיחת הקורס"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr ""
+msgstr "בקורסים מובנים אפשר לצפות בלבד."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
@@ -114,12 +114,12 @@ msgstr "שגיאה בפתיחת פריסת המקלדת"
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr ""
+msgstr "בפריסות מקלדת מובנות אפשר לצפות בלבד."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: src/editor/lessontexteditor.cpp:62
 #, kde-format
@@ -131,28 +131,28 @@ msgstr[1] "%1 תווים"
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "קובצי טקסט (‎*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
-msgstr ""
+msgstr "לא ניתן לפתוח את הקובץ הנבחר"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr ""
+msgstr "כבר יש פריסת מקלדת באותו השם."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "New"
-msgstr ""
+msgstr "חדשה"
 
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr ""
+msgstr "חדשה..."
 
 #: src/editor/newresourceassistant.cpp:35
 #, fuzzy, kde-format
@@ -167,7 +167,7 @@ msgstr "פריסת מקלדת חדשה"
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
 msgid "Template"
-msgstr ""
+msgstr "תבנית"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
@@ -176,17 +176,17 @@ msgstr ""
 #: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "מחיקה"
 
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr ""
+msgstr "ייבוא"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "ייצוא"
 
 #: src/editor/resourceeditor.cpp:65
 #, fuzzy, kde-format
@@ -217,7 +217,7 @@ msgstr "פריסת המקלדת. חסרת שם"
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr ""
+msgstr "שגיאה במחיקת קורס"
 
 #: src/editor/resourceeditor.cpp:195
 #, fuzzy, kde-format
@@ -228,17 +228,17 @@ msgstr "פריסת המקלדת. חסרת שם"
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr ""
+msgstr "קובצי XML‏ (‎*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr ""
+msgstr "לא ניתן לייבא את הקובץ הנבחר."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr ""
+msgstr "שגיאה בשמירת הקורס"
 
 #: src/editor/resourceeditor.cpp:290
 #, fuzzy, kde-format
@@ -248,7 +248,7 @@ msgstr "פריסת המקלדת. חסרת שם"
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr ""
+msgstr "הקורס <b>%1</b> נמחק"
 
 #: src/editor/resourceeditor.cpp:381
 #, fuzzy, kde-format
@@ -258,7 +258,7 @@ msgstr "פריסת מקלדת."
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr ""
+msgstr "שגיאה בשמירת הקורס לכונן."
 
 #: src/editor/resourceeditor.cpp:449
 #, fuzzy, kde-format
@@ -268,12 +268,12 @@ msgstr "עורך פריסת מקלדת."
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr ""
+msgstr "הקורס הנבחר כבר קיים כקורס מובנה."
 
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
-msgstr ""
+msgstr "ייבוא כקורס חדש"
 
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
@@ -301,12 +301,12 @@ msgstr ""
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
-msgstr ""
+msgstr "שחזור"
 
 #: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
 msgid "Dismiss"
-msgstr ""
+msgstr "התעלמות"
 
 #: src/editor/resourcetemplatewidget.cpp:45
 #, kde-format
@@ -321,12 +321,12 @@ msgstr "פריסת המקלדת. חסרת שם"
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
 msgid "Course"
-msgstr ""
+msgstr "קורס"
 
 #: src/editor/resourcetypeswidget.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard layout"
-msgstr "פריסת מקלדת."
+msgstr "פריסת מקלדת"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
@@ -423,9 +423,9 @@ msgid "Configure Keyboard"
 msgstr "הגדרת מקלדת"
 
 #: src/ktouchcontext.cpp:160
-#, fuzzy, kde-format
+#, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "עורך פריסת מקלדת."
+msgstr "עורך קורסים ופריסות מקלדת…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
@@ -452,7 +452,7 @@ msgstr ""
 #: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
-msgstr ""
+msgstr "סבסטיאן גוטפריד"
 
 #: src/main.cpp:43
 #, kde-format
@@ -462,7 +462,7 @@ msgstr "מתחזק נוכחי"
 #: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
-msgstr ""
+msgstr "אנדריאס ניקולאי"
 
 #: src/main.cpp:44
 #, kde-format
@@ -482,7 +482,7 @@ msgstr "יוצר מקורי"
 #: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
-msgstr ""
+msgstr "דיויד ויניוני"
 
 #: src/main.cpp:47
 #, kde-format
@@ -492,7 +492,7 @@ msgstr "יצר את סמל ה־SVG"
 #: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr ""
+msgstr "אן־מרי מחפוף"
 
 #: src/main.cpp:48
 #, kde-format
@@ -525,19 +525,19 @@ msgid "Character"
 msgstr "תו"
 
 #: src/models/charactersmodel.cpp:197
-#, fuzzy, kde-format
+#, kde-format
 msgid "Modifier ID"
-msgstr "(נערך)"
+msgstr "מזהה מחליף"
 
 #: src/models/charactersmodel.cpp:199
 #, kde-format
 msgid "Position"
-msgstr ""
+msgstr "מקום"
 
 #: src/models/lessonmodel.cpp:67
 #, kde-format
 msgid "<No title>"
-msgstr ""
+msgstr "<אין כותרת>"
 
 #: src/models/lessonmodel.cpp:69
 #, kde-format
@@ -552,7 +552,7 @@ msgstr "כותרת"
 #: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Courses"
-msgstr ""
+msgstr "קורסים"
 
 #: src/models/resourcemodel.cpp:211
 #, kde-format
@@ -562,7 +562,7 @@ msgstr "פריסות מקלדת"
 #: src/models/resourcemodel.cpp:215
 #, kde-format
 msgid "Name: %1"
-msgstr ""
+msgstr "שם: %1"
 
 #: src/qml/common/LearningProgressChart.qml:39
 #: src/qml/meters/AccuracyMeter.qml:17
@@ -579,13 +579,13 @@ msgstr "תווים לדקה"
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
 msgid "<i>Unknown</i>"
-msgstr ""
+msgstr "<i>לא ידוע</i>"
 
 #: src/qml/common/LearningProgressChart.qml:81
 #, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
-msgstr ""
+msgstr "שיעור:"
 
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
@@ -603,14 +603,14 @@ msgid "Characters per Minute:"
 msgstr "תווים לדקה:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "פריסת מקלדת."
+msgstr "קורסים לפריסת המקלדת שלך"
 
 #: src/qml/homescreen/CourseSelector.qml:163
-#, fuzzy, kde-format
+#, kde-format
 msgid "Other Courses"
-msgstr "&סכמת צבעים חדשה"
+msgstr "קורסים אחרים"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
@@ -624,9 +624,9 @@ msgid "Start Training"
 msgstr "התחלת תרגול"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
-#, fuzzy, kde-format
+#, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "פריסת המקלדת. חסרת שם"
+msgstr "הקורס הנבחר מיועד לפריסת מקלדת מסוימת."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
@@ -666,7 +666,7 @@ msgstr ""
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "אישור"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
@@ -694,17 +694,17 @@ msgstr "טקסט השיעור"
 #: src/qml/homescreen/ProfileForm.qml:98
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "בוצע"
 
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr ""
+msgstr "יש להשלים שיעורים קודמים כדי לשחרר"
 
 #: src/qml/homescreen/LessonSelector.qml:182
 #, kde-format
 msgid "Add New Lesson"
-msgstr ""
+msgstr "הוספת שיעור חדש"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -720,7 +720,7 @@ msgstr "ניהול פרופילים"
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr ""
+msgstr "שיעורים שהתאמנת בהם:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
@@ -730,27 +730,27 @@ msgstr "זמן התרגול הכולל:"
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "אימון אחרון:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr ""
+msgstr "אף פעם"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "עריכה"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr ""
+msgstr "למחוק את הפרופיל „<b>%1</b>”?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
@@ -760,12 +760,12 @@ msgstr ""
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "שם"
 
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr ""
+msgstr "אין לי או שיש לי ממש מעט ידע בהקלדה"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
@@ -793,14 +793,14 @@ msgid "Use Selected Profile"
 msgstr "להשתמש בפרופיל הנבחר"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lesson training statistics"
-msgstr "סטטיסטיקה כללית"
+msgstr "סטטיסטיקת אימון בשיעורים"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
 msgid "Elapsed time"
-msgstr ""
+msgstr "זמן שחלף"
 
 #: src/qml/scorescreen/ScoreScreen.qml:121
 #, kde-format
@@ -810,49 +810,49 @@ msgstr "תו:"
 #: src/qml/scorescreen/ScoreScreen.qml:125
 #, kde-format
 msgid "Errors:"
-msgstr ""
+msgstr "שגיאות:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:152
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
-msgstr ""
+msgstr "חזרה למסך הבית"
 
 #: src/qml/scorescreen/ScoreScreen.qml:166
 #, kde-format
 msgid "Repeat Lesson"
-msgstr ""
+msgstr "חזרה על השיעור"
 
 #: src/qml/scorescreen/ScoreScreen.qml:174
 #, kde-format
 msgid "Next Lesson"
-msgstr ""
+msgstr "השיעור הבא"
 
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr ""
+msgstr "ברכותינו! עברת את השיעור."
 
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr ""
+msgstr "לא עברת את השיעור."
 
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr ""
+msgstr "יש לחזור על השיעור. המיומנות שלך תשתפר אוטומטית עם הזמן."
 
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr ""
+msgstr "השיעור הבא שוחרר"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
-msgstr ""
+msgstr "הצגה"
 
 #: src/qml/scorescreen/ScoreScreen.qml:285
 #: src/qml/scorescreen/ScoreScreen.qml:358
@@ -865,18 +865,18 @@ msgstr "התקדמות"
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
-msgstr ""
+msgstr "שגיאות"
 
 #: src/qml/scorescreen/ScoreScreen.qml:296
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
-msgstr ""
+msgstr "על פני"
 
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr ""
+msgstr "כל השיעורים"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
@@ -884,14 +884,14 @@ msgid "This Lesson"
 msgstr "השיעור הזה"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
-#, fuzzy, kde-format
+#, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr "פריסת המקלדת. חסרת שם"
+msgstr "אין המחשה זמינה לפריסת המקלדת שלך."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "תפריט"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
@@ -901,7 +901,7 @@ msgstr "להמשיך בתרגול"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
 msgid "Restart Lesson"
-msgstr ""
+msgstr "התחלת שיעור מההתחלה"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
@@ -918,13 +918,13 @@ msgstr ""
 #: src/ui/colorsconfigwidget.ui:17
 #, kde-format
 msgid "Fingers"
-msgstr ""
+msgstr "אצבעות"
 
 #. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
 #: src/ui/colorsconfigwidget.ui:44
 #, kde-format
 msgid "Left Hand"
-msgstr ""
+msgstr "יד שמאל"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
@@ -958,13 +958,13 @@ msgstr "זרת:"
 #: src/ui/colorsconfigwidget.ui:190
 #, kde-format
 msgid "Right Hand"
-msgstr ""
+msgstr "יד ימין"
 
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "אטימות"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
@@ -983,25 +983,25 @@ msgstr "פריסת מקלדת:"
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "תיאור:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
 #, kde-format
 msgid "Lessons:"
-msgstr ""
+msgstr "שיעורים:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
 #: src/ui/courseeditor.ui:182
 #, kde-format
 msgid "Add new lesson"
-msgstr ""
+msgstr "הוספת שיעור חדש"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
-msgstr ""
+msgstr "הסרת שיעור"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:224
@@ -1013,7 +1013,7 @@ msgstr "העלאת השיעור למעלה"
 #: src/ui/courseeditor.ui:237
 #, kde-format
 msgid "Move lesson down"
-msgstr ""
+msgstr "הורדת השיעור למטה"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:312
@@ -1025,7 +1025,7 @@ msgstr "תווים חדשים:"
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "חלונית"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
@@ -1037,7 +1037,7 @@ msgstr "יצירת מקש רגיל חדש"
 #: src/ui/keyboardlayouteditor.ui:25
 #, kde-format
 msgid "Normal Key"
-msgstr ""
+msgstr "מקש רגיל"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:41
@@ -1127,75 +1127,75 @@ msgstr "אצבע:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left little finger"
-msgstr "בחר קובץ תירגול"
+msgstr "זרת שמאלית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left ring finger"
-msgstr "שורת ההקלדה"
+msgstr "קמיצה שמאלית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left middle finger"
-msgstr "בחר קובץ תירגול"
+msgstr "אמה שמאלית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left index finger"
-msgstr "בחר קובץ תירגול"
+msgstr "אצבע שמאלית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right index finger"
-msgstr "שורת ההקלדה"
+msgstr "אצבע ימנית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right middle finger"
-msgstr "בחר קובץ תירגול"
+msgstr "אמה ימנית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right ring finger"
-msgstr "שורת ההקלדה"
+msgstr "קמיצה ימנית"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right little finger"
-msgstr "שורת ההקלדה"
+msgstr "זרת ימנית"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr ""
+msgstr "סימן חישה:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, fuzzy, kde-format
+#, kde-format
 msgid "Characters"
-msgstr "תווים:"
+msgstr "תווים"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add new character"
-msgstr "תווים חדשים"
+msgstr "הוספת תו חדש"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove character"
-msgstr "תווים חדשים"
+msgstr "הסרת תו"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:558
@@ -1253,27 +1253,27 @@ msgstr "תווית:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, fuzzy, kde-format
+#, kde-format
 msgid "Modifier ID:"
-msgstr "(נערך)"
+msgstr "מזהה מחליף:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
 #: src/ui/lessontexteditor.ui:31
-#, fuzzy, kde-format
+#, kde-format
 msgid "Open a text file..."
-msgstr "&פתח תרגול..."
+msgstr "פתיחת קובץ טקסט…"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr ""
+msgstr "גלישת שורות אוטומטית"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
-#, fuzzy, kde-format
+#, kde-format
 msgid "0 Characters"
-msgstr "תווים:"
+msgstr "0 תווים"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
@@ -1283,27 +1283,27 @@ msgstr "פריסת המקלדת. חסרת שם"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
-#, fuzzy, kde-format
+#, kde-format
 msgid "During training:"
-msgstr "ת&רגול"
+msgstr "במהלך התרגול:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr ""
+msgstr "אכיפת תיקון תקלדות"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show keyboard"
-msgstr "צור מקלדת חדשה."
+msgstr "הצגת מקלדת"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show real-time statistics"
-msgstr "סטטיסטיקה כללית"
+msgstr "הצגת סטטיסטיקה בזמן אמת"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
@@ -1327,7 +1327,7 @@ msgstr ""
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr ""
+msgstr "מגבלות שחרור שיעורים"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
@@ -1337,9 +1337,9 @@ msgstr "מילים לדקה"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
-#, fuzzy, kde-format
+#, kde-format
 msgid "Minimum accuracy:"
-msgstr "דיוק"
+msgstr "דיוק מזערי:"
 
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
@@ -1347,9 +1347,9 @@ msgid "Set title"
 msgstr "הגדרת כותרת"
 
 #: src/undocommands/coursecommands.cpp:56
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout"
-msgstr "שמור פריסת המקלדת."
+msgstr "הגדרת פריסת מקלדת"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1372,39 +1372,39 @@ msgid "Set lesson title"
 msgstr "הגדרת כותרת שיעור"
 
 #: src/undocommands/coursecommands.cpp:321
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set new characters for lesson"
-msgstr "תווים חדשים"
+msgstr "הגדרת תווים חדשים לשיעור"
 
 #: src/undocommands/coursecommands.cpp:360
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set lesson text"
-msgstr "טקסט התלמיד"
+msgstr "הגדרת טקסט השיעור"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout title"
-msgstr "שמור פריסת המקלדת."
+msgstr "הגדרת כותרת לפריסת המקלדת"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout name"
-msgstr "שמור פריסת המקלדת."
+msgstr "הגדרת שם לפריסת המקלדת"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set keyboard layout size"
-msgstr "שמור פריסת המקלדת."
+msgstr "הגדרת גודל פריסת המקלדת"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add key"
-msgstr "החבא מקלדת"
+msgstr "הוספת מקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove key"
-msgstr "תווים חדשים"
+msgstr "הסרת מקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
@@ -1419,47 +1419,47 @@ msgstr "הגדרת אצבע המקש"
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr ""
+msgstr "הגדרת סימני חישה על המקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add key character"
-msgstr "תווים חדשים"
+msgstr "הוספת תו למקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:430
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove key character"
-msgstr "תווים חדשים"
+msgstr "הסרת תו ממקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:487
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set key character value"
-msgstr "תווים חדשים"
+msgstr "הגדרת ערך תו מקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr ""
+msgstr "הגדרת מחליף תו מקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr ""
+msgstr "הגדרת מקום תו מקש"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set special key type"
-msgstr "צור תרגול חדש"
+msgstr "הגדרת סוג מקש מיוחד"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set special key label"
-msgstr "צור תרגול חדש"
+msgstr "הגדרת תווים מקש מיוחד"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr ""
+msgstr "הגדרת מזהה מחליף למקש מיוחד"
 
 #, fuzzy
 #~ msgid "Choose Keyboard Layout"
