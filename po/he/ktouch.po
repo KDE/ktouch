@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2025-05-28 10:05+0300\n"
+"PO-Revision-Date: 2025-05-29 15:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -369,32 +369,32 @@ msgstr "מקש רווח בסוף השורה יעביר לשורה הבאה."
 #, kde-format
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr ""
+msgstr "מספר ההקלדות המזערי לדקה כדי לשחרר את השיעור הבא."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
 #, kde-format
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr ""
+msgstr "דיוק ההקלדה המזערי הנחוץ באחוזים כדי לשחרר את השיעור הבא."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr ""
+msgstr "צבע אטום למקלדת כדי להדגיש את המקשים לכל אצבע."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "איך צבעי אצבעות שקופים אמורים להיראות."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
 #, kde-format
 msgid "The ID of the last used profile."
-msgstr ""
+msgstr "מזהה הפרופיל האחרון שהיה בשימוש."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -519,7 +519,7 @@ msgstr "הוספת הנתיב לתחילת רשימת נתיבי הייבוא ש
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "%1 נתקל בשגיאת זמן ריצה והיה עליו להיסגר."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -644,6 +644,9 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"ל־KTouch אין איך להחליף או להגדיר פריסות מקלדת. לפי תחילת אימון, יש להגדיר "
+"את המחשב שלך כך שישתמש בפריסת המקלדת הנכונה. אחרת האימון יתבצע על פריסת "
+"המקלדת הנוכחית שלך כדי להקליד את טקס השיעור."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -908,13 +911,13 @@ msgstr "התחלת שיעור מההתחלה"
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
-msgstr ""
+msgstr "האימון החל. הזמן מתחיל לרוץ החל מההקלדה הראשונה."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
 #, kde-format
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
-msgstr ""
+msgstr "האימון נקטע. הזמן יתחיל לרוץ שוב עם ההקלדה הבאה."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
