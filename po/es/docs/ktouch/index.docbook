@@ -4,6 +4,8 @@
 <!ENTITY i18n-ktouch "<application
 >Entrenador de mecanografía</application
 >">
+<!ENTITY kappname "&i18n-ktouch;"
+><!-- replace kapp here -->
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % Spanish "INCLUDE"
 ><!-- change language only here -->
@@ -13,7 +15,7 @@
 
 <bookinfo>
 <title
->Manual de &ktouch;</title>
+>The &i18n-ktouch; Handbook</title>
 
 <authorgroup>
 
@@ -112,20 +114,6 @@
 > </othercredit
 > <othercredit role="translator"
 > <firstname
->Santiago</firstname
-> <surname
->Fernández Sancho</surname
-> <affiliation
-><address
-><email
->santi@kde-es.org</email
-></address
-></affiliation
-> <contrib
->Traductor</contrib
-> </othercredit
->  <othercredit role="translator"
-> <firstname
 >Leticia</firstname
 > <surname
 >Martín Hernández</surname
@@ -160,9 +148,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2021-01-05</date>
+>2019-07-05</date>
 <releaseinfo
->&ktouch; 2.3.0 (Aplicaciones 20.12)</releaseinfo>
+>Applications 19.08</releaseinfo>
 
 <abstract>
 <para
@@ -346,7 +334,7 @@
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > en la barra de herramientas, seleccionar el submenú <guisubmenu
-> Configurar el teclado...</guisubmenu
+> Configurar el teclado…</guisubmenu
 > y elegir el nombre de la distribución de su teclado o alguna similar a la suya. Si su teclado no está incluido, puede definir su propia distribución; consulte <xref linkend="create_layouts"/>. </para>
 </note>
 <para
@@ -413,7 +401,9 @@
 <para
 >Empiece a teclear el texto que aparece en el centro de la pantalla. La siguiente tecla que tiene que pulsar siempre está resaltada en la visualización del teclado. Mientras teclea, es posible que cometa errores y que pulse la tecla equivocada. Cuando esto ocurre, los caracteres se mostrarán en rojo y tendrá que pulsar la tecla &Backspace; tantas veces como sea necesario para borrar los caracteres incorrectos. </para>
 <para
->Cuando haya completado con éxito una línea de texto, deberá pulsar la tecla &Enter; para avanzar a la siguiente línea. </para>
+>When you have successfully completed a line of text you need to press the <keycap
+>Return</keycap
+> to advance to the next line. </para>
 <tip>
 <para
 >La tecla utilizada para avanzar a la siguiente línea se puede cambiar mediante <link linkend="configuration_dialog"
@@ -571,7 +561,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Editor de curso y de distribución del teclado...</guimenuitem
+>Editor de curso y de distribución del teclado…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -586,7 +576,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar Entrenador de mecanografía...</guimenuitem
+>Configurar Entrenador de mecanografía…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -601,7 +591,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar los accesos rápidos...</guimenuitem
+>Configurar los accesos rápidos…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -614,7 +604,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar el teclado...</guimenuitem
+>Configurar el teclado…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -646,7 +636,7 @@
 ><imagedata fileref="Icon-configure.png" format="PNG"/></imageobject
 ></inlinemediaobject
 > situado a la derecha de la barra de herramientas de la parte superior de la pantalla de inicio y después seleccione <guimenuitem
->Configurar Entrenador de mecanografía...</guimenuitem
+>Configurar Entrenador de mecanografía…</guimenuitem
 >.</para>
 
  <variablelist>
@@ -682,7 +672,11 @@ format="PNG"/></imageobject>
 >Mostrar estadísticas en tiempo real</guilabel
 >. </para>
 <para
->La tecla que hay que pulsar para ir a la siguiente línea de texto de entrenamiento se puede elegir entre dos opciones, &Enter; o &Space;. </para>
+>The keystroke to go to the next line of training text can be chosen from two options, <keycap
+>Return</keycap
+> or <keycap
+>Space</keycap
+>. </para>
 <para
 >Los <guilabel
 >Límites de desbloqueo de lección</guilabel
@@ -774,7 +768,7 @@ format="PNG"/></imageobject>
 <para
 >Seleccione <menuchoice
 ><guimenu
->Configurar teclado...</guimenu
+>Configurar teclado…</guimenu
 > </menuchoice
 >en el menú de la aplicación para seleccionar una distribución de teclado diferente. Después, &i18n-ktouch; se adaptará convenientemente y le presentará los cursos para esta distribución de teclado. </para>
 <note>
@@ -983,11 +977,11 @@ format="PNG"/></imageobject>
 ><imagedata fileref="Icon-configure.png" format="PNG"/></imageobject
 ></inlinemediaobject
 > situado a la derecha de la barra de herramientas de la pantalla de inicio y después seleccionando <guimenuitem
->Editor de distribución de teclado y curso...</guimenuitem
+>Editor de distribución de teclado y curso…</guimenuitem
 > Puede elegir abrir un archivo de curso, crear un curso vacío completamente nuevo o utilizar un curso existente como plantilla.</para>
 <important>
 <para
->No puede editar los cursos incorporados, incluso si tiene acceso de escritura a la carpeta de instalación. </para>
+>You cannot edit the built-in courses, even if you have the write access to the installation directory. </para>
 </important>
 
 <screenshot>
@@ -1108,9 +1102,9 @@ format="PNG"/></imageobject>
 ></term>
 <listitem>
 <para
->Para cada nivel, puede especificar los nuevos caracteres o teclas de la lección. Merece la pena incluir los nuevos caracteres en el título de la lección. Haga clic en la etiqueta de un nombre en la lista de <guilabel
->Lecciones:</guilabel
-> e introduzca un nombre que tenga sentido. </para>
+>For each level you can specify the new characters/keys in the lesson. It is worth to include the new characters in the lesson title. Click on a name label in the <guilabel
+>Lessons</guilabel
+> list and enter some meaningful name. </para>
 <note>
 <title
 >Lógico</title>
@@ -1443,27 +1437,29 @@ format="PNG"/></imageobject>
 <title
 >Añadir teclas</title>
 <para
->Utilice el botón <inlinemediaobject
+>Use <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > <guilabel
->Tecla normal</guilabel
-> para añadir una nueva tecla normal o el botón <inlinemediaobject
+>Normal Key</guilabel
+> button to add new normal key or <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > <guilabel
->Tecla especial</guilabel
-> para añadir una tecla especial (teclas modificadoras, &Space;, &Backspace;, &Tab;, <keycap
->Bloq Mayús</keycap
-> o &Enter;) a  la distribución. Se puede usar el botón<inlinemediaobject
+>Special Key</guilabel
+> button to add new special key (modifier keys, <keycap
+>Space</keycap
+>, &Backspace;, &Tab;, <keycap
+>Caps Lock</keycap
+> or &Enter;) to the layout. The <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 ><guilabel
->Borrar</guilabel
-> para borrar la tecla seleccionada de su distribución. Se puede modificar la escala utilizando el deslizador situado en la parte derecha de la barra de herramientas. </para>
+>Delete</guilabel
+> button can be used to remove a selected key from your layout. The scale can be changed using the slider at the left part of the editor toolbar. </para>
 <para
 >Las propiedades de cada una de las teclas se pueden editar utilizando el panel inferior de la ventana del editor. </para>
 <sect3 id="normal_keys">
@@ -1656,9 +1652,9 @@ format="PNG"/></imageobject>
 >. </para>
 <important>
 <para
->Sus datos se deberían distribuir conforme a la <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
->Licencia Pública General &GNU;</ulink
-> para incluirlos en la instalación predeterminada de &i18n-ktouch;. </para>
+>Your data should be licensed under <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>GNU General Public License, version 2</ulink
+> to include them into the default &i18n-ktouch; installation. </para>
 </important>
 <para
 >Para importar sus archivos de datos en &i18n-ktouch;, pulse el botón <guibutton
@@ -1675,7 +1671,7 @@ format="PNG"/></imageobject>
 <para
 >&i18n-ktouch;</para>
 <para
->&ktouch;, Copyright 1999-2007 por</para>
+>&i18n-ktouch;, Copyright 1999-2007 by</para>
 <itemizedlist>
 <listitem
 ><simpara
@@ -1689,7 +1685,7 @@ format="PNG"/></imageobject>
 ></listitem>
 </itemizedlist>
 <para
->&ktouch;, Copyright 2011-2019 por Sebastian Gottfried <email
+>&i18n-ktouch;, Copyright 2011-2019 by Sebastian Gottfried <email
 >sebastiangottfried@web DOT de</email
 >. </para>
 
@@ -1722,6 +1718,8 @@ format="PNG"/></imageobject>
 >traducciones@rociogallego.com</email
 >, Miguel Revilla Rodríguez <email
 >yo@miguelrevilla.com</email
+>, Rafael Beccar <email
+>traduccioneskde@rafabeccar.com.ar</email
 >, Santiago Fernández Sancho <email
 >santi@kde-es.org</email
 > y Leticia Martín Hernández<email

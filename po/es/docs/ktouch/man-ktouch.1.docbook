@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-<!ENTITY i18n-ktouch "<application
->Práctica de mecanografía</application
->">
 <!ENTITY % Spanish "INCLUDE">
 ]>
 
@@ -16,14 +13,14 @@
 ><surname
 >Burton</surname
 > <contrib
->Página man de &ktouch;.</contrib
+>KTouch man page.</contrib
 > <email
 >bab@debian.org</email
 ></author>
 <date
->2021-01-05</date>
+>2016-11-02</date>
 <releaseinfo
->&ktouch; 2.3.0 (Aplicaciones 20.12)</releaseinfo>
+>&ktouch; 2.3.0 (Applications 16.12)</releaseinfo>
 <productname
 >Aplicaciones de KDE</productname>
 </refentryinfo>
@@ -43,7 +40,7 @@
 >ktouch</command
 ></refname>
 <refpurpose
->Tutor de mecanografía creado por &kde;</refpurpose>
+>a typing tutor by KDE</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -67,17 +64,17 @@
 <title
 >Descripción</title>
 <para
->&i18n-ktouch; es un programa para aprender mecanografía. Le ayudará a aprender mecanografía en un teclado de forma rápida y correcta. Cada dedo tiene su lugar en el teclado con teclas asociadas para pulsar.</para
+>&ktouch; is a program for learning touch typing. It helps you learn to type on a keyboard quickly and correctly. Every finger has it's place on the keyboard with associated keys to press.</para
 > 
 <para
->&i18n-ktouch; le ayuda a aprender mecanografía proporcionándole un texto para practicar, y a ajustar diferentes niveles dependiendo de lo bueno que sea. Puede mostrar qué tecla pulsar a continuación y corregir el dedo a utilizar.</para>
+>&ktouch; helps you learn to touch type by providing you with text to train on, and adjusts to different levels depending on how good you are. It can display which key to press next, and correct finger to use.</para>
 <para
 >Esta aplicación es parte del módulo educativo oficial de &kde;.</para>
 </refsect1>
 
 <refsect1>
 <title
->Opciones de &ktouch;</title>
+>KTouch Options</title>
 <variablelist>
 <varlistentry>
 <term
@@ -110,12 +107,14 @@
 >Vea también</title>
 <simplelist>
 <member
->Existe documentación más detallada disponible en <ulink url="help:/ktouch"
+>More detailed user documentation is available from <ulink url="help:/ktouch"
 >help:/ktouch</ulink
-> (bien introduciendo el &URL; en &konqueror; o ejecutando <userinput
+> (either enter this <acronym
+>URL</acronym
+> into &konqueror;, or run <userinput
 ><command
 >khelpcenter</command
-><parameter
+> <parameter
 >help:/ktouch</parameter
 ></userinput
 >).</member>
@@ -137,7 +136,7 @@
 <title
 >Autores</title>
 <para
->&ktouch; fue escrito por <personname
+>KTouch was written by <personname
 ><firstname
 >Haavard</firstname
 ><surname
@@ -145,7 +144,7 @@
 ></personname
 > <email
 >haavard@users.sourceforge.net</email
-> y <personname
+> and <personname
 ><firstname
 >Andreas</firstname
 ><surname
@@ -153,7 +152,7 @@
 ></personname
 > <email
 >Andreas.Nicolai@gmx.net</email
->. Esta página de manual está basada en una preparada para &Debian; por <personname
+>.This manual page based on the one prepared for Debian by <personname
 > <firstname
 >Ben</firstname
 ><surname
