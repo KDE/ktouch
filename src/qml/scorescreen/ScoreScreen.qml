@@ -7,7 +7,7 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import ktouch 1.0
-import org.kde.quickcharts
+import org.kde.charts as Charts
 import org.kde.kirigami as Kirigami
 
 import "../common"
@@ -322,7 +322,7 @@ FocusScope {
                         Layout.fillWidth: true
                     }
 
-/*
+
                     Charts.LegendItem {
                         id: accuracyLegend
                         textColor: colorScheme.normalText
@@ -340,7 +340,7 @@ FocusScope {
                         Behavior on opacity {
                             NumberAnimation {duration: Units.shortDuration}
                         }
-                    }*/
+                    }
                 }
 
                 Item {
@@ -371,8 +371,6 @@ FocusScope {
                             }
                         }
 
-                        /*
-
                         Charts.BarChart{
                             id: errorsTab
                             property string title: i18n("Errors")
@@ -401,7 +399,7 @@ FocusScope {
                             onElemExited: {
                                 errorsTooltip.close()
                             }
-                        }*/
+                        }
                     }
                 }
             }

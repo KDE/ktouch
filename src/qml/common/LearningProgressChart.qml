@@ -6,19 +6,11 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.quickcharts as Charts
-import org.kde.quickcharts.controls as ControlsCharts
+import org.kde.charts as Charts
 import ktouch
 
-ControlsCharts.LineChartControl {
+Charts.LineChart {
     id: root
-
-    property var model
-/*
-    valueSources: [
-        Charts.ModelSource { roleName: "accuracy"; model: accuracyModel },
-        Charts.ModelSource { roleName: "charactersPerMinute"; model: charactersPerMinuteModel }
-    ]
 
     property Charts.Dimension accuracy: accuracyDimension
     property Charts.Dimension charactersPerMinute: charactersPerMinuteDimension
@@ -107,6 +99,6 @@ ControlsCharts.LineChartControl {
             width: 25 * Units.gridUnit
             model: infoModel
         }
-    }*/
+    }
 
 }

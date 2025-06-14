@@ -4,11 +4,11 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Layouts
 import ktouch 1.0
-import org.kde.quickcharts as Charts
-import org.kde.quickcharts.controls as ChartsControls
+import org.kde.kirigami as Kirigami
+import org.kde.charts as Charts
 
 import '../common'
 
@@ -52,14 +52,26 @@ PopupDialog {
                 id: learningProgressChart
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                backgroundColor: colorScheme.normalBackground
+                textColor: colorScheme.normalText
                 model: LearningProgressModel {
                     id: learningProgressModel
                 }
             }
 
-            ChartsControls.Legend {
-                id: accuracyLegend
-                chart: learningProgressChart
+            Row {
+                spacing: 2 * Units.gridUnit
+                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+                Charts.LegendItem {
+                    id: accuracyLegend
+                    dimension: learningProgressChart.accuracy
+                    textColor: colorScheme.normalText
+                }
+                Charts.LegendItem {
+                    id: charactersPerMinuteLegend
+                    dimension: learningProgressChart.charactersPerMinute
+                    textColor: colorScheme.normalText
+                }
             }
         }
         KColorScheme {

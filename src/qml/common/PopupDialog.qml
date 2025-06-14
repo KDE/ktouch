@@ -15,9 +15,6 @@ Dialog {
     dim: true
 
     opacity: 0
-    scale: 0.9
-    leftMargin: Math.floor((parent.width - width) / 2)
-    topMargin: Math.floor((parent.height - height) / 2)
 
     Component.onCompleted: {
         var candidate = root
