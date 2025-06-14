@@ -6,8 +6,9 @@
 
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import ktouch 1.0
+import org.kde.kirigami as Kirigami
 
 ComboBox {
     id: control
@@ -59,9 +60,8 @@ ComboBox {
         color: colorScheme.normalText
     }
 
-    indicator: MonochromeIcon {
-        color: colorScheme.normalText
-        icon: "arrow-down-double"
+    indicator: Kirigami.Icon {
+        source: "arrow-down-double"
         x: control.width - width - control.contentItem.padding
         y: control.topPadding + (control.availableHeight - height) / 2
         rotation: control.popup.opacity * -180
