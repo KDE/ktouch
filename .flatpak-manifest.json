@@ -2,7 +2,7 @@
     "id": "org.kde.ktouch",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-24.08",
+    "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
     "command": "ktouch",
     "tags": ["nightly"],
@@ -30,7 +30,8 @@
         {
             "name": "kqtquickcharts",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ],
+            "config-opts": [ "-DQT_MAJOR_VERSION=6" ]
         },
         {
             "name": "ktouch",
