@@ -202,7 +202,7 @@ FocusScope {
                 onIsCorrectChanged: keyboard.updateKeyHighlighting()
                 onFinished: {
                     profileDataAccess.saveTrainingStats(stats, screen.profile, screen.course.id, screen.lesson.id)
-                    screen.finished(stats)
+                    screen.finished()
                     screen.trainingFinished = true
                 }
             }
