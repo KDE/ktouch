@@ -12,13 +12,6 @@ training levels where additional keys are introduced. Because you no
 longer need to search for the keys on the keyboard you will be able
 to type quickly and accurately.
 
-# Build Status
-
-| Jenkins CI Name | Master | Stable |
-| --------------- | ------ | ------ |
-| OpenSuse Qt 5.14 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.14/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.14/) |
-| FreeBSD Qt 5.14 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.14/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.14/) |
-
 # Development Setup
 
 ## Quick Start
@@ -40,7 +33,7 @@ KTouch has the following build dependencies:
 
  * [CMake][cmake] ≥ 3.0.0
  * [Extra CMake Modules][ecm] ≥ 1.0.0
- * [Qt][qt] ≥ 5.9 with the following modules
+ * [Qt][qt] ≥ 6.6 with the following modules
    * Qt GUI
    * Qt QML
    * Qt Quick
@@ -49,8 +42,7 @@ KTouch has the following build dependencies:
    * Qt SQL
    * Qt Test
    * Qt XML
-   * Qt XML Patterns
- * [KDE Frameworks 5][kf5] with:
+ * [KDE Frameworks 6][kf5] with:
    * Completion
    * Config
    * ConfigWidgets
@@ -67,7 +59,6 @@ KTouch has the following build dependencies:
    * XmlGui
    * IconThemes
  * optionally, for keyboard layout auto-detection:
-   * Qt X11 Extras
    * [Xlib][xlib]
    * [XKB][xkb]
    * [libxkbfile][libxkbfile]

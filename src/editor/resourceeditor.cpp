@@ -515,21 +515,13 @@ bool ResourceEditor::importCourse(const QString& path)
 
         if (testCourse->source() == DataIndex::BuiltInResource &&  testCourse->id() == course.id())
         {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             switch (KMessageBox::questionTwoActions(this,
-#else
-            switch (KMessageBox::questionYesNo(this,
-#endif
                                                i18n("The selected course is already present as a built-in course."), QString(),
                                                KGuiItem(i18n("Import as new course"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::cancel()
             ))
             {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::PrimaryAction:
-#else
-                case KMessageBox::Yes:
-#endif
                     course.setId(QUuid::createUuid().toString());
                     for (int j = 0; j < course.lessonCount(); j++)
                     {
@@ -544,22 +536,14 @@ bool ResourceEditor::importCourse(const QString& path)
 
         if (testCourse->source() == DataIndex::UserResource &&  testCourse->id() == course.id())
         {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             switch (KMessageBox::questionTwoActionsCancel(this,
-#else
-            switch (KMessageBox::questionYesNoCancel(this,
-#endif
                                                i18n("The selected course is already present as a user course."), QString(),
                                                KGuiItem(i18n("Import as new course"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
             ))
             {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::PrimaryAction:
-#else
-                case KMessageBox::Yes:
-#endif
                     course.setId(QUuid::createUuid().toString());
                     for (int j = 0; j < course.lessonCount(); j++)
                     {
@@ -567,11 +551,7 @@ bool ResourceEditor::importCourse(const QString& path)
                         lesson->setId(QUuid::createUuid().toString());
                     }
                     break;
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::SecondaryAction:
-#else
-                case KMessageBox::No:
-#endif
                     overwriteDataIndexCourse = testCourse;
                     break;
                 default:
@@ -605,21 +585,13 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
 
         if (testKeyboardLayout->source() == DataIndex::BuiltInResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             switch (KMessageBox::questionTwoActions(this,
-#else
-            switch (KMessageBox::questionYesNo(this,
-#endif
                                                i18n("The selected keyboard layout is already present as a built-in keyboard layout."), QString(),
                                                KGuiItem(i18n("Import as new keyboard layout"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::cancel()
             ))
             {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::PrimaryAction:
-#else
-                case KMessageBox::Yes:
-#endif
                     keyboardLayout.setId(QUuid::createUuid().toString());
                     break;
                 default:
@@ -629,29 +601,17 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
 
         if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             switch (KMessageBox::questionTwoActionsCancel(this,
-#else
-            switch (KMessageBox::questionYesNoCancel(this,
-#endif
                                                i18n("The selected keyboard layout is already present as a user keyboard layout."), QString(),
                                                KGuiItem(i18n("Import as new keyboard layout"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
             ))
             {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::PrimaryAction:
-#else
-                case KMessageBox::Yes:
-#endif
                     keyboardLayout.setId(QUuid::createUuid().toString());
                     break;
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 case KMessageBox::SecondaryAction:
-#else
-                case KMessageBox::No:
-#endif
                     overwriteDataIndexKeyboardLayout = testKeyboardLayout;
                     break;
                 default:

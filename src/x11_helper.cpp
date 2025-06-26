@@ -351,11 +351,7 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
     return true;
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, long *)
-#else
 bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *)
-#endif
 {
 //	kDebug() << "event type:" << eventType;
     if (eventType == "xcb_generic_event_t") {

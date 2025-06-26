@@ -58,7 +58,6 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 
 find_package(LibXml2 REQUIRED)
 
-option(COMPILE_QML "Precompile QML code" OFF)
 option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X11)" OFF)
 
 if (NOT WITHOUT_X11)

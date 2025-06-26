@@ -14,10 +14,6 @@
 #include <QStandardPaths>
 
 #include <KLocalizedContext>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#include <Kdelibs4Migration>
-#endif
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
@@ -125,30 +121,6 @@ void Application::registerQmlTypes()
     qmlRegisterType<LessonTextHighlighterItem>("ktouch", 1, 0, "LessonTextHighlighter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
     qmlRegisterType<KColorSchemeProxy>("ktouch", 1, 0, "KColorScheme");
-}
-
-void Application::migrateKde4Files()
-{
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QStringList configFiles;
-    configFiles << QStringLiteral("ktouchrc");
-    Kdelibs4ConfigMigrator confMigrator(QStringLiteral("ktouch"));
-    confMigrator.setConfigFiles(configFiles);
-    confMigrator.migrate();
-
-    Kdelibs4Migration migration;
-    const QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
-    if (!dataDir.exists())
-    {
-        dataDir.mkpath(dataDir.path());
-    }
-    const QString dbPath = dataDir.filePath(QStringLiteral("profiles.db"));
-    const QString oldDbPath = migration.locateLocal("data", QStringLiteral("ktouch/profiles.db"));
-    if (!QFile(dbPath).exists() && !oldDbPath.isEmpty())
-    {
-        QFile(oldDbPath).copy(dbPath);
-    }
-#endif
 }
 
 #include "moc_application.cpp"

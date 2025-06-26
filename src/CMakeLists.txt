@@ -131,12 +131,7 @@ set(ktouch_SRCS
     undocommands/keyboardlayoutcommands.h)
 
 qt_add_resources(ktouch_imgs_SRCS images/images.qrc)
-
-if (Qt5QuickCompiler_FOUND AND COMPILE_QML)
-    qtquick_compiler_add_resources(ktouch_qml_SRCS qml/qml.qrc)
-else ()
-    qt_add_resources(ktouch_qml_SRCS qml/qml.qrc)
-endif()
+qt_add_resources(ktouch_qml_SRCS qml/qml.qrc)
 
 # compile UI files
 ki18n_wrap_ui(ktouch_SRCS

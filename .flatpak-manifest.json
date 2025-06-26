@@ -30,8 +30,7 @@
         {
             "name": "kqtquickcharts",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ],
-            "config-opts": [ "-DQT_MAJOR_VERSION=6" ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ]
         },
         {
             "name": "ktouch",

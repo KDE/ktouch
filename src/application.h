@@ -26,7 +26,6 @@ public:
     QStringList& qmlImportPaths();
 private:
     void registerQmlTypes();
-    void migrateKde4Files();
     DataIndex* m_dataIndex;
     QPointer<ResourceEditor> m_resourceEditorRef;
     QStringList m_qmlImportPaths;
