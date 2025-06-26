@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-06-26 00:39+0000\n"
 "PO-Revision-Date: 2024-10-29 21:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
@@ -434,17 +434,17 @@ msgstr "Редактор на курс и клавиатурна подредб�
 msgid "Configure Keyboard..."
 msgstr "Конфигуриране на клавиатурата..."
 
-#: src/main.cpp:31
+#: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Трениране на машинопис"
 
-#: src/main.cpp:33
+#: src/main.cpp:32
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Научете и практикувайте писане на машина"
 
-#: src/main.cpp:36
+#: src/main.cpp:35
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -453,67 +453,67 @@ msgstr ""
 "Авторско право (C) 2011-2015 от Себастиан Готфрид\n"
 "Авторско право (C) 2000-2007 от Håvard Frøiland и Andreas Nicolai"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Себастиан Готфрид"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
 msgstr "Текущ поддържащ"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Андреас Николай"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Бивш поддържащ и програмист"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Original author"
 msgstr "Оригинален автор"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "David Vignoni"
 msgstr "Дейвид Виньони"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Автор на SVG икона"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Ан-Мари Мафуф"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Много пачове, корекции и актуализации"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Всички създатели на обучителни и клавиатурни файлове"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Стартирайте редактора на курса и клавиатурната подредба"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Добавяне на пътя към списъка с пътища за импортиране на QML"
@@ -627,12 +627,12 @@ msgstr "Добре дошли в обучението по машинопис"
 msgid "Start Training"
 msgstr "Започнете обучение"
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
 msgstr "Избраният курс е предназначен за конкретна клавиатурна подредба."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
@@ -641,7 +641,7 @@ msgstr ""
 "Избраният курс не е предназначен за активната клавиатурна подредба на вашия "
 "компютър."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
 msgid ""
 "KTouch can't switch or set up keyboard layouts. Before training, you have to "
@@ -653,7 +653,7 @@ msgstr ""
 "клавиатурна подредба. В противен случай ще трябва да използвате текущата си "
 "клавиатурна подредба, за да въведете текста на урока."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
 msgid "Configure Keyboard"
 msgstr "Конфигуриране на клавиатура"
@@ -706,7 +706,7 @@ msgstr "Текст на урока"
 msgid "Done"
 msgstr "Готово"
 
-#: src/qml/homescreen/LessonLockedNotice.qml:44
+#: src/qml/homescreen/LessonLockedNotice.qml:45
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Завършете предишния урок за отключване"
@@ -803,7 +803,7 @@ msgstr "Създаване на нов профил"
 msgid "Use Selected Profile"
 msgstr "Използване на избрания профил"
 
-#: src/qml/homescreen/StatPopupDialog.qml:21
+#: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
 msgstr "Статистика за обучение на уроци"
@@ -813,83 +813,83 @@ msgstr "Статистика за обучение на уроци"
 msgid "Elapsed time"
 msgstr "Изминало време"
 
-#: src/qml/scorescreen/ScoreScreen.qml:121
+#: src/qml/scorescreen/ScoreScreen.qml:122
 #, kde-format
 msgid "Character:"
 msgstr "Символ:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:125
+#: src/qml/scorescreen/ScoreScreen.qml:126
 #, kde-format
 msgid "Errors:"
 msgstr "Грешки:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/scorescreen/ScoreScreen.qml:153
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
 msgstr "Връщане към началния екран"
 
-#: src/qml/scorescreen/ScoreScreen.qml:166
+#: src/qml/scorescreen/ScoreScreen.qml:167
 #, kde-format
 msgid "Repeat Lesson"
 msgstr "Повторете урока"
 
-#: src/qml/scorescreen/ScoreScreen.qml:174
+#: src/qml/scorescreen/ScoreScreen.qml:175
 #, kde-format
 msgid "Next Lesson"
 msgstr "Следващ урок"
 
-#: src/qml/scorescreen/ScoreScreen.qml:224
+#: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
 msgstr "честито! Преминахте урока."
 
-#: src/qml/scorescreen/ScoreScreen.qml:225
+#: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
 msgid "You have not passed the lesson."
 msgstr "Не сте преминали урока."
 
-#: src/qml/scorescreen/ScoreScreen.qml:237
+#: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr "Повторете урока. Вашите умения ще се подобрят автоматично с времето."
 
-#: src/qml/scorescreen/ScoreScreen.qml:239
+#: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
 msgid "Next lesson unlocked"
 msgstr "Следващият урок е отключен"
 
-#: src/qml/scorescreen/ScoreScreen.qml:276
+#: src/qml/scorescreen/ScoreScreen.qml:277
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
 msgstr "Покажи"
 
-#: src/qml/scorescreen/ScoreScreen.qml:285
-#: src/qml/scorescreen/ScoreScreen.qml:358
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:360
 #, kde-format
 msgid "Progress"
 msgstr "Прогрес"
 
-#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:287
 #: src/qml/scorescreen/ScoreScreen.qml:376
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
 msgstr "Грешки"
 
-#: src/qml/scorescreen/ScoreScreen.qml:296
+#: src/qml/scorescreen/ScoreScreen.qml:297
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
 msgstr "край"
 
-#: src/qml/scorescreen/ScoreScreen.qml:308
+#: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "All Lessons"
 msgstr "Всички уроци"
 
-#: src/qml/scorescreen/ScoreScreen.qml:309
+#: src/qml/scorescreen/ScoreScreen.qml:310
 #, kde-format
 msgid "This Lesson"
 msgstr "Този урок"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-06-26 00:39+0000\n"
 "PO-Revision-Date: 2023-10-10 15:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -429,17 +429,17 @@ msgstr "Pengedit Tataletak Keyboard dan Kursus..."
 msgid "Configure Keyboard..."
 msgstr "Konfigurasi Keyboard..."
 
-#: src/main.cpp:31
+#: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Pelatih Pengetikan"
 
-#: src/main.cpp:33
+#: src/main.cpp:32
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Belajar dan praktek mengetik"
 
-#: src/main.cpp:36
+#: src/main.cpp:35
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -448,67 +448,67 @@ msgstr ""
 "Hak Cipta (C) 2011-2015 by Sebastian Gottfried\n"
 "Hak Cipta (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
 msgstr "Perawat saat ini"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Mantan programer dan perawat"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Original author"
 msgstr "Penulis asli"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Pembuat ikon SVG"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Banyak menambal, memperbarui dan memperbaiki"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Semua para pembuat pada pelatihan dan file keyboard"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Luncurkan kursus dan pengedit tataletak keyboard"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Tambahkan alur ke daftar terhadap alur impor QML"
@@ -622,12 +622,12 @@ msgstr "Selamat Datang di Pelatih Pengetikan"
 msgid "Start Training"
 msgstr "Mulai Latihan"
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
 msgstr "Kursus yang dipilih ditujukan untuk tataletak keyboard tertentu."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
@@ -635,7 +635,7 @@ msgid ""
 msgstr ""
 "Kursus yang dipilih tidak ditujukan untuk tataletak keyboard aktif komputermu"
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
 msgid ""
 "KTouch can't switch or set up keyboard layouts. Before training, you have to "
@@ -647,7 +647,7 @@ msgstr ""
 "keyboard yang benar. Jika tidak, kamu harus menggunakan tataletak keyboardmu "
 "saat ini untuk mengetik teks pelatihan."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
 msgid "Configure Keyboard"
 msgstr "Konfigurasi Keyboard"
@@ -700,7 +700,7 @@ msgstr "Teks pelatihan"
 msgid "Done"
 msgstr "Selesai"
 
-#: src/qml/homescreen/LessonLockedNotice.qml:44
+#: src/qml/homescreen/LessonLockedNotice.qml:45
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Tuntaskan Pelatihan Sebelumnya untuk Membuka Kunci"
@@ -802,7 +802,7 @@ msgstr "Buat Profil Baru"
 msgid "Use Selected Profile"
 msgstr "Gunakan Profil Terpilih"
 
-#: src/qml/homescreen/StatPopupDialog.qml:21
+#: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
 msgstr "Statistik latihan pelatihan"
@@ -812,85 +812,85 @@ msgstr "Statistik latihan pelatihan"
 msgid "Elapsed time"
 msgstr "Waktu berlalu"
 
-#: src/qml/scorescreen/ScoreScreen.qml:121
+#: src/qml/scorescreen/ScoreScreen.qml:122
 #, kde-format
 msgid "Character:"
 msgstr "Karakter:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:125
+#: src/qml/scorescreen/ScoreScreen.qml:126
 #, kde-format
 msgid "Errors:"
 msgstr "Galat:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/scorescreen/ScoreScreen.qml:153
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
 msgstr "Kembali ke Layar Beranda"
 
-#: src/qml/scorescreen/ScoreScreen.qml:166
+#: src/qml/scorescreen/ScoreScreen.qml:167
 #, kde-format
 msgid "Repeat Lesson"
 msgstr "Ulangi Pelatihan"
 
-#: src/qml/scorescreen/ScoreScreen.qml:174
+#: src/qml/scorescreen/ScoreScreen.qml:175
 #, kde-format
 msgid "Next Lesson"
 msgstr "Pelatihan Selanjutnya"
 
-#: src/qml/scorescreen/ScoreScreen.qml:224
+#: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
 msgstr "Selamat! Kamu telah lulus pelatihan."
 
-#: src/qml/scorescreen/ScoreScreen.qml:225
+#: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
 msgid "You have not passed the lesson."
 msgstr "Kamu belum lulus pelatihan."
 
-#: src/qml/scorescreen/ScoreScreen.qml:237
+#: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr ""
 "Ulangi pelatihan. Keterampilanmu akan meningkat secara otomatis seiring "
 "waktu."
 
-#: src/qml/scorescreen/ScoreScreen.qml:239
+#: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
 msgid "Next lesson unlocked"
 msgstr "Pelatihan berikutnya dibuka kuncinya"
 
-#: src/qml/scorescreen/ScoreScreen.qml:276
+#: src/qml/scorescreen/ScoreScreen.qml:277
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
 msgstr "Tampilkan"
 
-#: src/qml/scorescreen/ScoreScreen.qml:285
-#: src/qml/scorescreen/ScoreScreen.qml:358
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:360
 #, kde-format
 msgid "Progress"
 msgstr "Progres"
 
-#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:287
 #: src/qml/scorescreen/ScoreScreen.qml:376
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
 msgstr "Error"
 
-#: src/qml/scorescreen/ScoreScreen.qml:296
+#: src/qml/scorescreen/ScoreScreen.qml:297
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
 msgstr "Melalui"
 
-#: src/qml/scorescreen/ScoreScreen.qml:308
+#: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "All Lessons"
 msgstr "Semua Pelatihan"
 
-#: src/qml/scorescreen/ScoreScreen.qml:309
+#: src/qml/scorescreen/ScoreScreen.qml:310
 #, kde-format
 msgid "This Lesson"
 msgstr "Pelatihan Ini"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-06-26 00:39+0000\n"
 "PO-Revision-Date: 2025-03-08 00:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -438,17 +438,17 @@ msgstr "Ders ve Klavye Düzeni Düzenleyicisi..."
 msgid "Configure Keyboard..."
 msgstr "Klavye Yapılandır..."
 
-#: src/main.cpp:31
+#: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Yazım Eğitici"
 
-#: src/main.cpp:33
+#: src/main.cpp:32
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Yazmayı öğrenin ve alıştırma yapın"
 
-#: src/main.cpp:36
+#: src/main.cpp:35
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -457,67 +457,67 @@ msgstr ""
 "© 2011–2015, Sebastian Gottfried\n"
 "© 2000–2007, Håvard Frøiland ve Andreas Nicolai"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
 msgstr "Şu anki bakımcı"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Önceki bakımcı ve geliştirici"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Original author"
 msgstr "Asıl yazar"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "SVG simgesinin yaratıcısı"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Bir sürü yama, düzeltme ve güncelleme"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Bütün klavye dosyası ve alıştırmaların yaratıcıları"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Dersi ve klavye düzeni düzenleyiciyi çalıştır"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "QML içe aktarma yollarına ekleme yapar"
@@ -631,12 +631,12 @@ msgstr "Yazım Eğiticiye Hoş Geldiniz"
 msgid "Start Training"
 msgstr "Eğitimi Başlat"
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
 msgstr "Seçili ders, belirli bir klavye düzeni için yapılmıştır."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
@@ -644,7 +644,7 @@ msgid ""
 msgstr ""
 "Seçili ders, bilgisayarınızdaki etkin klavye düzeni için yapılmamıştır."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
 msgid ""
 "KTouch can't switch or set up keyboard layouts. Before training, you have to "
@@ -656,7 +656,7 @@ msgstr ""
 "yapılandırmalısınız. Diğer türlü ders metnine başlarken geçerli klavye "
 "düzeninizi kullanmak durumunda kalırsınız."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
 msgid "Configure Keyboard"
 msgstr "Klavye Yapılandır"
@@ -709,7 +709,7 @@ msgstr "Ders metni"
 msgid "Done"
 msgstr "Tamamlandı"
 
-#: src/qml/homescreen/LessonLockedNotice.qml:44
+#: src/qml/homescreen/LessonLockedNotice.qml:45
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Kilidi Açmak için Önceki Dersleri Tamamlayın"
@@ -805,7 +805,7 @@ msgstr "Yeni Profil Oluştur"
 msgid "Use Selected Profile"
 msgstr "Seçili Profili Kullan"
 
-#: src/qml/homescreen/StatPopupDialog.qml:21
+#: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
 msgstr "Ders çalışma istatistikleri"
@@ -815,83 +815,83 @@ msgstr "Ders çalışma istatistikleri"
 msgid "Elapsed time"
 msgstr "Geçen süre"
 
-#: src/qml/scorescreen/ScoreScreen.qml:121
+#: src/qml/scorescreen/ScoreScreen.qml:122
 #, kde-format
 msgid "Character:"
 msgstr "Karakter:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:125
+#: src/qml/scorescreen/ScoreScreen.qml:126
 #, kde-format
 msgid "Errors:"
 msgstr "Hatalar:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/scorescreen/ScoreScreen.qml:153
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
 msgstr "Ana Ekrana Dön"
 
-#: src/qml/scorescreen/ScoreScreen.qml:166
+#: src/qml/scorescreen/ScoreScreen.qml:167
 #, kde-format
 msgid "Repeat Lesson"
 msgstr "Dersi Tekrarla"
 
-#: src/qml/scorescreen/ScoreScreen.qml:174
+#: src/qml/scorescreen/ScoreScreen.qml:175
 #, kde-format
 msgid "Next Lesson"
 msgstr "Sonraki Ders"
 
-#: src/qml/scorescreen/ScoreScreen.qml:224
+#: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
 msgstr "Tebrikler! Dersi geçtiniz."
 
-#: src/qml/scorescreen/ScoreScreen.qml:225
+#: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
 msgid "You have not passed the lesson."
 msgstr "Bu dersi geçemediniz."
 
-#: src/qml/scorescreen/ScoreScreen.qml:237
+#: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr "Dersi tekrar edin. Yetenekleriniz zamanla iyileşecektir."
 
-#: src/qml/scorescreen/ScoreScreen.qml:239
+#: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
 msgid "Next lesson unlocked"
 msgstr "Sonraki ders açıldı"
 
-#: src/qml/scorescreen/ScoreScreen.qml:276
+#: src/qml/scorescreen/ScoreScreen.qml:277
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
 msgstr "Göster"
 
-#: src/qml/scorescreen/ScoreScreen.qml:285
-#: src/qml/scorescreen/ScoreScreen.qml:358
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:360
 #, kde-format
 msgid "Progress"
 msgstr "İlerleme"
 
-#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:287
 #: src/qml/scorescreen/ScoreScreen.qml:376
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
 msgstr "Hatalar"
 
-#: src/qml/scorescreen/ScoreScreen.qml:296
+#: src/qml/scorescreen/ScoreScreen.qml:297
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
 msgstr "Üzerinden"
 
-#: src/qml/scorescreen/ScoreScreen.qml:308
+#: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "All Lessons"
 msgstr "Tüm Dersler"
 
-#: src/qml/scorescreen/ScoreScreen.qml:309
+#: src/qml/scorescreen/ScoreScreen.qml:310
 #, kde-format
 msgid "This Lesson"
 msgstr "Bu Ders"

@@ -1,22 +1,22 @@
-# translation of ktouch.po to Español
-# Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Spanish translations for ktouch.po package.
+# Copyright (C) 2003-2025 This file is copyright:
+# This file is distributed under the same license as the ktouch package.
 #
-# Development-KDE, 2005.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2004.
-# Rafael Beccar <rafael.beccar@kdemail.net>, 2004, 2005, 2006.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2019, 2021, 2023.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2005.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
-# Santiago Fernández Sancho <santi@kde-es.org>, 2007, 2008.
-# Jaime Robles <jaime@kde.org>, 2008.
-# Rocio Gallego <traducciones@rociogallego.com>, 2012, 2013, 2014.
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2004, 2005, 2006 Rafael Beccar <rafael.beccar@kdemail.net>
+# SPDX-FileCopyrightText: 2005, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2019, 2021, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008 Santiago Fernández Sancho <santi@kde-es.org>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2012, 2013, 2014 Rocio Gallego <traducciones@rociogallego.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2023-08-24 04:52+0200\n"
+"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"PO-Revision-Date: 2025-06-26 00:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -154,7 +154,7 @@ msgstr "Nuevo"
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr "Nuevo..."
+msgstr "Nuevo…"
 
 #: src/editor/newresourceassistant.cpp:35
 #, kde-format
@@ -439,24 +439,24 @@ msgstr "Configurar el teclado"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Editor de cursos y distribuciones de teclado..."
+msgstr "Editor de cursos y distribuciones de teclado…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
 msgid "Configure Keyboard..."
-msgstr "Configurar teclado..."
+msgstr "Configurar teclado…"
 
-#: src/main.cpp:31
+#: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Entrenador de mecanografía"
 
-#: src/main.cpp:33
+#: src/main.cpp:32
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Aprenda y practique mecanografía"
 
-#: src/main.cpp:36
+#: src/main.cpp:35
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -465,67 +465,67 @@ msgstr ""
 "Copyright © 2011-2015 por Sebastian Gottfried\n"
 "Copyright © 2000-2007 por Håvard Frøiland y Andreas Nicolai"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:43
+#: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
 msgstr "Responsable actual"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:44
+#: src/main.cpp:43
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Programador y responsable anterior"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:45
+#: src/main.cpp:44
 #, kde-format
 msgid "Original author"
 msgstr "Autor original"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Autor del icono SVG"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Numerosos parches, correcciones del código y actualizaciones"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Todos los creadores de los archivos de prácticas y de teclados"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Lanzar el editor de cursos y distribuciones de teclado"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Usar la ruta como prefijo de la lista de rutas de importación de QML"
@@ -639,14 +639,14 @@ msgstr "Bienvenido al entrenador de mecanografía"
 msgid "Start Training"
 msgstr "Iniciar práctica"
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
 msgstr ""
 "El curso seleccionado está pensado para una distribución de teclado "
 "específica."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
@@ -655,7 +655,7 @@ msgstr ""
 "El curso seleccionado no está pensado para la distribución de teclado activa "
 "de su equipo."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
 msgid ""
 "KTouch can't switch or set up keyboard layouts. Before training, you have to "
@@ -667,7 +667,7 @@ msgstr ""
 "de teclado correcta. En caso contrario tendrá que usar la distribución "
 "actual de teclado para escribir el texto de la lección."
 
-#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
 msgid "Configure Keyboard"
 msgstr "Configurar teclado"
@@ -720,7 +720,7 @@ msgstr "Texto de la lección"
 msgid "Done"
 msgstr "Terminado"
 
-#: src/qml/homescreen/LessonLockedNotice.qml:44
+#: src/qml/homescreen/LessonLockedNotice.qml:45
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Complete las lecciones anteriores para desbloquear"
@@ -816,7 +816,7 @@ msgstr "Crear nuevo perfil"
 msgid "Use Selected Profile"
 msgstr "Usar el perfil seleccionado"
 
-#: src/qml/homescreen/StatPopupDialog.qml:21
+#: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
 msgstr "Estadísticas de práctica de la lección"
@@ -826,83 +826,83 @@ msgstr "Estadísticas de práctica de la lección"
 msgid "Elapsed time"
 msgstr "Tiempo transcurrido"
 
-#: src/qml/scorescreen/ScoreScreen.qml:121
+#: src/qml/scorescreen/ScoreScreen.qml:122
 #, kde-format
 msgid "Character:"
 msgstr "Carácter:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:125
+#: src/qml/scorescreen/ScoreScreen.qml:126
 #, kde-format
 msgid "Errors:"
 msgstr "Errores:"
 
-#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/scorescreen/ScoreScreen.qml:153
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
 msgstr "Volver a la pantalla de inicio"
 
-#: src/qml/scorescreen/ScoreScreen.qml:166
+#: src/qml/scorescreen/ScoreScreen.qml:167
 #, kde-format
 msgid "Repeat Lesson"
 msgstr "Repetir lección"
 
-#: src/qml/scorescreen/ScoreScreen.qml:174
+#: src/qml/scorescreen/ScoreScreen.qml:175
 #, kde-format
 msgid "Next Lesson"
 msgstr "Siguiente lección"
 
-#: src/qml/scorescreen/ScoreScreen.qml:224
+#: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
 msgstr "¡Enhorabuena! Ha pasado la lección."
 
-#: src/qml/scorescreen/ScoreScreen.qml:225
+#: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
 msgid "You have not passed the lesson."
 msgstr "No ha pasado la lección."
 
-#: src/qml/scorescreen/ScoreScreen.qml:237
+#: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr "Repetir la lección. Su técnica mejorará automáticamente con el tiempo."
 
-#: src/qml/scorescreen/ScoreScreen.qml:239
+#: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
 msgid "Next lesson unlocked"
 msgstr "Siguiente lección desbloqueada"
 
-#: src/qml/scorescreen/ScoreScreen.qml:276
+#: src/qml/scorescreen/ScoreScreen.qml:277
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
 msgstr "Mostrar"
 
-#: src/qml/scorescreen/ScoreScreen.qml:285
-#: src/qml/scorescreen/ScoreScreen.qml:358
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:360
 #, kde-format
 msgid "Progress"
 msgstr "Progreso"
 
-#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:287
 #: src/qml/scorescreen/ScoreScreen.qml:376
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
 msgstr "Errores"
 
-#: src/qml/scorescreen/ScoreScreen.qml:296
+#: src/qml/scorescreen/ScoreScreen.qml:297
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
 msgstr "Sobre"
 
-#: src/qml/scorescreen/ScoreScreen.qml:308
+#: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "All Lessons"
 msgstr "Todas las lecciones"
 
-#: src/qml/scorescreen/ScoreScreen.qml:309
+#: src/qml/scorescreen/ScoreScreen.qml:310
 #, kde-format
 msgid "This Lesson"
 msgstr "Esta lección"
@@ -1289,7 +1289,7 @@ msgstr "ID del modificador:"
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr "Abrir un archivo de texto..."
+msgstr "Abrir un archivo de texto…"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
@@ -1488,39 +1488,3 @@ msgstr "Establecer etiqueta de tecla especial"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Establecer ID modificador de tecla especial"
-
-#~ msgid "Choose Keyboard Layout"
-#~ msgstr "Escoger distribución de teclado"
-
-#~ msgid "Create New Custom Lesson"
-#~ msgstr "Crear nueva lección personalizada"
-
-#~ msgid "'%1' deleted."
-#~ msgstr "«%1» borrada."
-
-#~ msgctxt "Statistics on lesson:"
-#~ msgid "On:"
-#~ msgstr "El:"
-
-#~ msgid "Use OpenGL for rendering (experimental)"
-#~ msgstr "Usar OpenGL para la representación (experimental)"
-
-#~ msgid "Edit Custom Lesson"
-#~ msgstr "Editar lección personalizada"
-
-#~ msgid "No Courses Available"
-#~ msgstr "Ningún curso disponible"
-
-#~ msgid ""
-#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
-#~ "create your own course with the keyboard layout and course editor."
-#~ msgstr ""
-#~ "El entrenador de mecanografía no tiene cursos para su distribución de "
-#~ "teclado. Debe crear sus propios cursos con el editor de cursos y "
-#~ "distribuciones de teclado."
-
-#~ msgid "Launch Editor"
-#~ msgstr "Lanzar el editor"
-
-#~ msgid "Form"
-#~ msgstr "Formulario"

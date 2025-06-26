@@ -112,20 +112,6 @@
 > </othercredit
 > <othercredit role="translator"
 > <firstname
->Santiago</firstname
-> <surname
->Fernández Sancho</surname
-> <affiliation
-><address
-><email
->santi@kde-es.org</email
-></address
-></affiliation
-> <contrib
->Traductor</contrib
-> </othercredit
->  <othercredit role="translator"
-> <firstname
 >Leticia</firstname
 > <surname
 >Martín Hernández</surname
@@ -136,7 +122,7 @@
 ></address
 ></affiliation
 > <contrib
->Traductor</contrib
+>Traductora</contrib
 > </othercredit
 > 
 
@@ -346,7 +332,7 @@
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > en la barra de herramientas, seleccionar el submenú <guisubmenu
-> Configurar el teclado...</guisubmenu
+> Configurar el teclado…</guisubmenu
 > y elegir el nombre de la distribución de su teclado o alguna similar a la suya. Si su teclado no está incluido, puede definir su propia distribución; consulte <xref linkend="create_layouts"/>. </para>
 </note>
 <para
@@ -571,7 +557,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Editor de curso y de distribución del teclado...</guimenuitem
+>Editor de curso y de distribución del teclado…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -586,7 +572,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar Entrenador de mecanografía...</guimenuitem
+>Configurar Entrenador de mecanografía…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -601,7 +587,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar los accesos rápidos...</guimenuitem
+>Configurar los accesos rápidos…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -614,7 +600,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar el teclado...</guimenuitem
+>Configurar el teclado…</guimenuitem
 ></term>
 <listitem
 ><para
@@ -646,7 +632,7 @@
 ><imagedata fileref="Icon-configure.png" format="PNG"/></imageobject
 ></inlinemediaobject
 > situado a la derecha de la barra de herramientas de la parte superior de la pantalla de inicio y después seleccione <guimenuitem
->Configurar Entrenador de mecanografía...</guimenuitem
+>Configurar Entrenador de mecanografía…</guimenuitem
 >.</para>
 
  <variablelist>
@@ -774,7 +760,7 @@ format="PNG"/></imageobject>
 <para
 >Seleccione <menuchoice
 ><guimenu
->Configurar teclado...</guimenu
+>Configurar teclado…</guimenu
 > </menuchoice
 >en el menú de la aplicación para seleccionar una distribución de teclado diferente. Después, &i18n-ktouch; se adaptará convenientemente y le presentará los cursos para esta distribución de teclado. </para>
 <note>
@@ -983,7 +969,7 @@ format="PNG"/></imageobject>
 ><imagedata fileref="Icon-configure.png" format="PNG"/></imageobject
 ></inlinemediaobject
 > situado a la derecha de la barra de herramientas de la pantalla de inicio y después seleccionando <guimenuitem
->Editor de distribución de teclado y curso...</guimenuitem
+>Editor de distribución de teclado y curso…</guimenuitem
 > Puede elegir abrir un archivo de curso, crear un curso vacío completamente nuevo o utilizar un curso existente como plantilla.</para>
 <important>
 <para
@@ -1722,6 +1708,8 @@ format="PNG"/></imageobject>
 >traducciones@rociogallego.com</email
 >, Miguel Revilla Rodríguez <email
 >yo@miguelrevilla.com</email
+>, Rafael Beccar <email
+>traduccioneskde@rafabeccar.com.ar</email
 >, Santiago Fernández Sancho <email
 >santi@kde-es.org</email
 > y Leticia Martín Hernández<email
