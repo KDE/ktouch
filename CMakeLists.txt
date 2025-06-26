@@ -66,6 +66,8 @@ if (NOT WITHOUT_X11)
     find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
     if (Qt6Gui_VERSION VERSION_GREATER_EQUAL 6.9.0)
         find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS GuiPrivate)
+    else()
+        set(Qt6GuiPrivate_FOUND TRUE)
     endif()
 
     if (Qt6GuiPrivate_FOUND AND X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)

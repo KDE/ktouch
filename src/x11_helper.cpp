@@ -82,7 +82,7 @@ void X11Helper::scrollLayouts(int delta)
 QStringList X11Helper::getLayoutsListAsString(const QList<LayoutUnit>& layoutsList)
 {
     QStringList stringList;
-    foreach(const LayoutUnit& layoutUnit, layoutsList) {
+    for(const LayoutUnit& layoutUnit : layoutsList) {
         stringList << layoutUnit.toString();
     }
     return stringList;
@@ -256,7 +256,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 //	qCDebug(KCM_KEYBOARD) << "prop_data:" << nitems << prop_data;
     QStringList names;
     for(char* p=prop_data; p-prop_data < (long)nitems && p != nullptr; p += strlen(p)+1) {
-        names.append( p );
+        names.append( QLatin1String(p) );
 //		kDebug() << " " << p;
     }
 
@@ -266,8 +266,8 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
     }
 
     if( fetchType == ALL || fetchType == LAYOUTS_ONLY ) {
-        QStringList layouts = names[2].split(OPTIONS_SEPARATOR);
-        QStringList variants = names[3].split(OPTIONS_SEPARATOR);
+        QStringList layouts = names[2].split(QLatin1String(OPTIONS_SEPARATOR));
+        QStringList variants = names[3].split(QLatin1String(OPTIONS_SEPARATOR));
 
         for(int ii=0; ii<layouts.count(); ii++) {
             xkbConfig->layouts << (layouts[ii] != nullptr ? layouts[ii] : QLatin1String(""));
@@ -286,7 +286,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
     if( fetchType == ALL ) {
         if( names.count() >= 5 ) {
             QString options = (names[4] != nullptr ? names[4] : QLatin1String(""));
-            xkbConfig->options = options.split(OPTIONS_SEPARATOR);
+            xkbConfig->options = options.split(QLatin1String(OPTIONS_SEPARATOR));
             qDebug() << "Fetched xkbOptions from X server:" << options;
         }
     }
@@ -342,11 +342,11 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
     _xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
     if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
 //		kDebug() << "group switch event";
-        emit(layoutChanged());
+        Q_EMIT(layoutChanged());
     }
     else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
 //		kDebug() << "layout switch event";
-        emit(layoutMapChanged());
+        Q_EMIT(layoutMapChanged());
     }
     return true;
 }
@@ -416,7 +416,7 @@ static const char LAYOUT_VARIANT_SEPARATOR_SUFFIX[] = ")";
 
 static QString& stripVariantName(QString& variant)
 {
-    if( variant.endsWith(LAYOUT_VARIANT_SEPARATOR_SUFFIX) ) {
+    if( variant.endsWith(QLatin1String(LAYOUT_VARIANT_SEPARATOR_SUFFIX)) ) {
         int suffixLen = strlen(LAYOUT_VARIANT_SEPARATOR_SUFFIX);
         return variant.remove(variant.length()-suffixLen, suffixLen);
     }
@@ -425,7 +425,7 @@ static QString& stripVariantName(QString& variant)
 
 LayoutUnit::LayoutUnit(const QString& fullLayoutName)
 {
-    QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
+    QStringList lv = fullLayoutName.split(QLatin1String(LAYOUT_VARIANT_SEPARATOR_PREFIX));
     layout = lv[0];
     variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
 }
@@ -435,7 +435,7 @@ QString LayoutUnit::toString() const
     if( variant.isEmpty() )
         return layout;
 
-    return layout + LAYOUT_VARIANT_SEPARATOR_PREFIX+variant+LAYOUT_VARIANT_SEPARATOR_SUFFIX;
+    return layout + QLatin1String(LAYOUT_VARIANT_SEPARATOR_PREFIX) + variant + QLatin1String(LAYOUT_VARIANT_SEPARATOR_SUFFIX);
 }
 
 const int LayoutUnit::MAX_LABEL_LENGTH = 3;

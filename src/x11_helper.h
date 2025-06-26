@@ -12,7 +12,7 @@
 #include <QString>
 #include <QStringList>
 #include <QWidget>
-#include <qtx11extras_p.h>
+#include <private/qtx11extras_p.h>
 #include <QAbstractNativeEventFilter>
 
 #include <xcb/xcb.h>
@@ -194,7 +194,7 @@ struct LayoutSet {
     QString toString() const {
         QString str(currentLayout.toString());
         str += QLatin1String(": ");
-        foreach(const LayoutUnit& layoutUnit, layouts) {
+        for (const LayoutUnit& layoutUnit : std::as_const(layouts)) {
             str += layoutUnit.toString() + QLatin1Char(' ');
         }
         return str;
@@ -202,7 +202,7 @@ struct LayoutSet {
 
     static QString toString(const QList<LayoutUnit>& layoutUnits) {
         QString str;
-        foreach(const LayoutUnit& layoutUnit, layoutUnits) {
+        for (const LayoutUnit& layoutUnit : layoutUnits) {
             str += layoutUnit.toString() + QLatin1Char(',');
         }
         return str;
