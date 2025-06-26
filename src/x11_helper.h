@@ -12,7 +12,7 @@
 #include <QString>
 #include <QStringList>
 #include <QWidget>
-#include <QX11Info>
+#include <qtx11extras_p.h>
 #include <QAbstractNativeEventFilter>
 
 #include <xcb/xcb.h>
