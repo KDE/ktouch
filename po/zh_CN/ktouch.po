@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -256,34 +256,34 @@ msgstr "保存课程时出错。"
 msgid "Error while saving keyboard layout to disk."
 msgstr "保存键盘布局出错."
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "选中的课程已经是内置课程。"
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "作为新课程导入"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "所选课程已作为用户课程存在。"
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr "当前选中的键盘布局已经是内置键盘布局。"
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "导入为新键盘布局"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

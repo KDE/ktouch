@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2023-09-14 23:13+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -255,22 +255,22 @@ msgstr "Error durante que il salveguardava curso a disco."
 msgid "Error while saving keyboard layout to disk."
 msgstr "Error durante que il salveguardava disposition de claviero."
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "Le curso seligite ja es presente como curso incorporate."
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "Importa como nove curso"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "Le curso seligite ja es presente como curso de usator."
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
@@ -279,12 +279,12 @@ msgstr ""
 "Le disposition de claviero seligite ja es presente como disposition de "
 "claviero incorporate."
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "Importa como nove disposition de claviero"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

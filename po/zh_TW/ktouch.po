@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2024-01-29 01:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -259,34 +259,34 @@ msgstr "儲存課程到磁碟時發生錯誤"
 msgid "Error while saving keyboard layout to disk."
 msgstr "儲存鍵盤佈局到磁碟時發生錯誤"
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "選取的課程已經是內建的課程。"
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "匯入成新課程"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "選取的課程已經是使用者課程。"
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr "選取的鍵盤佈局已經是內建的鍵盤佈局。"
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "匯入成新的鍵盤佈局"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

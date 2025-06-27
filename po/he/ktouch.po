@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2025-05-29 15:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -25,7 +25,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 25.04.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -122,7 +123,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: src/editor/lessontexteditor.cpp:62
-#, kde-format
+#, fuzzy, kde-format
 msgid "%1 Character"
 msgid_plural "%1 Characters"
 msgstr[0] "תו"
@@ -265,34 +266,34 @@ msgstr "שגיאה בשמירת הקורס לכונן."
 msgid "Error while saving keyboard layout to disk."
 msgstr "שגיאה בשמירת פריסת המקלדת לכונן."
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "הקורס הנבחר כבר קיים כקורס מובנה."
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "ייבוא כקורס חדש"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "הקורס הנבחר כבר קיים כקורס משתמש."
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr "פריסת המקלדת הנבחרת כבר קיימת כפריסת מקלדת מובנית."
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "ייבוא כפריסת מקלדת חדשה"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

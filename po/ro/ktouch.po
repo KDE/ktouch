@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2011-11-28 22:30+0200\n"
 "Last-Translator: Costin Raluca <costin_raluca_96@yahoo.com>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -282,37 +282,37 @@ msgstr ""
 msgid "Error while saving keyboard layout to disk."
 msgstr "Editor aspect tastatura"
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, fuzzy, kde-format
 #| msgid "The selected key is not a finger key."
 msgid "The selected course is already present as a user course."
 msgstr "Cheia selectată nu este o cheie deget."
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, fuzzy, kde-format
 #| msgctxt "Lesson Name"
 #| msgid "German (Neo 2 keyboard layout)"
 msgid "Import as new keyboard layout"
 msgstr "Limba Germana(aspectul tastaturii Neo 2 )"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, fuzzy, kde-format
 #| msgid "The selected key is not a finger key."
 msgid ""

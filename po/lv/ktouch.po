@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2013-08-03 13:04+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -270,23 +270,23 @@ msgstr "Kļūda saglabājot kursu diskā."
 msgid "Error while saving keyboard layout to disk."
 msgstr "Kļūda saglabājot tastatūras izkārtojumu diskā."
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "Izvēlētais kurss jau ir pieejams kā iebūvētais kurss."
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "Importēt kā jaunu kursu"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, fuzzy, kde-format
 #| msgid "The selected course is already present as an user course."
 msgid "The selected course is already present as a user course."
 msgstr "Izvēlētais kurss jau ir pieejams kā lietotāja kurss."
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
@@ -295,12 +295,12 @@ msgstr ""
 "Izvēlētais tastatūras izkārtojums jau ir pieejams kā iebūvētais tastatūras "
 "izkārtojums."
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "Importēt kā jaunu tastatūras izkārtojumu"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, fuzzy, kde-format
 #| msgid ""
 #| "The selected keyboard layout is already present as an user keyboard "

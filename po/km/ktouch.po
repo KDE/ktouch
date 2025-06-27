@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:39+0000\n"
 "PO-Revision-Date: 2010-06-08 15:50+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -261,35 +261,35 @@ msgstr "កំហុស​ខណៈ​ពេល​រក្សាទុក​វ
 msgid "Error while saving keyboard layout to disk."
 msgstr "កំហុស​ខណៈ​ពេល​​រក្សាទុក​ប្លង់​ក្ដារ​ចុច​ទៅ​កាន់​ថាស ។"
 
-#: src/editor/resourceeditor.cpp:523
+#: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "វគ្គសិក្សា​ដែល​បាន​ជ្រើស​រើស​​​បង្ហាញ​រួចហើយ​​ដូច​ជា​វគ្គសិក្សា​ដែល​ជាប់រវល់ ។"
 
-#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
+#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
 msgid "Import as new course"
 msgstr "នាំចូល​ជា​វគ្គសិក្សា​ថ្មី"
 
-#: src/editor/resourceeditor.cpp:552
+#: src/editor/resourceeditor.cpp:540
 #, fuzzy, kde-format
 #| msgid "The selected course is already present as an user course."
 msgid "The selected course is already present as a user course."
 msgstr "វគ្គសិក្សា​ដែល​បាន​ជ្រើស​​រើស​បង្ហាញ​រួច​ហើយ​ជា​វគ្គសិក្សា​​របស់​អ្នក​ប្រើ ។"
 
-#: src/editor/resourceeditor.cpp:613
+#: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr "ប្លង់​ក្ដារ​ចុច​ដែល​បាន​ជ្រើស​​រើស​បង្ហាញ​រួច​ហើយ​​​ជា​ប្លង់​ក្ដារ​ចុច​ជាប់ ។"
 
-#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
+#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "នាំចូល​ជា​ប្លង់​​ក្ដារ​ចុច​ថ្មី"
 
-#: src/editor/resourceeditor.cpp:637
+#: src/editor/resourceeditor.cpp:605
 #, fuzzy, kde-format
 #| msgid ""
 #| "The selected keyboard layout is already present as an user keyboard "
