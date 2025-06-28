@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:39+0000\n"
-"PO-Revision-Date: 2025-03-08 00:14+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-06-27 10:26+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -48,7 +48,7 @@ msgstr "%​%1"
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr "'%1' geçersiz veritabanı sürümü."
+msgstr "Geçersiz veritabanı sürümü “%1”."
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
@@ -69,7 +69,7 @@ msgstr "%1 kimlikli bir ders yok"
 #: src/core/userdataaccess.cpp:328
 #, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr "%1 kimlikli bir klavye düzeni yok"
+msgstr "%1 kimlikli bir klavye yerleşimi yok"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
@@ -111,12 +111,12 @@ msgstr "İçsel dersler yalnızca görüntülenebilir."
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "Klavye düzeni açılırken hata"
+msgstr "Klavye yerleşimi açılırken hata"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "İçsel klavye düzenleri yalnızca görüntülenebilir."
+msgstr "Yerleşik klavye yerleşimleri yalnızca görüntülenebilir."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "Seçili dosya açılamadı"
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Aynı adda bir klavye düzeni halihazırda var."
+msgstr "Aynı adda bir klavye yerleşimi halihazırda var."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -154,7 +154,7 @@ msgstr "Yeni"
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr "Yeni..."
+msgstr "Yeni…"
 
 #: src/editor/newresourceassistant.cpp:35
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "Yeni Ders"
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr "Yeni Klavye Düzeni"
+msgstr "Yeni Klavye Yerleşimi"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -194,27 +194,27 @@ msgstr "Dışa Aktar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "Ders ve Klavye Düzeni Düzenleyicisi"
+msgstr "Ders ve Klavye Yerleşimi Düzenleyicisi"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr "Yeni bir ders veya klavye düzeni oluştur"
+msgstr "Yeni bir ders veya klavye yerleşimi oluştur"
 
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr "Seçili ders veya klavye düzenini sil"
+msgstr "Seçili dersi veya klavye yerleşimini sil"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "Bir dosyadan ders veya klavye düzeni içe aktar"
+msgstr "Bir dosyadan ders veya klavye yerleşimi içe aktar"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr "Seçili ders veya klavye düzenini bir dosyaya aktar"
+msgstr "Seçili dersi veya klavye yerleşimini bir dosyaya aktar"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
@@ -224,7 +224,7 @@ msgstr "Ders silinirken hata"
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "Klavye düzeni silinirken hata"
+msgstr "Klavye yerleşimi silinirken hata"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
@@ -245,7 +245,7 @@ msgstr "Ders kaydedilirken hata"
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "Klavye düzeni kaydedilirken hata"
+msgstr "Klavye yerleşimi kaydedilirken hata"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
@@ -255,7 +255,7 @@ msgstr "<b>%1</b> dersi silindi"
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr "<b>%1</b> klavye düzeni silindi"
+msgstr "<b>%1</b> klavye yerleşimi silindi"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
@@ -265,7 +265,7 @@ msgstr "Ders diske kaydedilirken hata."
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "Klavye düzeni diske kaydedilirken hata."
+msgstr "Klavye yerleşimi diske kaydedilirken hata."
 
 #: src/editor/resourceeditor.cpp:519
 #, kde-format
@@ -287,18 +287,19 @@ msgstr "Seçili ders zaten bir kullanıcı dersi olarak mevcut."
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
-msgstr "Seçili klavye düzeni zaten dahili bir klavye düzeni olarak mevcut."
+msgstr "Seçili klavye yerleşimi halihazırda dahili bir yerleşim olarak var."
 
 #: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
-msgstr "Yeni klavye düzeni olarak içe aktar"
+msgstr "Yeni klavye yerleşimi olarak içe aktar"
 
 #: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
-msgstr "Seçili klavye düzeni zaten bir kullanıcı klavye düzeni olarak mevcut."
+msgstr ""
+"Seçili klavye yerleşimi halihazırda bir kullanıcı yerleşimi olarak var."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
@@ -318,7 +319,7 @@ msgstr "Şablon olarak farklı ders kullan"
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "Şablon olarak farklı klavye düzeni kullan"
+msgstr "Şablon olarak farklı klavye yerleşimi kullan"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -328,13 +329,13 @@ msgstr "Ders"
 #: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
-msgstr "Klavye düzeni"
+msgstr "Klavye yerleşimi"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "X11 olmayan platformlarda kullanılacak klavye düzeni"
+msgstr "X11 olmayan platformlarda kullanılacak klavye yerleşimi"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
@@ -431,17 +432,17 @@ msgstr "Klavyeyi Yapılandır"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Ders ve Klavye Düzeni Düzenleyicisi..."
+msgstr "Ders ve Klavye Yerleşimi Düzenleyicisi…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
 msgid "Configure Keyboard..."
-msgstr "Klavye Yapılandır..."
+msgstr "Klavyeyi Yapılandır…"
 
 #: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
-msgstr "Yazım Eğitici"
+msgstr "Yazım Eğiticisi"
 
 #: src/main.cpp:32
 #, kde-format
@@ -500,7 +501,7 @@ msgstr "SVG simgesinin yaratıcısı"
 #: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr "Anne-Marie Mahfouf"
+msgstr "Anne–Marie Mahfouf"
 
 #: src/main.cpp:47
 #, kde-format
@@ -515,7 +516,7 @@ msgstr "Bütün klavye dosyası ve alıştırmaların yaratıcıları"
 #: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr "Dersi ve klavye düzeni düzenleyiciyi çalıştır"
+msgstr "Dersi ve klavye yerleşimi düzenleyicisini çalıştır"
 
 #: src/main.cpp:67
 #, kde-format
@@ -535,7 +536,7 @@ msgstr "Karakter"
 #: src/models/charactersmodel.cpp:197
 #, kde-format
 msgid "Modifier ID"
-msgstr "Düzenleyici kimliği"
+msgstr "Niteleyici kimliği"
 
 #: src/models/charactersmodel.cpp:199
 #, kde-format
@@ -565,7 +566,7 @@ msgstr "Dersler"
 #: src/models/resourcemodel.cpp:211
 #, kde-format
 msgid "Keyboard Layouts"
-msgstr "Klavye Düzenleri"
+msgstr "Klavye Yerleşimleri"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
@@ -613,7 +614,7 @@ msgstr "Karakter/dak:"
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "Klavye Düzeniniz için Dersler"
+msgstr "Klavye Yerleşiminiz için Dersler"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
@@ -634,7 +635,7 @@ msgstr "Eğitimi Başlat"
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "Seçili ders, belirli bir klavye düzeni için yapılmıştır."
+msgstr "Seçili ders, belirli bir klavye yerleşimi için yapılmıştır."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
@@ -642,7 +643,7 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
-"Seçili ders, bilgisayarınızdaki etkin klavye düzeni için yapılmamıştır."
+"Seçili ders, bilgisayarınızdaki etkin klavye yerleşimi için yapılmamıştır."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
@@ -651,10 +652,10 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
-"K On Parmak, klavye düzenlerini değiştiremez veya ayarlayamaz. Antremandan "
-"önce, bilgisayarınızı doğru klavye düzenini kullanması için "
+"K Onparmak, klavye yerleşimlerinizi değiştiremez veya ayarlayamaz. "
+"Antremandan önce, bilgisayarınızı doğru klavye yerleşimini kullanması için "
 "yapılandırmalısınız. Diğer türlü ders metnine başlarken geçerli klavye "
-"düzeninizi kullanmak durumunda kalırsınız."
+"yerleşiminizi kullanmak durumunda kalırsınız."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
@@ -758,7 +759,7 @@ msgstr "Düzenle"
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr "\"<b>%1</b>\" profilini gerçekten silmek istediğinizden emin misiniz?"
+msgstr "“<b>%1</b>” profilini silmeyi gerçekten istediğinizden emin misiniz?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
@@ -899,7 +900,7 @@ msgstr "Bu Ders"
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr "Klavye düzeni için kullanılabilir görselleştirme yok."
+msgstr "Klavye yerleşimi için kullanılabilir görselleştirme yok."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
@@ -992,7 +993,7 @@ msgstr " %"
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr "Klavye düzenleri:"
+msgstr "Klavye yerleşimleri:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
@@ -1270,13 +1271,13 @@ msgstr "Etiket:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:626
 #, kde-format
 msgid "Modifier ID:"
-msgstr "Düzenleyici kimliği:"
+msgstr "Niteleyici kimliği:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr "Bir metin dosyası aç..."
+msgstr "Bir metin dosyası aç…"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
@@ -1294,7 +1295,7 @@ msgstr "0 Karakter"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr "Mevcut sistem klavye düzeni adını yapıştır"
+msgstr "Geçerli sistem klavye yerleşimi adını yapıştır"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
@@ -1364,7 +1365,7 @@ msgstr "Başlığı ayarla"
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Klavye düzenini ayarla"
+msgstr "Klavye yerleşimini ayarla"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1399,17 +1400,17 @@ msgstr "Ders metnini ayarla"
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr "Klavye düzeni başlığını ayarla"
+msgstr "Klavye yerleşimi başlığını ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr "Klavye düzeni adını ayarla"
+msgstr "Klavye yerleşimi adını ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr "Klavye düzeni boyutunu ayarla"
+msgstr "Klavye yerleşimi boyutunu ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
