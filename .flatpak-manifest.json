@@ -30,7 +30,7 @@
         {
             "name": "kqtquickcharts",
             "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git", "branch": "release/25.04" } ]
         },
         {
             "name": "ktouch",
