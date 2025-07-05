@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:21+0000\n"
+"POT-Creation-Date: 2025-07-05 05:53+0000\n"
 "PO-Revision-Date: 2021-10-07 08:09+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -166,9 +166,11 @@ msgstr "Νέα διάταξη πληκτρολογίου"
 msgid "Template"
 msgstr "Πρότυπο"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Διαγραφή "
@@ -326,6 +328,86 @@ msgstr "Μάθημα"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Διάταξη πληκτρολογίου"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+"Η διάταξη πληκτρολογίου που θα χρησιμοποιηθεί στα συστήματα που δε "
+"χρησιμοποιούν X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Ελέγχει αν τα σφάλματα πληκτρολόγησης πρέπει να διορθωθούν ή όχι."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Ελέγχει αν το πληκτρολόγιο θα εμφανίζεται κατά την εξάσκηση."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+"Ελέγχει αν τα στατιστικά πραγματικού χρόνου θα εμφανίζονται κατά την "
+"εξάσκηση."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+"Το πάτημα του πλήκτρου επαναφοράς στο τέλος μια γραμμής θα οδηγεί στην "
+"επόμενη γραμμή."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+"Το πάτημα του πλήκτρου διαστήματος στο τέλος μια γραμμής θα οδηγεί στην "
+"επόμενη γραμμή."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Ο ελάχιστος απαιτούμενος αριθμός χτυπημάτων ανά λεπτό για να ξεκλειδωθεί το "
+"επόμενο μάθημα."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Η μικρότερη απαιτούμενη ακρίβεια πληκτρολόγησης (σε ποσοστό) για να "
+"ξεκλειδωθεί το επόμενο μάθημα."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Ο τόνος χρωματισμού για την επισήμανση των πλήκτρων κάθε δαχτύλου."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Πώς πρέπει να εμφανίζονται τα χρώματα στα διαφανή δάχτυλα."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Το αναγνωριστικό του προφίλ που χρησιμοποιήθηκε την τελευταία φορά."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -613,7 +695,14 @@ msgstr "Επιβεβαίωση"
 msgid "Edit lesson"
 msgstr "Επεξεργασία μαθήματος"
 
-#: src/qml/homescreen/LessonEditorDialog.qml:45
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Τίτλος:"
@@ -856,6 +945,434 @@ msgstr ""
 "Παύση συνεδρίας εξάσκησης Ο χρόνος αρχίζει να μετρά ξανά με το πρώτο πάτημα "
 "πλήκτρου."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Δάχτυλα"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Αριστερό χέρι"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Δείκτης:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Μέσος:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Παράμεσος:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Μικρός:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Δεξί χέρι"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Αδιαφάνεια"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Διάταξη πληκτρολογίου:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Μαθήματα:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Προσθήκη νέου μαθήματος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Αφαίρεση μαθήματος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:224
+#, kde-format
+msgid "Move lesson up"
+msgstr "Μετακίνηση μαθήματος προς τα πάνω"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:237
+#, kde-format
+msgid "Move lesson down"
+msgstr "Μετακίνηση μαθήματος προς τα κάτω"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:312
+#, kde-format
+msgid "New characters:"
+msgstr "Νέοι χαρακτήρες:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Διάλογος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Δημιουργία νέου κανονικού πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Κανονικό πλήκτρο"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:41
+#, kde-format
+msgid "Create new special key"
+msgstr "Δημιουργία νέου ειδικού πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:44
+#, kde-format
+msgid "Special Key"
+msgstr "Ειδικό πλήκτρο"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:63
+#, kde-format
+msgid "Delete selected key"
+msgstr "Διαγραφή επιλεγμένου πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:127
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Όνομα:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Πλάτος:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Ύψος:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Γεωμετρία"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Αριστερά:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Πάνω:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
+#, kde-format
+msgid "Key"
+msgstr "Πλήκτρο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Δάχτυλο:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Αριστερός μικρός"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Αριστερός παράμεσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Αριστερός μέσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Αριστερός δείκτης"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Δεξιός δείκτης"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Δεξιός μέσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Δεξιός παράμεσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Δεξιός μικρός"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Δείκτης αφής:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Χαρακτήρες"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Προσθήκη νέου χαρακτήρα"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
+#, kde-format
+msgid "Remove character"
+msgstr "Διαγραφή χαρακτήρα"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
+#, kde-format
+msgid "Type:"
+msgstr "Τύπος:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
+#, kde-format
+msgid "Tab"
+msgstr "Tab"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
+#, kde-format
+msgid "Return"
+msgstr "Επαναφορά (Return)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
+#, kde-format
+msgid "Space"
+msgstr "Διάστημα"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
+#, kde-format
+msgid "Other"
+msgstr "Άλλο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
+#, kde-format
+msgid "Label:"
+msgstr "Ετικέτα:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Διακριτικό τροποποιητή:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Άνοιγμα αρχείου κειμένου..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:44
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Αυτόματη αναδίπλωση γραμμών"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:70
+#, kde-format
+msgid "0 Characters"
+msgstr "0 χαρακτήρες"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr ""
+"Επικόλληση του ονόματος της τρέχουσας διάταξης πληκτρολογίου του συστήματος"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Κατά τη διάρκεια της εξέτασης:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Εξαναγκασμός διόρθωσης για σφάλματα πληκτρολόγησης"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Εμφάνιση πληκτρολογίου"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Εμφάνιση στατιστικών πραγματικού χρόνου"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Πέρασμα σε νέα γραμμή με:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "ΕπιστρΙοφή"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "Κε&νό"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Όρια ξεκλειδώματος μαθημάτων"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Ελάχιστος αριθμός πληκτρολογήσεων &ανά λεπτό:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Ελάχιστη ακρίβεια:"
+
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -875,11 +1392,6 @@ msgstr "Επεξεργασία περιγραφής"
 #, kde-format
 msgid "Add lesson"
 msgstr "Προσθήκη μαθήματος"
-
-#: src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Αφαίρεση μαθήματος"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -980,260 +1492,6 @@ msgstr "Ορισμός ετικέτας ειδικού πλήκτρου"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Ορισμός του αναγνωριστικού του τροποποιητή ειδικού πλήκτρου"
-
-#~ msgid "The keyboard layout to use on non-X11 platforms"
-#~ msgstr ""
-#~ "Η διάταξη πληκτρολογίου που θα χρησιμοποιηθεί στα συστήματα που δε "
-#~ "χρησιμοποιούν X11"
-
-#~ msgid "Controls whether typing errors have to be corrected or not."
-#~ msgstr "Ελέγχει αν τα σφάλματα πληκτρολόγησης πρέπει να διορθωθούν ή όχι."
-
-#~ msgid "Controls the visibility of the keyboard during training."
-#~ msgstr "Ελέγχει αν το πληκτρολόγιο θα εμφανίζεται κατά την εξάσκηση."
-
-#~ msgid "Controls the visibility of realtime statistics during training."
-#~ msgstr ""
-#~ "Ελέγχει αν τα στατιστικά πραγματικού χρόνου θα εμφανίζονται κατά την "
-#~ "εξάσκηση."
-
-#~ msgid "Return key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "Το πάτημα του πλήκτρου επαναφοράς στο τέλος μια γραμμής θα οδηγεί στην "
-#~ "επόμενη γραμμή."
-
-#~ msgid "Space key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "Το πάτημα του πλήκτρου διαστήματος στο τέλος μια γραμμής θα οδηγεί στην "
-#~ "επόμενη γραμμή."
-
-#~ msgid ""
-#~ "The minimum required amount of strokes per minute to unlock the next "
-#~ "lesson."
-#~ msgstr ""
-#~ "Ο ελάχιστος απαιτούμενος αριθμός χτυπημάτων ανά λεπτό για να ξεκλειδωθεί "
-#~ "το επόμενο μάθημα."
-
-#~ msgid ""
-#~ "The minimum required typing accuracy in percent to unlock the next lesson."
-#~ msgstr ""
-#~ "Η μικρότερη απαιτούμενη ακρίβεια πληκτρολόγησης (σε ποσοστό) για να "
-#~ "ξεκλειδωθεί το επόμενο μάθημα."
-
-#~ msgid "The keyboard tinting color to highlight keys for each finger."
-#~ msgstr "Ο τόνος χρωματισμού για την επισήμανση των πλήκτρων κάθε δαχτύλου."
-
-#~ msgid "How transparent finger colors should be shown."
-#~ msgstr "Πώς πρέπει να εμφανίζονται τα χρώματα στα διαφανή δάχτυλα."
-
-#~ msgid "The ID of the last used profile."
-#~ msgstr "Το αναγνωριστικό του προφίλ που χρησιμοποιήθηκε την τελευταία φορά."
-
-#~ msgid "Fingers"
-#~ msgstr "Δάχτυλα"
-
-#~ msgid "Left Hand"
-#~ msgstr "Αριστερό χέρι"
-
-#~ msgid "Index finger:"
-#~ msgstr "Δείκτης:"
-
-#~ msgid "Middle finger:"
-#~ msgstr "Μέσος:"
-
-#~ msgid "Ring finger:"
-#~ msgstr "Παράμεσος:"
-
-#~ msgid "Little finger:"
-#~ msgstr "Μικρός:"
-
-#~ msgid "Right Hand"
-#~ msgstr "Δεξί χέρι"
-
-#~ msgid "Opacity"
-#~ msgstr "Αδιαφάνεια"
-
-#~ msgid " %"
-#~ msgstr " %"
-
-#~ msgid "Keyboard layout:"
-#~ msgstr "Διάταξη πληκτρολογίου:"
-
-#~ msgid "Description:"
-#~ msgstr "Περιγραφή:"
-
-#~ msgid "Lessons:"
-#~ msgstr "Μαθήματα:"
-
-#~ msgid "Add new lesson"
-#~ msgstr "Προσθήκη νέου μαθήματος"
-
-#~ msgid "Move lesson up"
-#~ msgstr "Μετακίνηση μαθήματος προς τα πάνω"
-
-#~ msgid "Move lesson down"
-#~ msgstr "Μετακίνηση μαθήματος προς τα κάτω"
-
-#~ msgid "New characters:"
-#~ msgstr "Νέοι χαρακτήρες:"
-
-#~ msgid "Dialog"
-#~ msgstr "Διάλογος"
-
-#~ msgid "Create new normal key"
-#~ msgstr "Δημιουργία νέου κανονικού πλήκτρου"
-
-#~ msgid "Normal Key"
-#~ msgstr "Κανονικό πλήκτρο"
-
-#~ msgid "Create new special key"
-#~ msgstr "Δημιουργία νέου ειδικού πλήκτρου"
-
-#~ msgid "Special Key"
-#~ msgstr "Ειδικό πλήκτρο"
-
-#~ msgid "Delete selected key"
-#~ msgstr "Διαγραφή επιλεγμένου πλήκτρου"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Keyboard"
-#~ msgstr "Πληκτρολόγιο"
-
-#~ msgid "Name:"
-#~ msgstr "Όνομα:"
-
-#~ msgid "Width:"
-#~ msgstr "Πλάτος:"
-
-#~ msgid "Height:"
-#~ msgstr "Ύψος:"
-
-#~ msgid "Geometry"
-#~ msgstr "Γεωμετρία"
-
-#~ msgid "Left:"
-#~ msgstr "Αριστερά:"
-
-#~ msgid "Top:"
-#~ msgstr "Πάνω:"
-
-#~ msgid "Key"
-#~ msgstr "Πλήκτρο"
-
-#~ msgid "Finger:"
-#~ msgstr "Δάχτυλο:"
-
-#~ msgid "Left little finger"
-#~ msgstr "Αριστερός μικρός"
-
-#~ msgid "Left ring finger"
-#~ msgstr "Αριστερός παράμεσος"
-
-#~ msgid "Left middle finger"
-#~ msgstr "Αριστερός μέσος"
-
-#~ msgid "Left index finger"
-#~ msgstr "Αριστερός δείκτης"
-
-#~ msgid "Right index finger"
-#~ msgstr "Δεξιός δείκτης"
-
-#~ msgid "Right middle finger"
-#~ msgstr "Δεξιός μέσος"
-
-#~ msgid "Right ring finger"
-#~ msgstr "Δεξιός παράμεσος"
-
-#~ msgid "Right little finger"
-#~ msgstr "Δεξιός μικρός"
-
-#~ msgid "Haptic Marker:"
-#~ msgstr "Δείκτης αφής:"
-
-#~ msgid "Characters"
-#~ msgstr "Χαρακτήρες"
-
-#~ msgid "Add new character"
-#~ msgstr "Προσθήκη νέου χαρακτήρα"
-
-#~ msgid "Remove character"
-#~ msgstr "Διαγραφή χαρακτήρα"
-
-#~ msgid "Type:"
-#~ msgstr "Τύπος:"
-
-#~ msgid "Tab"
-#~ msgstr "Tab"
-
-#~ msgid "Capslock"
-#~ msgstr "CapsLock"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Backspace"
-#~ msgstr "Backspace"
-
-#~ msgid "Return"
-#~ msgstr "Επαναφορά (Return)"
-
-#~ msgid "Space"
-#~ msgstr "Διάστημα"
-
-#~ msgid "Other"
-#~ msgstr "Άλλο"
-
-#~ msgid "Label:"
-#~ msgstr "Ετικέτα:"
-
-#~ msgid "Modifier ID:"
-#~ msgstr "Διακριτικό τροποποιητή:"
-
-#~ msgid "Open a text file..."
-#~ msgstr "Άνοιγμα αρχείου κειμένου..."
-
-#~ msgid "Wrap lines automatically"
-#~ msgstr "Αυτόματη αναδίπλωση γραμμών"
-
-#~ msgid "0 Characters"
-#~ msgstr "0 χαρακτήρες"
-
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr ""
-#~ "Επικόλληση του ονόματος της τρέχουσας διάταξης πληκτρολογίου του "
-#~ "συστήματος"
-
-#~ msgid "During training:"
-#~ msgstr "Κατά τη διάρκεια της εξέτασης:"
-
-#~ msgid "Enforce correction of typing errors"
-#~ msgstr "Εξαναγκασμός διόρθωσης για σφάλματα πληκτρολόγησης"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Εμφάνιση πληκτρολογίου"
-
-#~ msgid "Show real-time statistics"
-#~ msgstr "Εμφάνιση στατιστικών πραγματικού χρόνου"
-
-#~ msgid "Go to next line with:"
-#~ msgstr "Πέρασμα σε νέα γραμμή με:"
-
-#~ msgid "Ret&urn"
-#~ msgstr "ΕπιστρΙοφή"
-
-#~ msgid "Spa&ce"
-#~ msgstr "Κε&νό"
-
-#~ msgid "Lesson unlocking limits"
-#~ msgstr "Όρια ξεκλειδώματος μαθημάτων"
-
-#~ msgid "Minimum strokes &per minute:"
-#~ msgstr "Ελάχιστος αριθμός πληκτρολογήσεων &ανά λεπτό:"
-
-#~ msgid "Minimum accuracy:"
-#~ msgstr "Ελάχιστη ακρίβεια:"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Επιλογή διάταξης πληκτρολογίου"

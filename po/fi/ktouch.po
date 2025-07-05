@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:21+0000\n"
+"POT-Creation-Date: 2025-07-05 05:53+0000\n"
 "PO-Revision-Date: 2023-11-19 19:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -173,9 +173,11 @@ msgstr "Uusi näppäimistöasettelu"
 msgid "Template"
 msgstr "Pohja"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Poista"
@@ -332,6 +334,78 @@ msgstr "Kurssi"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Näppäimistöasettelu"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Muilla kuin X11-alustoilla käytettävä näppäimistöasettelu"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Hallitsee kirjoitusvirheiden korjaamisen pakottamista."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Hallitsee näppäimistön näkyvyyttä harjoituksen aikana."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Hallitsee reaaliaikaisten tilastojen näkymistä harjoituksen aikana."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Enter-näppäimen painallus rivin lopussa siirtää seuraavalle riville."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+"Välilyöntinäppäimen painallus rivin lopussa siirtää seuraavalle riville."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Seuraavan oppitunnin avaamiseen vaadittu painalluksia minuutissa -"
+"vähimmäisarvo"
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Seuraavan oppitunnin avaamiseen vaadittu kirjoittamisen vähimmäistarkkuus"
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Väri eri sormien näppäimien korostamiseksi sävyttämällä."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Kuinka läpikuultavat sormivärit tulisi esittää."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Viimeksi käytetyn profiilin tunniste."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -622,7 +696,14 @@ msgstr "Vahvista"
 msgid "Edit lesson"
 msgstr "Muokkaa oppituntia"
 
-#: src/qml/homescreen/LessonEditorDialog.qml:45
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Nimi:"
@@ -862,6 +943,438 @@ msgstr ""
 "Harjoitus on keskeytetty. Aika alkaa taas kulua ensimmäisestä "
 "näppäinpainalluksesta."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Sormet"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Vasen käsi"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Etusormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Keskisormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Nimetön:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Pikkusormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Oikea käsi"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Peittävyys"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Näppäimistöasettelu:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Oppitunnit:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Lisää uusi oppitunti"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Poista oppitunti"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:224
+#, kde-format
+msgid "Move lesson up"
+msgstr "Siirrä oppituntia ylemmäs"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:237
+#, kde-format
+msgid "Move lesson down"
+msgstr "Siirrä oppituntia alemmas"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:312
+#, kde-format
+msgid "New characters:"
+msgstr "Uudet merkit:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Valintaikkuna"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Luo uusi tavallinen näppäin"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Tavallinen näppäin"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:41
+#, kde-format
+msgid "Create new special key"
+msgstr "Luo uusi erikoisnäppäin"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:44
+#, kde-format
+msgid "Special Key"
+msgstr "Erikoisnäppäin"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:63
+#, kde-format
+msgid "Delete selected key"
+msgstr "Poista valittu näppäin"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:127
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100 %"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Näppäimistö"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Tunniste:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Leveys:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Korkeus:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Vasen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Ylä:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
+#, kde-format
+msgid "Key"
+msgstr "Näppäin"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Sormi:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Vasen pikkusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Vasen nimetön"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Vasen keskisormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Vasen etusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Oikea etusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Oikea keskisormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Oikea nimetön"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Oikea pikkusormi"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Kohouma:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Merkit"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Lisää uusi merkki"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
+#, kde-format
+msgid "Remove character"
+msgstr "Poista merkki"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
+#, kde-format
+msgid "Type:"
+msgstr "Tyyppi:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
+#, kde-format
+msgid "Tab"
+msgstr "Sarkain"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
+#, kde-format
+msgid "Capslock"
+msgstr "Vaihtolukko"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
+#, kde-format
+msgid "Shift"
+msgstr "Vaihto"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
+#, kde-format
+msgid "Backspace"
+msgstr "Askelpalautin"
+
+# BUGI: Sama viesti kahdessa eri kontekstissa
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
+#, kde-format
+msgid "Return"
+msgstr "Enter"
+
+# BUGI: Sama viesti kahdessa eri kontekstissa
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
+#, kde-format
+msgid "Space"
+msgstr "Välilyönti"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
+#, kde-format
+msgid "Other"
+msgstr "Muu"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
+#, kde-format
+msgid "Label:"
+msgstr "Nimike:"
+
+# ID jätetty ID:ksi lyhyyden vuoksi.
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Muunnosnäppäimen ID:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Avaa tekstitiedosto…"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:44
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Rivitä automaattisesti"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:70
+#, kde-format
+msgid "0 Characters"
+msgstr "0 merkkiä"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Liitä nykyisen järjestelmänäppäimistöasettelun tunniste"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Harjoituksen aikana:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Pakota korjaamaan kirjoitusvirheet"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Näytä näppäimistö"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Näytä reaaliaikaiset tilastot"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Siirry seuraavalle riville:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "&Enter"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "&Välilyönti"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Oppitunnin avaamisrajat"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "&Painalluksia minuutissa vähintään:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Vähimmäistarkkuus:"
+
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -881,11 +1394,6 @@ msgstr "Muokkaa kuvausta"
 #, kde-format
 msgid "Add lesson"
 msgstr "Lisää oppitunti"
-
-#: src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Poista oppitunti"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -987,256 +1495,6 @@ msgstr "Aseta erikoisnäppäimen nimike"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Aseta erikoisnäppäimen muunnnosnäppäintunniste"
-
-#~ msgid "The keyboard layout to use on non-X11 platforms"
-#~ msgstr "Muilla kuin X11-alustoilla käytettävä näppäimistöasettelu"
-
-#~ msgid "Controls whether typing errors have to be corrected or not."
-#~ msgstr "Hallitsee kirjoitusvirheiden korjaamisen pakottamista."
-
-#~ msgid "Controls the visibility of the keyboard during training."
-#~ msgstr "Hallitsee näppäimistön näkyvyyttä harjoituksen aikana."
-
-#~ msgid "Controls the visibility of realtime statistics during training."
-#~ msgstr "Hallitsee reaaliaikaisten tilastojen näkymistä harjoituksen aikana."
-
-#~ msgid "Return key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "Enter-näppäimen painallus rivin lopussa siirtää seuraavalle riville."
-
-#~ msgid "Space key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "Välilyöntinäppäimen painallus rivin lopussa siirtää seuraavalle riville."
-
-#~ msgid ""
-#~ "The minimum required amount of strokes per minute to unlock the next "
-#~ "lesson."
-#~ msgstr ""
-#~ "Seuraavan oppitunnin avaamiseen vaadittu painalluksia minuutissa -"
-#~ "vähimmäisarvo"
-
-#~ msgid ""
-#~ "The minimum required typing accuracy in percent to unlock the next lesson."
-#~ msgstr ""
-#~ "Seuraavan oppitunnin avaamiseen vaadittu kirjoittamisen vähimmäistarkkuus"
-
-#~ msgid "The keyboard tinting color to highlight keys for each finger."
-#~ msgstr "Väri eri sormien näppäimien korostamiseksi sävyttämällä."
-
-#~ msgid "How transparent finger colors should be shown."
-#~ msgstr "Kuinka läpikuultavat sormivärit tulisi esittää."
-
-#~ msgid "The ID of the last used profile."
-#~ msgstr "Viimeksi käytetyn profiilin tunniste."
-
-#~ msgid "Fingers"
-#~ msgstr "Sormet"
-
-#~ msgid "Left Hand"
-#~ msgstr "Vasen käsi"
-
-#~ msgid "Index finger:"
-#~ msgstr "Etusormi:"
-
-#~ msgid "Middle finger:"
-#~ msgstr "Keskisormi:"
-
-#~ msgid "Ring finger:"
-#~ msgstr "Nimetön:"
-
-#~ msgid "Little finger:"
-#~ msgstr "Pikkusormi:"
-
-#~ msgid "Right Hand"
-#~ msgstr "Oikea käsi"
-
-#~ msgid "Opacity"
-#~ msgstr "Peittävyys"
-
-#~ msgid " %"
-#~ msgstr " %"
-
-#~ msgid "Keyboard layout:"
-#~ msgstr "Näppäimistöasettelu:"
-
-#~ msgid "Description:"
-#~ msgstr "Kuvaus:"
-
-#~ msgid "Lessons:"
-#~ msgstr "Oppitunnit:"
-
-#~ msgid "Add new lesson"
-#~ msgstr "Lisää uusi oppitunti"
-
-#~ msgid "Move lesson up"
-#~ msgstr "Siirrä oppituntia ylemmäs"
-
-#~ msgid "Move lesson down"
-#~ msgstr "Siirrä oppituntia alemmas"
-
-#~ msgid "New characters:"
-#~ msgstr "Uudet merkit:"
-
-#~ msgid "Dialog"
-#~ msgstr "Valintaikkuna"
-
-#~ msgid "Create new normal key"
-#~ msgstr "Luo uusi tavallinen näppäin"
-
-#~ msgid "Normal Key"
-#~ msgstr "Tavallinen näppäin"
-
-#~ msgid "Create new special key"
-#~ msgstr "Luo uusi erikoisnäppäin"
-
-#~ msgid "Special Key"
-#~ msgstr "Erikoisnäppäin"
-
-#~ msgid "Delete selected key"
-#~ msgstr "Poista valittu näppäin"
-
-#~ msgid "100%"
-#~ msgstr "100 %"
-
-#~ msgid "Keyboard"
-#~ msgstr "Näppäimistö"
-
-# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
-#~ msgid "Name:"
-#~ msgstr "Tunniste:"
-
-#~ msgid "Width:"
-#~ msgstr "Leveys:"
-
-#~ msgid "Height:"
-#~ msgstr "Korkeus:"
-
-#~ msgid "Geometry"
-#~ msgstr "Geometria"
-
-#~ msgid "Left:"
-#~ msgstr "Vasen:"
-
-#~ msgid "Top:"
-#~ msgstr "Ylä:"
-
-#~ msgid "Key"
-#~ msgstr "Näppäin"
-
-#~ msgid "Finger:"
-#~ msgstr "Sormi:"
-
-#~ msgid "Left little finger"
-#~ msgstr "Vasen pikkusormi"
-
-#~ msgid "Left ring finger"
-#~ msgstr "Vasen nimetön"
-
-#~ msgid "Left middle finger"
-#~ msgstr "Vasen keskisormi"
-
-#~ msgid "Left index finger"
-#~ msgstr "Vasen etusormi"
-
-#~ msgid "Right index finger"
-#~ msgstr "Oikea etusormi"
-
-#~ msgid "Right middle finger"
-#~ msgstr "Oikea keskisormi"
-
-#~ msgid "Right ring finger"
-#~ msgstr "Oikea nimetön"
-
-#~ msgid "Right little finger"
-#~ msgstr "Oikea pikkusormi"
-
-#~ msgid "Haptic Marker:"
-#~ msgstr "Kohouma:"
-
-#~ msgid "Characters"
-#~ msgstr "Merkit"
-
-#~ msgid "Add new character"
-#~ msgstr "Lisää uusi merkki"
-
-#~ msgid "Remove character"
-#~ msgstr "Poista merkki"
-
-#~ msgid "Type:"
-#~ msgstr "Tyyppi:"
-
-#~ msgid "Tab"
-#~ msgstr "Sarkain"
-
-#~ msgid "Capslock"
-#~ msgstr "Vaihtolukko"
-
-#~ msgid "Shift"
-#~ msgstr "Vaihto"
-
-#~ msgid "Backspace"
-#~ msgstr "Askelpalautin"
-
-# BUGI: Sama viesti kahdessa eri kontekstissa
-#~ msgid "Return"
-#~ msgstr "Enter"
-
-# BUGI: Sama viesti kahdessa eri kontekstissa
-#~ msgid "Space"
-#~ msgstr "Välilyönti"
-
-#~ msgid "Other"
-#~ msgstr "Muu"
-
-#~ msgid "Label:"
-#~ msgstr "Nimike:"
-
-# ID jätetty ID:ksi lyhyyden vuoksi.
-#~ msgid "Modifier ID:"
-#~ msgstr "Muunnosnäppäimen ID:"
-
-#~ msgid "Open a text file..."
-#~ msgstr "Avaa tekstitiedosto…"
-
-#~ msgid "Wrap lines automatically"
-#~ msgstr "Rivitä automaattisesti"
-
-#~ msgid "0 Characters"
-#~ msgstr "0 merkkiä"
-
-# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr "Liitä nykyisen järjestelmänäppäimistöasettelun tunniste"
-
-#~ msgid "During training:"
-#~ msgstr "Harjoituksen aikana:"
-
-#~ msgid "Enforce correction of typing errors"
-#~ msgstr "Pakota korjaamaan kirjoitusvirheet"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Näytä näppäimistö"
-
-#~ msgid "Show real-time statistics"
-#~ msgstr "Näytä reaaliaikaiset tilastot"
-
-#~ msgid "Go to next line with:"
-#~ msgstr "Siirry seuraavalle riville:"
-
-#~ msgid "Ret&urn"
-#~ msgstr "&Enter"
-
-#~ msgid "Spa&ce"
-#~ msgstr "&Välilyönti"
-
-#~ msgid "Lesson unlocking limits"
-#~ msgstr "Oppitunnin avaamisrajat"
-
-#~ msgid "Minimum strokes &per minute:"
-#~ msgstr "&Painalluksia minuutissa vähintään:"
-
-#~ msgid "Minimum accuracy:"
-#~ msgstr "Vähimmäistarkkuus:"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Valitse näppäimistöasettelu"

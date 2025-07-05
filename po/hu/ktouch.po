@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:21+0000\n"
+"POT-Creation-Date: 2025-07-05 05:53+0000\n"
 "PO-Revision-Date: 2013-11-08 20:19+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -160,9 +160,11 @@ msgstr "Új billentyűzetkiosztás"
 msgid "Template"
 msgstr "Sablon"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Törlés"
@@ -327,6 +329,78 @@ msgstr "Tanfolyam"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Billentyűzetkiosztás"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Nem X11 platformon használandó billentyűzetkiosztás"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Vezérli a billentyűzet láthatóságát gyakorlás közben."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Vezérli a valós idejű statisztika láthatóságát gyakorlás közben."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Az enter billentyű a sor végén új sort fog váltani."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "A szóköz billentyű a sor végén új sort fog váltani."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"A minimálisan szükséges leütés mennyisége percenként a következő lecke "
+"feloldásához."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"A minimálisan szükséges gépelési pontosság százalékosan a következő lecke "
+"feloldásához."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "A billentyűzet kifestő színe a billentyűk kiemeléséhez minden ujjhoz."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "A legutóbb használt profil azonosítója."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -627,7 +701,14 @@ msgstr ""
 msgid "Edit lesson"
 msgstr "Lecke hozzáadása"
 
-#: src/qml/homescreen/LessonEditorDialog.qml:45
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Cím:"
@@ -870,6 +951,435 @@ msgstr ""
 "A gyakorló munkamenet meg lett szakítva. Az idő a következő billentyű "
 "lenyomásával indul ismét."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Ujjak"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Bal kéz"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Mutató ujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Középső ujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Gyűrűsujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Kisujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Jobb kéz"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Billentyűzetkiosztás:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Leírás:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Leckék:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Új lecke hozzáadása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Lecke eltávolítása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:224
+#, kde-format
+msgid "Move lesson up"
+msgstr "Lecke mozgatása fel"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:237
+#, kde-format
+msgid "Move lesson down"
+msgstr "Lecke mozgatása le"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:312
+#, kde-format
+msgid "New characters:"
+msgstr "Új karakterek:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Új normál billentyű létrehozása"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Normál billentyű"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:41
+#, kde-format
+msgid "Create new special key"
+msgstr "Új speciális billentyű létrehozása"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:44
+#, kde-format
+msgid "Special Key"
+msgstr "Speciális billentyű"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:63
+#, kde-format
+msgid "Delete selected key"
+msgstr "A kijelölt billentyű törlése"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:127
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Billentyűzet"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Név:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Szélesség"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Magasság:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Balra:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Fent:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
+#, kde-format
+msgid "Key"
+msgstr "Billentyű"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Ujj:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Bal kisujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Bal gyűrűsujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Bal középső ujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Bal mutatóujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Jobb mutatóujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Jobb középső ujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Jobb gyűrűsujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Jobb kisujj"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Karakterek"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Új karakter hozzáadása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
+#, kde-format
+msgid "Remove character"
+msgstr "Karakter eltávolítása"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
+#, kde-format
+msgid "Type:"
+msgstr "Típus:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
+#, kde-format
+msgid "Tab"
+msgstr "Tab"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
+#, kde-format
+msgid "Return"
+msgstr "Enter"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
+#, kde-format
+msgid "Space"
+msgstr "Szóköz"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
+#, kde-format
+msgid "Other"
+msgstr "Egyéb"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
+#, kde-format
+msgid "Label:"
+msgstr "Címke:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Módosító azonosító:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Egy szövegfájl megnyitása…"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:44
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Sorok automatikus tördelése"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:70
+#, kde-format
+msgid "0 Characters"
+msgstr "0 karakter"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "A jelenlegi rendszer billentyűzetkiosztás nevének beillesztése"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Gyakorlás közben:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Billentyűzetkép"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Valós idejű statisztika megjelenítése"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Ugrás a következő sorra ezzel:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Lecke feloldási korlátok"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Minimum strokes per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "Minimális leütés percenként:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Minimális pontosság:"
+
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -889,11 +1399,6 @@ msgstr "Leírás szerkesztése"
 #, kde-format
 msgid "Add lesson"
 msgstr "Lecke hozzáadása"
-
-#: src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Lecke eltávolítása"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -994,231 +1499,6 @@ msgstr "Speciális billentyű címkéjének beállítása"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Speciális billentyű módosító azonosítójának beállítása"
-
-#~ msgid "The keyboard layout to use on non-X11 platforms"
-#~ msgstr "Nem X11 platformon használandó billentyűzetkiosztás"
-
-#~ msgid "Controls the visibility of the keyboard during training."
-#~ msgstr "Vezérli a billentyűzet láthatóságát gyakorlás közben."
-
-#~ msgid "Controls the visibility of realtime statistics during training."
-#~ msgstr "Vezérli a valós idejű statisztika láthatóságát gyakorlás közben."
-
-#~ msgid "Return key at the end of a line will switch to next line."
-#~ msgstr "Az enter billentyű a sor végén új sort fog váltani."
-
-#~ msgid "Space key at the end of a line will switch to next line."
-#~ msgstr "A szóköz billentyű a sor végén új sort fog váltani."
-
-#~ msgid ""
-#~ "The minimum required amount of strokes per minute to unlock the next "
-#~ "lesson."
-#~ msgstr ""
-#~ "A minimálisan szükséges leütés mennyisége percenként a következő lecke "
-#~ "feloldásához."
-
-#~ msgid ""
-#~ "The minimum required typing accuracy in percent to unlock the next lesson."
-#~ msgstr ""
-#~ "A minimálisan szükséges gépelési pontosság százalékosan a következő lecke "
-#~ "feloldásához."
-
-#~ msgid "The keyboard tinting color to highlight keys for each finger."
-#~ msgstr ""
-#~ "A billentyűzet kifestő színe a billentyűk kiemeléséhez minden ujjhoz."
-
-#~ msgid "The ID of the last used profile."
-#~ msgstr "A legutóbb használt profil azonosítója."
-
-#~ msgid "Fingers"
-#~ msgstr "Ujjak"
-
-#~ msgid "Left Hand"
-#~ msgstr "Bal kéz"
-
-#~ msgid "Index finger:"
-#~ msgstr "Mutató ujj:"
-
-#~ msgid "Middle finger:"
-#~ msgstr "Középső ujj:"
-
-#~ msgid "Ring finger:"
-#~ msgstr "Gyűrűsujj:"
-
-#~ msgid "Little finger:"
-#~ msgstr "Kisujj:"
-
-#~ msgid "Right Hand"
-#~ msgstr "Jobb kéz"
-
-#, fuzzy
-#~| msgid "%"
-#~ msgid " %"
-#~ msgstr "%"
-
-#~ msgid "Keyboard layout:"
-#~ msgstr "Billentyűzetkiosztás:"
-
-#~ msgid "Description:"
-#~ msgstr "Leírás:"
-
-#~ msgid "Lessons:"
-#~ msgstr "Leckék:"
-
-#~ msgid "Add new lesson"
-#~ msgstr "Új lecke hozzáadása"
-
-#~ msgid "Move lesson up"
-#~ msgstr "Lecke mozgatása fel"
-
-#~ msgid "Move lesson down"
-#~ msgstr "Lecke mozgatása le"
-
-#~ msgid "New characters:"
-#~ msgstr "Új karakterek:"
-
-#~ msgid "Create new normal key"
-#~ msgstr "Új normál billentyű létrehozása"
-
-#~ msgid "Normal Key"
-#~ msgstr "Normál billentyű"
-
-#~ msgid "Create new special key"
-#~ msgstr "Új speciális billentyű létrehozása"
-
-#~ msgid "Special Key"
-#~ msgstr "Speciális billentyű"
-
-#~ msgid "Delete selected key"
-#~ msgstr "A kijelölt billentyű törlése"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Keyboard"
-#~ msgstr "Billentyűzet"
-
-#~ msgid "Name:"
-#~ msgstr "Név:"
-
-#~ msgid "Width:"
-#~ msgstr "Szélesség"
-
-#~ msgid "Height:"
-#~ msgstr "Magasság:"
-
-#~ msgid "Geometry"
-#~ msgstr "Geometria"
-
-#~ msgid "Left:"
-#~ msgstr "Balra:"
-
-#~ msgid "Top:"
-#~ msgstr "Fent:"
-
-#~ msgid "Key"
-#~ msgstr "Billentyű"
-
-#~ msgid "Finger:"
-#~ msgstr "Ujj:"
-
-#~ msgid "Left little finger"
-#~ msgstr "Bal kisujj"
-
-#~ msgid "Left ring finger"
-#~ msgstr "Bal gyűrűsujj"
-
-#~ msgid "Left middle finger"
-#~ msgstr "Bal középső ujj"
-
-#~ msgid "Left index finger"
-#~ msgstr "Bal mutatóujj"
-
-#~ msgid "Right index finger"
-#~ msgstr "Jobb mutatóujj"
-
-#~ msgid "Right middle finger"
-#~ msgstr "Jobb középső ujj"
-
-#~ msgid "Right ring finger"
-#~ msgstr "Jobb gyűrűsujj"
-
-#~ msgid "Right little finger"
-#~ msgstr "Jobb kisujj"
-
-#~ msgid "Characters"
-#~ msgstr "Karakterek"
-
-#~ msgid "Add new character"
-#~ msgstr "Új karakter hozzáadása"
-
-#~ msgid "Remove character"
-#~ msgstr "Karakter eltávolítása"
-
-#~ msgid "Type:"
-#~ msgstr "Típus:"
-
-#~ msgid "Tab"
-#~ msgstr "Tab"
-
-#~ msgid "Capslock"
-#~ msgstr "CapsLock"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Backspace"
-#~ msgstr "Backspace"
-
-#~ msgid "Return"
-#~ msgstr "Enter"
-
-#~ msgid "Space"
-#~ msgstr "Szóköz"
-
-#~ msgid "Other"
-#~ msgstr "Egyéb"
-
-#~ msgid "Label:"
-#~ msgstr "Címke:"
-
-#~ msgid "Modifier ID:"
-#~ msgstr "Módosító azonosító:"
-
-#~ msgid "Open a text file..."
-#~ msgstr "Egy szövegfájl megnyitása…"
-
-#~ msgid "Wrap lines automatically"
-#~ msgstr "Sorok automatikus tördelése"
-
-#~ msgid "0 Characters"
-#~ msgstr "0 karakter"
-
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr "A jelenlegi rendszer billentyűzetkiosztás nevének beillesztése"
-
-#~ msgid "During training:"
-#~ msgstr "Gyakorlás közben:"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Billentyűzetkép"
-
-#~ msgid "Show real-time statistics"
-#~ msgstr "Valós idejű statisztika megjelenítése"
-
-#~ msgid "Go to next line with:"
-#~ msgstr "Ugrás a következő sorra ezzel:"
-
-#~ msgid "Lesson unlocking limits"
-#~ msgstr "Lecke feloldási korlátok"
-
-#, fuzzy
-#~| msgid "Minimum strokes per minute:"
-#~ msgid "Minimum strokes &per minute:"
-#~ msgstr "Minimális leütés percenként:"
-
-#~ msgid "Minimum accuracy:"
-#~ msgstr "Minimális pontosság:"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Billentyűzetkiosztás választása"

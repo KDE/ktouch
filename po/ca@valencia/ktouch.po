@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:21+0000\n"
+"POT-Creation-Date: 2025-07-05 05:53+0000\n"
 "PO-Revision-Date: 2024-10-23 20:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -164,9 +164,11 @@ msgstr "Disposició de teclat nova"
 msgid "Template"
 msgstr "Plantilla"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Elimina"
@@ -326,6 +328,79 @@ msgstr "Curs"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Disposició de teclat"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Disposició de teclat que s'ha d'utilitzar en plataformes no X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Controla si s'han de corregir o no els errors mecanogràfics."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Controla la visibilitat del teclat durant l'entrenament."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+"Controla la visibilitat de les estadístiques en temps real durant "
+"l'entrenament."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "La tecla «Retorn» al final de la línia salta fins a la línia següent."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "La tecla «Espai» al final de la línia salta fins a la línia següent."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"El nombre mínim de pulsacions per minut per a desbloquejar la lliçó següent."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"La precisió mínima requerida en tant per cent per a desbloquejar la lliçó "
+"següent."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "El color del teclat per a ressaltar les tecles de cada dit."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Com de transparents s'han de mostrar els colors dels dits."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "L'ID de l'últim perfil utilitzat."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -613,7 +688,14 @@ msgstr "Confirma"
 msgid "Edit lesson"
 msgstr "Edita una lliçó"
 
-#: src/qml/homescreen/LessonEditorDialog.qml:45
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Títol:"
@@ -853,6 +935,433 @@ msgstr ""
 "S'ha fet una pausa a la sessió d'entrenament. El temps seguirà comptant amb "
 "la pulsació següent."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Dits"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Mà esquerra"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Dit índex:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Dit del mig:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Dit anular:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Dit xicotet:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Mà dreta"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Opacitat"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Disposició de teclat:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Descripció:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Lliçons:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Afig una lliçó nova"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Elimina la lliçó"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:224
+#, kde-format
+msgid "Move lesson up"
+msgstr "Mou la lliçó amunt"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:237
+#, kde-format
+msgid "Move lesson down"
+msgstr "Mou la lliçó avall"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:312
+#, kde-format
+msgid "New characters:"
+msgstr "Caràcters nous:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Diàleg"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Crea una tecla normal nova"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Tecla normal"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:41
+#, kde-format
+msgid "Create new special key"
+msgstr "Crea una tecla espacial nova"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:44
+#, kde-format
+msgid "Special Key"
+msgstr "Tecla especial"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:63
+#, kde-format
+msgid "Delete selected key"
+msgstr "Elimina la tecla seleccionada"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:127
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Teclat"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Nom:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Amplària:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Alçària:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Esquerra:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Dalt:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
+#, kde-format
+msgid "Key"
+msgstr "Tecla"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Dit:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Dit xicotet esquerre"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Dit anular esquerre"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Dit del mig esquerre"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Dit índex esquerre"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Dit índex dret"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Dit del mig dret"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Dit anular dret"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Dit xicotet dret"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Marcador hàptic:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Caràcters"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Afig un caràcter nou"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
+#, kde-format
+msgid "Remove character"
+msgstr "Elimina el caràcter"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
+#, kde-format
+msgid "Type:"
+msgstr "Tipus:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
+#, kde-format
+msgid "Tab"
+msgstr "Tabulador"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
+#, kde-format
+msgid "Capslock"
+msgstr "BloqMaj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
+#, kde-format
+msgid "Shift"
+msgstr "Majúscules"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
+#, kde-format
+msgid "Backspace"
+msgstr "Retrocés"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
+#, kde-format
+msgid "Return"
+msgstr "Retorn"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
+#, kde-format
+msgid "Space"
+msgstr "Espai"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
+#, kde-format
+msgid "Other"
+msgstr "Altres"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
+#, kde-format
+msgid "Label:"
+msgstr "Etiqueta:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
+#, kde-format
+msgid "Modifier ID:"
+msgstr "ID del modificador:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Obri un fitxer de text…"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:44
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Ajusta automàticament les línies"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:70
+#, kde-format
+msgid "0 Characters"
+msgstr "Cap caràcter"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Apega el nom de la disposició de teclat actual del sistema"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Durant l'entrenament:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Força la correcció dels errors d'escriptura"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Mostra el teclat"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Mostra les estadístiques en temps real"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Ves fins a la línia següent amb:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "Ret&orn"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "Espa&i"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Límits de desbloqueig de les lliçons"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Pulsacions mínimes &per minut:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Exactitud mínima:"
+
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -872,11 +1381,6 @@ msgstr "Edita la descripció"
 #, kde-format
 msgid "Add lesson"
 msgstr "Afig una lliçó"
-
-#: src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Elimina la lliçó"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -977,251 +1481,3 @@ msgstr "Establix una etiqueta de tecla especial"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Establix l'ID del modificador de tecla especial"
-
-#~ msgid "The keyboard layout to use on non-X11 platforms"
-#~ msgstr "Disposició de teclat que s'ha d'utilitzar en plataformes no X11"
-
-#~ msgid "Controls whether typing errors have to be corrected or not."
-#~ msgstr "Controla si s'han de corregir o no els errors mecanogràfics."
-
-#~ msgid "Controls the visibility of the keyboard during training."
-#~ msgstr "Controla la visibilitat del teclat durant l'entrenament."
-
-#~ msgid "Controls the visibility of realtime statistics during training."
-#~ msgstr ""
-#~ "Controla la visibilitat de les estadístiques en temps real durant "
-#~ "l'entrenament."
-
-#~ msgid "Return key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "La tecla «Retorn» al final de la línia salta fins a la línia següent."
-
-#~ msgid "Space key at the end of a line will switch to next line."
-#~ msgstr ""
-#~ "La tecla «Espai» al final de la línia salta fins a la línia següent."
-
-#~ msgid ""
-#~ "The minimum required amount of strokes per minute to unlock the next "
-#~ "lesson."
-#~ msgstr ""
-#~ "El nombre mínim de pulsacions per minut per a desbloquejar la lliçó "
-#~ "següent."
-
-#~ msgid ""
-#~ "The minimum required typing accuracy in percent to unlock the next lesson."
-#~ msgstr ""
-#~ "La precisió mínima requerida en tant per cent per a desbloquejar la lliçó "
-#~ "següent."
-
-#~ msgid "The keyboard tinting color to highlight keys for each finger."
-#~ msgstr "El color del teclat per a ressaltar les tecles de cada dit."
-
-#~ msgid "How transparent finger colors should be shown."
-#~ msgstr "Com de transparents s'han de mostrar els colors dels dits."
-
-#~ msgid "The ID of the last used profile."
-#~ msgstr "L'ID de l'últim perfil utilitzat."
-
-#~ msgid "Fingers"
-#~ msgstr "Dits"
-
-#~ msgid "Left Hand"
-#~ msgstr "Mà esquerra"
-
-#~ msgid "Index finger:"
-#~ msgstr "Dit índex:"
-
-#~ msgid "Middle finger:"
-#~ msgstr "Dit del mig:"
-
-#~ msgid "Ring finger:"
-#~ msgstr "Dit anular:"
-
-#~ msgid "Little finger:"
-#~ msgstr "Dit xicotet:"
-
-#~ msgid "Right Hand"
-#~ msgstr "Mà dreta"
-
-#~ msgid "Opacity"
-#~ msgstr "Opacitat"
-
-#~ msgid " %"
-#~ msgstr " %"
-
-#~ msgid "Keyboard layout:"
-#~ msgstr "Disposició de teclat:"
-
-#~ msgid "Description:"
-#~ msgstr "Descripció:"
-
-#~ msgid "Lessons:"
-#~ msgstr "Lliçons:"
-
-#~ msgid "Add new lesson"
-#~ msgstr "Afig una lliçó nova"
-
-#~ msgid "Move lesson up"
-#~ msgstr "Mou la lliçó amunt"
-
-#~ msgid "Move lesson down"
-#~ msgstr "Mou la lliçó avall"
-
-#~ msgid "New characters:"
-#~ msgstr "Caràcters nous:"
-
-#~ msgid "Dialog"
-#~ msgstr "Diàleg"
-
-#~ msgid "Create new normal key"
-#~ msgstr "Crea una tecla normal nova"
-
-#~ msgid "Normal Key"
-#~ msgstr "Tecla normal"
-
-#~ msgid "Create new special key"
-#~ msgstr "Crea una tecla espacial nova"
-
-#~ msgid "Special Key"
-#~ msgstr "Tecla especial"
-
-#~ msgid "Delete selected key"
-#~ msgstr "Elimina la tecla seleccionada"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Keyboard"
-#~ msgstr "Teclat"
-
-#~ msgid "Name:"
-#~ msgstr "Nom:"
-
-#~ msgid "Width:"
-#~ msgstr "Amplària:"
-
-#~ msgid "Height:"
-#~ msgstr "Alçària:"
-
-#~ msgid "Geometry"
-#~ msgstr "Geometria"
-
-#~ msgid "Left:"
-#~ msgstr "Esquerra:"
-
-#~ msgid "Top:"
-#~ msgstr "Dalt:"
-
-#~ msgid "Key"
-#~ msgstr "Tecla"
-
-#~ msgid "Finger:"
-#~ msgstr "Dit:"
-
-#~ msgid "Left little finger"
-#~ msgstr "Dit xicotet esquerre"
-
-#~ msgid "Left ring finger"
-#~ msgstr "Dit anular esquerre"
-
-#~ msgid "Left middle finger"
-#~ msgstr "Dit del mig esquerre"
-
-#~ msgid "Left index finger"
-#~ msgstr "Dit índex esquerre"
-
-#~ msgid "Right index finger"
-#~ msgstr "Dit índex dret"
-
-#~ msgid "Right middle finger"
-#~ msgstr "Dit del mig dret"
-
-#~ msgid "Right ring finger"
-#~ msgstr "Dit anular dret"
-
-#~ msgid "Right little finger"
-#~ msgstr "Dit xicotet dret"
-
-#~ msgid "Haptic Marker:"
-#~ msgstr "Marcador hàptic:"
-
-#~ msgid "Characters"
-#~ msgstr "Caràcters"
-
-#~ msgid "Add new character"
-#~ msgstr "Afig un caràcter nou"
-
-#~ msgid "Remove character"
-#~ msgstr "Elimina el caràcter"
-
-#~ msgid "Type:"
-#~ msgstr "Tipus:"
-
-#~ msgid "Tab"
-#~ msgstr "Tabulador"
-
-#~ msgid "Capslock"
-#~ msgstr "BloqMaj"
-
-#~ msgid "Shift"
-#~ msgstr "Majúscules"
-
-#~ msgid "Backspace"
-#~ msgstr "Retrocés"
-
-#~ msgid "Return"
-#~ msgstr "Retorn"
-
-#~ msgid "Space"
-#~ msgstr "Espai"
-
-#~ msgid "Other"
-#~ msgstr "Altres"
-
-#~ msgid "Label:"
-#~ msgstr "Etiqueta:"
-
-#~ msgid "Modifier ID:"
-#~ msgstr "ID del modificador:"
-
-#~ msgid "Open a text file..."
-#~ msgstr "Obri un fitxer de text…"
-
-#~ msgid "Wrap lines automatically"
-#~ msgstr "Ajusta automàticament les línies"
-
-#~ msgid "0 Characters"
-#~ msgstr "Cap caràcter"
-
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr "Apega el nom de la disposició de teclat actual del sistema"
-
-#~ msgid "During training:"
-#~ msgstr "Durant l'entrenament:"
-
-#~ msgid "Enforce correction of typing errors"
-#~ msgstr "Força la correcció dels errors d'escriptura"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Mostra el teclat"
-
-#~ msgid "Show real-time statistics"
-#~ msgstr "Mostra les estadístiques en temps real"
-
-#~ msgid "Go to next line with:"
-#~ msgstr "Ves fins a la línia següent amb:"
-
-#~ msgid "Ret&urn"
-#~ msgstr "Ret&orn"
-
-#~ msgid "Spa&ce"
-#~ msgstr "Espa&i"
-
-#~ msgid "Lesson unlocking limits"
-#~ msgstr "Límits de desbloqueig de les lliçons"
-
-#~ msgid "Minimum strokes &per minute:"
-#~ msgstr "Pulsacions mínimes &per minut:"
-
-#~ msgid "Minimum accuracy:"
-#~ msgstr "Exactitud mínima:"

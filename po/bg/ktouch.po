@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:21+0000\n"
+"POT-Creation-Date: 2025-07-05 05:53+0000\n"
 "PO-Revision-Date: 2024-10-29 21:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
@@ -160,9 +160,11 @@ msgstr "Нова клавиатурна подредба"
 msgid "Template"
 msgstr "Шаблон"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Изтриване"
@@ -320,6 +322,81 @@ msgstr "курс"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Подредба на клавиатурата"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Клавиатурната подредба за използване на различни от X11 платформи"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Контролира дали грешките при въвеждане трябва да се коригират или не."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Контролира видимостта на клавиатурата по време на тренировка."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+"Контролира видимостта на статистиката в реално време по време на обучение."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Клавишът за връщане в края на ред ще превключи към следващия ред."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "Клавишът за интервал в края на ред ще превключи към следващия ред."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Минималното необходимо количество удари в минута за отключване на следващия "
+"урок."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Минималната необходима точност на въвеждане в проценти за отключване на "
+"следващия урок."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+"Цветът за оцветяване на клавиатурата за подчертаване на клавишите за всеки "
+"пръст."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Как трябва да се показват прозрачни цветове на пръстите."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "ID на последния използван профил."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -606,7 +683,14 @@ msgstr "Потвърждаване"
 msgid "Edit lesson"
 msgstr "Редактиране на урока"
 
-#: src/qml/homescreen/LessonEditorDialog.qml:45
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Заглавие:"
@@ -844,6 +928,433 @@ msgstr ""
 "Тренировката е прекъсната. Времето започва да тече отново със следващото "
 "натискане на клавиш."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Пръсти"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Лява ръка"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Показалец:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Среден пръст:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Безименен пръст:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Малък пръст:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Дясна ръка"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Непрозрачност"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Подредба на клавиатурата:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Уроци:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Добавете нов урок"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Премахване на урока"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:224
+#, kde-format
+msgid "Move lesson up"
+msgstr "Преместете урока нагоре"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:237
+#, kde-format
+msgid "Move lesson down"
+msgstr "Преместете урока надолу"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:312
+#, kde-format
+msgid "New characters:"
+msgstr "Нови герои:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Диалог"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Създаване на нов нормален ключ"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Нормален ключ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:41
+#, kde-format
+msgid "Create new special key"
+msgstr "Създаване на нов специален ключ"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:44
+#, kde-format
+msgid "Special Key"
+msgstr "Специален ключ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:63
+#, kde-format
+msgid "Delete selected key"
+msgstr "Изтриване на избрания ключ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:127
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Клавиатура"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Име:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "ширина:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Височина:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Геометрия"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "ляво:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Най-горе:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
+#, kde-format
+msgid "Key"
+msgstr "Ключ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Пръст:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Ляв малък пръст"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Ляв безименен пръст"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Ляв среден пръст"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Ляв показалец"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Десен показалец"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Десен среден пръст"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Десен безименен пръст"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Десен малък пръст"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Хаптичен маркер:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Знаци"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Добавяне на нов знак"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
+#, kde-format
+msgid "Remove character"
+msgstr "Премахване на символ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
+#, kde-format
+msgid "Tab"
+msgstr "Таб"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
+#, kde-format
+msgid "Capslock"
+msgstr "Capslock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
+#, kde-format
+msgid "Return"
+msgstr "Връщане"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
+#, kde-format
+msgid "Space"
+msgstr "Интервал"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
+#, kde-format
+msgid "Other"
+msgstr "други"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
+#, kde-format
+msgid "Label:"
+msgstr "Етикет:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
+#, kde-format
+msgid "Modifier ID:"
+msgstr "ID на модификатора:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Отворете текстов файл..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:44
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Автоматично пренасяне на редовете"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:70
+#, kde-format
+msgid "0 Characters"
+msgstr "0 знака"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Поставете името на текущата системна клавиатурна подредба"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "По време на обучението:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Принудително коригиране на грешки при въвеждане"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Показване на клавиатурата"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Показване на статистика в реално време"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Отиване на следващия ред с:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "En&ter"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "&Интервал"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Ограничения за отключване на урока"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Минимален брой удари в минута:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Минимална точност:"
+
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -863,11 +1374,6 @@ msgstr "Редактиране на описанието"
 #, kde-format
 msgid "Add lesson"
 msgstr "Добавяне на урок"
-
-#: src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Премахване на урока"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -968,251 +1474,3 @@ msgstr "Задайте етикет на специален ключ"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Задайте идентификатор на модификатор на специален ключ"
-
-#~ msgid "The keyboard layout to use on non-X11 platforms"
-#~ msgstr "Клавиатурната подредба за използване на различни от X11 платформи"
-
-#~ msgid "Controls whether typing errors have to be corrected or not."
-#~ msgstr ""
-#~ "Контролира дали грешките при въвеждане трябва да се коригират или не."
-
-#~ msgid "Controls the visibility of the keyboard during training."
-#~ msgstr "Контролира видимостта на клавиатурата по време на тренировка."
-
-#~ msgid "Controls the visibility of realtime statistics during training."
-#~ msgstr ""
-#~ "Контролира видимостта на статистиката в реално време по време на обучение."
-
-#~ msgid "Return key at the end of a line will switch to next line."
-#~ msgstr "Клавишът за връщане в края на ред ще превключи към следващия ред."
-
-#~ msgid "Space key at the end of a line will switch to next line."
-#~ msgstr "Клавишът за интервал в края на ред ще превключи към следващия ред."
-
-#~ msgid ""
-#~ "The minimum required amount of strokes per minute to unlock the next "
-#~ "lesson."
-#~ msgstr ""
-#~ "Минималното необходимо количество удари в минута за отключване на "
-#~ "следващия урок."
-
-#~ msgid ""
-#~ "The minimum required typing accuracy in percent to unlock the next lesson."
-#~ msgstr ""
-#~ "Минималната необходима точност на въвеждане в проценти за отключване на "
-#~ "следващия урок."
-
-#~ msgid "The keyboard tinting color to highlight keys for each finger."
-#~ msgstr ""
-#~ "Цветът за оцветяване на клавиатурата за подчертаване на клавишите за "
-#~ "всеки пръст."
-
-#~ msgid "How transparent finger colors should be shown."
-#~ msgstr "Как трябва да се показват прозрачни цветове на пръстите."
-
-#~ msgid "The ID of the last used profile."
-#~ msgstr "ID на последния използван профил."
-
-#~ msgid "Fingers"
-#~ msgstr "Пръсти"
-
-#~ msgid "Left Hand"
-#~ msgstr "Лява ръка"
-
-#~ msgid "Index finger:"
-#~ msgstr "Показалец:"
-
-#~ msgid "Middle finger:"
-#~ msgstr "Среден пръст:"
-
-#~ msgid "Ring finger:"
-#~ msgstr "Безименен пръст:"
-
-#~ msgid "Little finger:"
-#~ msgstr "Малък пръст:"
-
-#~ msgid "Right Hand"
-#~ msgstr "Дясна ръка"
-
-#~ msgid "Opacity"
-#~ msgstr "Непрозрачност"
-
-#~ msgid " %"
-#~ msgstr "%"
-
-#~ msgid "Keyboard layout:"
-#~ msgstr "Подредба на клавиатурата:"
-
-#~ msgid "Description:"
-#~ msgstr "Описание:"
-
-#~ msgid "Lessons:"
-#~ msgstr "Уроци:"
-
-#~ msgid "Add new lesson"
-#~ msgstr "Добавете нов урок"
-
-#~ msgid "Move lesson up"
-#~ msgstr "Преместете урока нагоре"
-
-#~ msgid "Move lesson down"
-#~ msgstr "Преместете урока надолу"
-
-#~ msgid "New characters:"
-#~ msgstr "Нови герои:"
-
-#~ msgid "Dialog"
-#~ msgstr "Диалог"
-
-#~ msgid "Create new normal key"
-#~ msgstr "Създаване на нов нормален ключ"
-
-#~ msgid "Normal Key"
-#~ msgstr "Нормален ключ"
-
-#~ msgid "Create new special key"
-#~ msgstr "Създаване на нов специален ключ"
-
-#~ msgid "Special Key"
-#~ msgstr "Специален ключ"
-
-#~ msgid "Delete selected key"
-#~ msgstr "Изтриване на избрания ключ"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Keyboard"
-#~ msgstr "Клавиатура"
-
-#~ msgid "Name:"
-#~ msgstr "Име:"
-
-#~ msgid "Width:"
-#~ msgstr "ширина:"
-
-#~ msgid "Height:"
-#~ msgstr "Височина:"
-
-#~ msgid "Geometry"
-#~ msgstr "Геометрия"
-
-#~ msgid "Left:"
-#~ msgstr "ляво:"
-
-#~ msgid "Top:"
-#~ msgstr "Най-горе:"
-
-#~ msgid "Key"
-#~ msgstr "Ключ"
-
-#~ msgid "Finger:"
-#~ msgstr "Пръст:"
-
-#~ msgid "Left little finger"
-#~ msgstr "Ляв малък пръст"
-
-#~ msgid "Left ring finger"
-#~ msgstr "Ляв безименен пръст"
-
-#~ msgid "Left middle finger"
-#~ msgstr "Ляв среден пръст"
-
-#~ msgid "Left index finger"
-#~ msgstr "Ляв показалец"
-
-#~ msgid "Right index finger"
-#~ msgstr "Десен показалец"
-
-#~ msgid "Right middle finger"
-#~ msgstr "Десен среден пръст"
-
-#~ msgid "Right ring finger"
-#~ msgstr "Десен безименен пръст"
-
-#~ msgid "Right little finger"
-#~ msgstr "Десен малък пръст"
-
-#~ msgid "Haptic Marker:"
-#~ msgstr "Хаптичен маркер:"
-
-#~ msgid "Characters"
-#~ msgstr "Знаци"
-
-#~ msgid "Add new character"
-#~ msgstr "Добавяне на нов знак"
-
-#~ msgid "Remove character"
-#~ msgstr "Премахване на символ"
-
-#~ msgid "Type:"
-#~ msgstr "Тип:"
-
-#~ msgid "Tab"
-#~ msgstr "Таб"
-
-#~ msgid "Capslock"
-#~ msgstr "Capslock"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Backspace"
-#~ msgstr "Backspace"
-
-#~ msgid "Return"
-#~ msgstr "Връщане"
-
-#~ msgid "Space"
-#~ msgstr "Интервал"
-
-#~ msgid "Other"
-#~ msgstr "други"
-
-#~ msgid "Label:"
-#~ msgstr "Етикет:"
-
-#~ msgid "Modifier ID:"
-#~ msgstr "ID на модификатора:"
-
-#~ msgid "Open a text file..."
-#~ msgstr "Отворете текстов файл..."
-
-#~ msgid "Wrap lines automatically"
-#~ msgstr "Автоматично пренасяне на редовете"
-
-#~ msgid "0 Characters"
-#~ msgstr "0 знака"
-
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr "Поставете името на текущата системна клавиатурна подредба"
-
-#~ msgid "During training:"
-#~ msgstr "По време на обучението:"
-
-#~ msgid "Enforce correction of typing errors"
-#~ msgstr "Принудително коригиране на грешки при въвеждане"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Показване на клавиатурата"
-
-#~ msgid "Show real-time statistics"
-#~ msgstr "Показване на статистика в реално време"
-
-#~ msgid "Go to next line with:"
-#~ msgstr "Отиване на следващия ред с:"
-
-#~ msgid "Ret&urn"
-#~ msgstr "En&ter"
-
-#~ msgid "Spa&ce"
-#~ msgstr "&Интервал"
-
-#~ msgid "Lesson unlocking limits"
-#~ msgstr "Ограничения за отключване на урока"
-
-#~ msgid "Minimum strokes &per minute:"
-#~ msgstr "Минимален брой удари в минута:"
-
-#~ msgid "Minimum accuracy:"
-#~ msgstr "Минимална точност:"
