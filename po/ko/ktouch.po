@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-07-05 03:21+0000\n"
 "PO-Revision-Date: 2023-08-26 00:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -158,11 +158,9 @@ msgstr "새 키보드 레이아웃"
 msgid "Template"
 msgstr "템플릿"
 
-#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
@@ -316,74 +314,6 @@ msgstr "과정"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "키보드 레이아웃"
-
-#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
-#: src/ktouch.kcfg:9
-#, kde-format
-msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "X11 플랫폼이 아닌 환경에서 사용할 키보드 레이아웃"
-
-#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
-#: src/ktouch.kcfg:15
-#, kde-format
-msgid "Controls whether typing errors have to be corrected or not."
-msgstr "연습 중에 오타를 수정해야 할지 여부를 제어합니다."
-
-#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
-#: src/ktouch.kcfg:19
-#, kde-format
-msgid "Controls the visibility of the keyboard during training."
-msgstr "연습 중에 키보드 표시를 제어합니다."
-
-#. i18n: ectx: label, entry (ShowStatistics), group (Training)
-#: src/ktouch.kcfg:23
-#, kde-format
-msgid "Controls the visibility of realtime statistics during training."
-msgstr "연습 중에 실시간 통계 표시를 제어합니다."
-
-#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
-#: src/ktouch.kcfg:27
-#, kde-format
-msgid "Return key at the end of a line will switch to next line."
-msgstr "줄 끝에서 Return 키를 누르면 다음 줄로 이동합니다."
-
-#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
-#: src/ktouch.kcfg:31
-#, kde-format
-msgid "Space key at the end of a line will switch to next line."
-msgstr "줄 끝에서 Space 키를 누르면 다음 줄로 이동합니다."
-
-#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
-#: src/ktouch.kcfg:35
-#, kde-format
-msgid ""
-"The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr "다음 연습의 잠금을 해제할 때 필요한 최소 분당 타자 수입니다."
-
-#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
-#: src/ktouch.kcfg:41
-#, kde-format
-msgid ""
-"The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr "다음 연습의 잠금을 해제할 때 필요한 최소 타자 정확도입니다."
-
-#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
-#: src/ktouch.kcfg:50
-#, kde-format
-msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr "각각 손가락으로 눌러야 하는 키를 강조하는 키보드 표시 색상입니다."
-
-#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
-#: src/ktouch.kcfg:61
-#, kde-format
-msgid "How transparent finger colors should be shown."
-msgstr "투명한 손가락 색상을 표시할 방법입니다."
-
-#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
-#: src/ktouch.kcfg:69
-#, kde-format
-msgid "The ID of the last used profile."
-msgstr "마지막으로 사용한 프로필 ID입니다."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -667,14 +597,7 @@ msgstr "확인"
 msgid "Edit lesson"
 msgstr "연습 편집"
 
-#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
-#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
-#: src/ui/customlessoneditorwidget.ui:25
-#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:49
+#: src/qml/homescreen/LessonEditorDialog.qml:45
 #, kde-format
 msgid "Title:"
 msgstr "제목:"
@@ -908,433 +831,6 @@ msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr "연습이 중단되었습니다. 다음 키 입력부터 다시 시간을 재기 시작합니다."
 
-#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
-#: src/ui/colorsconfigwidget.ui:17
-#, kde-format
-msgid "Fingers"
-msgstr "손가락"
-
-#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
-#: src/ui/colorsconfigwidget.ui:44
-#, kde-format
-msgid "Left Hand"
-msgstr "왼손"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
-#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, kde-format
-msgid "Index finger:"
-msgstr "집게손가락:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
-#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, kde-format
-msgid "Middle finger:"
-msgstr "가운뎃손가락:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
-#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, kde-format
-msgid "Ring finger:"
-msgstr "약손가락:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
-#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, kde-format
-msgid "Little finger:"
-msgstr "새끼손가락:"
-
-#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
-#: src/ui/colorsconfigwidget.ui:190
-#, kde-format
-msgid "Right Hand"
-msgstr "오른손"
-
-#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
-#: src/ui/colorsconfigwidget.ui:317
-#, kde-format
-msgid "Opacity"
-msgstr "불투명도"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
-#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, no-c-format, kde-format
-msgid " %"
-msgstr "%"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
-#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, kde-format
-msgid "Keyboard layout:"
-msgstr "키보드 레이아웃:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
-#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
-#, kde-format
-msgid "Description:"
-msgstr "설명:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
-#: src/ui/courseeditor.ui:153
-#, kde-format
-msgid "Lessons:"
-msgstr "연습:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
-#: src/ui/courseeditor.ui:182
-#, kde-format
-msgid "Add new lesson"
-msgstr "새 연습 추가"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "연습 삭제"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:224
-#, kde-format
-msgid "Move lesson up"
-msgstr "연습 위로 이동"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:237
-#, kde-format
-msgid "Move lesson down"
-msgstr "연습 아래로 이동"
-
-#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:312
-#, kde-format
-msgid "New characters:"
-msgstr "새 글자:"
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
-#: src/ui/customlessoneditordialog.ui:14
-#, kde-format
-msgid "Dialog"
-msgstr "대화 상자"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:22
-#, kde-format
-msgid "Create new normal key"
-msgstr "새 일반 키 만들기"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:25
-#, kde-format
-msgid "Normal Key"
-msgstr "일반 키"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:41
-#, kde-format
-msgid "Create new special key"
-msgstr "새 특수 키 만들기"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:44
-#, kde-format
-msgid "Special Key"
-msgstr "특수 키"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:63
-#, kde-format
-msgid "Delete selected key"
-msgstr "선택한 키 삭제"
-
-#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:127
-#, no-c-format, kde-format
-msgid "100%"
-msgstr "100%"
-
-#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:36
-#, kde-format
-msgid "Keyboard"
-msgstr "키보드"
-
-#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:79
-#: src/ui/newkeyboardlayoutwidget.ui:22
-#, kde-format
-msgid "Name:"
-msgstr "이름:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/ui/keyboardlayoutpropertieswidget.ui:109
-#: src/ui/keyboardlayoutpropertieswidget.ui:276
-#, kde-format
-msgid "Width:"
-msgstr "너비:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: src/ui/keyboardlayoutpropertieswidget.ui:138
-#: src/ui/keyboardlayoutpropertieswidget.ui:305
-#, kde-format
-msgid "Height:"
-msgstr "높이:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/ui/keyboardlayoutpropertieswidget.ui:185
-#, kde-format
-msgid "Geometry"
-msgstr "크기"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: src/ui/keyboardlayoutpropertieswidget.ui:211
-#, kde-format
-msgid "Left:"
-msgstr "왼쪽:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/keyboardlayoutpropertieswidget.ui:221
-#, kde-format
-msgid "Top:"
-msgstr "위:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:546
-#, kde-format
-msgid "Key"
-msgstr "키"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, kde-format
-msgid "Finger:"
-msgstr "손가락:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, kde-format
-msgid "Left little finger"
-msgstr "왼손 새끼손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, kde-format
-msgid "Left ring finger"
-msgstr "왼손 약손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, kde-format
-msgid "Left middle finger"
-msgstr "왼손 가운뎃손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, kde-format
-msgid "Left index finger"
-msgstr "왼손 집게손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, kde-format
-msgid "Right index finger"
-msgstr "오른손 집게손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, kde-format
-msgid "Right middle finger"
-msgstr "오른손 가운뎃손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, kde-format
-msgid "Right ring finger"
-msgstr "오른손 약손가락"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, kde-format
-msgid "Right little finger"
-msgstr "오른손 새끼손가락"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:439
-#, kde-format
-msgid "Haptic Marker:"
-msgstr "손가락 돌기:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, kde-format
-msgid "Characters"
-msgstr "글자"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, kde-format
-msgid "Add new character"
-msgstr "새 글자 추가"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, kde-format
-msgid "Remove character"
-msgstr "글자 삭제"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:558
-#, kde-format
-msgid "Type:"
-msgstr "종류:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:575
-#, kde-format
-msgid "Tab"
-msgstr "탭"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:580
-#, kde-format
-msgid "Capslock"
-msgstr "CapsLock"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:585
-#, kde-format
-msgid "Shift"
-msgstr "Shift"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:590
-#, kde-format
-msgid "Backspace"
-msgstr "Backspace"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:595
-#, kde-format
-msgid "Return"
-msgstr "Return"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:600
-#, kde-format
-msgid "Space"
-msgstr "Space"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:605
-#, kde-format
-msgid "Other"
-msgstr "기타"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:613
-#, kde-format
-msgid "Label:"
-msgstr "이름표:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, kde-format
-msgid "Modifier ID:"
-msgstr "수정자 ID:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
-#: src/ui/lessontexteditor.ui:31
-#, kde-format
-msgid "Open a text file..."
-msgstr "텍스트 파일 열기..."
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:44
-#, kde-format
-msgid "Wrap lines automatically"
-msgstr "자동으로 줄 둘러싸기"
-
-#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:70
-#, kde-format
-msgid "0 Characters"
-msgstr "0글자"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
-#: src/ui/newkeyboardlayoutwidget.ui:37
-#, kde-format
-msgid "Paste current system keyboard layout name"
-msgstr "현재 시스템 키보드 레이아웃 이름 붙여넣기"
-
-#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
-#: src/ui/trainingconfigwidget.ui:25
-#, kde-format
-msgid "During training:"
-msgstr "연습 중:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
-#: src/ui/trainingconfigwidget.ui:32
-#, kde-format
-msgid "Enforce correction of typing errors"
-msgstr "오타 발생 시 수정 강제"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
-#: src/ui/trainingconfigwidget.ui:45
-#, kde-format
-msgid "Show keyboard"
-msgstr "키보드 표시"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
-#: src/ui/trainingconfigwidget.ui:52
-#, kde-format
-msgid "Show real-time statistics"
-msgstr "실시간 통계 표시"
-
-#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
-#: src/ui/trainingconfigwidget.ui:75
-#, kde-format
-msgid "Go to next line with:"
-msgstr "다음 줄로 이동:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
-#: src/ui/trainingconfigwidget.ui:82
-#, kde-format
-msgid "Ret&urn"
-msgstr "Return(&U)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
-#: src/ui/trainingconfigwidget.ui:89
-#, kde-format
-msgid "Spa&ce"
-msgstr "Space(&C)"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/ui/trainingconfigwidget.ui:120
-#, kde-format
-msgid "Lesson unlocking limits"
-msgstr "연습 잠금 해제 제한"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
-#: src/ui/trainingconfigwidget.ui:126
-#, kde-format
-msgid "Minimum strokes &per minute:"
-msgstr "최소 분당 타자 수(&P):"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
-#: src/ui/trainingconfigwidget.ui:149
-#, kde-format
-msgid "Minimum accuracy:"
-msgstr "최소 정확도:"
-
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -1354,6 +850,11 @@ msgstr "설명 편집"
 #, kde-format
 msgid "Add lesson"
 msgstr "연습 추가"
+
+#: src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "연습 삭제"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -1454,3 +955,243 @@ msgstr "특수 키 이름표 설정"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "특수 키 수정자 ID 설정"
+
+#~ msgid "The keyboard layout to use on non-X11 platforms"
+#~ msgstr "X11 플랫폼이 아닌 환경에서 사용할 키보드 레이아웃"
+
+#~ msgid "Controls whether typing errors have to be corrected or not."
+#~ msgstr "연습 중에 오타를 수정해야 할지 여부를 제어합니다."
+
+#~ msgid "Controls the visibility of the keyboard during training."
+#~ msgstr "연습 중에 키보드 표시를 제어합니다."
+
+#~ msgid "Controls the visibility of realtime statistics during training."
+#~ msgstr "연습 중에 실시간 통계 표시를 제어합니다."
+
+#~ msgid "Return key at the end of a line will switch to next line."
+#~ msgstr "줄 끝에서 Return 키를 누르면 다음 줄로 이동합니다."
+
+#~ msgid "Space key at the end of a line will switch to next line."
+#~ msgstr "줄 끝에서 Space 키를 누르면 다음 줄로 이동합니다."
+
+#~ msgid ""
+#~ "The minimum required amount of strokes per minute to unlock the next "
+#~ "lesson."
+#~ msgstr "다음 연습의 잠금을 해제할 때 필요한 최소 분당 타자 수입니다."
+
+#~ msgid ""
+#~ "The minimum required typing accuracy in percent to unlock the next lesson."
+#~ msgstr "다음 연습의 잠금을 해제할 때 필요한 최소 타자 정확도입니다."
+
+#~ msgid "The keyboard tinting color to highlight keys for each finger."
+#~ msgstr "각각 손가락으로 눌러야 하는 키를 강조하는 키보드 표시 색상입니다."
+
+#~ msgid "How transparent finger colors should be shown."
+#~ msgstr "투명한 손가락 색상을 표시할 방법입니다."
+
+#~ msgid "The ID of the last used profile."
+#~ msgstr "마지막으로 사용한 프로필 ID입니다."
+
+#~ msgid "Fingers"
+#~ msgstr "손가락"
+
+#~ msgid "Left Hand"
+#~ msgstr "왼손"
+
+#~ msgid "Index finger:"
+#~ msgstr "집게손가락:"
+
+#~ msgid "Middle finger:"
+#~ msgstr "가운뎃손가락:"
+
+#~ msgid "Ring finger:"
+#~ msgstr "약손가락:"
+
+#~ msgid "Little finger:"
+#~ msgstr "새끼손가락:"
+
+#~ msgid "Right Hand"
+#~ msgstr "오른손"
+
+#~ msgid "Opacity"
+#~ msgstr "불투명도"
+
+#~ msgid " %"
+#~ msgstr "%"
+
+#~ msgid "Keyboard layout:"
+#~ msgstr "키보드 레이아웃:"
+
+#~ msgid "Description:"
+#~ msgstr "설명:"
+
+#~ msgid "Lessons:"
+#~ msgstr "연습:"
+
+#~ msgid "Add new lesson"
+#~ msgstr "새 연습 추가"
+
+#~ msgid "Move lesson up"
+#~ msgstr "연습 위로 이동"
+
+#~ msgid "Move lesson down"
+#~ msgstr "연습 아래로 이동"
+
+#~ msgid "New characters:"
+#~ msgstr "새 글자:"
+
+#~ msgid "Dialog"
+#~ msgstr "대화 상자"
+
+#~ msgid "Create new normal key"
+#~ msgstr "새 일반 키 만들기"
+
+#~ msgid "Normal Key"
+#~ msgstr "일반 키"
+
+#~ msgid "Create new special key"
+#~ msgstr "새 특수 키 만들기"
+
+#~ msgid "Special Key"
+#~ msgstr "특수 키"
+
+#~ msgid "Delete selected key"
+#~ msgstr "선택한 키 삭제"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Keyboard"
+#~ msgstr "키보드"
+
+#~ msgid "Name:"
+#~ msgstr "이름:"
+
+#~ msgid "Width:"
+#~ msgstr "너비:"
+
+#~ msgid "Height:"
+#~ msgstr "높이:"
+
+#~ msgid "Geometry"
+#~ msgstr "크기"
+
+#~ msgid "Left:"
+#~ msgstr "왼쪽:"
+
+#~ msgid "Top:"
+#~ msgstr "위:"
+
+#~ msgid "Key"
+#~ msgstr "키"
+
+#~ msgid "Finger:"
+#~ msgstr "손가락:"
+
+#~ msgid "Left little finger"
+#~ msgstr "왼손 새끼손가락"
+
+#~ msgid "Left ring finger"
+#~ msgstr "왼손 약손가락"
+
+#~ msgid "Left middle finger"
+#~ msgstr "왼손 가운뎃손가락"
+
+#~ msgid "Left index finger"
+#~ msgstr "왼손 집게손가락"
+
+#~ msgid "Right index finger"
+#~ msgstr "오른손 집게손가락"
+
+#~ msgid "Right middle finger"
+#~ msgstr "오른손 가운뎃손가락"
+
+#~ msgid "Right ring finger"
+#~ msgstr "오른손 약손가락"
+
+#~ msgid "Right little finger"
+#~ msgstr "오른손 새끼손가락"
+
+#~ msgid "Haptic Marker:"
+#~ msgstr "손가락 돌기:"
+
+#~ msgid "Characters"
+#~ msgstr "글자"
+
+#~ msgid "Add new character"
+#~ msgstr "새 글자 추가"
+
+#~ msgid "Remove character"
+#~ msgstr "글자 삭제"
+
+#~ msgid "Type:"
+#~ msgstr "종류:"
+
+#~ msgid "Tab"
+#~ msgstr "탭"
+
+#~ msgid "Capslock"
+#~ msgstr "CapsLock"
+
+#~ msgid "Shift"
+#~ msgstr "Shift"
+
+#~ msgid "Backspace"
+#~ msgstr "Backspace"
+
+#~ msgid "Return"
+#~ msgstr "Return"
+
+#~ msgid "Space"
+#~ msgstr "Space"
+
+#~ msgid "Other"
+#~ msgstr "기타"
+
+#~ msgid "Label:"
+#~ msgstr "이름표:"
+
+#~ msgid "Modifier ID:"
+#~ msgstr "수정자 ID:"
+
+#~ msgid "Open a text file..."
+#~ msgstr "텍스트 파일 열기..."
+
+#~ msgid "Wrap lines automatically"
+#~ msgstr "자동으로 줄 둘러싸기"
+
+#~ msgid "0 Characters"
+#~ msgstr "0글자"
+
+#~ msgid "Paste current system keyboard layout name"
+#~ msgstr "현재 시스템 키보드 레이아웃 이름 붙여넣기"
+
+#~ msgid "During training:"
+#~ msgstr "연습 중:"
+
+#~ msgid "Enforce correction of typing errors"
+#~ msgstr "오타 발생 시 수정 강제"
+
+#~ msgid "Show keyboard"
+#~ msgstr "키보드 표시"
+
+#~ msgid "Show real-time statistics"
+#~ msgstr "실시간 통계 표시"
+
+#~ msgid "Go to next line with:"
+#~ msgstr "다음 줄로 이동:"
+
+#~ msgid "Ret&urn"
+#~ msgstr "Return(&U)"
+
+#~ msgid "Spa&ce"
+#~ msgstr "Space(&C)"
+
+#~ msgid "Lesson unlocking limits"
+#~ msgstr "연습 잠금 해제 제한"
+
+#~ msgid "Minimum strokes &per minute:"
+#~ msgstr "최소 분당 타자 수(&P):"
+
+#~ msgid "Minimum accuracy:"
+#~ msgstr "최소 정확도:"

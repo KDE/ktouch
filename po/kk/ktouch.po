@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-07-05 03:21+0000\n"
 "PO-Revision-Date: 2013-11-01 04:18+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -160,11 +160,9 @@ msgstr "Жаңа пернетақта сәйкестігі"
 msgid "Template"
 msgstr "Үлгі"
 
-#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Өшіру"
@@ -324,74 +322,6 @@ msgstr "Курсы"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Пернетақта сәйкестігі"
-
-#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
-#: src/ktouch.kcfg:9
-#, kde-format
-msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "X11-емес платформадағы пернетақта сәйкестігі"
-
-#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
-#: src/ktouch.kcfg:15
-#, kde-format
-msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
-
-#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
-#: src/ktouch.kcfg:19
-#, kde-format
-msgid "Controls the visibility of the keyboard during training."
-msgstr "Жаттығу кезінде пернетақтасы көрінетінін басқару."
-
-#. i18n: ectx: label, entry (ShowStatistics), group (Training)
-#: src/ktouch.kcfg:23
-#, kde-format
-msgid "Controls the visibility of realtime statistics during training."
-msgstr "Жаттығу кезінде болып жатқан статистикасын көрінетінін басқару."
-
-#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
-#: src/ktouch.kcfg:27
-#, kde-format
-msgid "Return key at the end of a line will switch to next line."
-msgstr "Жол соңындағы Return пернесі келесі жолға ауыстрады."
-
-#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
-#: src/ktouch.kcfg:31
-#, kde-format
-msgid "Space key at the end of a line will switch to next line."
-msgstr "Жол соңындағы Бос орын пернесі келесі жолға ауыстрады."
-
-#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
-#: src/ktouch.kcfg:35
-#, kde-format
-msgid ""
-"The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr "Минималды керек таңба/минут жылдамдығы келесі сабаққа жібереді."
-
-#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
-#: src/ktouch.kcfg:41
-#, kde-format
-msgid ""
-"The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr "Минималды керек теру нақтылығы келесі сабаққа жібереді."
-
-#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
-#: src/ktouch.kcfg:50
-#, kde-format
-msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr "Әр саусақпен басатын пернені түс реңкімен бояу."
-
-#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
-#: src/ktouch.kcfg:61
-#, kde-format
-msgid "How transparent finger colors should be shown."
-msgstr ""
-
-#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
-#: src/ktouch.kcfg:69
-#, kde-format
-msgid "The ID of the last used profile."
-msgstr "Соңғы қолданған іс-әлпетінің индентификаторы."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -690,14 +620,7 @@ msgstr ""
 msgid "Edit lesson"
 msgstr "Сабақты қосу"
 
-#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
-#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
-#: src/ui/customlessoneditorwidget.ui:25
-#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:49
+#: src/qml/homescreen/LessonEditorDialog.qml:45
 #, kde-format
 msgid "Title:"
 msgstr "Атауы:"
@@ -937,435 +860,6 @@ msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr "Жаттығу сеансы үзілді. Бірінші басқанда уақыт есебі қайта жалғасады."
 
-#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
-#: src/ui/colorsconfigwidget.ui:17
-#, kde-format
-msgid "Fingers"
-msgstr "Саусақтар"
-
-#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
-#: src/ui/colorsconfigwidget.ui:44
-#, kde-format
-msgid "Left Hand"
-msgstr "Сол қол"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
-#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, kde-format
-msgid "Index finger:"
-msgstr "Сұқ саусақ:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
-#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, kde-format
-msgid "Middle finger:"
-msgstr "Ортан саусақ:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
-#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, kde-format
-msgid "Ring finger:"
-msgstr "Аты жоқ саусақ:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
-#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, kde-format
-msgid "Little finger:"
-msgstr "Шынашақ:"
-
-#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
-#: src/ui/colorsconfigwidget.ui:190
-#, kde-format
-msgid "Right Hand"
-msgstr "Оң қол"
-
-#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
-#: src/ui/colorsconfigwidget.ui:317
-#, kde-format
-msgid "Opacity"
-msgstr ""
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
-#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
-msgid " %"
-msgstr "%"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
-#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, kde-format
-msgid "Keyboard layout:"
-msgstr "Пернетақта сәйкестігі:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
-#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
-#, kde-format
-msgid "Description:"
-msgstr "Сипаттамасы:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
-#: src/ui/courseeditor.ui:153
-#, kde-format
-msgid "Lessons:"
-msgstr "Сабақтар:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
-#: src/ui/courseeditor.ui:182
-#, kde-format
-msgid "Add new lesson"
-msgstr "Жаңа сабақты қосу"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Сабақты өшіру"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:224
-#, kde-format
-msgid "Move lesson up"
-msgstr "Сабақты жоғарлату"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:237
-#, kde-format
-msgid "Move lesson down"
-msgstr "Сабақты төмендету"
-
-#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:312
-#, kde-format
-msgid "New characters:"
-msgstr "Жаңа таңбалар:"
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
-#: src/ui/customlessoneditordialog.ui:14
-#, kde-format
-msgid "Dialog"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:22
-#, kde-format
-msgid "Create new normal key"
-msgstr "Жаңа кәдімгі пернені құру"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:25
-#, kde-format
-msgid "Normal Key"
-msgstr "Кәдімгін перне"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:41
-#, kde-format
-msgid "Create new special key"
-msgstr "Жаңа арнаулы пернені құру"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:44
-#, kde-format
-msgid "Special Key"
-msgstr "Арнаулы перне"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:63
-#, kde-format
-msgid "Delete selected key"
-msgstr "Таңдалған пернені өшіру"
-
-#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:127
-#, no-c-format, kde-format
-msgid "100%"
-msgstr "100%"
-
-#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:36
-#, kde-format
-msgid "Keyboard"
-msgstr "Пернетақта"
-
-#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:79
-#: src/ui/newkeyboardlayoutwidget.ui:22
-#, kde-format
-msgid "Name:"
-msgstr "Атауы:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/ui/keyboardlayoutpropertieswidget.ui:109
-#: src/ui/keyboardlayoutpropertieswidget.ui:276
-#, kde-format
-msgid "Width:"
-msgstr "Ені:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: src/ui/keyboardlayoutpropertieswidget.ui:138
-#: src/ui/keyboardlayoutpropertieswidget.ui:305
-#, kde-format
-msgid "Height:"
-msgstr "Биіктігі:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/ui/keyboardlayoutpropertieswidget.ui:185
-#, kde-format
-msgid "Geometry"
-msgstr "Геометриясы"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: src/ui/keyboardlayoutpropertieswidget.ui:211
-#, kde-format
-msgid "Left:"
-msgstr "Сол жағы:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/keyboardlayoutpropertieswidget.ui:221
-#, kde-format
-msgid "Top:"
-msgstr "Жоғарғы:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:546
-#, kde-format
-msgid "Key"
-msgstr "Перне"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, kde-format
-msgid "Finger:"
-msgstr "Саусағы:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, kde-format
-msgid "Left little finger"
-msgstr "Сол қол шыншағы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, kde-format
-msgid "Left ring finger"
-msgstr "Сол қол аты жоғы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, kde-format
-msgid "Left middle finger"
-msgstr "Сол қол ортаңғы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, kde-format
-msgid "Left index finger"
-msgstr "Сол қол сұқ саусағы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, kde-format
-msgid "Right index finger"
-msgstr "Оң қол сұқ саусағы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, kde-format
-msgid "Right middle finger"
-msgstr "Оң қол ортаңғы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, kde-format
-msgid "Right ring finger"
-msgstr "Оң қол аты жоғы"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, kde-format
-msgid "Right little finger"
-msgstr "Оң қол шыншағы"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:439
-#, kde-format
-msgid "Haptic Marker:"
-msgstr "Пернедегі томпақтық:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, kde-format
-msgid "Characters"
-msgstr "Таңбалар"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, kde-format
-msgid "Add new character"
-msgstr "Жаңа таңба қосу"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, kde-format
-msgid "Remove character"
-msgstr "Таңбаны өшіру"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:558
-#, kde-format
-msgid "Type:"
-msgstr "Түрі:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:575
-#, kde-format
-msgid "Tab"
-msgstr "Tab"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:580
-#, kde-format
-msgid "Capslock"
-msgstr "Capslock"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:585
-#, kde-format
-msgid "Shift"
-msgstr "Shift"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:590
-#, kde-format
-msgid "Backspace"
-msgstr "Backspace"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:595
-#, kde-format
-msgid "Return"
-msgstr "Enter"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:600
-#, kde-format
-msgid "Space"
-msgstr "Бос орын"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:605
-#, kde-format
-msgid "Other"
-msgstr "Басқа"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:613
-#, kde-format
-msgid "Label:"
-msgstr "Жарлығы:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, kde-format
-msgid "Modifier ID:"
-msgstr "Түрлендіру ID-і:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
-#: src/ui/lessontexteditor.ui:31
-#, kde-format
-msgid "Open a text file..."
-msgstr "Мәтін файлын ашу..."
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:44
-#, kde-format
-msgid "Wrap lines automatically"
-msgstr "Жолдарды автоматты түрде тасымалдау"
-
-#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:70
-#, kde-format
-msgid "0 Characters"
-msgstr "0 таңба"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
-#: src/ui/newkeyboardlayoutwidget.ui:37
-#, kde-format
-msgid "Paste current system keyboard layout name"
-msgstr "Қазіргі жүйелік пернетақта сәйкестігінің атауын орналастыру"
-
-#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
-#: src/ui/trainingconfigwidget.ui:25
-#, kde-format
-msgid "During training:"
-msgstr "Жаттығу кезінде:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
-#: src/ui/trainingconfigwidget.ui:32
-#, kde-format
-msgid "Enforce correction of typing errors"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
-#: src/ui/trainingconfigwidget.ui:45
-#, kde-format
-msgid "Show keyboard"
-msgstr "Пернетақта көрсетілсін"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
-#: src/ui/trainingconfigwidget.ui:52
-#, kde-format
-msgid "Show real-time statistics"
-msgstr "Статистикасы көрсетілсін"
-
-#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
-#: src/ui/trainingconfigwidget.ui:75
-#, kde-format
-msgid "Go to next line with:"
-msgstr "Келесі жолға ауысуы:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
-#: src/ui/trainingconfigwidget.ui:82
-#, kde-format
-msgid "Ret&urn"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
-#: src/ui/trainingconfigwidget.ui:89
-#, kde-format
-msgid "Spa&ce"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/ui/trainingconfigwidget.ui:120
-#, kde-format
-msgid "Lesson unlocking limits"
-msgstr "Келесі сабақтын табалдырығы:"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
-#: src/ui/trainingconfigwidget.ui:126
-#, fuzzy, kde-format
-#| msgid "Minimum strokes per minute:"
-msgid "Minimum strokes &per minute:"
-msgstr "Минималды таңба/минут жылдамдығы:"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
-#: src/ui/trainingconfigwidget.ui:149
-#, kde-format
-msgid "Minimum accuracy:"
-msgstr "Минималды тиянақтылығы:"
-
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -1385,6 +879,11 @@ msgstr "Сипаттамасын өзгерту"
 #, kde-format
 msgid "Add lesson"
 msgstr "Сабақты қосу"
+
+#: src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Сабақты өшіру"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -1485,6 +984,229 @@ msgstr "Арнаулы перненің жарлығын орнату"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Арнаулы перненің түрлендіру ID-ін орнату"
+
+#~ msgid "The keyboard layout to use on non-X11 platforms"
+#~ msgstr "X11-емес платформадағы пернетақта сәйкестігі"
+
+#~ msgid "Controls the visibility of the keyboard during training."
+#~ msgstr "Жаттығу кезінде пернетақтасы көрінетінін басқару."
+
+#~ msgid "Controls the visibility of realtime statistics during training."
+#~ msgstr "Жаттығу кезінде болып жатқан статистикасын көрінетінін басқару."
+
+#~ msgid "Return key at the end of a line will switch to next line."
+#~ msgstr "Жол соңындағы Return пернесі келесі жолға ауыстрады."
+
+#~ msgid "Space key at the end of a line will switch to next line."
+#~ msgstr "Жол соңындағы Бос орын пернесі келесі жолға ауыстрады."
+
+#~ msgid ""
+#~ "The minimum required amount of strokes per minute to unlock the next "
+#~ "lesson."
+#~ msgstr "Минималды керек таңба/минут жылдамдығы келесі сабаққа жібереді."
+
+#~ msgid ""
+#~ "The minimum required typing accuracy in percent to unlock the next lesson."
+#~ msgstr "Минималды керек теру нақтылығы келесі сабаққа жібереді."
+
+#~ msgid "The keyboard tinting color to highlight keys for each finger."
+#~ msgstr "Әр саусақпен басатын пернені түс реңкімен бояу."
+
+#~ msgid "The ID of the last used profile."
+#~ msgstr "Соңғы қолданған іс-әлпетінің индентификаторы."
+
+#~ msgid "Fingers"
+#~ msgstr "Саусақтар"
+
+#~ msgid "Left Hand"
+#~ msgstr "Сол қол"
+
+#~ msgid "Index finger:"
+#~ msgstr "Сұқ саусақ:"
+
+#~ msgid "Middle finger:"
+#~ msgstr "Ортан саусақ:"
+
+#~ msgid "Ring finger:"
+#~ msgstr "Аты жоқ саусақ:"
+
+#~ msgid "Little finger:"
+#~ msgstr "Шынашақ:"
+
+#~ msgid "Right Hand"
+#~ msgstr "Оң қол"
+
+#, fuzzy
+#~| msgid "%"
+#~ msgid " %"
+#~ msgstr "%"
+
+#~ msgid "Keyboard layout:"
+#~ msgstr "Пернетақта сәйкестігі:"
+
+#~ msgid "Description:"
+#~ msgstr "Сипаттамасы:"
+
+#~ msgid "Lessons:"
+#~ msgstr "Сабақтар:"
+
+#~ msgid "Add new lesson"
+#~ msgstr "Жаңа сабақты қосу"
+
+#~ msgid "Move lesson up"
+#~ msgstr "Сабақты жоғарлату"
+
+#~ msgid "Move lesson down"
+#~ msgstr "Сабақты төмендету"
+
+#~ msgid "New characters:"
+#~ msgstr "Жаңа таңбалар:"
+
+#~ msgid "Create new normal key"
+#~ msgstr "Жаңа кәдімгі пернені құру"
+
+#~ msgid "Normal Key"
+#~ msgstr "Кәдімгін перне"
+
+#~ msgid "Create new special key"
+#~ msgstr "Жаңа арнаулы пернені құру"
+
+#~ msgid "Special Key"
+#~ msgstr "Арнаулы перне"
+
+#~ msgid "Delete selected key"
+#~ msgstr "Таңдалған пернені өшіру"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Keyboard"
+#~ msgstr "Пернетақта"
+
+#~ msgid "Name:"
+#~ msgstr "Атауы:"
+
+#~ msgid "Width:"
+#~ msgstr "Ені:"
+
+#~ msgid "Height:"
+#~ msgstr "Биіктігі:"
+
+#~ msgid "Geometry"
+#~ msgstr "Геометриясы"
+
+#~ msgid "Left:"
+#~ msgstr "Сол жағы:"
+
+#~ msgid "Top:"
+#~ msgstr "Жоғарғы:"
+
+#~ msgid "Key"
+#~ msgstr "Перне"
+
+#~ msgid "Finger:"
+#~ msgstr "Саусағы:"
+
+#~ msgid "Left little finger"
+#~ msgstr "Сол қол шыншағы"
+
+#~ msgid "Left ring finger"
+#~ msgstr "Сол қол аты жоғы"
+
+#~ msgid "Left middle finger"
+#~ msgstr "Сол қол ортаңғы"
+
+#~ msgid "Left index finger"
+#~ msgstr "Сол қол сұқ саусағы"
+
+#~ msgid "Right index finger"
+#~ msgstr "Оң қол сұқ саусағы"
+
+#~ msgid "Right middle finger"
+#~ msgstr "Оң қол ортаңғы"
+
+#~ msgid "Right ring finger"
+#~ msgstr "Оң қол аты жоғы"
+
+#~ msgid "Right little finger"
+#~ msgstr "Оң қол шыншағы"
+
+#~ msgid "Haptic Marker:"
+#~ msgstr "Пернедегі томпақтық:"
+
+#~ msgid "Characters"
+#~ msgstr "Таңбалар"
+
+#~ msgid "Add new character"
+#~ msgstr "Жаңа таңба қосу"
+
+#~ msgid "Remove character"
+#~ msgstr "Таңбаны өшіру"
+
+#~ msgid "Type:"
+#~ msgstr "Түрі:"
+
+#~ msgid "Tab"
+#~ msgstr "Tab"
+
+#~ msgid "Capslock"
+#~ msgstr "Capslock"
+
+#~ msgid "Shift"
+#~ msgstr "Shift"
+
+#~ msgid "Backspace"
+#~ msgstr "Backspace"
+
+#~ msgid "Return"
+#~ msgstr "Enter"
+
+#~ msgid "Space"
+#~ msgstr "Бос орын"
+
+#~ msgid "Other"
+#~ msgstr "Басқа"
+
+#~ msgid "Label:"
+#~ msgstr "Жарлығы:"
+
+#~ msgid "Modifier ID:"
+#~ msgstr "Түрлендіру ID-і:"
+
+#~ msgid "Open a text file..."
+#~ msgstr "Мәтін файлын ашу..."
+
+#~ msgid "Wrap lines automatically"
+#~ msgstr "Жолдарды автоматты түрде тасымалдау"
+
+#~ msgid "0 Characters"
+#~ msgstr "0 таңба"
+
+#~ msgid "Paste current system keyboard layout name"
+#~ msgstr "Қазіргі жүйелік пернетақта сәйкестігінің атауын орналастыру"
+
+#~ msgid "During training:"
+#~ msgstr "Жаттығу кезінде:"
+
+#~ msgid "Show keyboard"
+#~ msgstr "Пернетақта көрсетілсін"
+
+#~ msgid "Show real-time statistics"
+#~ msgstr "Статистикасы көрсетілсін"
+
+#~ msgid "Go to next line with:"
+#~ msgstr "Келесі жолға ауысуы:"
+
+#~ msgid "Lesson unlocking limits"
+#~ msgstr "Келесі сабақтын табалдырығы:"
+
+#, fuzzy
+#~| msgid "Minimum strokes per minute:"
+#~ msgid "Minimum strokes &per minute:"
+#~ msgstr "Минималды таңба/минут жылдамдығы:"
+
+#~ msgid "Minimum accuracy:"
+#~ msgstr "Минималды тиянақтылығы:"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Пернетақта сәйкестігін таңдау"

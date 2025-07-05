@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-07-05 03:21+0000\n"
 "PO-Revision-Date: 2025-03-08 00:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -171,11 +171,9 @@ msgstr "Yeni Klavye Düzeni"
 msgid "Template"
 msgstr "Şablon"
 
-#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Sil"
@@ -329,78 +327,6 @@ msgstr "Ders"
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Klavye düzeni"
-
-#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
-#: src/ktouch.kcfg:9
-#, kde-format
-msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "X11 olmayan platformlarda kullanılacak klavye düzeni"
-
-#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
-#: src/ktouch.kcfg:15
-#, kde-format
-msgid "Controls whether typing errors have to be corrected or not."
-msgstr "Yazım hatalarının düzeltilmesi gerekip gerekmediğini kontrol eder."
-
-#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
-#: src/ktouch.kcfg:19
-#, kde-format
-msgid "Controls the visibility of the keyboard during training."
-msgstr "Eğitim sırasında klavyenin görünürlüğünü denetler."
-
-#. i18n: ectx: label, entry (ShowStatistics), group (Training)
-#: src/ktouch.kcfg:23
-#, kde-format
-msgid "Controls the visibility of realtime statistics during training."
-msgstr ""
-"Eğitim sırasında gerçek zamanlı istatistiklerin görünürlüğünü denetler."
-
-#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
-#: src/ktouch.kcfg:27
-#, kde-format
-msgid "Return key at the end of a line will switch to next line."
-msgstr "Bir satırın sonunda Giriş düğmesine basmak sonraki satıra geçecek."
-
-#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
-#: src/ktouch.kcfg:31
-#, kde-format
-msgid "Space key at the end of a line will switch to next line."
-msgstr "Bir satırın sonunda Boşluk düğmesine basmak sonraki satıra geçecek."
-
-#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
-#: src/ktouch.kcfg:35
-#, kde-format
-msgid ""
-"The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr ""
-"Sonraki dersin kilidini açmak için dakikada gerekli en düşük vuruş miktarı."
-
-#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
-#: src/ktouch.kcfg:41
-#, kde-format
-msgid ""
-"The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr ""
-"Sonraki dersin kilidini açmak için dakikada gerekli en düşük yazım doğruluk "
-"miktarı."
-
-#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
-#: src/ktouch.kcfg:50
-#, kde-format
-msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr "Her parmağın düğmelerini vurgulamak için klavye boyama rengi."
-
-#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
-#: src/ktouch.kcfg:61
-#, kde-format
-msgid "How transparent finger colors should be shown."
-msgstr "Parmak renklerinin nice saydam gösterilmesi gerektiği."
-
-#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
-#: src/ktouch.kcfg:69
-#, kde-format
-msgid "The ID of the last used profile."
-msgstr "Son kullanılan profilin kimliği."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -686,14 +612,7 @@ msgstr "Onayla"
 msgid "Edit lesson"
 msgstr "Ders düzenle"
 
-#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
-#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
-#: src/ui/customlessoneditorwidget.ui:25
-#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:49
+#: src/qml/homescreen/LessonEditorDialog.qml:45
 #, kde-format
 msgid "Title:"
 msgstr "Başlık:"
@@ -929,433 +848,6 @@ msgstr ""
 "Oturum yarıda kesildi. Bir düğmeye bastığınızda süre yeniden çalışmaya "
 "başlar."
 
-#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
-#: src/ui/colorsconfigwidget.ui:17
-#, kde-format
-msgid "Fingers"
-msgstr "Parmaklar"
-
-#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
-#: src/ui/colorsconfigwidget.ui:44
-#, kde-format
-msgid "Left Hand"
-msgstr "Sol El"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
-#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, kde-format
-msgid "Index finger:"
-msgstr "İşaret parmağı:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
-#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, kde-format
-msgid "Middle finger:"
-msgstr "Orta parmak:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
-#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, kde-format
-msgid "Ring finger:"
-msgstr "Yüzük parmağı:"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
-#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, kde-format
-msgid "Little finger:"
-msgstr "Küçük parmak:"
-
-#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
-#: src/ui/colorsconfigwidget.ui:190
-#, kde-format
-msgid "Right Hand"
-msgstr "Sağ El"
-
-#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
-#: src/ui/colorsconfigwidget.ui:317
-#, kde-format
-msgid "Opacity"
-msgstr "Matlık"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
-#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, no-c-format, kde-format
-msgid " %"
-msgstr " %"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
-#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, kde-format
-msgid "Keyboard layout:"
-msgstr "Klavye düzenleri:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
-#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
-#, kde-format
-msgid "Description:"
-msgstr "Tanım:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
-#: src/ui/courseeditor.ui:153
-#, kde-format
-msgid "Lessons:"
-msgstr "Dersler:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
-#: src/ui/courseeditor.ui:182
-#, kde-format
-msgid "Add new lesson"
-msgstr "Yeni ders ekle"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr "Dersi kaldır"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:224
-#, kde-format
-msgid "Move lesson up"
-msgstr "Dersi yukarı taşı"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:237
-#, kde-format
-msgid "Move lesson down"
-msgstr "Dersi aşağı taşı"
-
-#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:312
-#, kde-format
-msgid "New characters:"
-msgstr "Yeni karakterler:"
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
-#: src/ui/customlessoneditordialog.ui:14
-#, kde-format
-msgid "Dialog"
-msgstr "İletişim Penceresi"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:22
-#, kde-format
-msgid "Create new normal key"
-msgstr "Yeni normal düğme oluştur"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:25
-#, kde-format
-msgid "Normal Key"
-msgstr "Normal Düğme"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:41
-#, kde-format
-msgid "Create new special key"
-msgstr "Yeni özel düğme oluştur"
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:44
-#, kde-format
-msgid "Special Key"
-msgstr "Özel Düğme"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:63
-#, kde-format
-msgid "Delete selected key"
-msgstr "Seçili düğmeyi sil"
-
-#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:127
-#, no-c-format, kde-format
-msgid "100%"
-msgstr "%​100"
-
-#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:36
-#, kde-format
-msgid "Keyboard"
-msgstr "Klavye"
-
-#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:79
-#: src/ui/newkeyboardlayoutwidget.ui:22
-#, kde-format
-msgid "Name:"
-msgstr "Ad:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/ui/keyboardlayoutpropertieswidget.ui:109
-#: src/ui/keyboardlayoutpropertieswidget.ui:276
-#, kde-format
-msgid "Width:"
-msgstr "Genişlik:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: src/ui/keyboardlayoutpropertieswidget.ui:138
-#: src/ui/keyboardlayoutpropertieswidget.ui:305
-#, kde-format
-msgid "Height:"
-msgstr "Yükseklik:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/ui/keyboardlayoutpropertieswidget.ui:185
-#, kde-format
-msgid "Geometry"
-msgstr "Geometri"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: src/ui/keyboardlayoutpropertieswidget.ui:211
-#, kde-format
-msgid "Left:"
-msgstr "Sol:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/keyboardlayoutpropertieswidget.ui:221
-#, kde-format
-msgid "Top:"
-msgstr "Üst:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:546
-#, kde-format
-msgid "Key"
-msgstr "Düğme"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, kde-format
-msgid "Finger:"
-msgstr "Parmak:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, kde-format
-msgid "Left little finger"
-msgstr "Sol küçük parmak"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, kde-format
-msgid "Left ring finger"
-msgstr "Sol yüzük parmağı"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, kde-format
-msgid "Left middle finger"
-msgstr "Sol orta parmak"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, kde-format
-msgid "Left index finger"
-msgstr "Sol işaret parmağı"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, kde-format
-msgid "Right index finger"
-msgstr "Sağ işaret parmağı"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, kde-format
-msgid "Right middle finger"
-msgstr "Sağ orta parmak"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, kde-format
-msgid "Right ring finger"
-msgstr "Sağ yüzük parmağı"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, kde-format
-msgid "Right little finger"
-msgstr "Sağ küçük parmak"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:439
-#, kde-format
-msgid "Haptic Marker:"
-msgstr "Dokunma İşaretleyici:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, kde-format
-msgid "Characters"
-msgstr "Karakterler"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, kde-format
-msgid "Add new character"
-msgstr "yeni karakter ekle"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, kde-format
-msgid "Remove character"
-msgstr "Karakter kaldır"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:558
-#, kde-format
-msgid "Type:"
-msgstr "Türü:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:575
-#, kde-format
-msgid "Tab"
-msgstr "Sekme"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:580
-#, kde-format
-msgid "Capslock"
-msgstr "Büyük Harf"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:585
-#, kde-format
-msgid "Shift"
-msgstr "Üst Karakter"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:590
-#, kde-format
-msgid "Backspace"
-msgstr "Geri Sil"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:595
-#, kde-format
-msgid "Return"
-msgstr "Dönüş"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:600
-#, kde-format
-msgid "Space"
-msgstr "Boşluk"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:605
-#, kde-format
-msgid "Other"
-msgstr "Diğer"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:613
-#, kde-format
-msgid "Label:"
-msgstr "Etiket:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, kde-format
-msgid "Modifier ID:"
-msgstr "Düzenleyici kimliği:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
-#: src/ui/lessontexteditor.ui:31
-#, kde-format
-msgid "Open a text file..."
-msgstr "Bir metin dosyası aç..."
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:44
-#, kde-format
-msgid "Wrap lines automatically"
-msgstr "Satırları otomatik kaydır"
-
-#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:70
-#, kde-format
-msgid "0 Characters"
-msgstr "0 Karakter"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
-#: src/ui/newkeyboardlayoutwidget.ui:37
-#, kde-format
-msgid "Paste current system keyboard layout name"
-msgstr "Mevcut sistem klavye düzeni adını yapıştır"
-
-#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
-#: src/ui/trainingconfigwidget.ui:25
-#, kde-format
-msgid "During training:"
-msgstr "Eğitim sırasında:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
-#: src/ui/trainingconfigwidget.ui:32
-#, kde-format
-msgid "Enforce correction of typing errors"
-msgstr "Yazım hatalarının düzeltilmesini zorunlu kıl"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
-#: src/ui/trainingconfigwidget.ui:45
-#, kde-format
-msgid "Show keyboard"
-msgstr "Klavyeyi göster"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
-#: src/ui/trainingconfigwidget.ui:52
-#, kde-format
-msgid "Show real-time statistics"
-msgstr "Gerçek zaman istatistiklerini göster"
-
-#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
-#: src/ui/trainingconfigwidget.ui:75
-#, kde-format
-msgid "Go to next line with:"
-msgstr "Sonraki satıra şununla geç:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
-#: src/ui/trainingconfigwidget.ui:82
-#, kde-format
-msgid "Ret&urn"
-msgstr "&Dönüş"
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
-#: src/ui/trainingconfigwidget.ui:89
-#, kde-format
-msgid "Spa&ce"
-msgstr "&Boşluk"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/ui/trainingconfigwidget.ui:120
-#, kde-format
-msgid "Lesson unlocking limits"
-msgstr "Ders kilit açma sınırları"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
-#: src/ui/trainingconfigwidget.ui:126
-#, kde-format
-msgid "Minimum strokes &per minute:"
-msgstr "Dakikadaki asgari vuruş sayısı:"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
-#: src/ui/trainingconfigwidget.ui:149
-#, kde-format
-msgid "Minimum accuracy:"
-msgstr "En düşük doğruluk:"
-
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -1375,6 +867,11 @@ msgstr "Açıklamayı düzenle"
 #, kde-format
 msgid "Add lesson"
 msgstr "Ders ekle"
+
+#: src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Dersi kaldır"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
@@ -1475,6 +972,251 @@ msgstr "Özel düğme etiketini ayarla"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Özel düğme niteleyicisi kimliğini ayarla"
+
+#~ msgid "The keyboard layout to use on non-X11 platforms"
+#~ msgstr "X11 olmayan platformlarda kullanılacak klavye düzeni"
+
+#~ msgid "Controls whether typing errors have to be corrected or not."
+#~ msgstr "Yazım hatalarının düzeltilmesi gerekip gerekmediğini kontrol eder."
+
+#~ msgid "Controls the visibility of the keyboard during training."
+#~ msgstr "Eğitim sırasında klavyenin görünürlüğünü denetler."
+
+#~ msgid "Controls the visibility of realtime statistics during training."
+#~ msgstr ""
+#~ "Eğitim sırasında gerçek zamanlı istatistiklerin görünürlüğünü denetler."
+
+#~ msgid "Return key at the end of a line will switch to next line."
+#~ msgstr "Bir satırın sonunda Giriş düğmesine basmak sonraki satıra geçecek."
+
+#~ msgid "Space key at the end of a line will switch to next line."
+#~ msgstr "Bir satırın sonunda Boşluk düğmesine basmak sonraki satıra geçecek."
+
+#~ msgid ""
+#~ "The minimum required amount of strokes per minute to unlock the next "
+#~ "lesson."
+#~ msgstr ""
+#~ "Sonraki dersin kilidini açmak için dakikada gerekli en düşük vuruş "
+#~ "miktarı."
+
+#~ msgid ""
+#~ "The minimum required typing accuracy in percent to unlock the next lesson."
+#~ msgstr ""
+#~ "Sonraki dersin kilidini açmak için dakikada gerekli en düşük yazım "
+#~ "doğruluk miktarı."
+
+#~ msgid "The keyboard tinting color to highlight keys for each finger."
+#~ msgstr "Her parmağın düğmelerini vurgulamak için klavye boyama rengi."
+
+#~ msgid "How transparent finger colors should be shown."
+#~ msgstr "Parmak renklerinin nice saydam gösterilmesi gerektiği."
+
+#~ msgid "The ID of the last used profile."
+#~ msgstr "Son kullanılan profilin kimliği."
+
+#~ msgid "Fingers"
+#~ msgstr "Parmaklar"
+
+#~ msgid "Left Hand"
+#~ msgstr "Sol El"
+
+#~ msgid "Index finger:"
+#~ msgstr "İşaret parmağı:"
+
+#~ msgid "Middle finger:"
+#~ msgstr "Orta parmak:"
+
+#~ msgid "Ring finger:"
+#~ msgstr "Yüzük parmağı:"
+
+#~ msgid "Little finger:"
+#~ msgstr "Küçük parmak:"
+
+#~ msgid "Right Hand"
+#~ msgstr "Sağ El"
+
+#~ msgid "Opacity"
+#~ msgstr "Matlık"
+
+#~ msgid " %"
+#~ msgstr " %"
+
+#~ msgid "Keyboard layout:"
+#~ msgstr "Klavye düzenleri:"
+
+#~ msgid "Description:"
+#~ msgstr "Tanım:"
+
+#~ msgid "Lessons:"
+#~ msgstr "Dersler:"
+
+#~ msgid "Add new lesson"
+#~ msgstr "Yeni ders ekle"
+
+#~ msgid "Move lesson up"
+#~ msgstr "Dersi yukarı taşı"
+
+#~ msgid "Move lesson down"
+#~ msgstr "Dersi aşağı taşı"
+
+#~ msgid "New characters:"
+#~ msgstr "Yeni karakterler:"
+
+#~ msgid "Dialog"
+#~ msgstr "İletişim Penceresi"
+
+#~ msgid "Create new normal key"
+#~ msgstr "Yeni normal düğme oluştur"
+
+#~ msgid "Normal Key"
+#~ msgstr "Normal Düğme"
+
+#~ msgid "Create new special key"
+#~ msgstr "Yeni özel düğme oluştur"
+
+#~ msgid "Special Key"
+#~ msgstr "Özel Düğme"
+
+#~ msgid "Delete selected key"
+#~ msgstr "Seçili düğmeyi sil"
+
+#~ msgid "100%"
+#~ msgstr "%​100"
+
+#~ msgid "Keyboard"
+#~ msgstr "Klavye"
+
+#~ msgid "Name:"
+#~ msgstr "Ad:"
+
+#~ msgid "Width:"
+#~ msgstr "Genişlik:"
+
+#~ msgid "Height:"
+#~ msgstr "Yükseklik:"
+
+#~ msgid "Geometry"
+#~ msgstr "Geometri"
+
+#~ msgid "Left:"
+#~ msgstr "Sol:"
+
+#~ msgid "Top:"
+#~ msgstr "Üst:"
+
+#~ msgid "Key"
+#~ msgstr "Düğme"
+
+#~ msgid "Finger:"
+#~ msgstr "Parmak:"
+
+#~ msgid "Left little finger"
+#~ msgstr "Sol küçük parmak"
+
+#~ msgid "Left ring finger"
+#~ msgstr "Sol yüzük parmağı"
+
+#~ msgid "Left middle finger"
+#~ msgstr "Sol orta parmak"
+
+#~ msgid "Left index finger"
+#~ msgstr "Sol işaret parmağı"
+
+#~ msgid "Right index finger"
+#~ msgstr "Sağ işaret parmağı"
+
+#~ msgid "Right middle finger"
+#~ msgstr "Sağ orta parmak"
+
+#~ msgid "Right ring finger"
+#~ msgstr "Sağ yüzük parmağı"
+
+#~ msgid "Right little finger"
+#~ msgstr "Sağ küçük parmak"
+
+#~ msgid "Haptic Marker:"
+#~ msgstr "Dokunma İşaretleyici:"
+
+#~ msgid "Characters"
+#~ msgstr "Karakterler"
+
+#~ msgid "Add new character"
+#~ msgstr "yeni karakter ekle"
+
+#~ msgid "Remove character"
+#~ msgstr "Karakter kaldır"
+
+#~ msgid "Type:"
+#~ msgstr "Türü:"
+
+#~ msgid "Tab"
+#~ msgstr "Sekme"
+
+#~ msgid "Capslock"
+#~ msgstr "Büyük Harf"
+
+#~ msgid "Shift"
+#~ msgstr "Üst Karakter"
+
+#~ msgid "Backspace"
+#~ msgstr "Geri Sil"
+
+#~ msgid "Return"
+#~ msgstr "Dönüş"
+
+#~ msgid "Space"
+#~ msgstr "Boşluk"
+
+#~ msgid "Other"
+#~ msgstr "Diğer"
+
+#~ msgid "Label:"
+#~ msgstr "Etiket:"
+
+#~ msgid "Modifier ID:"
+#~ msgstr "Düzenleyici kimliği:"
+
+#~ msgid "Open a text file..."
+#~ msgstr "Bir metin dosyası aç..."
+
+#~ msgid "Wrap lines automatically"
+#~ msgstr "Satırları otomatik kaydır"
+
+#~ msgid "0 Characters"
+#~ msgstr "0 Karakter"
+
+#~ msgid "Paste current system keyboard layout name"
+#~ msgstr "Mevcut sistem klavye düzeni adını yapıştır"
+
+#~ msgid "During training:"
+#~ msgstr "Eğitim sırasında:"
+
+#~ msgid "Enforce correction of typing errors"
+#~ msgstr "Yazım hatalarının düzeltilmesini zorunlu kıl"
+
+#~ msgid "Show keyboard"
+#~ msgstr "Klavyeyi göster"
+
+#~ msgid "Show real-time statistics"
+#~ msgstr "Gerçek zaman istatistiklerini göster"
+
+#~ msgid "Go to next line with:"
+#~ msgstr "Sonraki satıra şununla geç:"
+
+#~ msgid "Ret&urn"
+#~ msgstr "&Dönüş"
+
+#~ msgid "Spa&ce"
+#~ msgstr "&Boşluk"
+
+#~ msgid "Lesson unlocking limits"
+#~ msgstr "Ders kilit açma sınırları"
+
+#~ msgid "Minimum strokes &per minute:"
+#~ msgstr "Dakikadaki asgari vuruş sayısı:"
+
+#~ msgid "Minimum accuracy:"
+#~ msgstr "En düşük doğruluk:"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Klavye Düzenini Seçin"

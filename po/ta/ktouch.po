@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-04 00:38+0000\n"
+"POT-Creation-Date: 2025-07-05 03:21+0000\n"
 "PO-Revision-Date: 2004-12-28 23:43-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <tamilpc@ambalam.com>\n"
@@ -159,11 +159,9 @@ msgstr "&விசைப்பலகை உருவரைகள்"
 msgid "Template"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr ""
@@ -317,74 +315,6 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Keyboard layout"
 msgstr "&விசைப்பலகை உருவரைகள்"
-
-#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
-#: src/ktouch.kcfg:9
-#, kde-format
-msgid "The keyboard layout to use on non-X11 platforms"
-msgstr ""
-
-#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
-#: src/ktouch.kcfg:15
-#, kde-format
-msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
-
-#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
-#: src/ktouch.kcfg:19
-#, kde-format
-msgid "Controls the visibility of the keyboard during training."
-msgstr ""
-
-#. i18n: ectx: label, entry (ShowStatistics), group (Training)
-#: src/ktouch.kcfg:23
-#, kde-format
-msgid "Controls the visibility of realtime statistics during training."
-msgstr ""
-
-#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
-#: src/ktouch.kcfg:27
-#, kde-format
-msgid "Return key at the end of a line will switch to next line."
-msgstr ""
-
-#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
-#: src/ktouch.kcfg:31
-#, kde-format
-msgid "Space key at the end of a line will switch to next line."
-msgstr ""
-
-#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
-#: src/ktouch.kcfg:35
-#, kde-format
-msgid ""
-"The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr ""
-
-#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
-#: src/ktouch.kcfg:41
-#, kde-format
-msgid ""
-"The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr ""
-
-#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
-#: src/ktouch.kcfg:50
-#, kde-format
-msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr ""
-
-#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
-#: src/ktouch.kcfg:61
-#, kde-format
-msgid "How transparent finger colors should be shown."
-msgstr ""
-
-#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
-#: src/ktouch.kcfg:69
-#, kde-format
-msgid "The ID of the last used profile."
-msgstr ""
 
 #: src/ktouchcontext.cpp:129
 #, fuzzy, kde-format
@@ -677,14 +607,7 @@ msgstr ""
 msgid "Edit lesson"
 msgstr "&பிழையின்போது ஒலி எழுப்பு"
 
-#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
-#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
-#: src/ui/customlessoneditorwidget.ui:25
-#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:49
+#: src/qml/homescreen/LessonEditorDialog.qml:45
 #, kde-format
 msgid "Title:"
 msgstr ""
@@ -925,448 +848,6 @@ msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr "பயிற்சித்தொடர் அடுத்த விசையழுத்தத்தின் காரணமாக தொடர்கிறது..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
-#: src/ui/colorsconfigwidget.ui:17
-#, kde-format
-msgid "Fingers"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
-#: src/ui/colorsconfigwidget.ui:44
-#, kde-format
-msgid "Left Hand"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
-#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Index finger:"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
-#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, fuzzy, kde-format
-msgid "Middle finger:"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
-#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Ring finger:"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
-#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
-#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, fuzzy, kde-format
-msgid "Little finger:"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
-#: src/ui/colorsconfigwidget.ui:190
-#, kde-format
-msgid "Right Hand"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
-#: src/ui/colorsconfigwidget.ui:317
-#, kde-format
-msgid "Opacity"
-msgstr ""
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
-#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
-msgid " %"
-msgstr "%"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
-#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, fuzzy, kde-format
-msgid "Keyboard layout:"
-msgstr "&விசைப்பலகை உருவரைகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
-#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
-#, kde-format
-msgid "Description:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
-#: src/ui/courseeditor.ui:153
-#, kde-format
-msgid "Lessons:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
-#: src/ui/courseeditor.ui:182
-#, kde-format
-msgid "Add new lesson"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
-#, kde-format
-msgid "Remove lesson"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:224
-#, fuzzy, kde-format
-msgid "Move lesson up"
-msgstr "&பிழையின்போது ஒலி எழுப்பு"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:237
-#, kde-format
-msgid "Move lesson down"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:312
-#, fuzzy, kde-format
-#| msgid "new characters"
-msgid "New characters:"
-msgstr "புதிய எழுத்துகள்"
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
-#: src/ui/customlessoneditordialog.ui:14
-#, kde-format
-msgid "Dialog"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:22
-#, fuzzy, kde-format
-msgid "Create new normal key"
-msgstr "புதிய விரிவுரையை உருவாக்கு."
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:25
-#, kde-format
-msgid "Normal Key"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:41
-#, fuzzy, kde-format
-msgid "Create new special key"
-msgstr "புதிய விரிவுரையை உருவாக்கு."
-
-#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:44
-#, fuzzy, kde-format
-msgid "Special Key"
-msgstr "புதிய விரிவுரையை உருவாக்கு."
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:63
-#, kde-format
-msgid "Delete selected key"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:127
-#, no-c-format, kde-format
-msgid "100%"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:36
-#, fuzzy, kde-format
-msgid "Keyboard"
-msgstr "&விசைப்பலகை உருவரைகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:79
-#: src/ui/newkeyboardlayoutwidget.ui:22
-#, kde-format
-msgid "Name:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/ui/keyboardlayoutpropertieswidget.ui:109
-#: src/ui/keyboardlayoutpropertieswidget.ui:276
-#, kde-format
-msgid "Width:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: src/ui/keyboardlayoutpropertieswidget.ui:138
-#: src/ui/keyboardlayoutpropertieswidget.ui:305
-#, kde-format
-msgid "Height:"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/ui/keyboardlayoutpropertieswidget.ui:185
-#, kde-format
-msgid "Geometry"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: src/ui/keyboardlayoutpropertieswidget.ui:211
-#, fuzzy, kde-format
-msgid "Left:"
-msgstr "விரிவுரை தலைப்பு:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/keyboardlayoutpropertieswidget.ui:221
-#, kde-format
-msgid "Top:"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:546
-#, kde-format
-msgid "Key"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Finger:"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, fuzzy, kde-format
-msgid "Left little finger"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Left ring finger"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, fuzzy, kde-format
-msgid "Left middle finger"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, fuzzy, kde-format
-msgid "Left index finger"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Right index finger"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, fuzzy, kde-format
-msgid "Right middle finger"
-msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Right ring finger"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, fuzzy, kde-format
-#| msgid "Typing line"
-msgid "Right little finger"
-msgstr "தட்டச்சு வரி"
-
-#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:439
-#, kde-format
-msgid "Haptic Marker:"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, fuzzy, kde-format
-msgid "Characters"
-msgstr "தட்டச்சு செய்யப்பட்ட எழுத்துகள்:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, fuzzy, kde-format
-#| msgid "new characters"
-msgid "Add new character"
-msgstr "புதிய எழுத்துகள்"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, fuzzy, kde-format
-#| msgid "new characters"
-msgid "Remove character"
-msgstr "புதிய எழுத்துகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:558
-#, kde-format
-msgid "Type:"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:575
-#, kde-format
-msgid "Tab"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:580
-#, kde-format
-msgid "Capslock"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:585
-#, kde-format
-msgid "Shift"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:590
-#, kde-format
-msgid "Backspace"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:595
-#, kde-format
-msgid "Return"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:600
-#, kde-format
-msgid "Space"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:605
-#, kde-format
-msgid "Other"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:613
-#, kde-format
-msgid "Label:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:626
-#, fuzzy, kde-format
-#| msgid " (modified)"
-msgid "Modifier ID:"
-msgstr "(மாற்றப்பட்டது)"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
-#: src/ui/lessontexteditor.ui:31
-#, fuzzy, kde-format
-msgid "Open a text file..."
-msgstr "&விரிவுரையைத் திற..."
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:44
-#, kde-format
-msgid "Wrap lines automatically"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:70
-#, fuzzy, kde-format
-msgid "0 Characters"
-msgstr "தட்டச்சு செய்யப்பட்ட எழுத்துகள்:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
-#: src/ui/newkeyboardlayoutwidget.ui:37
-#, fuzzy, kde-format
-msgid "Paste current system keyboard layout name"
-msgstr "&விசைப்பலகை உருவரைகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
-#: src/ui/trainingconfigwidget.ui:25
-#, fuzzy, kde-format
-#| msgid "T&raining"
-msgid "During training:"
-msgstr "பயிற்சி"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
-#: src/ui/trainingconfigwidget.ui:32
-#, kde-format
-msgid "Enforce correction of typing errors"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
-#: src/ui/trainingconfigwidget.ui:45
-#, fuzzy, kde-format
-msgid "Show keyboard"
-msgstr "புதிய விரிவுரையை உருவாக்கு."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
-#: src/ui/trainingconfigwidget.ui:52
-#, fuzzy, kde-format
-#| msgid "General Statistics"
-msgid "Show real-time statistics"
-msgstr "பொது புள்ளி விவரம்"
-
-#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
-#: src/ui/trainingconfigwidget.ui:75
-#, kde-format
-msgid "Go to next line with:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
-#: src/ui/trainingconfigwidget.ui:82
-#, kde-format
-msgid "Ret&urn"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
-#: src/ui/trainingconfigwidget.ui:89
-#, kde-format
-msgid "Spa&ce"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/ui/trainingconfigwidget.ui:120
-#, kde-format
-msgid "Lesson unlocking limits"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
-#: src/ui/trainingconfigwidget.ui:126
-#, fuzzy, kde-format
-msgid "Minimum strokes &per minute:"
-msgstr "நிமிடத்துக்கு வார்த்தைகள்"
-
-#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
-#: src/ui/trainingconfigwidget.ui:149
-#, fuzzy, kde-format
-#| msgid "Accuracy"
-msgid "Minimum accuracy:"
-msgstr "நுட்பம்"
-
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
@@ -1385,6 +866,11 @@ msgstr ""
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format
 msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
 msgstr ""
 
 #: src/undocommands/coursecommands.cpp:218
@@ -1491,6 +977,157 @@ msgstr "புதிய விரிவுரையை உருவாக்க�
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Index finger:"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Middle finger:"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Ring finger:"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Little finger:"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~| msgid "%"
+#~ msgid " %"
+#~ msgstr "%"
+
+#, fuzzy
+#~ msgid "Keyboard layout:"
+#~ msgstr "&விசைப்பலகை உருவரைகள்"
+
+#, fuzzy
+#~ msgid "Move lesson up"
+#~ msgstr "&பிழையின்போது ஒலி எழுப்பு"
+
+#, fuzzy
+#~| msgid "new characters"
+#~ msgid "New characters:"
+#~ msgstr "புதிய எழுத்துகள்"
+
+#, fuzzy
+#~ msgid "Create new normal key"
+#~ msgstr "புதிய விரிவுரையை உருவாக்கு."
+
+#, fuzzy
+#~ msgid "Create new special key"
+#~ msgstr "புதிய விரிவுரையை உருவாக்கு."
+
+#, fuzzy
+#~ msgid "Special Key"
+#~ msgstr "புதிய விரிவுரையை உருவாக்கு."
+
+#, fuzzy
+#~ msgid "Keyboard"
+#~ msgstr "&விசைப்பலகை உருவரைகள்"
+
+#, fuzzy
+#~ msgid "Left:"
+#~ msgstr "விரிவுரை தலைப்பு:"
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Finger:"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Left little finger"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Left ring finger"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Left middle finger"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~ msgid "Left index finger"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Right index finger"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Right middle finger"
+#~ msgstr "பயிற்சி விரிவுரை கோப்பைத் திற...."
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Right ring finger"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~| msgid "Typing line"
+#~ msgid "Right little finger"
+#~ msgstr "தட்டச்சு வரி"
+
+#, fuzzy
+#~ msgid "Characters"
+#~ msgstr "தட்டச்சு செய்யப்பட்ட எழுத்துகள்:"
+
+#, fuzzy
+#~| msgid "new characters"
+#~ msgid "Add new character"
+#~ msgstr "புதிய எழுத்துகள்"
+
+#, fuzzy
+#~| msgid "new characters"
+#~ msgid "Remove character"
+#~ msgstr "புதிய எழுத்துகள்"
+
+#, fuzzy
+#~| msgid " (modified)"
+#~ msgid "Modifier ID:"
+#~ msgstr "(மாற்றப்பட்டது)"
+
+#, fuzzy
+#~ msgid "Open a text file..."
+#~ msgstr "&விரிவுரையைத் திற..."
+
+#, fuzzy
+#~ msgid "0 Characters"
+#~ msgstr "தட்டச்சு செய்யப்பட்ட எழுத்துகள்:"
+
+#, fuzzy
+#~ msgid "Paste current system keyboard layout name"
+#~ msgstr "&விசைப்பலகை உருவரைகள்"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgid "During training:"
+#~ msgstr "பயிற்சி"
+
+#, fuzzy
+#~ msgid "Show keyboard"
+#~ msgstr "புதிய விரிவுரையை உருவாக்கு."
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "Show real-time statistics"
+#~ msgstr "பொது புள்ளி விவரம்"
+
+#, fuzzy
+#~ msgid "Minimum strokes &per minute:"
+#~ msgstr "நிமிடத்துக்கு வார்த்தைகள்"
+
+#, fuzzy
+#~| msgid "Accuracy"
+#~ msgid "Minimum accuracy:"
+#~ msgstr "நுட்பம்"
 
 #, fuzzy
 #~ msgid "Choose Keyboard Layout"
