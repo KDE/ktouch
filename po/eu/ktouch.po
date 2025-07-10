@@ -1,7 +1,7 @@
 # Translation for ktouch.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2023 This file is copyright:
+# Copyright (C) 2003-2025 This file is copyright:
 # This file is distributed under the same license as the ktouch package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003.
@@ -12,31 +12,32 @@
 # marcos <marcos@euskalgnu.org>, 2006.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
 # Ander Elortondo <ander.elor@gmail.com>, 2019, 2020.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:39+0000\n"
-"PO-Revision-Date: 2023-08-25 00:33+0200\n"
+"PO-Revision-Date: 2025-07-09 15:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Naiara Maya,Ion Gaztañaga,Ander Elortondo"
+msgstr "Iñigo Salvador Azurmendi,Ander Elortondo,Ion Gaztañaga,Naiara Maya"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "naiabera@yahoo.es,igaztanaga@gmail.com,Ander.elor@gmail.com"
+msgstr ""
+"xalba@ni.eus,ander.elor@gmail.com,igaztanaga@gmail.com,naiabera@yahoo.es"
 
 #: src/bindings/stringformatter.cpp:31
 #, kde-format
@@ -47,7 +48,7 @@ msgstr "%%1"
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr "Datu-base bertsio baliogabea '%1'"
+msgstr "Datu-base bertsio baliogabea '%1'."
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
@@ -58,17 +59,17 @@ msgstr "Ikasgai pertsonalizatuak"
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr "Ikasgai pertsonalizatuak biltegiratzeko toki bat "
+msgstr "Ikasgai-testu pertsonalak gordetzeko tokia"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr "Ez dago ikastarorik %1 IDaz"
+msgstr "Ez dago %1 IDa duen ikastarorik"
 
 #: src/core/userdataaccess.cpp:328
 #, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr "Ez dago %1 IDa duen teklatu diseinurik"
+msgstr "Ez dago %1 IDa duen teklatu-antolaerarik"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
@@ -104,18 +105,18 @@ msgstr "Errorea ikastaroa irekitzean"
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr "Barneko ikastaroak ikusi bakarrik egin daitezke."
+msgstr "Barneratutako ikastaroak ikusi besterik ezin dira egin."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "Errorea teklatuaren diseinua irekitzean"
+msgstr "Errorea teklatu-antolaera irekitzean"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "Barneko teklatuaren diseinuak ikusi bakarrik egin daitezke."
+msgstr "Barneratutako teklatu-antolaerak ikusi besterik ezin dira egin."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -132,17 +133,17 @@ msgstr[1] "%1 Karaktere"
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr "Testu fitxategiak (*.txt)"
+msgstr "Testu-fitxategiak (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
-msgstr "Hautatutako fitxategia ezin da ireki"
+msgstr "Hautatutako fitxategia ezin izan da ireki"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Lehendik ere badago izen hori duen teklatu diseinua."
+msgstr "Lehendik ere badago izen bera duen teklatu-antolaera bat."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -163,7 +164,7 @@ msgstr "Ikastaro berria"
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr "Teklatuaren diseinu berria"
+msgstr "Teklatu-antolaera berria"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -193,27 +194,28 @@ msgstr "Esportatu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "Ikastaro eta teklatuaren diseinuaren editorea"
+msgstr "Ikastaro eta teklatu-antolaera editorea"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr "Sortu ikastaro edo teklatuaren diseinu berri bat"
+msgstr "Sortu ikastaro edo teklatu-antolaera berri bat"
 
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr "Ezabatu une honetan hautatutako ikastaro edo teklatuaren diseinua"
+msgstr "Ezabatu unean hautatutako ikastaroa edo teklatu-antolaera"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "Inportatu ikastaro edo teklatuaren diseinua fitxategi batetik"
+msgstr "Inportatu ikastaro bat edo teklatu-antolaera bat fitxategi batetik"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr "Esportatu uneko ikastaro edo teklatuaren diseinua fitxategi batera"
+msgstr ""
+"Esportatu unean hautatutako ikastaroa edo teklatu-antolaera fitxategi batera"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
@@ -223,18 +225,18 @@ msgstr "Errorea ikastaroa ezabatzean"
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "errorea teklatuaren diseinua ezabatzean"
+msgstr "Errorea teklatu-antolaera ezabatzean"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr "XML fitxategiak (*.xml)"
+msgstr "XML-fitxategiak (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr "Hautatutako fitxategia ezin da inportatu."
+msgstr "Hautatutako fitxategia ezin izan da inportatu."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
@@ -244,17 +246,17 @@ msgstr "Errorea ikastaroa gordetzean"
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "Errorea teklatuaren diseinua gordetzean"
+msgstr "Errorea teklatu-antolaera gordetzean"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr "<b>%1</b> ikastaroa ezabatua"
+msgstr "<b>%1</b> ikastaroa ezabatu da"
 
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr "<b>%1</b> teklatuaren diseinua ezabatua"
+msgstr "<b>%1</b> teklatu-antolaera ezabatu da"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
@@ -264,12 +266,12 @@ msgstr "Errorea ikastaroa diskoan gordetzean."
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "Errorea teklatuaren diseinua diskoan gordetzean."
+msgstr "Errorea teklatu-antolaera diskoan gordetzean."
 
 #: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr "Hautatutako ikastaroa dagoeneko badago barne ikastaro gisa."
+msgstr "Hautatutako ikastaroa jada barneratutako ikastaro gisa dago."
 
 #: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
@@ -279,7 +281,7 @@ msgstr "Inportatu ikastaro berri gisa"
 #: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr "Hautatutako ikastaroa dagoeneko badago erabiltzaile ikastaro gisa."
+msgstr "Hautatutako ikastaroa jada erabiltzaile-ikastaro gisa dago."
 
 #: src/editor/resourceeditor.cpp:589
 #, kde-format
@@ -287,26 +289,24 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
-"Hautatutako teklatuaren diseinua dagoeneko badago barne tekatuaren diseinu "
-"gisa."
+"Hautatutako teklatu-antolaera jada barneratutako tekatu-antolaera gisa dago."
 
 #: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
 msgid "Import as new keyboard layout"
-msgstr "Inportatu teklatuaren diseinu berri gisa"
+msgstr "Inportatu teklatu-antolaera berri gisa"
 
 #: src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
-"Hautatutako teklatuaren diseinua dagoeneko badago erabiltzailearen "
-"tekatuaren diseinu gisa."
+"Hautatutako teklatu-antolaera jada erabiltzaile teklatu-antolaera gisa dago."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
-msgstr "Leheneratu"
+msgstr "Lehengoratu"
 
 #: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
@@ -321,7 +321,7 @@ msgstr "Erabili beste ikastaro bat txantiloi gisa"
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "Erabili beste teklatuaren diseinu bat txantiloi gisa"
+msgstr "Erabili beste teklatu-antolaera bat txantiloi gisa"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -331,45 +331,44 @@ msgstr "Ikastaroa"
 #: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
-msgstr "Teklatuaren diseinua"
+msgstr "Teklatu-antolaera"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "X11 ez diren plataformetan erabiltzeko teklatuaren diseinua"
+msgstr "X11 ez diren plataformetan erabiltzeko teklatu-antolaera"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr "Idazterakoan akatsak zuzendu behar diren ala ez kontrolatzen du."
+msgstr "Tekleatze-erroreak zuzendu behar diren ala ez kontrolatzen du."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
 #, kde-format
 msgid "Controls the visibility of the keyboard during training."
-msgstr "Ikasgaia egiten den bitartean teklatuaren bistaratzea kontrolatzen du."
+msgstr "Trebatzean teklatuaren ikusgai dagoen kontrolatzen du."
 
 #. i18n: ectx: label, entry (ShowStatistics), group (Training)
 #: src/ktouch.kcfg:23
 #, kde-format
 msgid "Controls the visibility of realtime statistics during training."
 msgstr ""
-"Ikasgaia egiten den bitartean denbora errealeko estatistiken bistaratzea "
-"kontrolatzen du."
+"Trebatzean estatistikak denbora-errealean ikusgai dauden kontrolatzen du."
 
 #. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
-msgstr "Lerro bukaeran 'sartu' teklak aldatuko du hurrengo lerrora."
+msgstr "Lerro baten bukaerako itzulera-teklak hurrengo lerrora aldatuko du."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
-msgstr "Lerro bukaeran 'zuriune' teklak aldatuko du hurrengo lerrora."
+msgstr "Lerro bateko bukaerako zuriune-teklak hurrengo lerrora aldatuko du."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
@@ -377,8 +376,7 @@ msgstr "Lerro bukaeran 'zuriune' teklak aldatuko du hurrengo lerrora."
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
-"Hurrengo ikasgaia askatzeko minutuko egin behar den gutxieneko sakatze "
-"kopurua."
+"Hurrengo ikasgaia askatzeko, minutuko gutxienez behar den sakatze-kopurua."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
@@ -386,19 +384,20 @@ msgstr ""
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
-"Gutxieneko sakatze zuzenak ehunekotan adierazita hurrengo ikasgaia askatzeko."
+"Hurrengo ikasgaia askatzeko, gutxienez behar den ehuneko tekleatze-"
+"zehaztasuna."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr "Hatz bakoitzaren teklak nabarmentzeko teklatua tindatzeko koloreak. "
+msgstr "Hatz bakoitzaren teklak nabarmentzeko teklatua tindatzeko kolorea."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr "Hatzen kolorea nolako gardentasunez erakutsi behar diren."
+msgstr "Hatzen koloreek erakutsi behar duten gardentasun-maila."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -414,7 +413,7 @@ msgstr "Trebakuntza"
 #: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Training Settings"
-msgstr "Trebakuntzaren ezarpenak"
+msgstr "Trebakuntza-ezarpenak"
 
 #: src/ktouchcontext.cpp:130
 #, kde-format
@@ -424,7 +423,7 @@ msgstr "Koloreak"
 #: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Color Settings"
-msgstr "Kolore ezarpenak"
+msgstr "Kolore-ezarpenak"
 
 #: src/ktouchcontext.cpp:143
 #, kde-format
@@ -435,7 +434,7 @@ msgstr "Konfiguratu teklatua"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr "Ikastaro eta teklatuaren diseinuaren editorea..."
+msgstr "Ikastaro eta teklatu-antolaera editorea..."
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
@@ -445,12 +444,12 @@ msgstr "Konfiguratu teklatua..."
 #: src/main.cpp:30
 #, kde-format
 msgid "Typewriting Trainer"
-msgstr "Mekanografia trebakuntza"
+msgstr "Mekanografia trebatzailea"
 
 #: src/main.cpp:32
 #, kde-format
 msgid "Learn and practice typewriting"
-msgstr "Ikasi eta trebatu mekanografian"
+msgstr "Mekanografia ikasi eta trebatu"
 
 #: src/main.cpp:35
 #, kde-format
@@ -458,8 +457,8 @@ msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
-"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
-"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+"Copyright (C) 2011-2015 Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 Håvard Frøiland eta Andreas Nicolai"
 
 #: src/main.cpp:42
 #, kde-format
@@ -469,7 +468,7 @@ msgstr "Sebastian Gottfried"
 #: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
-msgstr "Uneko mantentzailea"
+msgstr "Egungo mantentzailea"
 
 #: src/main.cpp:43
 #, kde-format
@@ -479,7 +478,7 @@ msgstr "Andreas Nicolai"
 #: src/main.cpp:43
 #, kde-format
 msgid "Former maintainer and programmer"
-msgstr "Aurreko mantentzailea eta programatzailea"
+msgstr "Mantentzaile eta programatzaile ohia"
 
 #: src/main.cpp:44
 #, kde-format
@@ -509,27 +508,27 @@ msgstr "Anne-Marie Mahfouf"
 #: src/main.cpp:47
 #, kde-format
 msgid "Lots of patches, fixes and updates"
-msgstr "Adabaki, konponketa eta eguneraketa asko."
+msgstr "Adabaki, konponketa eta eguneratze asko"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
-msgstr "Trebakuntzaren eta teklatuaren fitxategien sortzaile guztiak"
+msgstr "Trebakuntzaren eta teklatu-fitxategien sortzaile guztiak"
 
 #: src/main.cpp:65
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr "Abiarazi ikastaro eta teklatuaren diseinu editorea"
+msgstr "Abiarazi ikastaro eta teklatu-antolaera editorea"
 
 #: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr "Prestatu bide-izena QML inportazio bide-izen zerrendara"
+msgstr "Bide-izena QML inportazio bide-izenen zerrendan aurretik erantsi"
 
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr "%1-(e)k exekuzio errorea aurkitu du eta itxi behar da."
+msgstr "%1(e)k exekuzio garaian errore bat aurkitu du eta itxi egin behar da."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -549,7 +548,7 @@ msgstr "Kokapena"
 #: src/models/lessonmodel.cpp:67
 #, kde-format
 msgid "<No title>"
-msgstr "<Izenbururik ez>"
+msgstr "<Titulurik ez>"
 
 #: src/models/lessonmodel.cpp:69
 #, kde-format
@@ -559,7 +558,7 @@ msgstr "<p>Karaktere berriak: %1</p><p>%2</p>"
 #: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
 #, kde-format
 msgid "Title"
-msgstr "Izenburua:"
+msgstr "Titulua:"
 
 #: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
@@ -569,7 +568,7 @@ msgstr "Ikastaroak"
 #: src/models/resourcemodel.cpp:211
 #, kde-format
 msgid "Keyboard Layouts"
-msgstr "Teklatuaren diseinuak"
+msgstr "Teklatu-antolaerak"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
@@ -580,13 +579,13 @@ msgstr "Izena: %1"
 #: src/qml/meters/AccuracyMeter.qml:17
 #, kde-format
 msgid "Accuracy"
-msgstr "Zuzentasuna"
+msgstr "Zehaztasuna"
 
 #: src/qml/common/LearningProgressChart.qml:48
 #: src/qml/meters/CharactersPerMinuteMeter.qml:20
 #, kde-format
 msgid "Characters per Minute"
-msgstr "Karaktereak minutuko"
+msgstr "Karaktere minutuko"
 
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
@@ -607,38 +606,39 @@ msgstr "Trebatzen:"
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
 msgid "Accuracy:"
-msgstr "Zuzentasuna:"
+msgstr "Zehaztasuna:"
 
 #: src/qml/common/LearningProgressChart.qml:95
 #, kde-format
 msgid "Characters per Minute:"
-msgstr "Karaktereak minutuko:"
+msgstr "Karaktere minutuko:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "Ikastaroak zure teklatu diseinurako"
+msgstr "Zure teklatu-antolaerarako ikastaroak"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Other Courses"
-msgstr "Beste ikastaroak"
+msgstr "Beste ikastaro batzuk"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr "Ongi etorri mekanografia trebakuntzara"
+msgstr "Ongi etorri mekanografia trebatzailera"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
 #, kde-format
 msgid "Start Training"
-msgstr "Hasi trebakuntza"
+msgstr "Hasi trebatzen"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "Hautatutako ikastaroa teklatu diseinu zehatzerako prestatu da."
+msgstr ""
+"Hautatutako ikastaroa teklatu-antolaera jakin baterako prestatuta dago."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
@@ -646,8 +646,8 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
-"Hautatutako ikastaroa ez dago prestatua zure ordenagailuko uneko teklatu "
-"diseinurako."
+"Hautatutako ikastaroa ez dago zure ordenagailuan aktibo dagoen teklatu-"
+"antolaerarako prestatuta."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
@@ -656,10 +656,10 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
-"KTouch ezin du teklatu ezarpenak edo diseinua aldatu. Trebakuntza aurretik "
-"zure ordenagailua konfiguratu behar duzu teklatu diseinu egokia erabiltzeko. "
-"Bestela zure uneko teklatu diseinua erabili beharko duzu ikasgaiaren testua "
-"tekleatzeko."
+"KTouch-ek ezin ditu teklatu-antolaerak aldatu edo ezarri. Trebakuntza "
+"aurretik, zure ordenagailua teklatu-antolaera egokia erabiltzeko konfiguratu "
+"behar duzu. Bestela, ikasgaiaren testua tekleatzeko, zure uneko teklatu-"
+"antolaera erabili beharko duzu ."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
@@ -669,12 +669,12 @@ msgstr "Konfiguratu teklatua"
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr "<b>%1</b> ikasgaia ezabatua"
+msgstr "<b>%1</b> ikasgaia ezabatu da."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr "Izenburu gabeko ikasgaia ezabatua."
+msgstr "Titulurik gabeko ikasgaia ezabatu da."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -684,7 +684,7 @@ msgstr "Desegin"
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr "Berretsi"
+msgstr "Baieztatu"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
@@ -701,7 +701,7 @@ msgstr "Editatu ikasgaia"
 #: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
-msgstr "Izenburua:"
+msgstr "Titulua:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
 #, kde-format
@@ -743,7 +743,7 @@ msgstr "Trebatutako ikasgaiak:"
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
 msgid "Total training time:"
-msgstr "Trebatzen emandako denbora:"
+msgstr "Trebatzen emandako denbora osoa:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
@@ -763,7 +763,7 @@ msgstr "Editatu"
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr "Benetan ezabatu nahi duzu '\"<b>%1'</b> profila?"
+msgstr "\"<b>%1</b>\" profila benetan ezabatu nahi duzu?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
@@ -773,7 +773,7 @@ msgstr "Utzi"
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr "Trebakuntza hasi aurretik mesedez aurkeztu zure burua:"
+msgstr "Trebatzen hasi aurretik, mesedez, aurkeztu zure burua:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
@@ -783,18 +783,18 @@ msgstr "Izena"
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr "Makinaz idazten ez dakit edo oso gutxi ibilia naiz."
+msgstr "Ez dakit makinaz idazten edo oso gutxi ibilia naiz"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
 msgstr ""
-"Ikasgaiak askatuz doaz zure idazketa gaitasuna aurrera egin ahala denboran."
+"Ikasgaiak askatuz doaz zure tekleatzeko trebetasuna hobetzen den heinean."
 
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
 msgid "I am an experienced machine typist and want to improve my skills"
-msgstr "Makinaz idaztera ohitua nago eta nire gaitasunak frogatu nahi ditut."
+msgstr "Makinaz idazten eskarmentua dut eta trebetasuna hobetu nahi dut"
 
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
@@ -804,7 +804,7 @@ msgstr "Ikasgai guztiak berehala askatzen dira."
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
 msgid "Create New Profile"
-msgstr "Sortu profila berria"
+msgstr "Sortu profil berria"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
@@ -814,7 +814,7 @@ msgstr "Erabili hautatutako profila"
 #: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
-msgstr "Trebakuntza ikasgaiaren estatistikak"
+msgstr "Ikasgai-trebakuntzaren estatistikak"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -829,7 +829,7 @@ msgstr "Karakterea:"
 #: src/qml/scorescreen/ScoreScreen.qml:126
 #, kde-format
 msgid "Errors:"
-msgstr "Akatsak:"
+msgstr "Erroreak:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:153
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
@@ -855,17 +855,17 @@ msgstr "Zorionak! Ikasgaia gainditu duzu."
 #: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr "Ez duzu ikasgaia gainditu."
+msgstr "Ikasgaia ez duzu gainditu."
 
 #: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr "Errepikatu ikasgaia, zure gaitasunak hobetuz joango dira denboraz."
+msgstr "Ikasgaia errepikatu. Denborarekin zure trebetasuna hobetuko da."
 
 #: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr "Hurrengo ikasgaia askatua"
+msgstr "Hurrengo ikasgaia askatu da"
 
 #: src/qml/scorescreen/ScoreScreen.qml:277
 #, kde-format
@@ -884,18 +884,18 @@ msgstr "Aurrerapena"
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
-msgstr "Akatsak"
+msgstr "Erroreak"
 
 #: src/qml/scorescreen/ScoreScreen.qml:297
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
-msgstr "Ikasgai"
+msgstr "Honen gainean"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "All Lessons"
-msgstr "guztiak"
+msgstr "Ikasgai guztiak"
 
 #: src/qml/scorescreen/ScoreScreen.qml:310
 #, kde-format
@@ -905,7 +905,7 @@ msgstr "Ikasgai hau"
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr "Zure teklatuaren diseinua ezin da erakutsi."
+msgstr "Zure teklatu-antolaerak ez du bistaratze erabilgarririk."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
@@ -915,7 +915,7 @@ msgstr "Menua"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
 msgid "Resume Training"
-msgstr "Berrekin trebakuntza"
+msgstr "Berrekin trebakuntzari"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
@@ -925,15 +925,15 @@ msgstr "Berrabiarazi ikasgaia"
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
-msgstr "Trebakuntza saioa hasi da! Denbora lehen tekla sakatzean abiatuko da."
+msgstr "Trebakuntza saioa hasi da. Denbora lehen tekla sakatzean abiatuko da."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
 #, kde-format
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr ""
-"Trebakuntza saioa pausatuta. Trebakuntzak hurrengo tekla sakatzean "
-"jarraituko du."
+"Trebakuntza-saioa etenda. Denbora berriz martxan hasten da hurrengo tekla "
+"sakatzean."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
@@ -992,19 +992,19 @@ msgstr "Opakutasuna"
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
 #, no-c-format, kde-format
 msgid " %"
-msgstr "% "
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr "Teklatuaren diseinua"
+msgstr "Teklatu-antolaera:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr "Azalpena:"
+msgstr "Deskribapena:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
@@ -1046,7 +1046,7 @@ msgstr "Karaktere berriak:"
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr "Elkarrizketa"
+msgstr "Elkarrizketa-koadroa"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
@@ -1174,31 +1174,31 @@ msgstr "Ezkerreko hatz erakuslea"
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
 #, kde-format
 msgid "Right index finger"
-msgstr "Eskumako hatz erakuslea"
+msgstr "Eskuineko hatz erakuslea"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
 #, kde-format
 msgid "Right middle finger"
-msgstr "Eskumako hatz luzea"
+msgstr "Eskuineko hatz luzea"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:426
 #, kde-format
 msgid "Right ring finger"
-msgstr "Eskumako hatz nagia"
+msgstr "Eskuineko hatz nagia"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
 #, kde-format
 msgid "Right little finger"
-msgstr "Eskumako hatz txikia"
+msgstr "Eskuineko hatz txikia"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr "Ukimen markatzailea:"
+msgstr "Markatzaile haptikoa:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
@@ -1228,31 +1228,31 @@ msgstr "Mota:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
-msgstr "TAB"
+msgstr "Tab"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
-msgstr "MAIUS blok"
+msgstr "BlokMaius"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
-msgstr "MAIUS"
+msgstr "Maius"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
-msgstr "Atzera"
+msgstr "Atzera-tekla"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
-msgstr "Sartu"
+msgstr "Itzulbira"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:600
@@ -1264,7 +1264,7 @@ msgstr "Zuriunea"
 #: src/ui/keyboardlayoutpropertieswidget.ui:605
 #, kde-format
 msgid "Other"
-msgstr "Beste bat"
+msgstr "Bestelakoa"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:613
@@ -1282,13 +1282,13 @@ msgstr "Aldatzaile IDa:"
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr "Ireki testu fitxategi bat..."
+msgstr "Ireki testu-fitxategi bat..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr "Bildu lerroak automatikoki"
+msgstr "Lerroak automatikoki itzulbiratu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
@@ -1300,19 +1300,19 @@ msgstr "0 Karaktere"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr "Itsatsi uneko sistemako teklatuaren diseinu izena"
+msgstr "Itsatsi sistemaren uneko teklatu-antolaeraren izena"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
 #, kde-format
 msgid "During training:"
-msgstr "Trebakuntzan zehar:"
+msgstr "Trebakuntzan:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr "Behartu zuzentzera idazketa akatsak"
+msgstr "Behartu tekleatze-erroreak zuzentzea"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
@@ -1324,7 +1324,7 @@ msgstr "Erakutsi teklatua"
 #: src/ui/trainingconfigwidget.ui:52
 #, kde-format
 msgid "Show real-time statistics"
-msgstr "Erakutsi estatistikak zuzenean"
+msgstr "Erakutsi estatistikak denbora errealean"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
@@ -1336,13 +1336,13 @@ msgstr "Hurrengo lerrora joateko erabili:"
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr "Sartu"
+msgstr "Itz&ulbira"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr "Zuriunea"
+msgstr "&Zuriunea"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
@@ -1354,28 +1354,28 @@ msgstr "Ikasgaiak askatzeko mugak"
 #: src/ui/trainingconfigwidget.ui:126
 #, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr "Gutxieneko sakatzeak minutuko:"
+msgstr "Gutxieneko sakatze minutuko:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
 #, kde-format
 msgid "Minimum accuracy:"
-msgstr "Gutxieneko zuzentasuna:"
+msgstr "Gutxieneko zehaztasuna:"
 
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr "Ezarri izenburua"
+msgstr "Ezarri titulua"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Ezarri teklatuaren diseinua"
+msgstr "Ezarri teklatu-antolaera"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
 msgid "Edit description"
-msgstr "Editatu azalpena"
+msgstr "Editatu deskribapena"
 
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format
