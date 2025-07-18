@@ -56,6 +56,16 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui
 )
 
+# Needs https://invent.kde.org/libraries/kqtquickcharts/-/merge_requests/10
+# to actually work with 6.0.0.
+find_package(KQtQuickCharts)
+#find_package(KQtQuickCharts 6.0.0) # aka >= 25.07.80
+set_package_properties(KQtQuickCharts PROPERTIES
+    DESCRIPTION "QtQuick plugin to render beautiful and interactive charts"
+    URL "https://commits.kde.org/kqtquickcharts"
+    TYPE RUNTIME
+)
+
 find_package(LibXml2 REQUIRED)
 
 option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X11)" OFF)
