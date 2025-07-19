@@ -46,7 +46,6 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Config
     ConfigWidgets
     CoreAddons
-    DocTools
     I18n
     ItemViews
     KCMUtils
