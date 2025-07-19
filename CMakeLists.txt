@@ -46,7 +46,6 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Config
     ConfigWidgets
     CoreAddons
-    DocTools
     I18n
     ItemViews
     KCMUtils
@@ -93,7 +92,6 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.101.0)
 
 # subdirectories to build
 ecm_optional_add_subdirectory(data)
-ecm_optional_add_subdirectory(doc)
 ecm_optional_add_subdirectory(src)
 # ecm_optional_add_subdirectory(sounds)
 ecm_optional_add_subdirectory(icons)
@@ -101,6 +99,7 @@ ecm_optional_add_subdirectory(icons)
 # files to install in the ktouch project root directory
 ki18n_install(po)
 if (KF6DocTools_FOUND)
+    ecm_optional_add_subdirectory(doc)
     kdoctools_install(po)
 endif()
 install( PROGRAMS org.kde.ktouch.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
