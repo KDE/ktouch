@@ -16,7 +16,7 @@
     ],
     "cleanup": [
         "/include",
-        "/lib/*.la"
+        "/lib/*.la",
         "/lib/cmake",
         "/lib/pkgconfig"
     ],
