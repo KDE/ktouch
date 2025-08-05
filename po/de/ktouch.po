@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2022, 2025 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # Stephan Johach <hunsum@gmx.de>, 2005.
 # Sebastian Stein <seb.stein@hpfsc.de>, 2005.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007.
@@ -8,21 +9,20 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2013, 2016, 2022, 2023.
 # Peter Rüthemann <peter.ruethemann@gmail.com>, 2010, 2011.
 # Rolf Eike Beer <kde@opensource.sf-tec.de>, 2011.
-# Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:39+0000\n"
-"PO-Revision-Date: 2023-06-07 19:58+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-08-01 22:11+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -721,8 +721,7 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Zum Freigeben vorherige Lektion erfolgreich abschließen"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
 msgstr "Neue Lektion hinzufügen"
 
