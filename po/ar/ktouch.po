@@ -769,7 +769,7 @@ msgstr "الاسم"
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr "لا أملك أو أملك القليل القليل من الخبرة في الطباعة الآلية"
+msgstr "لا أملك أو أملك القليل القليل من الخبرة في الطباعة الآليّة"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
@@ -845,7 +845,7 @@ msgstr "لم تنجح في هذا الدرس."
 #: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr "أعد الدرس. مهاراتك ستتطوّر تلقائيًّا مع مرور الوقت."
+msgstr "أعد الدرس. مهاراتك ستتطوّر آليًّا مع مرور الوقت."
 
 #: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
@@ -1271,7 +1271,7 @@ msgstr "افتح ملف نص صرف..."
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr "لف السطور آلياً"
+msgstr "لف السطور آليّاً"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
