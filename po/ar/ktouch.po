@@ -140,7 +140,7 @@ msgstr "الملف المحدّد لا يمكن فتحه"
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "هناك تخطيط لوحة مفاتيح بهذا الاسم بالفعل."
+msgstr "هناك تخطيط لوحة مفاتيح بهذا الاسم فعلًا."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -267,7 +267,7 @@ msgstr "خطأ أثناء حفظ تخطيط لوحة المفاتيح على ا�
 #: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr "التمرين المحدّد موجود بالفعل كتمرين مضمّن."
+msgstr "التمرين المحدّد موجود فعلًا كتمرين مضمّن."
 
 #: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
@@ -277,14 +277,14 @@ msgstr "استورد كتمرين جديد"
 #: src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr "التمرين المحدّد موجود بالفعل كتمرين مستخدِم."
+msgstr "التمرين المحدّد موجود فعلًا كتمرين مستخدِم."
 
 #: src/editor/resourceeditor.cpp:589
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
-msgstr "تخطيط لوحة المفاتيح المحدّد موجود بالفعل كتخطيط لوحة مفاتيح مضمّن."
+msgstr "تخطيط لوحة المفاتيح المحدّد موجود فعلًا كتخطيط لوحة مفاتيح مضمّن."
 
 #: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "استورد كتخطيط لوحة مفاتيح جديد"
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
-msgstr "تخطيط لوحة المفاتيح المحدّد موجود بالفعل كتخطيط لوحة مفاتيح مستخدِم."
+msgstr "تخطيط لوحة المفاتيح المحدّد موجود فعلًا كتخطيط لوحة مفاتيح مستخدِم."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
