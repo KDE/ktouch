@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:39+0000\n"
-"PO-Revision-Date: 2025-08-09 22:15+0400\n"
+"PO-Revision-Date: 2025-08-23 08:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -910,7 +910,7 @@ msgstr "أعد الدرس"
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
-msgstr "بدءت جلسة التدريب. سيبدأ الوقت مع أول ضربة مفتاح."
+msgstr "بدأت جلسة التدريب. سيبدأ الوقت مع أول ضربة مفتاح."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
 #, kde-format
@@ -1127,7 +1127,7 @@ msgstr "مفتاح"
 #: src/ui/keyboardlayoutpropertieswidget.ui:379
 #, kde-format
 msgid "Finger:"
-msgstr "الاصبع:"
+msgstr "الأصبع:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
@@ -1408,7 +1408,7 @@ msgstr "أضف مفتاح"
 #: src/undocommands/keyboardlayoutcommands.cpp:198
 #, kde-format
 msgid "Remove key"
-msgstr "إزالة مفتاح"
+msgstr "أزل مفتاح"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
@@ -1433,7 +1433,7 @@ msgstr "إضافة محرف مفتاح"
 #: src/undocommands/keyboardlayoutcommands.cpp:430
 #, kde-format
 msgid "Remove key character"
-msgstr "إزالة محرف مفتاح"
+msgstr "أزل محرف مفتاح"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
