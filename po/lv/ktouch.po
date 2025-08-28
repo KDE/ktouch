@@ -9,55 +9,56 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Einars Sprugis <einars8@gmail.com>, 2009, 2010, 2011, 2012, 2013.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:39+0000\n"
-"PO-Revision-Date: 2013-08-03 13:04+0300\n"
-"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
-"Language-Team: Latvian\n"
+"PO-Revision-Date: 2025-08-25 12:02+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Viesturs Zariņš, Jānis Suija, Einārs Sprūģis"
+msgstr "Viesturs Zariņš, Jānis Suija, Einārs Sprūģis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "viesturs.zarins@mii.lu.lv, killz@inbox.lv, einars8@gmail.com"
+msgstr ""
+"viesturs.zarins@mii.lu.lv, killz@inbox.lv, einars8@gmail.com, toms."
+"trasuns@posteo.net"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr "Nederīga datubāzes versija '%1'."
+msgstr "Nederīga datubāzes versija „%1“."
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
-#, fuzzy, kde-format
-#| msgid "Restart Lesson"
+#, kde-format
 msgid "Custom Lessons"
-msgstr "Pārstartēt nodarbību"
+msgstr "Pielāgotas nodarbības"
 
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr ""
+msgstr "Vieta, kurā saglabāt personīgos nodarbību tekstus"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
@@ -98,28 +99,28 @@ msgstr "Apakšējais labais"
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr "Kļūda atverot kursu"
+msgstr "Kļūda, atverot kursu"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr "Iebūvētie kursi var tikai tikt skatīti."
+msgstr "Iebūvētos kursus varat tikai skatīt."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "Kļūda atverot tastatūras izkārtojumu"
+msgstr "Kļūda, atverot tastatūras izkārtojumu"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "Iebūvētie tastatūras izvietojumi var tikai tikt skatīti."
+msgstr "Iebūvētos tastatūras izkārtojumus varat tikai skatīt."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: src/editor/lessontexteditor.cpp:62
 #, kde-format
@@ -132,22 +133,20 @@ msgstr[2] "%1 rakstzīmju"
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "Teksta datnes (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
-#, fuzzy, kde-format
-#| msgid "The selected file could not be imported."
+#, kde-format
 msgid "The selected file could not be opened"
-msgstr "Izvēlēto failu neizdevās importēt."
+msgstr "Atlasīto datni neizdevās atvērt"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Jau pastāv tastatūras izvietojums ar tādu nosaukumu."
+msgstr "Jau pastāv tastatūras izkārtojums ar tādu nosaukumu."
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
 msgstr "Jauns"
@@ -165,7 +164,7 @@ msgstr "Jauns kurss"
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr "Jauns tastatūras izvietojums"
+msgstr "Jauns tastatūras izkārtojums"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -192,8 +191,7 @@ msgid "Export"
 msgstr "Eksportēt"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Course and Keyboard Layout Editor"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Kursu un tastatūras izkārtojumu redaktors"
@@ -206,49 +204,48 @@ msgstr "Izveidot jaunu kursu vai tastatūras izkārtojumu"
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr "Dzēst pašreizeiz izvēlēto kursu vai tastatūras izkārtojumu"
+msgstr "Dzēst atlasīto kursu vai tastatūras izkārtojumu"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "Importēt kursu vai tastatūras izvietojumu no faila"
+msgstr "Importēt kursu vai tastatūras izkārtojumu no datnes"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr ""
-"Eksportēt pašreizeiz izvēlēto kursu vai tastatūras izkārtojumu uz failu"
+msgstr "Eksportēt atlasīto kursu vai tastatūras izkārtojumu datnē"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr "Kļūda dzēšot kursu"
+msgstr "Kļūda, dzēšot kursu"
 
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "Kļūda dzēšot tastatūras izvietojumu"
+msgstr "Kļūda, dzēšot tastatūras izkārtojumu"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr ""
+msgstr "XML datnes (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr "Izvēlēto failu neizdevās importēt."
+msgstr "Atlasīto datni neizdevās importēt."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr "Kļūda saglabājot kursu"
+msgstr "Kļūda, saglabājot kursu"
 
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "Kļūda saglabājot tastatūras izkārtojumu"
+msgstr "Kļūda, saglabājot tastatūras izkārtojumu"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
@@ -263,17 +260,17 @@ msgstr "Tastatūras izkārtojums <b>%1</b> tika dzēsts"
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr "Kļūda saglabājot kursu diskā."
+msgstr "Kļūda, saglabājot kursu diskā."
 
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "Kļūda saglabājot tastatūras izkārtojumu diskā."
+msgstr "Kļūda, saglabājot tastatūras izkārtojumu diskā."
 
 #: src/editor/resourceeditor.cpp:519
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr "Izvēlētais kurss jau ir pieejams kā iebūvētais kurss."
+msgstr "Atlasītais kurss jau ir pieejams kā iebūvētais kurss."
 
 #: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
 #, kde-format
@@ -281,10 +278,9 @@ msgid "Import as new course"
 msgstr "Importēt kā jaunu kursu"
 
 #: src/editor/resourceeditor.cpp:540
-#, fuzzy, kde-format
-#| msgid "The selected course is already present as an user course."
+#, kde-format
 msgid "The selected course is already present as a user course."
-msgstr "Izvēlētais kurss jau ir pieejams kā lietotāja kurss."
+msgstr "Atlasītais kurss jau ir pieejams kā lietotāja kurss."
 
 #: src/editor/resourceeditor.cpp:589
 #, kde-format
@@ -292,7 +288,7 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
-"Izvēlētais tastatūras izkārtojums jau ir pieejams kā iebūvētais tastatūras "
+"Atlasītais tastatūras izkārtojums jau ir pieejams kā iebūvētais tastatūras "
 "izkārtojums."
 
 #: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
@@ -301,14 +297,11 @@ msgid "Import as new keyboard layout"
 msgstr "Importēt kā jaunu tastatūras izkārtojumu"
 
 #: src/editor/resourceeditor.cpp:605
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as an user keyboard "
-#| "layout."
+#, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
-"Izvēlētais tastatūras izkārtojums jau ir pieejams kā lietotāja tastatūras "
+"Atlasītais tastatūras izkārtojums jau ir pieejams kā lietotāja tastatūras "
 "izkārtojums."
 
 #: src/editor/resourceeditorwidget.cpp:19
@@ -329,7 +322,7 @@ msgstr "Izmantot citu kursu kā sagatavi"
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "Izmantot citu tastatūras izkārtojumu kā sagatavi"
+msgstr "Kā sagatavi izmantot citu tastatūras izkārtojumu"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -345,44 +338,45 @@ msgstr "Tastatūras izkārtojums"
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "Tastatūras izkārtojums, ko izmantot uz ne-X11 platformām"
+msgstr "Tastatūras izkārtojums, ko izmantot uz ne X11 platformām"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
+msgstr "Nosaka, vai pārrakstīšanās kļūdas ir jālabo."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
 #, kde-format
 msgid "Controls the visibility of the keyboard during training."
-msgstr "Kontrolē tastatūras redzamību apmācības laikā."
+msgstr "Nosaka tastatūras redzamību apmācības laikā."
 
 #. i18n: ectx: label, entry (ShowStatistics), group (Training)
 #: src/ktouch.kcfg:23
 #, kde-format
 msgid "Controls the visibility of realtime statistics during training."
-msgstr "Kontrolē reāllaika statistikas redzamību apmācības laikā."
+msgstr "Nosaka reāllaika statistikas redzamību apmācības laikā."
 
 #. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
-msgstr "Taustiņš 'Return' rindas beigās pārslēgs uz jaunu rindu."
+msgstr "„Return“ taustiņš rindas beigās pārslēgs uz jaunu rindu."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
-msgstr "Taustiņš 'Atstarpe' rindas beigās pārslēgs uz jaunu rindu."
+msgstr "Atstarpes taustiņš rindas beigās pārslēgs uz jaunu rindu."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
 #, kde-format
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
-msgstr "Minimālais nospiedienu skaits minūtē, lai atslēgtu jaunu nodarbību."
+msgstr ""
+"Minimālais taustiņu spiedienu skaits minūtē, lai atslēgtu jaunu nodarbību."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
@@ -396,13 +390,13 @@ msgstr ""
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr "Tastatūras ietonēšanas krāsa, lai izceltu katra pirksta taustiņus."
+msgstr "Tastatūras iekrāsošanas krāsa, lai izceltu katra pirksta taustiņus."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Kā parādīt caurspīdīgas pirksta krāsas."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -431,8 +425,7 @@ msgid "Color Settings"
 msgstr "Krāsu iestatījumi"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "Konfigurēt tastatūru"
@@ -458,16 +451,13 @@ msgid "Learn and practice typewriting"
 msgstr "Ātrrakstīšanas apguve un praktizēšana"
 
 #: src/main.cpp:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
-#| "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+#, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
-"Autortiesības (C) 2011-2012 Sebastian Gottfried\n"
-"Autortiesības (C) 2000-2007 Håvard Frøiland un Andreas Nicolai"
+"Autortiesības (C) 2011—2012 Sebastian Gottfried\n"
+"Autortiesības (C) 2000—2007 Håvard Frøiland un Andreas Nicolai"
 
 #: src/main.cpp:42
 #, kde-format
@@ -522,7 +512,7 @@ msgstr "Daudz ielāpu, labojumu un atjauninājumu"
 #: src/main.cpp:48
 #, kde-format
 msgid "All the creators of training and keyboard files"
-msgstr "Visi apmācības un tastatūras failu izveidotāji"
+msgstr "Visi apmācību un tastatūras datņu veidotāji"
 
 #: src/main.cpp:65
 #, kde-format
@@ -532,12 +522,12 @@ msgstr "Palaist kursu un tastatūras izkārtojumu redaktoru"
 #: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "Pievienot ceļu QML importa ceļu sarakstam"
 
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "„%1“ saskārās ar izpildlaika kļūdu un ir aizvērta."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -602,17 +592,15 @@ msgid "<i>Unknown</i>"
 msgstr "<i>Nezināms</i>"
 
 #: src/qml/common/LearningProgressChart.qml:81
-#, fuzzy, kde-format
-#| msgid "Lessons:"
+#, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
 msgstr "Nodarbības:"
 
 #: src/qml/common/LearningProgressChart.qml:85
-#, fuzzy, kde-format
-#| msgid "Training"
+#, kde-format
 msgid "Training on:"
-msgstr "Apmācība"
+msgstr "Apmācība:"
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -625,21 +613,19 @@ msgid "Characters per Minute:"
 msgstr "Rakstzīmes minūtē:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
-#| msgid "Choose Keyboard Layout"
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "Izvēlēties tastatūras izkārtojumu"
+msgstr "Kursu jūsu tastatūras izkārtojumam"
 
 #: src/qml/homescreen/CourseSelector.qml:163
-#, fuzzy, kde-format
-#| msgid "Courses"
+#, kde-format
 msgid "Other Courses"
-msgstr "Kursi"
+msgstr "Citi kursi"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr "Laipni lūdzam ātrrakstīšanas apmācības programmā"
+msgstr "Laipni lūdzam ātrrakstīšanas apmācības programmā!"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
@@ -648,26 +634,17 @@ msgid "Start Training"
 msgstr "Sākt apmācību"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as an user keyboard "
-#| "layout."
+#, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr ""
-"Izvēlētais tastatūras izkārtojums jau ir pieejams kā lietotāja tastatūras "
-"izkārtojums."
+msgstr "Atlasītais kurss ir paredzēts noteiktam tastatūras izkārtojumam."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as an user keyboard "
-#| "layout."
+#, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
-"Izvēlētais tastatūras izkārtojums jau ir pieejams kā lietotāja tastatūras "
-"izkārtojums."
+"Atlasītais kurss nav paredzēts jūsu datora aktīvajam tastatūras izkārtojumam."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
@@ -676,6 +653,10 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"„KTouch“ nevar pārslēgt tastatūras izkārtojumus. Pirms treniņa jums ir "
+"jākonfigurē datora iestatījumi, lai tas izmantotu pašreizējo tastatūras "
+"izkārtojumu. Pretējā gadījumā nodarbības teksts būs jāizmanto ar pašreizējo "
+"tastatūras izkārtojumu."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
@@ -683,31 +664,29 @@ msgid "Configure Keyboard"
 msgstr "Konfigurēt tastatūru"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
-#, fuzzy, kde-format
-#| msgid "Course <b>%1</b> deleted"
+#, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr "Kurss <b>%1</b> tika dzēsts"
+msgstr "Nodarbība <b>%1</b> ir dzēsts."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "Ir dzēst nodarbība bez nosaukuma."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Atsaukt"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "Apstiprināt"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Add lesson"
+#, kde-format
 msgid "Edit lesson"
-msgstr "Pievienot nodarbību"
+msgstr "Rediģēt nodarbību"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -722,10 +701,9 @@ msgid "Title:"
 msgstr "Nosaukums:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
-#, fuzzy, kde-format
-#| msgid "Set lesson text"
+#, kde-format
 msgid "Lesson text"
-msgstr "Iestatīt nodarbības tekstu"
+msgstr "Nodarbības teksts"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
@@ -739,23 +717,20 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Lai atslēgtu, pabeidziet iepriekšējo nodarbību"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
 msgstr "Pievienot jaunu nodarbību"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
-#, fuzzy, kde-format
-#| msgid "Create New Profile"
+#, kde-format
 msgid "Manage Profiles"
-msgstr "Izveidot jaunu profilu"
+msgstr "Pārvaldīt profilus"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
-#| msgid "Create New Profile"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr "Izveidot jaunu profilu"
+msgstr "Pārvaldīt profilus"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
@@ -785,7 +760,7 @@ msgstr "Rediģēt"
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr "Vai tiešām vēlaties dzēst profilu \"<b>%1</b>\"?"
+msgstr "Vai tiešām vēlaties dzēst profilu <b>%1</b>?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
@@ -795,12 +770,12 @@ msgstr "Atcelt"
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr "Pirms sākat apmācību, lūdzu, iepazīstiniet sevi:"
+msgstr "Pirms sākat apmācību, iepazīstiniet sevi:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
 msgid "Name"
-msgstr "Nosaukums"
+msgstr "Vārds"
 
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
@@ -830,13 +805,12 @@ msgstr "Izveidot jaunu profilu"
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
 msgid "Use Selected Profile"
-msgstr "Lietot izvēlēto profilu"
+msgstr "Lietot atlasīto profilu"
 
 #: src/qml/homescreen/StatPopupDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Show real-time statistics"
+#, kde-format
 msgid "Lesson training statistics"
-msgstr "Rādīt reāllaika statistiku"
+msgstr "Nodarbības apmācības statistika"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -872,7 +846,7 @@ msgstr "Nākamā nodarbība"
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr "Apsveicam! Esat pabeidzis nodarbību."
+msgstr "Apsveicam! Jūs pabeidzāt nodarbību."
 
 #: src/qml/scorescreen/ScoreScreen.qml:226
 #, kde-format
@@ -882,8 +856,7 @@ msgstr "Jūs nepabeidzāt nodarbību."
 #: src/qml/scorescreen/ScoreScreen.qml:238
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr ""
-"Atkārtojiet nodarbību. Jūsu prasmes automātiski laika gaitā uzlabosies."
+msgstr "Atkārtojiet nodarbību. Jūsu prasmes laika gaitā uzlabosies."
 
 #: src/qml/scorescreen/ScoreScreen.qml:240
 #, kde-format
@@ -921,8 +894,7 @@ msgid "All Lessons"
 msgstr "Visas nodarbības"
 
 #: src/qml/scorescreen/ScoreScreen.qml:310
-#, fuzzy, kde-format
-#| msgid "This Lesson"
+#, kde-format
 msgid "This Lesson"
 msgstr "Šī nodarbība"
 
@@ -934,12 +906,12 @@ msgstr "Jūsu tastatūras izkārtojumam vizualizācija nav pieejama."
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "Izvēlne"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
 msgid "Resume Training"
-msgstr "Atsākt apmācību"
+msgstr "Turpināt apmācību"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
@@ -1011,15 +983,14 @@ msgstr "Labā roka"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Necaurspīdība"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
+#, no-c-format, kde-format
 msgid " %"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
@@ -1073,7 +1044,7 @@ msgstr "Jaunas rakstzīmes:"
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "Lodziņš"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
@@ -1103,13 +1074,13 @@ msgstr "Speciālais taustiņš"
 #: src/ui/keyboardlayouteditor.ui:63
 #, kde-format
 msgid "Delete selected key"
-msgstr "Dzēst izvēlēto taustiņu"
+msgstr "Dzēst atlasīto taustiņu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
 #: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
-msgstr "100%"
+msgstr "100 %"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:36
@@ -1309,13 +1280,13 @@ msgstr "Modifikatora ID:"
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr ""
+msgstr "Atvērt teksta datni..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr ""
+msgstr "Automātiski aplauzt rindas"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
@@ -1339,7 +1310,7 @@ msgstr "Apmācības laikā:"
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr ""
+msgstr "Piespiest rakstīšanas kļūdu labošanu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
@@ -1363,26 +1334,25 @@ msgstr "Pāriet uz nākamo rindu ar:"
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr ""
+msgstr "At&griezties"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr ""
+msgstr "&Atstarpe"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr "Nodarbību atslēgšanas limiti"
+msgstr "Nodarbību atslēgšanas ierobežojumi"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
-#, fuzzy, kde-format
-#| msgid "Minimum strokes per minute:"
+#, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr "Minimālais nospiedienu skaits minūtē:"
+msgstr "&Minimālais taustiņu spiedienu skaits minūtē:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
@@ -1393,12 +1363,12 @@ msgstr "Minimālā precizitāte:"
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr "Iestatīt nosaukumu"
+msgstr "Norādīt nosaukumu"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Iestatīt tastatūras izkārtojumu"
+msgstr "Norādīt tastatūras izkārtojumu"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1438,7 +1408,7 @@ msgstr "Iestatīt tastatūras izkārtojuma nosaukumu"
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr "Iestatīt tastatūras izkārtojuma vārdu"
+msgstr "Iestatīt tastatūras izkārtojuma nosaukumu"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
