@@ -33,6 +33,7 @@
   <name xml:lang="ka">KTouch</name>
   <name xml:lang="ko">KTouch</name>
   <name xml:lang="lt">KTouch</name>
+  <name xml:lang="lv">KTouch</name>
   <name xml:lang="nds">KTouch</name>
   <name xml:lang="nl">KTouch</name>
   <name xml:lang="nn">KTouch</name>
@@ -73,6 +74,7 @@
   <summary xml:lang="ka">შეხებით აკრეფის მასწავლებელი</summary>
   <summary xml:lang="ko">타자 연습 도우미</summary>
   <summary xml:lang="lt">Treniruoklė aklajam teksto rinkimui</summary>
+  <summary xml:lang="lv">Ātrrakstīšanas skolotājs</summary>
   <summary xml:lang="nds">Schriefmaschien öven</summary>
   <summary xml:lang="nl">Typcursus</summary>
   <summary xml:lang="nn">Tastaturøving</summary>
@@ -111,6 +113,7 @@
     <p xml:lang="it">KTouch è un allenatore di dattilografia per imparare a dattilografare. Ti fornisce del testo con cui esercitarti, sceglie il livello adatto alle tue capacità; ti mostra anche il prossimo tasto da premere ed il dito corretto da usare. Ti insegna a scrivere con tutte le dita, passo dopo passo, cosicché non dovrai più guardare la tastiera ogni volta per cercare i tasti giusti: questo rallenta di parecchio la tua velocità di battitura. È utile a tutte le età, ed è un perfetto insegnante di battitura nelle scuole, nelle università e per uso personale. KTouch ti viene fornito con dozzine di corsi diversi in molte lingue, e con un comodo editor di corsi. Supporta diverse mappature di tastiera, ed altre possono essere create dall'utente. Durante l'allenamento KTouch raccoglie delle informazioni statistiche complete, che aiutano te o il tuo insegnante ad analizzare i tuoi progressi.</p>
     <p xml:lang="ka">KTouch კრეფის მასწავლებელია სენსორით კრეფისთვის. ის მოგაწვდით სავარჯიშო ტექსტს და მოგარგებთ სხვადასხვა დონეებს იმაზე დამოკიდებულებით, რა კარგად გამოგივათ ეს. ჩვენ გაჩვენებთ კლავიატურას და მიგითითებთ, შემდეგი რომელი ღილაკი უნდა იყოს და რომელი თითით უნდა დააჭიროთ. კრეფას ყველა თითით ისწავლით, ნაბიჯ ნაბიჯ, ისე, რომ კლავიატურას აღარც შეხედავთ. ეს ეხება ყველა ასაკს და ძალიან კარგი მასწავლებელია როგორც უნივერსიტეტებისთვის და სკოლებისთვის, არამედ პერსონალური გამოყენებისთვისაც. KTouch-ს ათობით კურსი მოყვება სხვადასხვა ენებისთვის და ასევე კომფორტულ კურსის რედაქტორსაც წარმადგენს. მხარდაჭერილია სხვადასხვა კლავიატურის განლაგებები. ასევე შეგიძლიათ, ის ხელით დაამატოთ. ვარჯიშისას KTouch-ი დაწვრილებით ინფორმაციას აგროვებს თქვენს შესახებ, რათა თქვენ და თქვენს მასწავლებელს თქვენი პროგრესის შეფასების საშუალება მოგცეთ.</p>
     <p xml:lang="ko">KTouch는 타자 연습 도우미입니다. 다양한 연습할 텍스트는 타자 실력에 따라서 자동으로 조절됩니다. 현재 키보드를 표시하고 올바른 자리 익힘을 위해 손가락으로 키보드의 어떤 키를 눌러야 할지 표시합니다. 단계적으로 모든 손가락으로 타자를 익혀서 더 이상 키보드를 보면서 타자를 칠 필요가 없어집니다. 연령대와 관계 없이 학교에서의 타자 연습 훈련이나 개인의 훈련 목적으로 사용할 수 있습니다. 다양한 키보드 레이아웃을 지원하며 사용자가 직접 만들 수도 있습니다. KTouch는 타자 연습 과정에서 통계 정보를 수집하여 타자 연습을 돕거나 타자 속도 향상을 분석할 수 있습니다.</p>
+    <p xml:lang="lv">„KTouch“ rakstīšanas datorā mācību programma. Tā sniedz tekstu, ar kuru mācīties un to pielāgot dažādiem līmeņiem atkarībā no jūsu spējām. Programma parāda tastatūru no norāda, kurš taustiņš ir jāspiež nākamais un kurš pirksts būtu jāizmanto. Apmācību veido pakāpeniska katra pirksta vingrināšana bez skatīšanās uz tastatūru, lai taustiņus atrastu. Programma ir piemērota visiem vecumiem un ir lielisks rakstīšanas mācību palīgs skolām, universitātēm un personīgam lietojumam. „KTouch“ piedāvā daudz dažādu kursu daudzās valodās, kā arī ērtu kursu redaktoru. Tā atbalsta dažādus tastatūras izkārtojumus un ļauj lietotājam izveidot jaunus. Mācību laikā „KTouch“ iegūst vispārīgu statistikas informāciju, lai palīdzētu jūsu pasniedzējam analizēt mācību progresu.</p>
     <p xml:lang="nds">KTouch is en Programm, mit dat Du Schriefmaschien schrieven lehren kannst. Dat stellt Di de Öövtexten praat un passt de Sworheit dor na an, wo goot Du al büst. Dat wiest Dien Tastatuur, de Tast, de Du drücken schallst un den richtigen Finger dor för. Du lehrst dat Tippen mit all Fingers Schritt för Schritt, un ok, ahn dat Du na nerrn op de Tasten un Dien Fingers kieken muttst. Dat is goot för jünger un ok för öller Lüüd un en goot Tipplehrer för Scholen un Universiteten. Dor sünd KTouch en Barg verscheden Lexen in vele Spraken bi un en kommood Lexeneditor. dat ünnerstütt verscheden Tastanornen, Du kannst ok Dien egen Anornen opstellen. Bi't Öven sammelt KTouch Statistikinformatschonen, mit de Du oder Dien Lehrer Dien Vörankamen bekieken kannst.</p>
     <p xml:lang="nl">KTouch is een oefenprogramma voor blindtypen. Het geeft u oefenteksten en past het oefenniveau aan aan uw huidige vaardigheid. Het toetsenbord wordt getoond, en de volgende toets die u moet aanslaan, en met welke vinger. U leert met alle vingers te typen, stap voor stap, zonder dat u op het toetsenbord naar de toetsen kijkt. Het is voor alle leeftijden geschikt, en perfect om te leren typen op school, de universiteit, of thuis. KTouch komt met tientallen verschillende cursussen in vele talen, en bevat een handige cursusbewerker. Diverse toetsenbordindelingen worden ondersteund, en u kunt ook nieuwe zelf aanmaken. Tijdens de oefeningen verzamelt KTouch uitvoerige statistische informatie, voor het beoordelen van uw vorderingen.</p>
     <p xml:lang="pl">KTouch jest trenerem bezwzrokowego pisania na klawiaturze. Dostarcza teksty do ćwiczeń i dostosowuje się do poziomu użytkownika. Wyświetla klawiaturę, wskazuje, które klawisze nacisnąć i jakim palcem. Dzięki programowi uczysz się pisać wszystkimi palcami. Jest wygodny dla użytkowników w różnym wieku i idealny do ćwiczenia pisania w szkołach, uniwersytetach i czasie prywatnym. KTouch jest dostarczany z wieloma kursami w różnych językach oraz wygodnym edytorem kursów. Obsługiwane są różne układy klawiatury, można także dodawać układy stworzone przez użytkownika. Podczas ćwiczeń, KTouch zbiera wiele informacji statystycznych, aby pomóc tobie lub twojemu nauczycielowi analizować twój postęp.</p>
@@ -154,6 +157,7 @@
       <caption xml:lang="it">Allenamento con KTouch</caption>
       <caption xml:lang="ka">KTouch-ით სწავლა</caption>
       <caption xml:lang="ko">KTouch로 타자 연습</caption>
+      <caption xml:lang="lv">Treniņš ar „KTouch“</caption>
       <caption xml:lang="nl">Oefenen met KTouch</caption>
       <caption xml:lang="pl">Ćwiczenie w KTouch</caption>
       <caption xml:lang="pt">Exercício com o KTouch</caption>
@@ -192,6 +196,7 @@
       <caption xml:lang="it">Selezionare una lezione per l'allenamento</caption>
       <caption xml:lang="ka">აირჩიეთ გაკვეთილი</caption>
       <caption xml:lang="ko">타자 연습 종류 선택</caption>
+      <caption xml:lang="lv">Atlasiet nodarbību treniņam</caption>
       <caption xml:lang="nl">Een les voor training wordt geselecteerd</caption>
       <caption xml:lang="pl">Wybieranie lekcji do ćwiczeń</caption>
       <caption xml:lang="pt">Selecção de uma Lição para Exercício</caption>
@@ -229,6 +234,7 @@
       <caption xml:lang="it">Revisione delle prestazioni di digitazione dopo aver terminato una lezione</caption>
       <caption xml:lang="ka">გაკვეთილის დასრულების შემდეგ კრეფის წარმადობის შედეგების ნახვა</caption>
       <caption xml:lang="ko">타자 연습 이후 결과 보기</caption>
+      <caption xml:lang="lv">Pārskatiet rakstīšanas veiktspēju pēc nodarbības pabeigšanas</caption>
       <caption xml:lang="nl">Bekijken van Presentaties met typen na beëindigen van een les</caption>
       <caption xml:lang="pl">Ocena sprawności pisania po ukończeniu lekcji</caption>
       <caption xml:lang="pt">Revisão da Performance da Escrita após Terminar uma Lição</caption>
