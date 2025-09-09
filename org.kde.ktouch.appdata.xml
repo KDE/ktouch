@@ -45,7 +45,6 @@
   <name xml:lang="sv">Ktouch</name>
   <name xml:lang="tr">K Onparmak</name>
   <name xml:lang="uk">KTouch</name>
-  <name xml:lang="x-test">xxKTouchxx</name>
   <name xml:lang="zh-CN">KTouch</name>
   <name xml:lang="zh-TW">打字練習_KTouch</name>
   <summary>Touch Typing Tutor</summary>
@@ -85,7 +84,6 @@
   <summary xml:lang="sv">Maskinskrivningsträning</summary>
   <summary xml:lang="tr">On Parmak Yazım Öğreticisi</summary>
   <summary xml:lang="uk">Навчання комп’ютерного набору</summary>
-  <summary xml:lang="x-test">xxTouch Typing Tutorxx</summary>
   <summary xml:lang="zh-CN">盲打练习辅导工具</summary>
   <summary xml:lang="zh-TW">觸摸輸入輔助教學</summary>
   <description>
@@ -122,7 +120,6 @@
     <p xml:lang="sv">Ktouch är ett program för att lära sig maskinskrivning. Det tillhandahåller en text att öva på, och justeras till olika nivåer, beroende på hur bra du är. Det visar tangentbordet och vilken tangent som ska tryckas ner härnäst, och det riktiga fingret som ska användas. Man lär sig att skriva med alla fingrar, steg för steg, utan att behöva titta ner på tangentbordet hela tiden för att hitta rätt tangenter. Det är bekvämt för alla åldrar och är perfekt för skrivmaskinsövning på skolor, universitet och vid personlig användning. Ktouch levereras med dussintals kurser på många språk och en bekväm kurseditor. Olika tangentbordslayouter stöds och nya användardefinierade layouter kan skapas. Under övningar samlar Ktouch in omfattande statistisk information för att hjälpa dig eller din lärare att analysera dina framsteg.</p>
     <p xml:lang="tr">K Onparmak, on parmak yazma çalıştıran bir daktilo eğitmenidir. Ne kadar iyi olduğunuza bağlı olarak farklı düzeylerde eğitim almanız için metin hazırlar ve ayarlar. Klavyenizi görüntüler ve bir sonraki düğmeye hangi klavye düğmesinin kullanılacağını belirtir. Düğmeleri bulmak için klavyeye bakmanıza gerek kalmadan, adım adım ilerleyerek tüm parmaklarınızla yazmayı öğrenirsiniz. Her yaşa uygun, okullar, üniversiteler ve kişisel kullanım için mükemmel derecede yazmayı öğrenmek için uygundur. K Onparmak birçok dilde düzinelerce farklı ders ve kolay bir ders düzenleyiciyle birlikte gelir. Farklı klavye düzenlerini destekler ve yeni kullanıcı tanımlı düzenler oluşturulabilir. Eğitim sırasında, K Onparmak size veya öğretmeninin ilerlesini çözümlemede size yardımcı olacak kapsamlı istatistiki bilgileri de toplar.</p>
     <p xml:lang="uk">KTouch — програма для навчання машинопису. Ви вводитимете навчальний текст, а програма визначатиме рівень складності цього тексту, залежно від ваших навичок. У вікні програми ви зможете бачити клавіатуру, підсвічування для клавіш, які слід натискати, та рекомендації щодо пальця, яким це слід робити. Ви зможете навчитися десятипальцевому набору, крок за кроком, не дивлячись на клавіатуру і не шукаючи на ній потрібних вам клавіш. Програму пристосовано для користувачів будь-якого віку, вона є чудовим засобом навчання для шкіл, університетів та особистих потреб. Разом з KTouch постачаються десятки різних курсів багатьма мовами, а також зручний редактор курсів. Передбачено підтримку різних розкладок клавіатур та можливість визначення власних розкладок. Під час навчання KTouch збирає статистичні дані, які допоможуть вам та вашому наставнику проаналізувати поступ навчання.</p>
-    <p xml:lang="x-test">xxKTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.xx</p>
     <p xml:lang="zh-CN">KTouch 是盲打训练工具。它为您提供文字训练，并根据您的表现调整难度。KTouch 会显示一个键盘并指出下一个要按的按键。它便于全年龄的人群使用，无论是对中小学、大学、还是个人来说，都是绝佳的打字练习辅导工具。KTouch 为各种语言提供了许多不同的课程，并有着舒适的课程编辑器。支持不同的键盘布局，且可由用户创建新的布局。KTouch 还会收集训练过程中的综合数据信息，帮助您或您的老师分析您的进度。</p>
     <p xml:lang="zh-TW">KTouch 是一套打字訓練程式。它可以訓練您打字，並依您的程度來調整訓練等級。它會顯示您的鍵盤，並指引您下一個要按下什麼鍵，以及該使用哪個指頭。您可以學習使用所有的指頭來打字，一步步，不需要看鍵盤來找鍵。所有的年齡層、所有程度的學校都適用，包括個人練習也可以。KTouch 中有多種不同的語言課程，並且提供了課程編輯器。它也支援不同的鍵盤佈局，也可以建立使用者自訂的鍵盤佈局。在訓練課程中，KTouch 會收集統計資料，協助您與您的老師分析追蹤您的進度。</p>
   </description>
@@ -164,7 +161,6 @@
       <caption xml:lang="sv">Övning med Ktouch</caption>
       <caption xml:lang="tr">K Onparmak ile egzersiz</caption>
       <caption xml:lang="uk">Вправляння у KTouch</caption>
-      <caption xml:lang="x-test">xxTraining with KTouchxx</caption>
       <caption xml:lang="zh-CN">KTouch 练习界面</caption>
       <caption xml:lang="zh-TW">用 KTouch 訓練</caption>
       <image>https://cdn.kde.org/screenshots/ktouch/ktouch.png</image>
@@ -202,7 +198,6 @@
       <caption xml:lang="sv">Välja en lektion för övning</caption>
       <caption xml:lang="tr">Egzersiz için ders seçim</caption>
       <caption xml:lang="uk">Вибір уроку для навчання</caption>
-      <caption xml:lang="x-test">xxSelecting a Lesson for Trainingxx</caption>
       <caption xml:lang="zh-CN">选择训练课程</caption>
       <caption xml:lang="zh-TW">選擇訓練課程</caption>
       <image>https://cdn.kde.org/screenshots/ktouch/ktouch_homescreen.png</image>
@@ -239,7 +234,6 @@
       <caption xml:lang="sv">Granska skrivprestation efter en lektion har avslutats</caption>
       <caption xml:lang="tr">Ders sonrası gözden geçirme</caption>
       <caption xml:lang="uk">Огляд поступу навчання після завершення уроку</caption>
-      <caption xml:lang="x-test">xxReviewing Typing Performance after Finishing a Lessonxx</caption>
       <caption xml:lang="zh-CN">在完成课程后查看打字表现</caption>
       <caption xml:lang="zh-TW">在完成課程之後回顧打字成績</caption>
       <image>https://cdn.kde.org/screenshots/ktouch/ktouch_scorescreen.png</image>
@@ -280,7 +274,6 @@
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
-  <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
   <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
   <provides>
