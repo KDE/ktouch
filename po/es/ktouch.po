@@ -43,7 +43,7 @@ msgstr ""
 #, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Las distribuciones de teclado integradas solo se pueden ver."
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: src/editor/lessontexteditor.cpp:62
 #, kde-format
