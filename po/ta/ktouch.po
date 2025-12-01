@@ -1,20 +1,22 @@
-# translation of ktouch.po to 
+# translation of ktouch.po to
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # Ambalam <tamilpc@ambalam.com>, 2004.
 #
+# SPDX-FileCopyrightText: 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2004-12-28 23:43-0800\n"
-"Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
-"Language-Team:  <tamilpc@ambalam.com>\n"
+"PO-Revision-Date: 2025-11-30 15:22+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -735,17 +737,17 @@ msgstr "பயிற்சி விருப்பங்கள்"
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "கடைசி பயிற்சி:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr ""
+msgstr "ஒருபோதும் இல்லை"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "திருத்து"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
@@ -755,7 +757,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
