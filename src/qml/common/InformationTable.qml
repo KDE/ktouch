@@ -5,10 +5,10 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
-import ktouch 1.0
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import ktouch
 
 Item {
     property alias model: repeator.model

@@ -5,8 +5,8 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import ktouch 1.0
+import QtQuick
+import ktouch
 
 import "../common"
 

@@ -5,10 +5,10 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import ktouch 1.0
+import ktouch
 import org.kde.kirigami as Kirigami
 
 import '../common'

@@ -4,8 +4,8 @@
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.4
-import QtQuick.Window 2.2
+import QtQuick
+import QtQuick.Window
 
 pragma Singleton
 

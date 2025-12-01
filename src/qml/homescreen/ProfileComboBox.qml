@@ -4,9 +4,9 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
+import QtQuick
 import Qt5Compat.GraphicalEffects
-import ktouch 1.0
+import ktouch
 
 import "../common"
 

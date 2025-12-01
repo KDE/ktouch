@@ -6,11 +6,11 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Layouts
 import org.kde.charts as Charts
-import org.kde.coreaddons 1.0
-import ktouch 1.0
+import org.kde.coreaddons
+import ktouch
 
 import "../common"
 

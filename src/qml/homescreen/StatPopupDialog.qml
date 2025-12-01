@@ -6,7 +6,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import ktouch 1.0
+import ktouch
 import org.kde.kirigami as Kirigami
 import org.kde.charts as Charts
 
