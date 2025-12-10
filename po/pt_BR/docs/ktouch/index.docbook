@@ -4,9 +4,6 @@
 <!ENTITY i18n-ktouch "<application
 >Treino de datilografia</application
 >">
-<!ENTITY kappname "&i18n-ktouch;"
-><!-- replace kapp here -->
-<!ENTITY package "kdeedu">
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % Brazilian-Portuguese "INCLUDE"
 ><!-- change language only here -->
@@ -16,7 +13,7 @@
 
 <bookinfo>
 <title
->Manual do &i18n-ktouch;</title>
+>Manual do &ktouch;</title>
 
 <authorgroup>
 
@@ -84,7 +81,7 @@
 </copyright>
 <copyright>
 <year
->2011-2013</year>
+>2011-2019</year>
 <holder
 >Sebastian Gottfried</holder>
 </copyright>
@@ -93,9 +90,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->01/05/2014</date>
+>05/01/2021</date>
 <releaseinfo
->2.3.0</releaseinfo>
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
 
 <abstract>
 <para
@@ -165,7 +162,7 @@
 >Recursos</title>
 
 <para
->Na sua versão atual, o &i18n-ktouch; 2.2 possui um grande número de funcionalidades, como por exemplo:</para>
+>Na sua versão atual, o &i18n-ktouch; possui um grande número de funcionalidades, como por exemplo:</para>
 <itemizedlist>
 <listitem
 ><simpara
@@ -265,20 +262,12 @@
 </screenshot>
 
 <para
->O &i18n-ktouch; mostrará o primeiro exercício disponível para o seuleiaute de teclado atual. </para>
+>O &i18n-ktouch; mostrará o primeiro exercício disponível para o seu layout de teclado atual. </para>
 
 <para
->Você pode alternar entre os exercícios ou escolher <link linkend="custom_lessons"
->lições personalizadas</link
-> usando <inlinemediaobject
-> <imageobject
-> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
-> </inlinemediaobject
-> e <inlinemediaobject
-> <imageobject
-> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
-> </inlinemediaobject
-> os botões no canto superior direito da janela. </para>
+>Você pode alternar entre os cursos ou escolher <link linkend="custom_lessons"
+>aulas personalizadas</link
+> clicando em suas miniaturas na parte direita da janela. </para>
 
 <note>
 <para
@@ -287,7 +276,7 @@
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > da barra de ferramentas, escolher o submenu <guisubmenu
->Escolher a disposição do teclado...</guisubmenu
+>Configurar teclado...</guisubmenu
 > e selecionar o nome da disposição do teclado ou de alguma disposição semelhante que possua. Se o seu teclado não estiver incluído, você poderá sempre definir a sua própria disposição de teclado; veja mais informações em <xref linkend="create_layouts"/>. </para>
 </note>
 <para
@@ -354,9 +343,7 @@
 <para
 >Comece digitando o texto no meio da tela. A próxima tecla que terá que pressionar fica sempre realçada na visualização do teclado. Enquanto estiver digitando, você poderá cometer erros e pressionar na tecla errada. Nesse caso, a linha do aluno irá de cor (por padrão para vermelho) e você terá que pressionar &Backspace; para apagar o caractere (ou caracteres) errado, conforme o necessário. </para>
 <para
->Quando tiver terminado com sucesso uma linha de texto, será necessário pressionar a tecla <keycap
->Return</keycap
-> para passar para a próxima linha. </para>
+>Quando tiver terminado com sucesso uma linha de texto, será necessário pressionar a tecla &Enter; para passar para a próxima linha. </para>
 <tip>
 <para
 >As opções para ignorar lições poderão ser alteradas com a <link linkend="configuration_dialog"
@@ -500,21 +487,21 @@
 ></keycombo
 > </shortcut
 > <guimenuitem
->Modo tela inteira</guimenuitem
+>Modo tela cheia</guimenuitem
 ></menuchoice>
 </term>
 <listitem
 ><para
 ><action
 >Alterna</action
-> o modo de tela inteira do &i18n-ktouch;</para
+> o modo de tela cheia do &i18n-ktouch;</para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guimenuitem
->Editor de leiautes de teclado e exercícios...</guimenuitem
+>Editor de layouts de teclado e exercícios...</guimenuitem
 ></term>
 <listitem
 ><para
@@ -557,7 +544,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Configurar a disposição do teclado...</guimenuitem
+>Configurar o teclado...</guimenuitem
 ></term>
 <listitem
 ><para
@@ -570,7 +557,14 @@
 </varlistentry>
 
 </variablelist>
-&help.menu.documentation; </sect3>
+
+<para
+>O &i18n-ktouch; tem o item de menu <guimenu
+>Ajuda</guimenu
+> comum do &kde;, para mais informações leia a seção sobre o <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu Ajuda</ulink
+> nos Fundamentos do &kde;. </para>
+</sect3>
 
 <sect3 id="configuration_dialog">
 <title
@@ -618,11 +612,7 @@ format="PNG"/></imageobject>
 >Mostrar as estatísticas em tempo-real</guilabel
 >. </para>
 <para
->A tecla para ir para a linha de texto de treino seguinte pode ser escolhida a partir de duas opções, o <keycap
->Return</keycap
-> ou o <keycap
->Espaço</keycap
->. </para>
+>A tecla para ir para a linha de texto de treino seguinte pode ser escolhida a partir de duas opções, o &Enter; ou o &Space;. </para>
 <para
 >Os <guilabel
 >Limites de desbloqueio das lições</guilabel
@@ -667,7 +657,7 @@ format="PNG"/></imageobject>
 <title
 >Seleção do exercício e da lição</title>
 <para
->O &i18n-ktouch; detecta automaticamente o leiaute do seu teclado e mostra apenas os exercícios otimizados para esse leiaute. </para>
+>O &i18n-ktouch; detecta automaticamente o layout do seu teclado e mostra apenas os exercícios otimizados para esse layout. </para>
 <note>
 <para
 >Em algumas plataformas, especialmente no &Windows;, a detecção automática da disposição do teclado não está disponível. Use o menu da aplicação para selecionar manualmente a sua disposição do teclado. </para>
@@ -676,7 +666,7 @@ format="PNG"/></imageobject>
 <title
 >Mudar de exercícios</title>
 <para
->Caso exista mais de um exercício instalado para o seu leiaute de teclado, você poderá escolher o apropriado com os botões <inlinemediaobject
+>Caso exista mais de um exercício instalado para o seu layout de teclado, você poderá escolher o apropriado com os botões <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
 > </inlinemediaobject
@@ -716,7 +706,7 @@ format="PNG"/></imageobject>
 ><guimenu
 >Configurar teclado...</guimenu
 ></menuchoice
-> no menu da aplicação para selecionar uma disposição de teclado diferente. Depois disso, o &i18n-ktouch; adaptar-se-á e apresentará adequadamente os exercícios destinados a esse leiaute. </para>
+> no menu da aplicação para selecionar uma disposição de teclado diferente. Depois disso, o &i18n-ktouch; adaptar-se-á e apresentará adequadamente os exercícios destinados a esse layout. </para>
 <note>
 <para
 >Nas plataformas sem detecção automática da disposição do teclado, especialmente no &Microsoft; &Windows;, você terá que configurar primeiro o seu sistema operacional para a nova disposição de teclado e depois selecioná-la no &i18n-ktouch;, através do menu da aplicação. </para>
@@ -918,7 +908,7 @@ format="PNG"/></imageobject>
 <title
 >Criar exercícios</title>
 <para
->Você poderá criar facilmente o seu próprio exercício de treino com o editor de exercícios e leiaute de teclado incorporado do &i18n-ktouch;. Clique no botão <inlinemediaobject
+>Você poderá criar facilmente o seu próprio exercício de treino com o editor de exercícios e layout de teclado incorporado do &i18n-ktouch;. Clique no botão <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
@@ -932,14 +922,14 @@ format="PNG"/></imageobject>
 
 <screenshot>
 <screeninfo
->Janela principal do Editor de leiautes de teclado e exercícios</screeninfo>
+>Janela principal do Editor de layouts de teclado e exercícios</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="courses.png" format="PNG"/>
 </imageobject>
 <textobject>
 <phrase
->Janela principal do Editor de leiautes de teclado e exercícios</phrase>
+>Janela principal do Editor de layouts de teclado e exercícios</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
@@ -953,7 +943,7 @@ format="PNG"/></imageobject>
 > <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > da barra de ferramentas da janela do <guilabel
->Editor de leiautes de teclado e exercícios</guilabel
+>Editor de layouts de teclado e exercícios</guilabel
 >. </para>
 <para
 >A primeira página do assistente de criação do &i18n-ktouch; permite-lhe escolher o tipo dos dados. Selecione o <guilabel
@@ -975,7 +965,7 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para
->A segunda página do assistente permite-lhe escolher o título, o leiaute do teclado e a descrição do exercício. </para>
+>A segunda página do assistente permite-lhe escolher o título, o layout do teclado e a descrição do exercício. </para>
 <screenshot>
 <screeninfo
 >Segunda página do assistente de novos exercícios</screeninfo>
@@ -1049,7 +1039,7 @@ format="PNG"/></imageobject>
 <listitem>
 <para
 >Para cada nível, você poderá indicar os novos caracteres/teclas na lição. Vale a pena incluir os novos caracteres no título da lição. Clique no texto do nome na lista de <guilabel
->Lições</guilabel
+>Lições:</guilabel
 > e indique um nome intuitivo. </para>
 <note>
 <title
@@ -1298,12 +1288,12 @@ format="PNG"/></imageobject>
 <title
 >Propriedades da disposição do teclado</title>
 <para
->As propriedades do leiaute do teclado podem ser escolhidas com o assistente de criação de leiautes de teclado do &i18n-ktouch;. Para carregar este assistente, você deve clicar no botão <inlinemediaobject
+>As propriedades do layout do teclado podem ser escolhidas com o assistente de criação de layouts de teclado do &i18n-ktouch;. Para carregar este assistente, você deve clicar no botão <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > da barra de ferramentas da janela do <guilabel
->Editor de exercícios e leiautes de teclado</guilabel
+>Editor de exercícios e layouts de teclado</guilabel
 >. </para>
 <para
 >A primeira página do assistente de criação do &i18n-ktouch; permite-lhe escolher o tipo dos dados. Selecione a <guilabel
@@ -1395,9 +1385,7 @@ format="PNG"/></imageobject>
 > </inlinemediaobject
 > <guilabel
 >Tecla especial</guilabel
-> para adicionar uma nova tecla especial (modificadora, <keycap
->Espaço</keycap
->, &Backspace;, &Tab;, <keycap
+> para adicionar uma nova tecla especial (modificadora, &Space;, &Backspace;, &Tab;, <keycap
 >Caps Lock</keycap
 > ou &Enter;) à disposição. O botão <inlinemediaobject
 > <imageobject
@@ -1405,7 +1393,7 @@ format="PNG"/></imageobject>
 > </inlinemediaobject
 ><guilabel
 >Delete</guilabel
-> pode ser usado para remover uma tecla selecionada da sua disposição. A escala poderá ser alterada com a barra no lado esquerdo da barra de edição. </para>
+> pode ser usado para remover uma tecla selecionada da sua disposição. A escala poderá ser alterada com a barra no lado direito da barra de edição. </para>
 <para
 >As propriedades das teclas individuais poderão ser editadas com a área inferior da janela de edição. </para>
 <sect3 id="normal_keys">
@@ -1541,10 +1529,10 @@ format="PNG"/></imageobject>
 </screenshot>
 <para
 >Este exercício especial funciona geralmente como os outros, onde o treinamento e o agrupamento de informações para estatística funcionam como de costume. Se clicar no botão <guibutton
->Criar uma nova lição personalizada</guibutton
+>Adicionar nova lição</guibutton
 > ou em <guibutton
 >Editar</guibutton
-> (para as lições existentes), irá aparecer uma versão reduzida do <link linkend="adding_lessons"
+> (o ícone de lápis para as lições existentes), irá aparecer uma versão reduzida do <link linkend="adding_lessons"
 >editor normal de lições</link
 >. </para>
 <screenshot>
@@ -1561,22 +1549,14 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para
->Use o botão <inlinemediaobject
-> <imageobject
-> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
-> </inlinemediaobject
-> para abrir um arquivo de texto genérico que será carregado no campo de texto da lição. </para>
+>O editor destacará as seções problemáticas dos seus textos de lição. Caracteres que não podem ser digitados no seu teclado serão exibidos em um fundo vermelho escuro, linhas consideradas muito longas usarão um fundo rosa para os caracteres excedentes. O &i18n-ktouch; exige que cada linha da lição não exceda o limite recomendado de 60 caracteres. </para>
 <para
->O botão <inlinemediaobject
-> <imageobject
-> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
-> </inlinemediaobject
-> pode ser usado para quebrar o texto da lição. O editor do &i18n-ktouch; troca de linha para que o texto em nenhuma delas exceda o limite recomendado de 60 caracteres. </para>
-<para
->O editor irá realçar as seções problemáticas do texto das suas lições. Os caracteres que não podem ser digitados no seu teclado serão apresentados em vermelho escuro e as linhas muito longas terão o texto dos caracteres em excesso apresentados em cinza. </para>
+>Use o botão <guibutton
+>Concluído</guibutton
+> para confirmar suas edições ou feche a janela do editor para cancelá-las. </para>
 <tip>
 <para
->Todas as lições personalizadas são armazenadas individualmente por perfil e leiaute de teclado. Use isto para gerenciar os diferentes conjuntos de lições, dependendo da situação específica. </para>
+>Todas as lições personalizadas são armazenadas individualmente por perfil e layout de teclado. Use isto para gerenciar os diferentes conjuntos de lições, dependendo da situação específica. </para>
 </tip>
 </sect1>
 
@@ -1584,7 +1564,7 @@ format="PNG"/></imageobject>
 <title
 >Compartilhar os seus resultados</title>
 <para
->É possível salvar os seus exercícios e disposições do teclado em arquivos separados, fora da base de dados local do &i18n-ktouch;. </para>
+>É possível salvar os seus exercícios e disposições do teclado em arquivos separados, fora do banco de dados local do &i18n-ktouch;. </para>
 <sect2 id="export_import">
 <title
 >Exportar/Importar</title>
@@ -1606,8 +1586,8 @@ format="PNG"/></imageobject>
 >. </para>
 <important>
 <para
->Os seus dados deverão estar licenciados segundo a <ulink url="http://www.gnu.org/licenses/gpl-2.0.html"
->Licença Geral Pública da GNU, na versão 2</ulink
+>Os seus dados deverão estar licenciados segundo a <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>Licença Geral Pública da &GNU;, na versão 2</ulink
 > para incluí-los na instalação padrão do &i18n-ktouch;. </para>
 </important>
 <para
@@ -1625,7 +1605,7 @@ format="PNG"/></imageobject>
 <para
 >&i18n-ktouch;</para>
 <para
->Direitos autorais do &i18n-ktouch;, 1999-2007 por</para>
+>Direitos autorais do &ktouch;, 1999-2007 por</para>
 <itemizedlist>
 <listitem
 ><simpara
@@ -1639,7 +1619,7 @@ format="PNG"/></imageobject>
 ></listitem>
 </itemizedlist>
 <para
->&i18n-ktouch; com 'copyright' 2011-2012 de Sebastian Gottfried <email
+>&ktouch;, Direitos autorais 2011-2019 de Sebastian Gottfried <email
 >sebastiangottfried@web DOT de</email
 >. </para>
 
@@ -1671,20 +1651,7 @@ format="PNG"/></imageobject>
 >Tradução de Marcus Gama <email
 >marcus.gama@gmail.com</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
-
-<appendix id="installation">
-<title
->Como obter e instalar o &i18n-ktouch;</title>
-
-&install.intro.documentation;
- 
-<sect1 id="Compilation">
-<title
->Compilação e instalação</title>
-&install.compile.documentation; </sect1>
-</appendix>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>

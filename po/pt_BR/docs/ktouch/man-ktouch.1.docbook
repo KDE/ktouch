@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Treinador de datilografia</application
+>">
 <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
 
@@ -13,14 +16,14 @@
 ><surname
 >Burton</surname
 > <contrib
->Manpage do KTouch.</contrib
+>&ktouch; man page.</contrib
 > <email
 >bab@debian.org</email
 ></author>
 <date
->02/11/2016</date>
+>05/01/2021</date>
 <releaseinfo
->&ktouch; 2.3.0 (Applications 16.12)</releaseinfo>
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
 <productname
 >KDE Applications</productname>
 </refentryinfo>
@@ -40,7 +43,7 @@
 >ktouch</command
 ></refname>
 <refpurpose
->um tutoria de digitação do KDE</refpurpose>
+>Uma tutoria de digitação do &kde;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -64,17 +67,17 @@
 <title
 >Descrição</title>
 <para
->O &ktouch; é um programa para aprender a digitar. Ele ajuda você a aprender a digitar num teclado rápida e corretamente. Cada dedo tem sua posição no teclado e teclas associadas a pressionar.</para
+>O &i18n-ktouch; é um programa para aprender a digitar. Ele ajuda você a aprender a digitar num teclado rápida e corretamente. Cada dedo tem sua posição no teclado e teclas associadas a pressionar.</para
 > 
 <para
->O &ktouch; ajuda você a aprender a digitar fornecendo textos para treinar e ajustes a diferentes níveis dependendo de quanto você está bom. Ele pode exibir qual a próxima tecla a pressionar e o dedo correto a usar.</para>
+>O &i18n-ktouch; ajuda você a aprender a digitar fornecendo textos para treinar e ajustes a diferentes níveis dependendo de quanto você está bom. Ele pode exibir qual a próxima tecla a pressionar e o dedo correto a usar.</para>
 <para
 >Este aplicativo faz parte do módulo oficial de educação do &kde;.</para>
 </refsect1>
 
 <refsect1>
 <title
->Opções do KTouch</title>
+>Opções do &ktouch;</title>
 <variablelist>
 <varlistentry>
 <term
@@ -109,9 +112,7 @@
 <member
 >A documentação mais detalhada para o usuário está disponível em <ulink url="help:/ktouch"
 >help:/ktouch</ulink
-> (tanto poderá inserir esta <acronym
->URL</acronym
-> no &konqueror;, como executar o comando <userinput
+> (tanto poderá inserir esta &URL; no &konqueror;, como executar o comando <userinput
 ><command
 >khelpcenter</command
 > <parameter
@@ -136,7 +137,7 @@
 <title
 >Autores</title>
 <para
->O KTouch foi escrito por <personname
+>O &ktouch; foi escrito por <personname
 ><firstname
 >Haavard</firstname
 ><surname
@@ -152,7 +153,7 @@
 ></personname
 > <email
 >Andreas.Nicolai@gmx.net</email
->. Esta página de manual é baseada na preparada para o Debian por <personname
+>.Esta página de manual é baseada na preparada para o &Debian; por <personname
 > <firstname
 >Ben</firstname
 ><surname
