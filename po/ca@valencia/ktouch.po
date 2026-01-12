@@ -93,7 +93,7 @@ msgstr "Inferior dreta"
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr "S'ha produït un error en obrir el curs"
+msgstr "S'ha produït un error mentre s'obria el curs"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "Els cursos integrats només es poden visualitzar."
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr "S'ha produït un error en obrir la disposició de teclat"
+msgstr "S'ha produït un error mentre s'obria la disposició de teclat"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
@@ -214,12 +214,12 @@ msgstr ""
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr "S'ha produït un error en eliminar el curs"
+msgstr "S'ha produït un error mentre s'eliminava el curs"
 
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr "S'ha produït un error en eliminar la disposició de teclat"
+msgstr "S'ha produït un error mentre s'eliminava la disposició de teclat"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
@@ -235,12 +235,12 @@ msgstr "No s'ha pogut importar el fitxer seleccionat."
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr "S'ha produït un error en guardar el curs"
+msgstr "S'ha produït un error mentre es guardava el curs"
 
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr "S'ha produït un error en guardar la disposició de teclat"
+msgstr "S'ha produït un error mentre es guardava la disposició de teclat"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
@@ -255,12 +255,13 @@ msgstr "La disposició de teclat <b>%1</b> s'ha eliminat"
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr "S'ha produït un error en guardar el curs al disc."
+msgstr "S'ha produït un error mentre es guardava el curs al disc."
 
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr "S'ha produït un error en guardar la disposició de teclat al disc."
+msgstr ""
+"S'ha produït un error mentre es guardava la disposició de teclat al disc."
 
 #: src/editor/resourceeditor.cpp:519
 #, kde-format
