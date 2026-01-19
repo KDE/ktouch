@@ -137,7 +137,7 @@
 <title
 >Upphovsmän</title>
 <para
->&ktouch; är skrivet av <personname
+>&ktouch; was written by <personname
 ><firstname
 >Haavard</firstname
 ><surname
@@ -145,7 +145,7 @@
 ></personname
 > <email
 >haavard@users.sourceforge.net</email
-> och <personname
+> and <personname
 ><firstname
 >Andreas</firstname
 ><surname
@@ -153,13 +153,13 @@
 ></personname
 > <email
 >Andreas.Nicolai@gmx.net</email
->. Den här manualsidan är baserad på den som tagits fram för &Debian; av <personname
-><firstname
+>.This manual page based on the one prepared for &Debian; by <personname
+> <firstname
 >Ben</firstname
 ><surname
 >Burton</surname
 ></personname
->. </para>
+> </para>
 </refsect1>
 
 </refentry>
