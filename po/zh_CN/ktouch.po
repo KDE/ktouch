@@ -49,7 +49,7 @@ msgstr "自定义课程"
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr "保存个人课程文字"
+msgstr "保存个人课程文本"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
@@ -1374,7 +1374,7 @@ msgstr "设置课程的新增字符"
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr "设置课程的文字"
+msgstr "设置课程的文本"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
