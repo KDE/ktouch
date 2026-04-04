@@ -3,35 +3,36 @@
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2019, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2024-08-20 15:24+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-03 21:55+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
-"Martina Blahová, Klára Cihlářová, Jakub Friedl, Pavel Fric, Miroslav "
-"Hrončok, David Kolibáč"
+"Martina Blahová,Klára Cihlářová,Jakub Friedl,Pavel Fric,Miroslav Hrončok,"
+"David Kolibáč,Libor Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"mblah@gvid.cz, koty@seznam.cz, jfriedl@suse.cz, pavelfric@seznam.cz, "
-"miro@hroncok.cz, david@kolibac.cz"
+"mblah@gvid.cz,koty@seznam.cz,jfriedl@suse.cz,pavelfric@seznam.cz,"
+"miro@hroncok.cz,david@kolibac.cz,libor.filipek@gmail.com"
 
 #: src/bindings/stringformatter.cpp:31
 #, kde-format
@@ -388,7 +389,7 @@ msgstr ""
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Jak by měly být zobrazeny průhledné barvy prstů."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -514,12 +515,12 @@ msgstr "Spustit editor kurzů a rozvržení kláves"
 #: src/main.cpp:67
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "Přidat cestu na začátek seznamu importních cest QML"
 
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "V %1 došlo k chybě při běhu a musel být ukončen."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -592,7 +593,7 @@ msgstr "Lekce:"
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
 msgid "Training on:"
-msgstr ""
+msgstr "Procvičování na:"
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -607,12 +608,12 @@ msgstr "Znaků za minutu:"
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr ""
+msgstr "Kurzy pro vaše rozložení klávesnice"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Other Courses"
-msgstr ""
+msgstr "Ostatní kurzy"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
@@ -628,7 +629,7 @@ msgstr "Spustit procvičování"
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr ""
+msgstr "Vybraný kurz je určen pro konkrétní rozložení klávesnice."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:49
 #, kde-format
@@ -636,6 +637,7 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
+"Vybraný kurz není určen pro aktuální rozložení klávesnice vašeho počítače."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:57
 #, kde-format
@@ -644,6 +646,10 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"Aplikace KTouch neumí přepínat ani nastavovat rozložení klávesnice. Před "
+"zahájením výuky musíte v počítači nastavit správné rozložení klávesnice. V "
+"opačném případě budete muset k zadávání textu v lekci použít aktuální "
+"rozložení klávesnice."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:66
 #, kde-format
@@ -653,12 +659,12 @@ msgstr "Nastavit klávesnici"
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr ""
+msgstr "Lekce <b>%1</b> smazána."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "Lekce bez názvu byla smazána."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -673,7 +679,7 @@ msgstr "Potvrdit"
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
 msgid "Edit lesson"
-msgstr ""
+msgstr "Upravit lekci"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -690,7 +696,7 @@ msgstr "Název:"
 #: src/qml/homescreen/LessonEditorDialog.qml:78
 #, kde-format
 msgid "Lesson text"
-msgstr ""
+msgstr "Text lekce"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
@@ -797,7 +803,7 @@ msgstr "Použít zvolený profil"
 #: src/qml/homescreen/StatPopupDialog.qml:22
 #, kde-format
 msgid "Lesson training statistics"
-msgstr ""
+msgstr "Statistiky tréninku lekcí"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
