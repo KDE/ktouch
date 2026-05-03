@@ -9,13 +9,13 @@
 # Renan Cakirerk, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2025-12-23 11:36+0300\n"
+"PO-Revision-Date: 2026-05-02 19:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,14 +23,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
-"Serdar Soytetir, Görkem Çetin, Engin Çağatay, Muhammet Kara, Renan Çakırerk, "
-"Volkan Gezer, Emir SARI"
+"Serdar SOYTETİR, Görkem ÇETİN, Engin Çağatay, Muhammet KARA, Renan Çakırerk, "
+"Volkan GEZER, Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -143,7 +143,7 @@ msgstr "Seçili dosya açılamadı"
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Aynı adda bir klavye yerleşimi halihazırda var."
+msgstr "Aynı adda bir klavye yerleşimi hâlihazırda var."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -287,7 +287,7 @@ msgstr "Seçili ders zaten bir kullanıcı dersi olarak mevcut."
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
-msgstr "Seçili klavye yerleşimi halihazırda dahili bir yerleşim olarak var."
+msgstr "Seçili klavye yerleşimi hâlihazırda dahili bir yerleşim olarak var."
 
 #: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "Yeni klavye yerleşimi olarak içe aktar"
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
-"Seçili klavye yerleşimi halihazırda bir kullanıcı yerleşimi olarak var."
+"Seçili klavye yerleşimi hâlihazırda bir kullanıcı yerleşimi olarak var."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
