@@ -8,28 +8,28 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:48+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-31 19:54-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -134,8 +134,7 @@ msgid "There is already a keyboard layout with the same name."
 msgstr ""
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
 msgstr "يېڭى"
@@ -172,19 +171,18 @@ msgstr "ئۆچۈر"
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr "ئىمپورت قىل"
+msgstr "ئەكىر"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
-msgstr "ئېكسپورت قىل"
+msgstr "چىقار"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Keyboard Layouts"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "ھەرپتاختا ئورۇنلاشتۇرۇلۇشى"
+msgstr ""
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
@@ -293,7 +291,7 @@ msgstr ""
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
-msgstr "ئەسلىگە كەلتۈرۈش"
+msgstr "ئەسلىگە كەلتۈر"
 
 #: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
@@ -401,7 +399,7 @@ msgstr ""
 #: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Colors"
-msgstr "رەڭلەر"
+msgstr "رەڭ"
 
 #: src/ktouchcontext.cpp:130
 #, kde-format
@@ -409,11 +407,10 @@ msgid "Color Settings"
 msgstr "رەڭ تەڭشىكى"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr "ھەرپتاختا"
+msgstr ""
 
 #: src/ktouchcontext.cpp:160
 #, kde-format
@@ -450,7 +447,7 @@ msgstr ""
 #: src/main.cpp:42
 #, kde-format
 msgid "Current maintainer"
-msgstr "نۆۋەتتىكى مەسئۇلى"
+msgstr "نۆۋەتتىكى ئاسرىغۇچى"
 
 #: src/main.cpp:43
 #, kde-format
@@ -470,12 +467,12 @@ msgstr ""
 #: src/main.cpp:44
 #, kde-format
 msgid "Original author"
-msgstr "ئەسلى ئاپتور"
+msgstr "ئەسلى يازغۇچى"
 
 #: src/main.cpp:46
 #, kde-format
 msgid "David Vignoni"
-msgstr "David Vignoni"
+msgstr ""
 
 #: src/main.cpp:46
 #, kde-format
@@ -581,10 +578,9 @@ msgid "Lesson:"
 msgstr ""
 
 #: src/qml/common/LearningProgressChart.qml:85
-#, fuzzy, kde-format
-#| msgid "Training"
+#, kde-format
 msgid "Training on:"
-msgstr "مەشىق"
+msgstr ""
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -597,10 +593,9 @@ msgid "Characters per Minute:"
 msgstr ""
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
-#| msgid "Keyboard Layouts"
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "ھەرپتاختا ئورۇنلاشتۇرۇلۇشى"
+msgstr ""
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
@@ -656,12 +651,12 @@ msgstr ""
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "يېنىۋال"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "جەزملە"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
@@ -735,7 +730,7 @@ msgstr "ھەرگىز"
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr "تەھرىرلەش"
+msgstr "تەھرىر"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
@@ -745,7 +740,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
 msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇر"
+msgstr "ۋاز كەچ"
 
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
@@ -780,7 +775,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
 msgid "Create New Profile"
-msgstr ""
+msgstr "يېڭى سەپلىمە ھۆججەت قۇر"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
@@ -886,7 +881,7 @@ msgstr ""
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "تىزىملىك"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
@@ -959,15 +954,14 @@ msgstr ""
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "غۇۋالىقى"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
+#, no-c-format, kde-format
 msgid " %"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
@@ -1021,7 +1015,7 @@ msgstr ""
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "سۆزلەشكۈ"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
@@ -1197,7 +1191,7 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:558
 #, kde-format
 msgid "Type:"
-msgstr "تىپى:"
+msgstr "تۈرى:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
