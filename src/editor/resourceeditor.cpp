@@ -16,7 +16,6 @@
 #include <QStandardPaths>
 #include <QUndoGroup>
 
-#include <kwidgetsaddons_version.h>
 #include <KToolBar>
 #include <KActionCollection>
 #include <KStandardAction>

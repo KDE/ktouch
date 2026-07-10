@@ -18,7 +18,6 @@
 #include "trainingconfigwidget.h"
 #include "core/lesson.h"
 
-#include <kxmlgui_version.h>
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KHelpMenu>
