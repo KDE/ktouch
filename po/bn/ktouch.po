@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch (KDE 3.5)\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-07-11 00:39+0000\n"
 "PO-Revision-Date: 2006-03-30 14:00+0600\n"
 "Last-Translator: Progga <progga@BengaLinux.Org>\n"
 "Language-Team: Bangla <kde-translation@BengaLinux.Org>\n"
@@ -88,8 +88,8 @@ msgstr ""
 msgid "Bottom right"
 msgstr ""
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
-#: src/editor/resourceeditor.cpp:247
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
 #, kde-format
 msgid "Error while opening course"
 msgstr ""
@@ -99,8 +99,8 @@ msgstr ""
 msgid "Built-in courses can only be viewed."
 msgstr ""
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
-#: src/editor/resourceeditor.cpp:278
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Error while opening keyboard layout"
@@ -167,7 +167,7 @@ msgid "Template"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:50
+#: src/editor/resourceeditor.cpp:49
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:66
@@ -175,131 +175,131 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:52
 #, kde-format
 msgid "Import"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:54
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Export"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:65
+#: src/editor/resourceeditor.cpp:64
 #, fuzzy, kde-format
 #| msgid "Keyboard Layout Editor"
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "কীবোর্ড বিন্যাস সম্পাদক"
 
-#: src/editor/resourceeditor.cpp:67
+#: src/editor/resourceeditor.cpp:66
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Create a new course or keyboard layout"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:69
+#: src/editor/resourceeditor.cpp:68
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Delete the current selected course or keyboard layout"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:79
+#: src/editor/resourceeditor.cpp:78
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Import a course or keyboard layout from a file"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:81
+#: src/editor/resourceeditor.cpp:80
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:173
+#: src/editor/resourceeditor.cpp:172
 #, kde-format
 msgid "Error while deleting course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:195
+#: src/editor/resourceeditor.cpp:194
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Error while deleting keyboard layout"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
-#: src/editor/resourceeditor.cpp:284
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:224
+#: src/editor/resourceeditor.cpp:223
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:259
+#: src/editor/resourceeditor.cpp:258
 #, kde-format
 msgid "Error while saving course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:290
+#: src/editor/resourceeditor.cpp:289
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Error while saving keyboard layout"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:377
+#: src/editor/resourceeditor.cpp:376
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:381
+#: src/editor/resourceeditor.cpp:380
 #, fuzzy, kde-format
 #| msgid "Keyboard Layout"
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:415
+#: src/editor/resourceeditor.cpp:414
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:449
+#: src/editor/resourceeditor.cpp:448
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Error while saving keyboard layout to disk."
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:519
+#: src/editor/resourceeditor.cpp:518
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
+#: src/editor/resourceeditor.cpp:519 src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "Import as new course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:540
+#: src/editor/resourceeditor.cpp:539
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:589
+#: src/editor/resourceeditor.cpp:588
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
+#: src/editor/resourceeditor.cpp:589 src/editor/resourceeditor.cpp:605
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Import as new keyboard layout"
 msgstr "নামবিহীন কীবোর্ড বিন্যাস"
 
-#: src/editor/resourceeditor.cpp:605
+#: src/editor/resourceeditor.cpp:604
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
@@ -405,43 +405,43 @@ msgstr ""
 msgid "The ID of the last used profile."
 msgstr ""
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, fuzzy, kde-format
 #| msgid "T&raining"
 msgid "Training"
 msgstr "প্রশিক্ষণ (&শ)"
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, fuzzy, kde-format
 #| msgid "Training Statistics"
 msgid "Training Settings"
 msgstr "প্রশিক্ষণ সংক্রান্ত পরিসংখ্যান"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, fuzzy, kde-format
 #| msgid "Color Settings"
 msgid "Colors"
 msgstr "রঙের বৈশিষ্ট্য"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, fuzzy, kde-format
 msgid "Color Settings"
 msgstr "রঙের বৈশিষ্ট্য"
 
-#: src/ktouchcontext.cpp:143
+#: src/ktouchcontext.cpp:142
 #, fuzzy, kde-format
 #| msgid "Save Keyboard Layout"
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "কীবোর্ড বিন্যাস সংরক্ষণ করো"
 
-#: src/ktouchcontext.cpp:160
+#: src/ktouchcontext.cpp:159
 #, fuzzy, kde-format
 #| msgid "Keyboard Layout Editor"
 msgid "Course and Keyboard Layout Editor..."
 msgstr "কীবোর্ড বিন্যাস সম্পাদক"
 
-#: src/ktouchcontext.cpp:170
+#: src/ktouchcontext.cpp:169
 #, fuzzy, kde-format
 #| msgid "Open keyboard file ..."
 msgid "Configure Keyboard..."

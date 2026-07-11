@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-07-11 00:39+0000\n"
 "PO-Revision-Date: 2024-02-14 20:19+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian kde-i18n-sq@kde.org\n"
@@ -86,8 +86,8 @@ msgstr "Në fund majtas"
 msgid "Bottom right"
 msgstr "Në fund djathtas"
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
-#: src/editor/resourceeditor.cpp:247
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
 #, kde-format
 msgid "Error while opening course"
 msgstr "Gabim teksa hapej kursi"
@@ -97,8 +97,8 @@ msgstr "Gabim teksa hapej kursi"
 msgid "Built-in courses can only be viewed."
 msgstr "Kurset e brendshme të programit mundet vetëm të shihen."
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
-#: src/editor/resourceeditor.cpp:278
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
 #, kde-format
 msgid "Error while opening keyboard layout"
 msgstr "Gabim teksa hapej skemë tastiere"
@@ -162,7 +162,7 @@ msgid "Template"
 msgstr "Gjedhe"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:50
+#: src/editor/resourceeditor.cpp:49
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:66
@@ -170,110 +170,110 @@ msgstr "Gjedhe"
 msgid "Delete"
 msgstr "Fshije"
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:52
 #, kde-format
 msgid "Import"
 msgstr "Importo"
 
-#: src/editor/resourceeditor.cpp:54
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Export"
 msgstr "Eksportoje"
 
-#: src/editor/resourceeditor.cpp:65
+#: src/editor/resourceeditor.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Përpunues Kursi dhe Skeme Tastiere"
 
-#: src/editor/resourceeditor.cpp:67
+#: src/editor/resourceeditor.cpp:66
 #, kde-format
 msgid "Create a new course or keyboard layout"
 msgstr "Krijoni një kurs, ose një skemë të re tastiere"
 
-#: src/editor/resourceeditor.cpp:69
+#: src/editor/resourceeditor.cpp:68
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
 msgstr "Fshi kursin, ose skemën e tastierës të përzgjedhur tani"
 
-#: src/editor/resourceeditor.cpp:79
+#: src/editor/resourceeditor.cpp:78
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
 msgstr "Importo një kurs, ose skemë tastiere prej një kartele"
 
-#: src/editor/resourceeditor.cpp:81
+#: src/editor/resourceeditor.cpp:80
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr ""
 "Eksporto në një kartelë kursin, ose skemën e tastierës së përzgjedhur tani"
 
-#: src/editor/resourceeditor.cpp:173
+#: src/editor/resourceeditor.cpp:172
 #, kde-format
 msgid "Error while deleting course"
 msgstr "Gabim teksa fshihej kursi"
 
-#: src/editor/resourceeditor.cpp:195
+#: src/editor/resourceeditor.cpp:194
 #, kde-format
 msgid "Error while deleting keyboard layout"
 msgstr "Gabim teksa fshihej skemë tastiere"
 
-#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
-#: src/editor/resourceeditor.cpp:284
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr "Kartela XML (*.xml)"
 
-#: src/editor/resourceeditor.cpp:224
+#: src/editor/resourceeditor.cpp:223
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr "Kartela e përzgjedhur s’u importua dot."
 
-#: src/editor/resourceeditor.cpp:259
+#: src/editor/resourceeditor.cpp:258
 #, kde-format
 msgid "Error while saving course"
 msgstr "Gabim teksa ruhej kursi"
 
-#: src/editor/resourceeditor.cpp:290
+#: src/editor/resourceeditor.cpp:289
 #, kde-format
 msgid "Error while saving keyboard layout"
 msgstr "Gabim teksa ruhej skemë tastiere"
 
-#: src/editor/resourceeditor.cpp:377
+#: src/editor/resourceeditor.cpp:376
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr "Kursi <b>%1</b> u fshi"
 
-#: src/editor/resourceeditor.cpp:381
+#: src/editor/resourceeditor.cpp:380
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "Skema e tastierës <b>%1</b> u fshi"
 
-#: src/editor/resourceeditor.cpp:415
+#: src/editor/resourceeditor.cpp:414
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr "Gabim teksa ruhej kursi në disk."
 
-#: src/editor/resourceeditor.cpp:449
+#: src/editor/resourceeditor.cpp:448
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
 msgstr "Gabim teksa ruhej skemë tastiere në disk."
 
-#: src/editor/resourceeditor.cpp:519
+#: src/editor/resourceeditor.cpp:518
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "Kursi i përzgjedhur është tashmë i pranishëm si një kurs i brendshëm."
 
-#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
+#: src/editor/resourceeditor.cpp:519 src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "Import as new course"
 msgstr "Importoje si kurs të ri"
 
-#: src/editor/resourceeditor.cpp:540
+#: src/editor/resourceeditor.cpp:539
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "Kursi i përzgjedhur është tashmë i pranishëm si një kurs përdoruesi."
 
-#: src/editor/resourceeditor.cpp:589
+#: src/editor/resourceeditor.cpp:588
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
@@ -282,12 +282,12 @@ msgstr ""
 "Skema e përzgjedhur për tastierën është tashmë e pranishme si një skemë e "
 "brendshme tastiere."
 
-#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
+#: src/editor/resourceeditor.cpp:589 src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "Importoje si skemë të re tastiere"
 
-#: src/editor/resourceeditor.cpp:605
+#: src/editor/resourceeditor.cpp:604
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
@@ -400,38 +400,38 @@ msgstr "Sa të tejdukshme duhet të shfaqen ngjyrat për gishtat."
 msgid "The ID of the last used profile."
 msgstr "ID-ja e profilit të fundit të përdorur."
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, kde-format
 msgid "Training"
 msgstr "Stërvitje"
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, kde-format
 msgid "Training Settings"
 msgstr "Rregullime Stërvitjeje"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Colors"
 msgstr "Ngjyra"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Color Settings"
 msgstr "Rregullime Ngjyrash"
 
-#: src/ktouchcontext.cpp:143
+#: src/ktouchcontext.cpp:142
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "Formësoni Tastierë"
 
-#: src/ktouchcontext.cpp:160
+#: src/ktouchcontext.cpp:159
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
 msgstr "Përpunues Kursesh dhe Skemash Tastiere…"
 
-#: src/ktouchcontext.cpp:170
+#: src/ktouchcontext.cpp:169
 #, kde-format
 msgid "Configure Keyboard..."
 msgstr "Formësoni Tastierë…"

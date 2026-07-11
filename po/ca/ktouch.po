@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-07-11 00:39+0000\n"
 "PO-Revision-Date: 2024-10-23 20:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -89,8 +89,8 @@ msgstr "Inferior esquerra"
 msgid "Bottom right"
 msgstr "Inferior dreta"
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
-#: src/editor/resourceeditor.cpp:247
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
 #, kde-format
 msgid "Error while opening course"
 msgstr "Error en obrir el curs"
@@ -100,8 +100,8 @@ msgstr "Error en obrir el curs"
 msgid "Built-in courses can only be viewed."
 msgstr "Els cursos integrats només es poden visualitzar."
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
-#: src/editor/resourceeditor.cpp:278
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
 #, kde-format
 msgid "Error while opening keyboard layout"
 msgstr "Error en obrir la disposició de teclat"
@@ -165,7 +165,7 @@ msgid "Template"
 msgstr "Plantilla"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:50
+#: src/editor/resourceeditor.cpp:49
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:66
@@ -173,111 +173,111 @@ msgstr "Plantilla"
 msgid "Delete"
 msgstr "Elimina"
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:52
 #, kde-format
 msgid "Import"
 msgstr "Importa"
 
-#: src/editor/resourceeditor.cpp:54
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Export"
 msgstr "Exporta"
 
-#: src/editor/resourceeditor.cpp:65
+#: src/editor/resourceeditor.cpp:64
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Editor de cursos i la disposició de teclat"
 
-#: src/editor/resourceeditor.cpp:67
+#: src/editor/resourceeditor.cpp:66
 #, kde-format
 msgid "Create a new course or keyboard layout"
 msgstr "Crea un curs nou o una disposició de teclat nova"
 
-#: src/editor/resourceeditor.cpp:69
+#: src/editor/resourceeditor.cpp:68
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
 msgstr "Elimina el curs o disposició de teclat seleccionats actualment"
 
-#: src/editor/resourceeditor.cpp:79
+#: src/editor/resourceeditor.cpp:78
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
 msgstr "Importa un curs o una disposició de teclat des d'un fitxer"
 
-#: src/editor/resourceeditor.cpp:81
+#: src/editor/resourceeditor.cpp:80
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr ""
 "Exporta un curs o una disposició de teclat seleccionats actualment a un "
 "fitxer"
 
-#: src/editor/resourceeditor.cpp:173
+#: src/editor/resourceeditor.cpp:172
 #, kde-format
 msgid "Error while deleting course"
 msgstr "Error en eliminar el curs"
 
-#: src/editor/resourceeditor.cpp:195
+#: src/editor/resourceeditor.cpp:194
 #, kde-format
 msgid "Error while deleting keyboard layout"
 msgstr "Error en eliminar la disposició de teclat"
 
-#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
-#: src/editor/resourceeditor.cpp:284
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr "Fitxers XML (*.xml)"
 
-#: src/editor/resourceeditor.cpp:224
+#: src/editor/resourceeditor.cpp:223
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr "No s'ha pogut importar el fitxer seleccionat."
 
-#: src/editor/resourceeditor.cpp:259
+#: src/editor/resourceeditor.cpp:258
 #, kde-format
 msgid "Error while saving course"
 msgstr "Error en desar el curs"
 
-#: src/editor/resourceeditor.cpp:290
+#: src/editor/resourceeditor.cpp:289
 #, kde-format
 msgid "Error while saving keyboard layout"
 msgstr "Error en desar la disposició de teclat"
 
-#: src/editor/resourceeditor.cpp:377
+#: src/editor/resourceeditor.cpp:376
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr "El curs <b>%1</b> s'ha eliminat"
 
-#: src/editor/resourceeditor.cpp:381
+#: src/editor/resourceeditor.cpp:380
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "La disposició de teclat <b>%1</b> s'ha eliminat"
 
-#: src/editor/resourceeditor.cpp:415
+#: src/editor/resourceeditor.cpp:414
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr "Error en desar el curs al disc."
 
-#: src/editor/resourceeditor.cpp:449
+#: src/editor/resourceeditor.cpp:448
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
 msgstr "Error en desar la disposició de teclat al disc."
 
-#: src/editor/resourceeditor.cpp:519
+#: src/editor/resourceeditor.cpp:518
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "El curs seleccionat ja és present com un curs integrat."
 
-#: src/editor/resourceeditor.cpp:520 src/editor/resourceeditor.cpp:541
+#: src/editor/resourceeditor.cpp:519 src/editor/resourceeditor.cpp:540
 #, kde-format
 msgid "Import as new course"
 msgstr "Importa com a curs nou"
 
-#: src/editor/resourceeditor.cpp:540
+#: src/editor/resourceeditor.cpp:539
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "El curs seleccionat ja és present com un curs d'usuari."
 
-#: src/editor/resourceeditor.cpp:589
+#: src/editor/resourceeditor.cpp:588
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
@@ -286,12 +286,12 @@ msgstr ""
 "La disposició de teclat seleccionada ja és present com una disposició de "
 "teclat integrada."
 
-#: src/editor/resourceeditor.cpp:590 src/editor/resourceeditor.cpp:606
+#: src/editor/resourceeditor.cpp:589 src/editor/resourceeditor.cpp:605
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "Importa com una disposició de teclat nova"
 
-#: src/editor/resourceeditor.cpp:605
+#: src/editor/resourceeditor.cpp:604
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
@@ -402,38 +402,38 @@ msgstr "Com de transparents s'han de mostrar els colors dels dits."
 msgid "The ID of the last used profile."
 msgstr "L'ID del darrer perfil utilitzat."
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, kde-format
 msgid "Training"
 msgstr "Entrenament"
 
-#: src/ktouchcontext.cpp:129
+#: src/ktouchcontext.cpp:128
 #, kde-format
 msgid "Training Settings"
 msgstr "Configuració de l'entrenament"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Colors"
 msgstr "Colors"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Color Settings"
 msgstr "Configuració del color"
 
-#: src/ktouchcontext.cpp:143
+#: src/ktouchcontext.cpp:142
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "Configuració del teclat"
 
-#: src/ktouchcontext.cpp:160
+#: src/ktouchcontext.cpp:159
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
 msgstr "Editor de cursos i la disposició de teclat..."
 
-#: src/ktouchcontext.cpp:170
+#: src/ktouchcontext.cpp:169
 #, kde-format
 msgid "Configure Keyboard..."
 msgstr "Configura el teclat..."
