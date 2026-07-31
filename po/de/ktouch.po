@@ -336,7 +336,7 @@ msgstr "Tastaturbelegung"
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
 msgstr ""
-"Die Tastaturbelegung, die auf anderen Plattformen als X11 benutzt werden"
+"Die Tastaturbelegung, die auf anderen Plattformen als X11 verwendet werden"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15

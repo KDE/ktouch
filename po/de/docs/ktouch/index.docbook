@@ -90,13 +90,13 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2021-01-05</date>
+>2021–01–05</date>
 <releaseinfo
 >&ktouch; 2.3.0 (Anwendungen 20.12)</releaseinfo>
 
 <abstract>
 <para
->&i18n-ktouch; ist ein Programm, um das Maschineschreiben zu lernen. Das Programm enthält Texte, um ihre Schnelligkeit zu trainieren und verschiedene Schwierigkeitsstufen. Es kann anzeigen, welche Taste Sie als nächste drücken müssen und welchen Finger Sie dazu benutzen sollen.</para>
+>&i18n-ktouch; ist ein Programm, um das Maschineschreiben zu lernen. Das Programm enthält Texte, um ihre Schnelligkeit zu trainieren und verschiedene Schwierigkeitsstufen. Es kann anzeigen, welche Taste Sie als nächste drücken müssen und welchen Finger Sie dazu verwenden sollen.</para>
 
 </abstract>
 
@@ -137,7 +137,7 @@
 <para
 >&i18n-ktouch; ist ein Programm, mit dem Sie das Maschineschreiben lernen können.</para>
 <para
->&i18n-ktouch; enthält Übungstexte in verschiedenen Schwierigkeitsstufen. Es kann anzeigen, welche Taste Sie als nächste drücken müssen und welchen Finger Sie dazu benutzen sollen.</para>
+>&i18n-ktouch; enthält Übungstexte in verschiedenen Schwierigkeitsstufen. Es kann anzeigen, welche Taste Sie als nächste drücken müssen und welchen Finger Sie dazu verwenden sollen.</para>
 
 <screenshot>
 <screeninfo
@@ -170,7 +170,7 @@
 ></listitem>
 <listitem
 ><simpara
->Verschiedene Tastaturbelegungen und die Möglichkeit, eigene Tastaturen zu erstellen und zu benutzen</simpara
+>Verschiedene Tastaturbelegungen und die Möglichkeit, eigene Tastaturen zu erstellen und zu verwenden</simpara
 ></listitem>
 <listitem
 ><simpara
@@ -267,16 +267,16 @@
 <para
 >Sie können zwischen Kursen wechseln oder <link linkend="custom_lessons"
 >benutzerdefinierte Lektion auswählen</link
->, indem Sie Knöpfe  rechts oben im Fenster benutzen. </para>
+>, indem Sie Knöpfe  rechts oben im Fenster verwenden. </para>
 
 <note>
 <para
->Auf einigen Plattformen wie insbesondere unter &Microsoft; &Windows; funktioniert die automatische Erkennung der Tastaturbelegung nicht. Benutzen Sie in diesem Fall den Knopf <inlinemediaobject
+>Auf einigen Plattformen wie insbesondere unter &Microsoft; &Windows; funktioniert die automatische Erkennung der Tastaturbelegung nicht. Verwenden Sie in diesem Fall den Knopf <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > in der Werkzeugleiste und wählen im Untermenü <guisubmenu
->Tastatur einrichten ...</guisubmenu
+>Tastatur einrichten …</guisubmenu
 > den Namen der Belegung oder eine Belegung ähnlich zu Ihrer Tastatur. Ist Ihre Tastaturbelegung nicht im Untermenü enthalten, können Sie eine eigene Belegung definieren, siehe <xref linkend="create_layouts"/>. </para>
 </note>
 <para
@@ -516,7 +516,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Schreibmaschinenkurs einrichten ...</guimenuitem
+>Schreibmaschinenkurs einrichten …</guimenuitem
 ></term>
 <listitem
 ><para
@@ -531,7 +531,7 @@
 <varlistentry>
 <term
 ><guimenuitem
->Kurzbefehle festlegen ...</guimenuitem
+>Kurzbefehle festlegen …</guimenuitem
 ></term>
 <listitem
 ><para
@@ -544,14 +544,14 @@
 <varlistentry>
 <term
 ><guimenuitem
->Tastatur einrichten ...</guimenuitem
+>Tastatur einrichten …</guimenuitem
 ></term>
 <listitem
 ><para
 >Öffnet das Modul für die Tastatureinrichtung der &systemsettings;. Die Änderung des Tastaturbelegung ist als Vorbereitung für Übungen auf anderen Tastaturbelegungen nötig. </para>
 <note>
 <para
->Auf Plattformen ohne automatische Erkennung der Tastaturbelegung - insbesondere &Microsoft; &Windows; - wird dieser Eintrag durch ein Untermenü ersetzt, um die Tastaturbelegung für &i18n-ktouch; manuell auszuwählen. </para>
+>Auf Plattformen ohne automatische Erkennung der Tastaturbelegung – insbesondere &Microsoft; &Windows; – wird dieser Eintrag durch ein Untermenü ersetzt, um die Tastaturbelegung für &i18n-ktouch; manuell auszuwählen. </para>
 </note>
 </listitem>
 </varlistentry>
@@ -559,7 +559,7 @@
 </variablelist>
 
 <para
->&i18n-ktouch; benutzt die bekannten &kde;-Einträge im Menü <guimenu
+>&i18n-ktouch; verwendet die bekannten &kde;-Einträge im Menü <guimenu
 >Hilfe</guimenu
 >, weitere Informationen dazu finden Sie im Abschnitt über das Menü <ulink url="help:/fundamentals/menus.html#menus-help"
 >Hilfe</ulink
@@ -576,7 +576,7 @@
 > <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > rechts in der oberen Werkzeugleiste und wählen Sie dann <guimenuitem
->&i18n-ktouch; einrichten ...</guimenuitem
+>&i18n-ktouch; einrichten …</guimenuitem
 >, um den Einstellungsdialog zu öffnen.</para>
 
  <variablelist>
@@ -658,7 +658,7 @@ format="PNG"/></imageobject>
 >&i18n-ktouch; erkennt automatisch Ihre Tastaturbelegung und zeigt nur die für diese Belegung optimierten Kurse an. </para>
 <note>
 <para
->Auf einigen Plattformen wie insbesondere unter &Windows; funktioniert die automatische Erkennung der Tastaturbelegung nicht. Benutzen Sie in diesem Fall das Anwendungsmenü, um manuell eine Tastaturbelegung einzustellen. </para>
+>Auf einigen Plattformen wie insbesondere unter &Windows; funktioniert die automatische Erkennung der Tastaturbelegung nicht. Verwenden Sie in diesem Fall das Anwendungsmenü, um manuell eine Tastaturbelegung einzustellen. </para>
 </note>
 <sect3 id="switching_courses">
 <title
@@ -698,11 +698,11 @@ format="PNG"/></imageobject>
 <title
 >Übungen auf unterschiedlichen Tastaturbelegungen</title>
 <para
->In &i18n-ktouch; können Sie jede beliebige Tastaturbelegung für die Übungen benutzen. Drücken Sie dazu auf die Tasten, die in der Übung hervorgehoben sind, unabhängig von der Beschriftung der tatsächlichen Tastatur. </para>
+>In &i18n-ktouch; können Sie jede beliebige Tastaturbelegung für die Übungen verwenden. Drücken Sie dazu auf die Tasten, die in der Übung hervorgehoben sind, unabhängig von der Beschriftung der tatsächlichen Tastatur. </para>
 <para
 >Wählen Sie <menuchoice
 ><guimenu
->Tastatur einrichten ...</guimenu
+>Tastatur einrichten …</guimenu
 ></menuchoice
 > im Anwendungsmenü und stellen Sie eine andere Tastaturbelegung ein. Dann wird &i18n-ktouch; entsprechend angepasst und nur die Kurse für diese Tastaturbelegung angezeigt. </para>
 <note>
@@ -731,7 +731,7 @@ format="PNG"/></imageobject>
 <title
 >Genauigkeit ist wichtig</title>
 <para
->Als nächstes sollten Sie die Trefferquote beachten. Nur wenn Sie die bisher freigegeben Tasten erfolgreich benutzen und wenige Fehler dabei machen, können Sie die nächste Lektion mit noch mehr Tasten mit Erfolg üben. Sie werden beim Üben feststellen, dass Sie automatisch erfolgreich sind, wenn Sie nur sehr wenige Fehler machen und daher keine kostbare Zeit mit der Verbesserung dieser wenigen Fehler verlieren. </para>
+>Als nächstes sollten Sie die Trefferquote beachten. Nur wenn Sie die bisher freigegeben Tasten erfolgreich verwenden und wenige Fehler dabei machen, können Sie die nächste Lektion mit noch mehr Tasten mit Erfolg üben. Sie werden beim Üben feststellen, dass Sie automatisch erfolgreich sind, wenn Sie nur sehr wenige Fehler machen und daher keine kostbare Zeit mit der Verbesserung dieser wenigen Fehler verlieren. </para>
 <note>
 <para
 >Das ist auch der Grund, dass zum Freigeben der nächsten Lektion für die Trefferquote ein Wert von 98 % eingestellt ist, während die Anforderung an die Geschwindigkeit mit 180 Zeichen pro Minute sehr moderat sind. </para>
@@ -1088,7 +1088,7 @@ format="PNG"/></imageobject>
 ></term>
 <listitem>
 <para
->Sorgen Sie dafür, dass die Zeichen für die neu eingeführten Tasten die am meisten oder mindestens sehr häufig im Text der Lektion benutzt werdende. </para>
+>Sorgen Sie dafür, dass die Zeichen für die neu eingeführten Tasten die am meisten oder mindestens sehr häufig im Text der Lektion verwendeten sind. </para>
 <note>
 <title
 >Begründung</title>
@@ -1147,7 +1147,7 @@ format="PNG"/></imageobject>
 </varlistentry>
 </variablelist>
 <para
->Benutzen Sie den Kopf <inlinemediaobject
+>Verwenden Sie den Kopf <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
 > </inlinemediaobject
@@ -1171,7 +1171,7 @@ format="PNG"/></imageobject>
 <para
 >Der Inhalt von Lektionen kann im Editor rechts unten bearbeitet werden. Sie können Textausschnitte mit Ihrem Lieblingseditor kopieren und in diese Feld einfügen. </para>
 <para
->Benutzen Sie den Knopf <inlinemediaobject
+>Verwenden Sie den Knopf <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
 > </inlinemediaobject
@@ -1181,7 +1181,7 @@ format="PNG"/></imageobject>
 > <imageobject
 > <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
 > </inlinemediaobject
-> können Sie den Zeilenumbruch für den Text der Lektion einschalten. Im Editor von &i18n-ktouch; wird dann eine maximale Zeilenlänge von 60 Zeichen verwendet. </para>
+> können Sie den Zeilenumbruch für den Text der Lektion aktivieren. Im Editor von &i18n-ktouch; wird dann eine maximale Zeilenlänge von 60 Zeichen verwendet. </para>
 <para
 >Für die Erstellung von neuen Lektionen sollten Sie einige Regel beachten: </para>
 
@@ -1225,7 +1225,7 @@ format="PNG"/></imageobject>
 ></term>
 <listitem>
 <para
->Dies ist wahrscheinlich in den allerersten Lektionen nicht möglich, in denen nur einige wenige Zeichen verfügbar sind, aber sobald als möglich sollten tatsächliche Wörter verwendet werden. Benutzen Sie niemals falsch geschriebene Wörter. </para>
+>Dies ist wahrscheinlich in den allerersten Lektionen nicht möglich, in denen nur einige wenige Zeichen verfügbar sind, aber sobald als möglich sollten tatsächliche Wörter verwendet werden. Verwenden Sie niemals falsch geschriebene Wörter. </para>
 <note>
 <title
 >Begründung</title>
@@ -1377,14 +1377,13 @@ format="PNG"/></imageobject>
 > </inlinemediaobject
 > <guilabel
 >Normale Taste</guilabel
->, um  eine normale Taste hinzuzufügen oder den Knopf <inlinemediaobject
+>, um eine normale Taste hinzuzufügen oder den Knopf <inlinemediaobject
 > <imageobject
 > <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
 > </inlinemediaobject
 > <guilabel
 >Sondertaste</guilabel
->, um eine neue Sondertaste  (wie zum Beispiel  &Space;
->, &Backspace;, &Tab;, <keycap
+>, um eine neue Sondertaste (wie zum Beispiel &Space;, &Backspace;, &Tab;, <keycap
 >Umschalttaste</keycap
 > oder &Enter;) zur Tastaturbelegung hinzuzufügen. Der Knopf <inlinemediaobject
 > <imageobject
@@ -1392,7 +1391,7 @@ format="PNG"/></imageobject>
 > </inlinemediaobject
 ><guilabel
 >Löschen</guilabel
-> kann benutzt werden,um eine ausgewählte Taste aus Ihrer  Belegung zu entfernen. Die Vergrößerung kann mit dem Schieberegler rechts in der Werkzeugleiste im Editor eingestellt werden. </para>
+> kann verwendet werden, um eine ausgewählte Taste aus Ihrer Belegung zu entfernen. Die Vergrößerung kann mit dem Schieberegler rechts in der Werkzeugleiste im Editor eingestellt werden. </para>
 <para
 >Die Eigenschaften einzelner Tasten können im unteren Bereich des Editorfensters geändert werden. </para>
 <sect3 id="normal_keys">
@@ -1527,7 +1526,7 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para
->Dieser besondere Kurs kann wie alle anderen Kurse benutzt werden, Übungsdaten und Statistiken funktionieren wie üblich. Durch Klicken auf <guibutton
+>Dieser besondere Kurs kann wie alle anderen Kurse verwendet werden, Übungsdaten und Statistiken funktionieren wie üblich. Durch Klicken auf <guibutton
 >Neue Lektion hinzufügen</guibutton
 > oder auf <guibutton
 >Bearbeiten</guibutton
@@ -1604,7 +1603,7 @@ format="PNG"/></imageobject>
 <para
 >&i18n-ktouch;</para>
 <para
->&ktouch;, Copyright 1999-2007</para>
+>&ktouch;, © 1999–2007</para>
 <itemizedlist>
 <listitem
 ><simpara
@@ -1618,7 +1617,7 @@ format="PNG"/></imageobject>
 ></listitem>
 </itemizedlist>
 <para
->&ktouch;, Copyright 2011-2019 Sebastian Gottfried <email
+>&ktouch;, © 2011–2019 Sebastian Gottfried <email
 >sebastiangottfried@web DOT de</email
 >. </para>
 
