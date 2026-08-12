@@ -708,7 +708,7 @@ msgstr "أكمل التمارين السابقة لفك القفل"
 #: src/qml/homescreen/LessonSelector.qml:182
 #, kde-format
 msgid "Add New Lesson"
-msgstr "أضف درساً جديداً"
+msgstr "أضف درسًا جديدًا"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -1271,7 +1271,7 @@ msgstr "افتح ملف نص صرف..."
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr "لف السطور آليّاً"
+msgstr "لف السطور آليًّا"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
