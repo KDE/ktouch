@@ -36,7 +36,7 @@
                         "type": "anitya",
                         "project-id": 1781,
                         "stable-only": true,
-                        "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
+                        "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.xz"
                     }
                 }
             ]
