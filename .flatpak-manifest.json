@@ -23,10 +23,7 @@
     "modules": [
         {
             "name": "libxkbfile",
-            "config-opts": [
-                "--disable-static",
-                "--enable-x11"
-            ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
