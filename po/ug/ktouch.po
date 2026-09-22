@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:39+0000\n"
-"PO-Revision-Date: 2026-05-31 19:54-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 #, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
@@ -110,7 +110,7 @@ msgstr ""
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: src/editor/lessontexteditor.cpp:62
 #, kde-format
@@ -482,7 +482,7 @@ msgstr ""
 #: src/main.cpp:47
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr "Anne-Marie Mahfouf"
+msgstr ""
 
 #: src/main.cpp:47
 #, kde-format
@@ -961,7 +961,7 @@ msgstr "غۇۋالىقى"
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
 #, no-c-format, kde-format
 msgid " %"
-msgstr " %"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
@@ -1051,7 +1051,7 @@ msgstr ""
 #: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
-msgstr "100%"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:36
@@ -1197,7 +1197,7 @@ msgstr "تۈرى:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
-msgstr "Tab"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:580
@@ -1209,19 +1209,19 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
-msgstr "Shift"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
-msgstr "Backspace"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
-msgstr "Return"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:600
