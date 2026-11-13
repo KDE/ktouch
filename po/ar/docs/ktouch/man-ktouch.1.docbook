@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>مدرّب طباعة</application
+>">
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>دليل مستخدم معلم الطباعة</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>&ktouch; man page.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>2021-01-05</date>
+<releaseinfo
+>معلم الطباعة 2.3.0 (التّطبيقات 20.12)</releaseinfo>
+<productname
+>تطبيقات كِيدِي</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>مدرّب طباعة من كيدي </refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>path</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>الوصف</title>
+<para
+>&i18n-ktouch; هو برنامج لتعلم الطباعة باللمس. يساعدك على تعلم الكتابة على لوحة المفاتيح بسرعة وبشكل صحيح. لكل إصبع مكانه على لوحة المفاتيح مع مفاتيح مرتبطة به للضغط.</para
+> 
+<para
+>يساعدك &i18n-ktouch; على تعلم الطباعة باللمس من خلال تزويدك بنص للتدرب عليه، ويتكيف مع مستويات مختلفة حسب مهارتك. يمكنه عرض المفتاح الذي يجب الضغط عليه لاحقًا، والإصبع الصحيح لاستخدامه.</para>
+<para
+>هذا التطبيق جزء من وحدة التعليم الرسمية لـ كيدي.</para>
+</refsect1>
+
+<refsect1>
+<title
+>خيارات معلم الطباعة</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>شغّل محرر الدورة وتخطيط لوحة المفاتيح.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>path</replaceable
+></term>
+<listitem
+><para
+>أضف المسار إلى بداية قائمة مسارات استيراد QML.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+<simplelist>
+<member
+>وثائق المستخدم الأكثر تفصيلًا متوفرة من <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (إما أدخل هذا &URL; في &konqueror;، أو شغّل <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>تتوفر أيضًا معلومات إضافية على <ulink url="https://edu.kde.org/ktouch/"
+>موقع كيدي التعليمي</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>المؤلفون</title>
+<para
+>كتب معلم الطباعة <personname
+><firstname
+>هافارد</firstname
+><surname
+>فرويلاند</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> و<personname
+><firstname
+>أندرياس</firstname
+><surname
+>نيكولاي</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. تستند صفحة الدليل هذه إلى تلك التي أُعدت لـ &Debian; بواسطة <personname
+> <firstname
+>بن</firstname
+><surname
+>بيرتون</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

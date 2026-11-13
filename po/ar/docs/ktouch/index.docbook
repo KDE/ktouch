@@ -1,0 +1,1668 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>مدرّب طباعة</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>دليل معلم الطباعة</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>هوارد فرولاند، أندرياس نيكولاي</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (التطبيقات 20.12)</releaseinfo>
+
+<abstract>
+<para
+>معلم الطباعة برنامج لتعلم الطباعة باللمس. يزوّدك معلم الطباعة بنصوص للتدرب عليها ويتكيف مع مستويات مختلفة حسب مهارتك. يعرض أي مفتاح تضغط لاحقًا والإصبع الصحيح لاستخدامه.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>الكتابة باللمس</keyword>
+<keyword
+>الطباعة باللمس</keyword>
+<keyword
+>كتابة</keyword>
+<keyword
+>طباعة</keyword>
+<keyword
+>تعليم</keyword>
+<keyword
+>معلم طباعة</keyword>
+<keyword
+>اللمس</keyword>
+<keyword
+>طباعة</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>تعلم الطباعة باللمس مع معلم الطباعة</title>
+
+<sect1 id="introduction">
+<title
+>مقدمة</title>
+
+<sect2>
+<title
+>ما هو معلم الطباعة؟</title>
+<para
+>معلم الطباعة برنامج لتعلم الطباعة باللمس.</para>
+<para
+>يزوّدك معلم الطباعة بنصوص للتدرب عليها ويتكيف مع مستويات مختلفة حسب مهارتك. يعرض لوحة مفاتيحك ويشير إلى أي مفتاح تضغط لاحقًا والإصبع الصحيح لاستخدامه.</para>
+
+<screenshot>
+<screeninfo
+>الشاشة الرئيسة لـ معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الشاشة الرئيسة لـ معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>معلم الطباعة مدرّب طباعة باللمس موجه للاستخدام الشخصي غالبًا. تتعلم الطباعة بكل الأصابع، خطوة بخطوة، دون الحاجة إلى النظر إلى لوحة المفاتيح طوال الوقت للعثور على المفاتيح الصحيحة مما يبطئك كثيرًا. </para>
+</sect2>
+
+<sect2>
+<title
+>١الميزات</title>
+
+<para
+>في نسخته الحالية، يمتلك معلم الطباعة عددًا لا بأس به من الميزات، مثل:</para>
+<itemizedlist>
+<listitem
+><simpara
+>يأتي بعشرات الدورات المختلفة بلغات عديدة ومحرر دورات مريح</simpara
+></listitem>
+<listitem
+><simpara
+>دعم تخطيطات لوحة مفاتيح مختلفة مع إمكانية استخدام وتحرير تخطيطات معرّفة من المستخدم</simpara
+></listitem>
+<listitem
+><simpara
+>خلال جلسة التدريب، يجمع معلم الطباعة معلومات إحصائية شاملة لمساعدتك أو مساعدة معلمك في تحليل تقدمك</simpara
+></listitem>
+</itemizedlist>
+<para
+>هناك ميزات أخرى كثيرة ستُناقش في الفصول المناسبة من هذا الدليل. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>البدء</title>
+
+<para
+>إليك لقطة شاشة أخرى لـ معلم الطباعة أثناء العمل، هذه المرة بلوحة مفاتيح ألمانية ودرس تدريبي:</para>
+
+<screenshot>
+<screeninfo
+>الشاشة الرئيسة لـ معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الشاشة الرئيسة لـ معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>رغم أن تعلم الطباعة باللمس باستخدام معلم الطباعة واستخدام البرنامج يجب أن يكون بسيطًا جدًا، سنلقي نظرة أكثر تفصيلًا على معلم الطباعة في الأقسام التالية.</para>
+
+<sect2 id="creating_profile">
+<title
+>إنشاء تشكيلتك الأولى</title>
+
+<para
+>عند تشغيل معلم الطباعة لأول مرة، ستُفتح شاشة خاصة تساعدك في إنشاء تشكيلتك الأولى. يمكنك اختيار اسم التشكيلة ومستوى مهاراتك في الطباعة. </para>
+<tip>
+<para
+>يحدد المستوى الذي تختاره التشغيل العام لـ معلم الطباعة. في وضع المبتدئ، تُفتح الدروس واحدًا تلو الآخر بعد اجتيازها، أما للكاتب المتقدم فجميع الدروس متاحة من البداية. </para>
+</tip>
+<note>
+<para
+>فكر في اختيارك، فلن تستطيع تغيير نوع التشكيلة لاحقًا. لكن يمكنك دائمًا إنشاء تشكيلات جديدة لإعادة النظر في هذا القرار. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>شاشة الترحيب لـ معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>شاشة الترحيب لـ معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>بعد الضغط على <guibutton
+>بدء التدريب</guibutton
+>، ستُنقل إلى الشاشة الرئيسة. ستكون هذه الشاشة أيضًا أول شاشة تُرى عند تشغيل معلم الطباعة في المرة التالية. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>اختيار درس</title>
+
+<para
+>تتكون الشاشة الرئيسة لـ معلم الطباعة من شريط أدوات ومُحدد دورة. لمزيد من المعلومات، انظر <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>الشاشة الرئيسة لـ معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الشاشة الرئيسة لـ معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>سيعرض معلم الطباعة أول دورة متاحة لتخطيط لوحة المفاتيح الحالي لديك. </para>
+
+<para
+>يمكنك التبديل بين الدورات أو اختيار <link linkend="custom_lessons"
+>دروس مخصصة</link
+> بالنقر على صورها المصغرة في الجزء الأيمن من النافذة. </para>
+
+<note>
+<para
+>على بعض المنصات، خاصة على &Microsoft; &Windows;، لا يتوفر الكشف الآلي عن تخطيط لوحة المفاتيح. في هذه الحالة، عليك النقر على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط الأدوات، واختيار القائمة الفرعية <guisubmenu
+>اضبط لوحة المفاتيح...</guisubmenu
+> واختيار اسم تخطيط لوحة المفاتيح أو بعض التخطيطات المشابهة لتخطيطك. إذا لم تُضمن لوحة المفاتيح لديك، يمكنك تعريف تخطيط لوحة المفاتيح الخاص بك بنفسك، انظر <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>اختر درسك من القائمة على يسار النافذة. لا يمكنك اختيار الدروس المقفلة ذات <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لأنها صعبة جدًا على مهاراتك الحالية. اجتز الدروس لفتح دروس جديدة. ستُعرض معاينة الدرس المختار على يمين قائمة الدروس. </para>
+<tip>
+<para
+>يمكن إظهار المزيد من المعلومات عن المساق المختار وإخفاؤها مجددًا باستخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> بجانب عنوان المساق. </para>
+</tip>
+<para
+>عند الانتهاء من التحديد، انقر على <guibutton
+>ابدأ التدريب</guibutton
+> للانتقال إلى شاشة تدريب معلم الطباعة. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>التدريب</title>
+<para
+>نافذة تدريب معلم الطباعة تعرض ثلاثة أقسام رئيسة: </para>
+<orderedlist>
+<listitem
+><simpara
+>بعض إحصائيات الكتابة في مربعات معلومات في الأعلى</simpara
+></listitem>
+<listitem
+><simpara
+>النص الذي تحتاج إلى كتابته</simpara
+></listitem>
+<listitem
+><simpara
+>التصوير المرئي للوحة المفاتيح</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>شاشة تدريب معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>شاشة تدريب معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>يمكن ضبط رؤية أجزاء شاشة التدريب باستخدام <link linkend="configuration_dialog"
+>حوار ضبط معلم الطباعة</link
+>. </para>
+</note>
+
+<para
+>ضع إصبعي السبابة على المفتاحين في لوحة المفاتيح اللذين يحملان العلامتين اللمسيتين الصغيرتين بالقرب من منتصف صف الأحرف الأوسط. بعد ذلك، ستجد أصابعك الأخرى مفاتيحها المقصودة آليًا تقريبًا. يجب أن تستقر إبهاماك فوق مفتاح المسافة، المفتاح الوحيد الذي ستستخدمهما فيه عند الكتابة باللمس. يجب وضع الأصابع الأخرى على المفاتيح الثلاثة المجاورة للمفاتيح المعلّمة على الصف الأوسط. المفاتيح الخاصة بالإصبع نفسه مجمّعة معًا من خلال لونها. حاول تحريك يديك بأقل قدر ممكن وحاول دائمًا إعادة أصابعك إلى أوضاع الراحة بعد كتابة حرف. </para>
+<para
+>ابدأ بكتابة النص في منتصف الشاشة. المفتاح التالي الذي يجب الضغط عليه مظلل دائمًا في التصوير المرئي للوحة المفاتيح. أثناء الكتابة، قد ترتكب أخطاء وتضغط على المفتاح الخطأ. في هذه الحالة، ستُعرض الأحرف باللون الأحمر وعليك الضغط على &Backspace; عدة مرات حسب الحاجة لمسح الأحرف المكتوبة خطأً. </para>
+<para
+>عند إكمال سطر نص بنجاح، تحتاج إلى الضغط على &Enter; للتقدم إلى السطر التالي. </para>
+<tip>
+<para
+>يمكن تغيير المفتاح المستخدم للتقدم إلى السطر التالي باستخدام <link linkend="configuration_dialog"
+>حوار ضبط معلم الطباعة</link
+> </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>راجع تقدمك</title>
+<para
+>عند إكمال درس، سيتبدل معلم الطباعة إلى شاشة النتيجة. تعرض إحصائيات التدريب والدرس الحاليين وتظهر تاريخًا بيانيًا لجلسات التدريب السابقة. </para>
+<screenshot>
+<screeninfo
+>حوار إحصائيات معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>حوار إحصائيات معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>في حوار الإحصائيات، يمكنك اختيار إظهار درس معين أو <guilabel
+>كل الدروس</guilabel
+>. هذا مفيد للتمييز بين الأداء العام والمهارة في دروس معينة. </para>
+<para
+>إذا شعرت بأنك مستعد للدرس التالي، اضغط على زر <guibutton
+>الدرس التالي</guibutton
+> في شريط الأدوات لمواصلة الدرس التالي من المساق الحالي، أو زر <guibutton
+>كرر الدرس</guibutton
+> لتجربة مهاراتك على الدرس الحالي مجددًا. سيكون زر <guibutton
+>الدرس التالي</guibutton
+> متاحًا فقط إذا اجتزت الدرس. </para>
+<para
+>إذا أردت التبديل إلى درس أو دورة أخرى، اضغط <guibutton
+>العودة إلى الشاشة الرئيسة</guibutton
+>. </para>
+<para
+>إذا لم ترغب في متابعة التدريب مع معلم الطباعة، فأغلق نافذة التطبيق فحسب. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>تحضير التدريب</title>
+<para
+>كل شيء تقريبًا في الشاشة الرئيسة لـ معلم الطباعة يجب أن يكون واضحًا بذاته. شريط الأدوات العلوي هو المكان الذي يمكنك فيه عرض وضبط إعدادات معلم الطباعة. يمكن استخدام منتقي الدورات لعرض المعلومات عن الدورات والتبديل بينها. </para>
+
+<sect2 id="toolbar">
+  <title
+>شريط الأدوات ملعم الطباعة</title>
+<para
+>يضم شريط أدوات معلم الطباعة زر التشكيلة على اليسار وزر قائمة التطبيق على اليمين. </para>
+
+<sect3 id="profile_management">
+<title
+>إدارة التشكيلات</title>
+<para
+>يمكن استخدام زر التشكيلة الذي يحمل اسم تشكيلتك على يسار شريط أدوات الشاشة الرئيسية لإدارة تشكيلات معلم الطباعة. </para>
+
+<screenshot>
+<screeninfo
+>إدارة التشكيلات في معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>إدارة التشكيلات في معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكنك مراجعة إعدادات التشكيلات الحالية، أو حذفها، أو إنشاء تشكيلة جديدة باستخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>للتبديل إلى وضع المراجعة اضغط <guibutton
+>حرّر</guibutton
+>. لاختيار تشكيلة والعودة إلى الشاشة الرئيسية اضغط <guibutton
+>استخدم التشكيلة المختارة</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>مراجعة معلومات التشكيلة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>مراجعة معلومات التشكيلة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>قائمة معلم الطباعة</title>
+<para
+>يمكن فتح قائمة معلم الطباعة باستخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط أدوات الشاشة الرئيسية. </para>
+
+<screenshot>
+<screeninfo
+>قائمة معلم الطباعة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>قائمة معلم الطباعة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>يمكنك العثور على قائمة بعناصر القائمة مع وصفها المختصر أدناه. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>وضع ملء الشاشة</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>بدّل</action
+> وضع ملء الشاشة لـ معلم الطباعة تشغيلًا وإيقافًا</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>محرّر التمرين وتخطيط لوحة المفاتيح...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>افتح</action
+> نافذة محرر معلم الطباعة <link linkend="extending"
+></link
+> </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>اضبط مدرب الطباعة...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>اعرض</action
+> حوار تهيئة معلم الطباعة <link linkend="configuration_dialog"
+></link
+> </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>اضبط الاختصارات...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>اضبط</action
+> الاختصارات التي تريد ربطها ببعض الإجراءات </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>اضبط لوحة المفاتيح...</guimenuitem
+></term>
+<listitem
+><para
+>اختصار لوحدة &systemsettings; لضبط إعدادات لوحة المفاتيح. مفيد للتحضير للتدريب على تخطيط لوحة مفاتيح مختلف. </para>
+<note>
+<para
+>على المنصات التي تفتقر لدعم كشف تخطيط لوحة المفاتيح آليًا، خاصة &Microsoft; &Windows;، يُستبدل هذا المدخل بقائمة فرعية لتحديد تخطيط لوحة مفاتيح معلم الطباعة يدويًا. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>معلم الطباعة يحتوي على عنصر القائمة <guimenu
+>مساعدة</guimenu
+> الشائع في &kde;، لمزيد من المعلومات اقرأ القسم حول <ulink url="help:/fundamentals/menus.html#menus-help"
+>قائمة المساعدة</ulink
+> من أساسيات &kde;. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>حواري الضبط</title>
+
+<para
+>يمكنك تخصيص معلم الطباعة بشكل كبير. تنطبق الإعدادات على جميع التشكيلات عالميًا. افتح حوار التهيئة بالضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> على يمين شريط الأدوات العلوي للشاشة الرئيسية ثم اختر <guimenuitem
+>اضبط مدرب الطباعة...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>إعدادات التمرين</guilabel
+></term>
+     <listitem>
+       <para
+>في هذا الحوار يمكنك تحديد الخيارات التي تتحكم في مظهر نافذة المدرب وكيفية تصرف معلم الطباعة أثناء التدريب.</para>
+<screenshot>
+<screeninfo
+>خيارات التدريب</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>خيارات التدريب</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكن استخدام مربع الاختيار <guilabel
+>فرض تصحيح أخطاء الطباعة</guilabel
+> للتحكم في ما إذا كان يجب تصحيح أخطاء الطباعة. </para>
+<para
+>يمكنك التحكم في ظهور أجزاء الإحصائيات ولوحة المفاتيح أثناء التدريب باستخدام مربعي الاختيار <guilabel
+>أظهر لوحة المفاتيح</guilabel
+> و <guilabel
+>أظهر الإحصائيات الفورية</guilabel
+>. </para>
+<para
+>يمكن اختيار ضغطة المفتاح للانتقال إلى السطر التالي من نص التدريب من خيارين، &Enter; أو &Space;. </para>
+<para
+>يمكن استخدام <guilabel
+>حدود فتح الدروس</guilabel
+> لاختيار الإعدادات التي تتحكم في فتح الدروس ذات المستوى الأعلى. يتحقق معلم الطباعة من الحدود المعطاة في نهاية كل مستوى ويقرر ما إذا كان سيفتح الدرس التالي. إذا كانت سرعة الطباعة بالأحرف في الدقيقة والصحة <emphasis
+>كلاهما</emphasis
+> أعلى من أو مساوية لـ <guilabel
+>حدود فتح الدروس</guilabel
+> سيفتح معلم الطباعة الدرس التالي ذا المستوى الأعلى. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>إعدادات الألوان</guilabel
+></term>
+  <listitem>
+<para
+>في هذا الحوار يمكنك ضبط الألوان المستخدمة بواسطة معلم الطباعة.</para>
+<screenshot>
+<screeninfo
+>إعدادات الألوان</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>إعدادات الألوان</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكنك تحديد لون الخلفية لكل مفاتيح الأصابع. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>اختيار الدورة والدرس</title>
+<para
+>يكتشف معلم الطباعة تخطيط لوحة المفاتيح الخاص بك آليًا ويعرض فقط الدورات المحسّنة لهذا التخطيط. </para>
+<note>
+<para
+>على بعض المنصات، خاصة &Windows;، الكشف الآلي عن تخطيط لوحة المفاتيح غير متوفر. استخدم قائمة التطبيق لتحديد تخطيط لوحة المفاتيح يدويًا. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>تبديل المساقات</title>
+<para
+>إذا وُجد أكثر من مساق واحد متاح لتخطيط لوحة المفاتيح، يمكنك اختيار مساقك المفضل باستخدام زري <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> و <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> على يمين التسمية التي تحمل اسم المساق. إذا وُجد مساق واحد فقط، لن تظهر الأزرار. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>فتح الدروس</title>
+<para
+>إذا اخترت <guilabel
+>ليست لدي خبرة أو لدي خبرة قليلة جدًا في الطباعة الآلية</guilabel
+> أثناء <link linkend="creating_profile"
+>إنشاء التشكيلة المبدئي</link
+>، ستجد أن بعض الدروس مقفلة. تُوسم هذه العناصر بأيقونة <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> ولا يمكن الوصول إليها حتى تجتاز الدروس السابقة. </para>
+<note>
+<para
+>يمكن تغيير إعدادات اجتياز الدروس باستخدام <link linkend="configuration_dialog"
+>حوار ضبط معلم الطباعة</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>التدريب على تخطيط لوحة مفاتيح مختلف</title>
+<para
+>مع معلم الطباعة، يمكن استخدام أي تخطيط لوحة مفاتيح للتدريب. فقط اضغط الأزرار التي يبرزها المدرب، بغض النظر عن التسميات على لوحة المفاتيح الفعلية. </para>
+<para
+>اختر <menuchoice
+><guimenu
+>اضبط لوحة المفاتيح...</guimenu
+></menuchoice
+> في قائمة التطبيق لاختيار تخطيط لوحة مفاتيح مختلف. بعد ذلك، سيتكيف معلم الطباعة وفقًا لذلك ويعرض لك مساقاته لهذا التخطيط. </para>
+<note>
+<para
+>على المنصات التي لا تحتوي على كشف آلي لتخطيط لوحة المفاتيح، خاصة &Microsoft; &Windows;، يجب أولًا ضبط نظام التشغيل لاستخدام التخطيط الذي تريد التدرب عليه ثم اختيار نفس التخطيط في معلم الطباعة عبر قائمة التطبيق. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>التدريب الفعال</title>
+<sect2 id="training_techniques">
+<title
+>تقنيات التدريب</title>
+<para
+>فيما يلي، يمكنك العثور على بعض النصائح العامة حول تقنيات تعلم الطباعة باللمس. </para>
+<sect3 id="steady_speed">
+<title
+>السرعة الثابتة</title>
+<para
+>لتكون فعالًا عند تعلم الطباعة باللمس، من المهم ألا تحاول ببساطة الكتابة بأسرع ما يمكن، بل أن تحافظ على سرعة ثابتة وتجد إيقاعًا طبيعيًا للضغط على المفاتيح. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>الدقة هي الملك</title>
+<para
+>الشيء المهم التالي هو تركيز الانتباه على الدقة. فقط إذا أتقنت استخدام المفاتيح المفتوحة حاليًا، مما يعني أنك ترتكب أخطاء قليلة جدًا بها، ستكون لديك فرصة في الدروس التالية التي تحتوي على المزيد من المفاتيح للتعامل معها. ستلاحظ أنك تصبح ماهرًا بشكل آلي تقريبًا إذا ارتكبت أخطاء قليلة جدًا، وستوفر وقتًا ثمينًا إذا لم تضطر لتصحيح العديد من الأخطاء. </para>
+<note>
+<para
+>هذا هو أيضًا السبب في أن مستوى الدقة المبدئي لفتح الدرس التالي هو 98% بينما متطلبات السرعة معتدلة جدًا بـ 180 حرفًا في الدقيقة فقط. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>تصحيح الأخطاء</title>
+<para
+>إذا ارتكبت أخطاء، من المهم تصحيحها بكفاءة. تصحيح الأحرف الفردية يكون دائمًا أبطأ تقريبًا من تصحيح الكلمة بأكملها. للأخير، عليك فقط الضغط على <keycombo
+>&Ctrl;&Backspace;</keycombo
+>، وإعادة كتابة الكلمة. العبء الذهني لهذا صغير جدًا. للأول، عليك أولًا تحديد موقع خطأك، والحذف بدقة إلى موقع الخطأ، وتحديد الجزء المفقود من الكلمة، ثم إعادة كتابتها. هذا يتطلب تركيزًا أكبر بكثير من إعادة كتابة الكلمة بأكملها. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>إيقاف جلسة التدريب مؤقتًا</title>
+<sect3 id="automatically_pausing">
+<title
+>آليّا</title>
+<para
+>إذا فتحت أي حوار أو انتقلت إلى تطبيق آخر أثناء جلسة تدريب، فستتوقف الجلسة ويتوقف المؤقت حتى تركز على نافذة معلم الطباعة مجددًا وتضغط أي مفتاح. </para>
+<para
+>ستتوقف جلسة التدريب أيضًا إذا لم يكن هناك أي نشاط من المستخدم لمدة خمس ثوانٍ. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>يدويا</title>
+<para
+>يمكنك إيقاف الجلسة الحالية يدويًا باستخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط الأدوات. </para>
+<para
+>إذا نقرت على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط الأدوات، فسيوقف معلم الطباعة الجلسة الحالية ويعرض قائمة متراكبة مع بعض الإجراءات الإضافية. </para>
+<screenshot>
+<screeninfo
+>قائمة معلم الطباعة عند الإيقاف</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>قائمة معلم الطباعة عند الإيقاف</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>تتبع تقدم التعلم</title>
+<para
+>بعد إكمال درس، لن تعد فورًا إلى الشاشة الرئيسية. بدلًا من ذلك، تُعرض شاشة ملخص وإحصائيات خاصة. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>إحصائيات السرعة والدقة</title>
+<screenshot>
+<screeninfo
+>صفحة تقدم شاشة النقاط</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>صفحة تقدم شاشة النقاط</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>تصفية حسب الدرس</title>
+<para
+>بمساعدة صفحة إحصائيات السرعة والدقة، يمكنك مراجعة تقدمك في التعلم وتحديد نقاط ضعفك. </para>
+<para
+>يمكن تصفية بيانات الإحصائيات حسب الدرس باستخدام المربع المنسدل بجوار التسمية <guilabel
+>على مدى</guilabel
+>. يمكن أن تكون هذه الميزة مفيدة للتحكم في تقدمك في الدرس الحالي ومقارنة هذا التقدم مع التقدم في الدروس الأخرى. </para>
+<screenshot>
+<screeninfo
+>قائمة منسدلة لنطاق الإحصائيات</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>قائمة منسدلة لنطاق الإحصائيات</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكن عرض بيانات إضافية عن الجلسة في التراكبات. إذا مررت مؤشر الفأرة فوق نقطة على الرسم البياني، فسيظهر معلم الطباعة إحصائيات الجلسة المقابلة. </para>
+<screenshot>
+<screeninfo
+>التقدم لكل درس</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>التقدم لكل درس</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>إحصائيات الأخطاء</title>
+<para
+>يمكن تبديل شاشة النتائج لإظهار معدل الأخطاء لكل مفتاح باستخدام القائمة المنسدلة بجانب لصيقة <guilabel
+>أظهر</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>تبديل وضع الإحصائيات</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>تبديل وضع الإحصائيات</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>في هذا الوضع، يُظهر معلم الطباعة مخططًا أعمدة للأخطاء لكل مفتاح في آخر جلسة تدريب. </para>
+<screenshot>
+<screeninfo
+>مخطط الأخطاء حسب المفاتيح</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>مخطط الأخطاء حسب المفاتيح</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكنك العودة إلى رسم الدروس باستخدام القائمة المنسدلة نفسها بجانب لصيقة <guilabel
+>أظهر</guilabel
+>. </para>
+<para
+>إذا اجتزت الدرس، يمكنك اختيار بدء التدريب على الدرس التالي فورًا بالضغط على <guibutton
+>الدرس التالي</guibutton
+> في شريط الأدوات. وإلا يمكنك تكرار الدرس الحالي بـ <guibutton
+>كرر الدرس</guibutton
+> أو العودة إلى الشاشة الرئيسة بالزر المتبقي. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>توسيع معلم الطباعة</title>
+
+<sect1 id="create_courses">
+<title
+>إنشاء دورات</title>
+<para
+>يمكنك بسهولة إنشاء دورة تدريبية خاصة بك باستخدام محرر الدورة وتخطيط لوحة المفاتيح المدمج في معلم الطباعة. اضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> على يمين شريط أدوات الشاشة الرئيسة ثم اختر <guimenuitem
+>محرر الدورة وتخطيط لوحة المفاتيح...</guimenuitem
+>. يمكنك اختيار فتح ملف دورة أو إنشاء دورة فارغة من الصفر أو استخدام دورة موجودة كقالب.</para>
+<important>
+<para
+>لا يمكنك تحرير الدورات المدمجة، حتى لو كان لديك صلاحية الكتابة إلى مجلد التثبيت. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>النافذة الرئيسة لمحرر الدورة وتخطيط لوحة المفاتيح</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>النافذة الرئيسة لمحرر الدورة وتخطيط لوحة المفاتيح</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>خصائص الدورة</title>
+<para
+>يمكن اختيار خصائص الدورة باستخدام معالج إنشاء الدورة في معلم الطباعة. لاستدعاء هذا المعالج، اضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط أدوات نافذة <guilabel
+>محرر الدورة وتخطيط لوحة المفاتيح</guilabel
+>. </para>
+<para
+>تتيح لك الصفحة الأولى من معالج إنشاء معلم الطباعة اختيار نوع البيانات. اختر <guilabel
+>دورة</guilabel
+> واضغط <guibutton
+>التالي</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>اختيار النوع</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>اختيار النوع</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>تتيح لك الصفحة الثانية من المعالج اختيار العنوان وتخطيط لوحة المفاتيح ووصف الدورة. </para>
+<screenshot>
+<screeninfo
+>الصفحة الثانية من معالج الدورة الجديدة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الصفحة الثانية من معالج الدورة الجديدة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>عنوان الدورة مهم لإدخال قائمة التحديد السريع في قائمة الدورات وللإحصائيات. </para>
+<para
+>يُستخدم الوصف لتضمين معلومات عن مؤلف الدرس ومصدر بيانات الدرس إن وُجد. يُمكن عرض هذا الوصف بالضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في الشاشة الرئيسية لـ معلم الطباعة. </para>
+<para
+>عند الانتهاء من إدخال القيم المناسبة، اضغط <guibutton
+>التالي</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>الصفحة الثالثة من معالج الدورة الجديدة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الصفحة الثالثة من معالج الدورة الجديدة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>باستخدام الصفحة الثالثة من المعالج، يُمكنك اختيار دورة أخرى كقالب لدورتك. اختر الدورة من القائمة واضغط <guibutton
+>إنهاء</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>نافذة تحرير الدورة الجديدة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>نافذة تحرير الدورة الجديدة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>سيفتح معلم الطباعة نافذة محرر الدورة مُهيأة لإدخال بيانات دورتك. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>إضافة الدروس</title>
+<para
+>الدورة هي مجموعة مرتبة من الدروس. لكي تكون فعّالة لتعلم الطباعة باللمس، يجب أن يفي محتوى الدورة بعدة متطلبات. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>اختر اسمًا ذا معنى للدرس</emphasis
+></term>
+<listitem>
+<para
+>لكل مستوى، يُمكنك تحديد الأحرف/المفاتيح الجديدة في الدرس. من المفيد تضمين الأحرف الجديدة في عنوان الدرس. انقر على تسمية اسم في قائمة <guilabel
+>الدروس:</guilabel
+> وأدخل اسمًا ذا معنى. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>النص الذي تُدخله كعنوان للدرس سيُعرض كنص معلومات الدرس في قائمة الدورات بالشاشة الرئيسية. سيكون من الأسهل بكثير للمستخدم اختيار الدرس إذا كان له عنوان ذو معنى. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>يجب أن يغطي الدرس الأول المفاتيح الرئيسية</emphasis
+></term>
+<listitem>
+<para
+>عادةً ما تحتوي لوحة المفاتيح على علامتين لمسيتين للمفاتيح في الصف الثاني التابعة لأصابع السبابة. هذان المفتاحان والمفاتيح الثلاثة المجاورة للخارج هما المفاتيح الرئيسية. هذا هو <emphasis
+>asdfjkl;</emphasis
+> لتخطيط لوحة المفاتيح الأمريكية. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>تلك المفاتيح الثمانية هي وضع البداية لكل إصبع. يجب على المرء استيعاب موقع هذه المفاتيح أولًا لتعلم الطباعة باللمس بنجاح. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>أضف مفتاحين جديدين لكل درس </emphasis
+></term>
+<listitem>
+<para
+>ترتيب فتح المفاتيح غير ثابت، لكن عادةً تُقدم المفاتيح في أزواج تنتمي لنفس الإصبع في كلتا اليدين. انتقل من المفاتيح الرئيسة إلى البعيدة. لذا، يجب تقديم الصف الرابع أخيرًا. فضّل المفاتيح الخاصة بالأحرف المهمة في لغتك، وقد يتطلب ذلك تغيير نمط التقديم قليلًا. مثلًا، في الفرنسية، النبرات مهمة جدًا، مما يستدعي درسًا مبكرًا يركز على مفتاح النبرة وحده. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>إذا أُضيفت مفاتيح أكثر، قد يشعر المتدرب بالإرهاق من صعوبة الدرس ويفقد حافزه. قدم المفاتيح المهمة أولًا لتتمكن من تكوين كلمات حقيقية مبكرًا. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>تركيز إضافي على المفاتيح الجديدة</emphasis
+></term>
+<listitem>
+<para
+>تأكد من أن الأحرف التابعة للمفاتيح المقدمة حديثًا هي الأكثر أو على الأقل المستخدمة بكثرة في نص الدرس. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>إذا اجتاز المتدرب درسًا، فيجب أن يكون قد أتقن المفاتيح الجديدة. هذا ممكن فقط إذا احتوى الدرس على كمية كبيرة من الأحرف الجديدة. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>اخلط الدروس ذات المفاتيح الجديدة بدروس تكرارية</emphasis
+></term>
+<listitem>
+<para
+>أضف درسًا تكرارًا بدون أي مفاتيح جديدة كل درسين أو ثلاثة. يجب أن تحتوي هذه الدروس على مزيج متوازن من الأحرف يغطي جميع الأحرف المقدمة سابقًا. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>تساعد هذه الدروس في تعزيز المهارات المكتسبة وتوفر طريقة للتحقق من مستوى التدريب العام. كما أنها مناسبة أكثر للتدريب المتكرر لتحسين مهارات الكتابة العامة. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>دروس مخصصة للكتابة بالأحرف الكبيرة</emphasis
+></term>
+<listitem>
+<para
+>يجب أن يكون هناك عدة دروس تركز حصرًا على الكتابة بالأحرف الكبيرة. من المثالي تقديم الكتابة بالأحرف الكبيرة في خطوات متعددة: أولًا مفتاح &Shift; الأيسر فقط، ثم الأيمن، ثم كليهما، يتبعها درس أو أكثر للتكرار. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>إتقان الكتابة بالأحرف الكبيرة هو أصعب جزء في تعلم الكتابة باللمس. لذا، يجب بذل جهد إضافي في هذه الدروس. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>غطِ تخطيط لوحة المفاتيح بالكامل</emphasis
+></term>
+<listitem>
+<para
+>يشمل ذلك الأحرف والرموز التي يمكن الوصول إليها عبر مفاتيح تعديل غير &Shift;. من المثالي تغطية كل حرف ورقم ورمز مطبوع على لوحة مفاتيح حقيقية. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>كلما كان المقرر أكثر اكتمالًا، زاد ما يمكن للمتدرب تعلمه منه. كما يحافظ ذلك على إثارة المقرر للاهتمام لدى الكتّاب المتقدمين بالفعل. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>استخدم زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لإضافة درس جديد إلى المقرر، وزر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لإزالة الدرس المحدد من مقرك، وأزرار <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لإعادة ترتيب الدروس في المقرر. </para>
+<important>
+<para
+>احذف الدروس بحذر فقط. قد يؤدي ذلك إلى إعادة تعيين تقدم فتح مستخدمي المقرر. إذا كنت تخطط لمراجعة مقرر بدقة، فمن الأفضل عادةً استخدام المقرر الحالي كأساس لمقرر جديد. </para>
+</important>
+<para
+>يمكن تحرير محتوى الدرس باستخدام حقل التحرير في الأسفل اليمين. يمكنك نسخ مقتطفات من النص من محرر النصوص المفضل لديك ولصقها في هذا الحقل. </para>
+<para
+>استخدم زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لفتح ملف نصي عام سيُحمّل في حقل نص الدرس. </para>
+<para
+>يمكن استخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> لالتفاف نص الدرس. محرر معلم الطباعة يلف النص بحيث لا يتجاوز كل سطر من الدرس الحد الموصى به وهو 60 حرفًا. </para>
+<para
+>لنفترض أنك تريد إضافة درس جديد. إليك بعض الإرشادات التي قد ترغب في مراعاتها: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>أعطِ الدروس عنوانًا وصفيًا</emphasis
+></term>
+<listitem>
+<para
+>سمِّ المحارف الجديدة إن وُجدت، أو اذكر موضوع الدرس بخلاف ذلك. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>العناوين الجيدة تُسهِّل العثور على المساق المناسب إذا أراد المرء التدرب على شيء محدد. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>يجب أن يُؤلف نص الدرس من كلمات وجمل حقيقية</emphasis
+></term>
+<listitem>
+<para
+>من الأفضل أن يُشكل الدرس نصًا متصلًا مفهومًا حول موضوع مختار بحرية. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>التدرب بكلمات وجمل حقيقية أكثر فعالية من التدرب بتركيبات محارف عشوائية، لأن ذلك أقرب إلى الكتابة الحقيقية. وهو أيضًا أكثر متعة. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>تجنب تركيبات المحارف غير الكلمية</emphasis
+></term>
+<listitem>
+<para
+>قد يكون هذا مستحيلًا في الدروس الأولى جدًا حيث لا تتوفر سوى محارف قليلة، ولكن بمجرد الإمكان يجب استخدام كلمات حقيقية فقط. لا تستخدم أبدًا كلمات مكتوبة بشكل خاطئ. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>تركيبات المحارف العشوائية صعبة الكتابة ونادرًا ما توجد في الكتابة اليومية. أما الكلمات المكتوبة بشكل خاطئ فهي مربكة ولها قيمة تعليمية سلبية، لأن المتدرب قد يحفظ التهجئة الخاطئة. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>يجب أن يبلغ طول نص الدرس 600 محرف تقريبًا</emphasis
+></term>
+<listitem>
+<para
+>قد تكون أطول، حتى 1200 محرف مقبول، ولكن يجب تجنب الدروس الأقصر. هذا ينطبق بشكل خاص على دروس التكرار. </para>
+<note>
+<title
+>المبرر</title>
+<para
+>البقاء ضمن هذا النطاق يضمن أن كاتبًا غير مدرب (~120 محرفًا في الدقيقة) يمكنه إنهاء الدرس في خمس إلى عشر دقائق. الدروس الأطول تصبح محبطة، والأقصر غير فعالة. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>فحوصات الجودة في محرر نص الدرس</title>
+<screenshot>
+<screeninfo
+>فحص الجودة في نافذة تحرير المساق</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>فحص الجودة في نافذة تحرير المساق</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>أعلاه لقطة شاشة لمحرر المساق مع تحميل أحد الدروس الإشكالية تُظهر أحد فحوصات ضمان الجودة المضمنة: إذا احتوى درس على محارف غير متوفرة في ذلك الدرس، لأنها ليست ضمن المحارف الجديدة المضبوطة لهذا الدرس أو أي درس سابق، فتُظلل باللون الأحمر. يوجد أيضًا فحص للأسطر الطويلة جدًا مما يؤدي إلى لون خافت للمحارف خلف العمود المسموح به. </para>
+<para
+>على الجانب الأيسر توجد قائمة بجميع ملفات البيانات التي يعرفها معلم الطباعة، سواء المضمنة أو التي أنشأها المستخدم. ومع ذلك، إذا اختار المستخدم موردًا مضمنًا فسينحط المحرر إلى عارض بسيط. إذا اختار المستخدم تخطيط لوحة مفاتيح فسيُكيف البرنامج نفسه بشكل مناسب. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>إنشاء تخطيطات لوحة المفاتيح</title>
+<para
+>يمكنك إنشاء تخطيطات لوحة المفاتيح الخاصة بك باستخدام المحرر المضمن معلم الطباعة. عادةً ما يكون من الأفضل البدء بتخطيط موجود قريب من تخطيط لوحة المفاتيح الذي تريد إنشاءه، واستخدام ذلك كأساس للتخطيط الخاص بك. بهذه الطريقة يمكنك تجنب الكثير من العمل.</para>
+
+<sect2 id="layout_properties">
+<title
+>خصائص تخطيط لوحة المفاتيح</title>
+<para
+>يمكن اختيار خصائص تخطيط لوحة المفاتيح باستخدام معالج إنشاء تخطيط لوحة المفاتيح معلم الطباعة. لاستدعاء هذا المعالج، اضغط زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> في شريط أدوات نافذة <guilabel
+>محرر الدورة وتخطيط لوحة المفاتيح</guilabel
+>. </para>
+<para
+>تتيح لك الصفحة الأولى من معالج إنشاء معلم الطباعة اختيار نوع البيانات. اختر <guilabel
+>تخطيط لوحة المفاتيح</guilabel
+> واضغط <guibutton
+>التالي</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>اختيار النوع</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>اختيار النوع</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>تتيح لك الصفحة الثانية من المعالج اختيار عنوان التخطيط واسمه. </para>
+<screenshot>
+<screeninfo
+>الصفحة الثانية من معالج التخطيط الجديد</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الصفحة الثانية من معالج التخطيط الجديد</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>عنوان التخطيط مهم لإدخال قائمة التحديد السريع في قائمة التخطيطات بقائمة <link linkend="ktouch_menu"
+>ضبط معلم الطباعة</link
+> وللإحصائيات. </para>
+<para
+>سيُستخدم اسم التخطيط كاسم للتخطيط بواسطة معلم الطباعة داخليًا. </para>
+<screenshot>
+<screeninfo
+>الصفحة الثالثة من معالج التخطيط الجديد</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>الصفحة الثالثة من معالج التخطيط الجديد</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>باستخدام الصفحة الثالثة من المعالج، يمكنك اختيار تخطيط آخر كقالب لتخطيطك. اختر الدورة من القائمة واضغط <guibutton
+>إنهاء</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>نافذة تحرير التخطيط الجديد</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>نافذة تحرير التخطيط الجديد</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>سيفتح معلم الطباعة نافذة المحرر المُعدة لإدخال بيانات تخطيط لوحة المفاتيح. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>إضافة مفاتيح</title>
+<para
+>استخدم زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>مفتاح عادي</guilabel
+> لإضافة مفتاح عادي جديد، أو زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>مفتاح خاص</guilabel
+> لإضافة مفتاح خاص جديد (مفاتيح التعديل، &Space;، &Backspace;، &Tab;، <keycap
+>Caps Lock</keycap
+> أو &Enter;) إلى التخطيط. يمكن استخدام زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>حذف</guilabel
+> لإزالة مفتاح محدد من تخطيطك. يمكن تغيير المقياس باستخدام المنزلق في الجزء الأيمن من شريط أدوات المحرر. </para>
+<para
+>يمكن تحرير خصائص المفاتيح الفردية باستخدام اللوحة السفلية من نافذة المحرر. </para>
+<sect3 id="normal_keys">
+<title
+>مفاتيح عادية</title>
+<para
+>من السهل تغيير حجم المفتاح أو خصائصه. </para>
+<para
+>ابدأ بالنقر على المفتاح الذي تريد تغييره. يؤدي هذا إلى تحديد المفتاح المُنقر كمفتاح حالي. </para>
+<para
+>توجد الآن 4 مربعات على زوايا المفتاح. بسحب هذه المربعات، ستتمكن من سحب حد المفتاح إلى موقع جديد. سحب المفتاح بأكمله يسمح لك بتغيير موضع المفتاح في التخطيط. </para>
+<para
+>يمكن أيضًا تغيير الخصائص العددية لهندسة المفتاح باستخدام قسم <guilabel
+>الهندسة</guilabel
+> في اللوحة أسفل نافذة المحرر. </para>
+<screenshot>
+<screeninfo
+>تحرير خصائص مفتاح فردي</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>تحرير خصائص مفتاح فردي</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكن أيضًا استخدام اللوحة السفلية لاختيار الإصبع للضغط على المفتاح وتبديل العلامة اللمسية للمفتاح. </para>
+<sect4 id="key_characters">
+<title
+>محارف المفتاح</title>
+<para
+>يمكن تغيير المحارف التي ستُعرض على مفتاح باستخدام قسم <guilabel
+>المحارف</guilabel
+> في اللوحة السفلية للمحرر. </para>
+<screenshot>
+<screeninfo
+>تحرير موضع المحرف</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>تحرير موضع المحرف</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>يمكنك إضافة محرف بالضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. يمكن إزالة محرف محدد بالضغط على زر <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>يمكنك أيضًا تحديد موضع المحارف الفردية على المفتاح بالنقر المزدوج في عمود <guilabel
+>الموضع</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>المعدِّلات</title>
+<para
+>توجد عدة مفاتيح تعديل يمكن تعريفها في معلم الطباعة. يمكن تحريرها كمفاتيح عادية لكن من المفيد معرفة معرف مفتاح التعديل لاستخدامها بشكل مناسب. جدول معرفات مفاتيح التعديل مُعطى أدناه. </para>
+<table>
+<title
+>مفاتيح التعديل</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>المفتاح المغيِّر</entry>
+<entry
+>معرف التعديل في معلم الطباعة</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>left_shift</literal
+> أو <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>حصص مخصصة</title>
+<para
+>تتيح لك ميزة الدروس المخصصة توسيع مادة تدريبك بطريقة سهلة باختيار نص عشوائي. </para>
+<para
+>تُجمع الدروس المخصصة في دورة خاصة، دورة <guilabel
+>الدروس المخصصة</guilabel
+>، متاحة دائمًا بجوار <link linkend="picking_a_lesson"
+>الدورات المدمجة العادية</link
+>. </para>
+<screenshot>
+<screeninfo
+>دورة الدروس المخصصة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>دورة الدروس المخصصة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>تعمل هذه الدورة الخاصة في الغالب مثل أي دورة أخرى، التدريب وجمع الإحصائيات يعملان كالمعتاد. النقر على <guibutton
+>إضافة درس جديد</guibutton
+> أو زر <guibutton
+>تحرير</guibutton
+> (أيقونة القلم للدروس الموجودة) يظهر نسخة مبسطة من <link linkend="adding_lessons"
+>محرر الدروس العادي</link
+>. </para>
+<screenshot>
+<screeninfo
+>محرر الدروس المخصصة</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>محرر الدرس المخصص</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>يُبرز المحرر المقاطع الإشكالية في نصوص درسك. تُعرض المحارف التي لا يمكن كتابتها باستخدام تخطيط لوحة المفاتيح لديك على خلفية حمراء داكنة، بينما تُستخدم خلفية وردية للمحارف الزائدة في السطور التي تُعتبر طويلة جدًا. يتطلب معلم الطباعة ألا يتجاوز كل سطر من الدرس الحد الموصى به وهو 60 محرفًا. </para>
+<para
+>استخدم زر <guibutton
+>تم</guibutton
+> لتأكيد تعديلاتك أو أغلق نافذة المحرر لإلغائها. </para>
+<tip>
+<para
+>تُخزن جميع الدروس المخصصة لكل تشكيلة وتخطيط لوحة مفاتيح على حدة. استخدم هذا لإدارة مجموعات مختلفة من الدروس وفقًا لحالة التدريب المحددة. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>مشاركة نتائجك</title>
+<para
+>من الممكن حفظ دوراتك وتخطيطات لوحة المفاتيح في ملفات منفصلة خارج قاعدة بيانات معلم الطباعة المحلية. </para>
+<sect2 id="export_import">
+<title
+>تصدير/استيراد</title>
+<para
+>لتصدير دورة أو تخطيط لوحة مفاتيح في ملف منفصل، اختر العنصر المقابل في القائمة بالجزء الأيسر من نافذة <guilabel
+>محرر الدورة وتخطيط لوحة المفاتيح</guilabel
+> واضغط على زر <guibutton
+>تصدير</guibutton
+> في شريط الأدوات. </para>
+<para
+>سيفتح معلم الطباعة حوار حفظ قياسيًا لـ &kde;. يمكن العثور على وصف تفصيلي لهذا الحوار في فصل <ulink url="help:/fundamentals/files.html"
+>فتح الملفات وحفظها</ulink
+> من أساسيات &kde;. </para>
+<para
+>يمكنك اختيار اسم وموقع ملف &XML; المراد حفظه. </para>
+<para
+>إذا رأيت أن مشاركة ملفاتك مع المستخدمين الآخرين جديرة بالاهتمام، فأرسلها مع وصف إلى <ulink url="mailto:kde-edu@kde.org"
+>القائمة البريدية kde-edu</ulink
+>. </para>
+<important>
+<para
+>يجب ترخيص بياناتك بموجب <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>رخصة &GNU; العمومية العامة، الإصدار 2</ulink
+> لتضمينها في التثبيت المبدئي لـ معلم الطباعة. </para>
+</important>
+<para
+>لاستيراد ملفات بياناتك إلى معلم الطباعة، اضغط على زر <guibutton
+>استيراد</guibutton
+> في شريط الأدوات واختر ملف &XML; الذي صُدّر سابقًا باستخدام معلم الطباعة. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+<para
+>معلم الطباعة</para>
+<para
+>&ktouch;، حقوق النشر 1999-2007 بواسطة</para>
+<itemizedlist>
+<listitem
+><simpara
+>هوارد فرويلاند &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>أندرياس نيكولاي <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&ktouch;، حقوق النشر 2011-2019 بواسطة سيباستيان غوتفريد <email
+>sebastiangottfried@web DOT de</email
+>. </para>
+
+<para
+>المساهمون:</para>
+<itemizedlist>
+<listitem
+><simpara
+>فرانك كوتشالا، لوحة المفاتيح الألمانية وملف التدريب الألماني والترجمة.</simpara
+></listitem>
+<listitem
+><simpara
+>إرنستو هيرنانديز-نوفيتش، لوحة المفاتيح لأمريكا اللاتينية</simpara
+></listitem>
+<listitem
+><simpara
+>جواو ميغيل نيفيس، لوحة مفاتيح برتغالية</simpara
+></listitem>
+<listitem
+><simpara
+>هنري جيرار، لوحة مفاتيح فرنسية</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>شكر خاص لجميع المساهمين الآخرين (غير المذكورين هنا) في ملفات لوحات المفاتيح والدروس.</emphasis>
+</para>
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->
